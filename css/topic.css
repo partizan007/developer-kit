@@ -8,9 +8,8 @@
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
 .topic .topic-header .topic-title i 			{ cursor: help; }
-.topic .topic-header .topic-info 				{ margin-bottom: 10px; color: #999999; font-size: 12px; }
-.topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; font-weight: bold; }
-.topic .topic-header .topic-info time 			{ margin-right: 10px; }
+.topic .topic-header .topic-info 				{ margin-bottom: 10px; }
+.topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; text-decoration: underline; }
 .topic .topic-header .topic-info .actions,
 .topic .topic-header .topic-info .actions li	{ display: inline; float: none; }
 
@@ -37,7 +36,9 @@
 .topic .topic-footer .topic-info 								{ font-size: 12px; padding-top: 5px; border-top: 1px solid #eeeeee; }
 .topic .topic-footer .topic-info li.vote 						{ padding-right: 0; }
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
-.topic .topic-footer .topic-info li.topic-info-author a 		{ font-weight: bold; }
+.topic .topic-footer .topic-info li.topic-info-author a 		{ text-decoration: underline; }
+.topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: middle; }
+.topic .topic-footer .topic-info li.topic-info-date 			{ color: #999999; }
 .topic .topic-footer .topic-info li.topic-info-comments span 	{ color: #999999; }
 .topic .topic-footer .topic-info li.topic-info-share a 			{ position: relative; top: -1px; }
 
