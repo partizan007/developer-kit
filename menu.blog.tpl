@@ -1,4 +1,4 @@
-<ul class="nav nav-menu nav-stacked">
+<ul class="nav nav-pills">
 	<li {if $sMenuItemSelect=='index'}class="active"{/if}>
 		<a href="{cfg name='path.root.web'}/">{$aLang.blog_menu_all}</a>
 	</li>

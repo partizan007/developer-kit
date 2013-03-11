@@ -1,14 +1,16 @@
-				{hook run='content_end'}
-			</div> <!-- /content -->
+					{hook run='content_end'}
+				</div> <!-- /content -->
 
-			{if !$noSidebar && $sidebarPosition != 'left'}
-				{include file='sidebar.tpl'}
-			{/if}
+				{if !$noSidebar && $sidebarPosition != 'left'}
+					{include file='sidebar.tpl'}
+				{/if}
+			</div> <!-- /row -->
+		
 		</div> <!-- /wrapper -->
-	</div> <!-- /container -->
+	</section> <!-- /container -->
 
 
-	<footer class="footer">
+	<footer id="footer">
 		<div class="container">
 	
 			<div class="span3 pull-right copyright">
@@ -18,6 +20,7 @@
 			</div>
 		
 			{hook run='footer_end'}
+			
 		</div>
 	</footer>
 
