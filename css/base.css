@@ -2,9 +2,14 @@
 	ОСНОВНЫЕ СТИЛИ
 ------------------------------------------------------------------- */
 
-body { padding-top: 40px; position: relative; background-color: #f5f5f5; }
-#nav.container { background-color: #ffffff; }
-#wrapper.container { background-color: #ffffff; }
+body { padding-top: 40px; position: relative; background-color: #f0f0f0; }
+
+#nav { margin-bottom: 40px; }
+#nav .container { padding: 10px 20px; background-color: #ffffff; }
+#nav .nav { margin-bottom: 0; }
+#nav .navbar-search { margin-top: 2px; }
+
+#wrapper.container { padding: 20px; background-color: #ffffff; }
 
 a:focus, a:hover, a:active { outline: 0; }
 .btn:focus { outline: 0; }
@@ -28,8 +33,7 @@ a.link-dotted:hover { color: #005580; border-color: #005580; text-decoration: no
 
 /* Футер
 ---------------------------------------------------- */
-#footer 			{ padding: 40px 0; margin-top: 40px; }
-#footer 			{ border-top: 1px solid #eeeeee; background-color: #f5f5f5; }
+#footer 			{ padding: 40px 0; margin-top: 40px; color: #999999; background-color: #333333; }
 #footer .copyright 	{ font-size: 12px; text-align: right; }
 
 
