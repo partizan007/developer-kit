@@ -105,17 +105,18 @@
 	
 	<section id="container {hook run='container_class'}">
 		<div id="wrapper" class="container {hook run='wrapper_class'}">
+			<div class="wrapper-inner">
 
-			<div class="row">
-				{if !$noSidebar && $sidebarPosition == 'left'}
-					{include file='sidebar.tpl'}
-				{/if} 
+				<div class="row-fluid">
+					{if !$noSidebar && $sidebarPosition == 'left'}
+						{include file='sidebar.tpl'}
+					{/if} 
 		
-				<div role="main" 
-					class="{if $noSidebar}span12{else}span8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
-					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
+					<div role="main" 
+						class="{if $noSidebar}span12{else}span8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
+						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 				
-					{include file='nav_content.tpl'}
-					{include file='system_message.tpl'}
+						{include file='nav_content.tpl'}
+						{include file='system_message.tpl'}
 				
-					{hook run='content_begin'}
+						{hook run='content_begin'}

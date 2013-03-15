@@ -2,18 +2,34 @@
 	ОСНОВНЫЕ СТИЛИ
 ------------------------------------------------------------------- */
 
-body { padding-top: 40px; position: relative; background-color: #f0f0f0; }
+body { position: relative; background-color: #f0f0f0; }
 
-#nav { margin-bottom: 40px; }
-#nav .container { padding: 10px 20px; background-color: #ffffff; }
-#nav .nav { margin-bottom: 0; }
+
+/* Оформление
+---------------------------------------------------- */
+.nav-inner 		{ background-color: #ffffff; }
+.wrapper-inner 	{ background-color: #ffffff; }
+
+
+/* Навигация
+---------------------------------------------------- */
+#nav .nav 			{ margin-bottom: 0; }
 #nav .navbar-search { margin-top: 2px; }
+#nav .btn-write 	{ margin-top: 2px; margin-left: 20px; }
 
-#wrapper.container { padding: 20px; background-color: #ffffff; }
 
-a:focus, a:hover, a:active { outline: 0; }
-.btn:focus { outline: 0; }
-select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { outline: 0; }
+/* Футер
+---------------------------------------------------- */
+#footer 					{ color: #999999; background-color: #1b1b1b; }
+#footer a 					{ color: #555555; }
+#footer .footer-list-header	{ margin-bottom: 5px; font-weight: bold; border-bottom: 1px solid #333333; }
+#footer .copyright 			{ font-size: 12px; text-align: right; }
+
+
+/* Stat
+---------------------------------------------------- */
+#stat-performance 			{ background-color: #000000; }
+#stat-performance table td 	{ width: 200px; vertical-align: top; }
 
 
 /* Ссылки
@@ -29,18 +45,6 @@ a.link-dotted:hover { color: #005580; border-color: #005580; text-decoration: no
 ---------------------------------------------------- */
 .page-header 		{ margin-top: 0; }
 .page-header span 	{ color: #999999; }
-
-
-/* Футер
----------------------------------------------------- */
-#footer 			{ padding: 40px 0; margin-top: 40px; color: #999999; background-color: #333333; }
-#footer .copyright 	{ font-size: 12px; text-align: right; }
-
-
-/* Stat
----------------------------------------------------- */
-.stat-performance 			{ padding-top: 20px; padding-bottom: 20px; }
-.stat-performance table td 	{ width: 200px; vertical-align: top; }
 
 
 /* Stream
@@ -76,3 +80,13 @@ a.link-dotted:hover { color: #005580; border-color: #005580; text-decoration: no
 .help .help-item:last-child { margin-bottom: 0; }
 
 .help-block.span4 			{ margin-left: 0; }
+
+
+a:focus,
+a:hover,
+a:active,
+.btn:focus,
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus { outline: 0; }
