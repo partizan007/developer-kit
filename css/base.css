@@ -18,6 +18,13 @@ body { position: relative; background-color: #f0f0f0; }
 #nav .btn-write 	{ margin-top: 2px; margin-left: 20px; }
 
 
+/* Контейнер
+---------------------------------------------------- */
+.content { position: relative; }
+
+.pagination { margin-bottom: 0; }
+
+
 /* Футер
 ---------------------------------------------------- */
 #footer 					{ color: #999999; background-color: #1b1b1b; }

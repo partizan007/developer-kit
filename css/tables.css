@@ -62,7 +62,7 @@
 
 /* Table Profile Info */
 .table.table-profile-info 				{ margin-bottom: 40px; }
-.table.table-profile-info .cell-label 	{ color: #999999; width: 30%; }
+.table.table-profile-info .cell-label 	{ color: #999999; width: 33%; }
 
 /* Table Plugins */
 .table.table-plugins .cell-checkbox 	{ width: 16px; }

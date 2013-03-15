@@ -22,7 +22,7 @@
 			
 			<div class="stream-settings-userlist">
 				<div class="input-append">
-					<input type="text" id="userfeed_users_complete" autocomplete="off" class="span2 autocomplete-users input-text input-width-150" />
+					<input type="text" id="userfeed_users_complete" autocomplete="off" class="span6 autocomplete-users input-text input-width-150" />
 					<a href="javascript:ls.userfeed.appendUser()" class="btn">{$aLang.userfeed_block_users_append}</a>
 				</div>
 				

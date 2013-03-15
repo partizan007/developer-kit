@@ -7,7 +7,7 @@
 .profile .avatar 		{ position: absolute; top: 0; left: 0; }
 
 .profile .vote-label	{ color: #999999; font-size: 12px; text-align: center; }
-.profile .count 		{ color: #007fff; font-size: 12px; }
+.profile .count 		{ color: #007fff; font-size: 12px; text-align: center; }
 
 .profile .vote 			{ float: right; margin-left: 20px; }
 .profile .strength 		{ float: right; }
@@ -17,3 +17,4 @@
 .profile .user-name 				{ color: #999999; }
 
 .profile-info-about 	{ padding: 15px 20px 20px; background: #ffffcc; margin-bottom: 40px; }
+.profile-info-about h3 	{ margin-top: 0; }

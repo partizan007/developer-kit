@@ -7,6 +7,8 @@
 
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
+.topic .topic-header .topic-title a 			{ color: #333333; }
+
 .topic .topic-header .topic-title i 			{ cursor: help; }
 .topic .topic-header .topic-info 				{ margin-bottom: 20px; }
 .topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; text-decoration: underline; }
@@ -27,6 +29,8 @@
 .topic .topic-footer .topic-tags 						{ margin-bottom: 5px; font-size: 12px; color: #999999; }
 .topic .topic-footer .topic-tags li 					{ padding: 0; }
 .topic .topic-footer .topic-tags li i 					{ margin-right: 3px; }
+.topic .topic-footer .topic-tags li a 					{ color: #999999; }
+.topic .topic-footer .topic-tags li a.link-dotted 		{ border-color: #999999; }
 
 .topic .topic-footer .topic-tags li.topic-tags-edit 	{ margin-left: 10px; }
 .topic .topic-footer .topic-tags li.topic-tags-user a 	{ color: #468847; }

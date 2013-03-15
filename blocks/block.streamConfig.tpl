@@ -50,7 +50,7 @@
 			<p class="muted"><small>{$aLang.stream_settings_note_follow_user}</small></p>
 			
 			<div class="input-append">
-				<input type="text" id="stream_users_complete" autocomplete="off" class="span2 autocomplete-users input-text input-width-150" />
+				<input type="text" id="stream_users_complete" autocomplete="off" class="span6 autocomplete-users input-text input-width-150" />
 				<a href="javascript:ls.stream.appendUser()" class="btn">{$aLang.stream_block_config_append}</a>
 			</div>
 			

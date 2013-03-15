@@ -18,94 +18,102 @@
 {/if}
 
 
-{assign var="aUserFieldValues" value=$oUserProfile->getUserFieldValues(true,array(''))}
-{if $oUserProfile->getProfileSex()!='other' || $oUserProfile->getProfileBirthday() || $oGeoTarget || $oUserProfile->getProfileAbout() || count($aUserFieldValues)}
+<div class="row-fluid">
 
-	<h4>{$aLang.profile_privat}</h4>
+	<div class="span6">
+		{assign var="aUserFieldValues" value=$oUserProfile->getUserFieldValues(true,array(''))}
+		{if $oUserProfile->getProfileSex()!='other' || $oUserProfile->getProfileBirthday() || $oGeoTarget || $oUserProfile->getProfileAbout() || count($aUserFieldValues)}
+
+			<h4>{$aLang.profile_privat}</h4>
 	
-	<table class="table table-profile-info">		
-		{if $oUserProfile->getProfileSex()!='other'}
-			<tr>
-				<td class="cell-label">{$aLang.profile_sex}:</td>
-				<td>
-					{if $oUserProfile->getProfileSex()=='man'}
-						{$aLang.profile_sex_man}
-					{else}
-						{$aLang.profile_sex_woman}
-					{/if}
-				</td>
-			</tr>
-		{/if}
+			<table class="table table-profile-info">		
+				{if $oUserProfile->getProfileSex()!='other'}
+					<tr>
+						<td class="cell-label">{$aLang.profile_sex}:</td>
+						<td>
+							{if $oUserProfile->getProfileSex()=='man'}
+								{$aLang.profile_sex_man}
+							{else}
+								{$aLang.profile_sex_woman}
+							{/if}
+						</td>
+					</tr>
+				{/if}
 			
 			
-		{if $oUserProfile->getProfileBirthday()}
-			<tr>
-				<td class="cell-label">{$aLang.profile_birthday}:</td>
-				<td>{date_format date=$oUserProfile->getProfileBirthday() format="j F Y"}</td>
-			</tr>
-		{/if}
+				{if $oUserProfile->getProfileBirthday()}
+					<tr>
+						<td class="cell-label">{$aLang.profile_birthday}:</td>
+						<td>{date_format date=$oUserProfile->getProfileBirthday() format="j F Y"}</td>
+					</tr>
+				{/if}
 		
 		
-		{if $oGeoTarget}
-			<tr>
-				<td class="cell-label">{$aLang.profile_place}:</td>
-				<td itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-					{if $oGeoTarget->getCountryId()}
-						<a href="{router page='people'}country/{$oGeoTarget->getCountryId()}/" itemprop="country-name">{$oUserProfile->getProfileCountry()|escape:'html'}</a>{if $oGeoTarget->getCityId()},{/if}
-					{/if}
-					
-					{if $oGeoTarget->getCityId()}
-						<a href="{router page='people'}city/{$oGeoTarget->getCityId()}/" itemprop="locality">{$oUserProfile->getProfileCity()|escape:'html'}</a>
-					{/if}
-				</td>
-			</tr>
+				{if $oGeoTarget}
+					<tr>
+						<td class="cell-label">{$aLang.profile_place}:</td>
+						<td itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+							{if $oGeoTarget->getCountryId()}
+								<a href="{router page='people'}country/{$oGeoTarget->getCountryId()}/" itemprop="country-name">{$oUserProfile->getProfileCountry()|escape:'html'}</a>{if $oGeoTarget->getCityId()},{/if}
+							{/if}
+						
+							{if $oGeoTarget->getCityId()}
+								<a href="{router page='people'}city/{$oGeoTarget->getCityId()}/" itemprop="locality">{$oUserProfile->getProfileCity()|escape:'html'}</a>
+							{/if}
+						</td>
+					</tr>
+				{/if}
+
+				{if $aUserFieldValues}
+					{foreach from=$aUserFieldValues item=oField}
+						<tr>
+							<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
+							<td>{$oField->getValue(true,true)}</td>
+						</tr>
+					{/foreach}
+				{/if}
+
+				{hook run='profile_whois_privat_item' oUserProfile=$oUserProfile}
+			</table>
 		{/if}
 
-		{if $aUserFieldValues}
-			{foreach from=$aUserFieldValues item=oField}
-				<tr>
-					<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
-					<td>{$oField->getValue(true,true)}</td>
-				</tr>
-			{/foreach}
+
+		{hook run='profile_whois_item_after_privat' oUserProfile=$oUserProfile}
+	</div>
+
+
+	<div class="span6">
+		{assign var="aUserFieldContactValues" value=$oUserProfile->getUserFieldValues(true,array('contact'))}
+		{if $aUserFieldContactValues}
+			<h4>{$aLang.profile_contacts}</h4>
+	
+			<table class="table table-profile-info">
+				{foreach from=$aUserFieldContactValues item=oField}
+					<tr>
+						<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
+						<td>{$oField->getValue(true,true)}</td>
+					</tr>
+				{/foreach}
+			</table>
 		{/if}
 
-		{hook run='profile_whois_privat_item' oUserProfile=$oUserProfile}
-	</table>
-{/if}
 
-
-{hook run='profile_whois_item_after_privat' oUserProfile=$oUserProfile}
-
-
-{assign var="aUserFieldContactValues" value=$oUserProfile->getUserFieldValues(true,array('contact'))}
-{if $aUserFieldContactValues}
-	<h4>{$aLang.profile_contacts}</h4>
+		{assign var="aUserFieldContactValues" value=$oUserProfile->getUserFieldValues(true,array('social'))}
+		{if $aUserFieldContactValues}
+			<h4>{$aLang.profile_social}</h4>
 	
-	<table class="table table-profile-info">
-		{foreach from=$aUserFieldContactValues item=oField}
-			<tr>
-				<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
-				<td>{$oField->getValue(true,true)}</td>
-			</tr>
-		{/foreach}
-	</table>
-{/if}
+			<table class="table table-profile-info">
+				{foreach from=$aUserFieldContactValues item=oField}
+					<tr>
+						<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
+						<td>{$oField->getValue(true,true)}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
 
-
-{assign var="aUserFieldContactValues" value=$oUserProfile->getUserFieldValues(true,array('social'))}
-{if $aUserFieldContactValues}
-	<h4>{$aLang.profile_social}</h4>
-	
-	<table class="table table-profile-info">
-		{foreach from=$aUserFieldContactValues item=oField}
-			<tr>
-				<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
-				<td>{$oField->getValue(true,true)}</td>
-			</tr>
-		{/foreach}
-	</table>
-{/if}
+</div>
 
 
 {hook run='profile_whois_item' oUserProfile=$oUserProfile}
