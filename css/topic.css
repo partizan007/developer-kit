@@ -8,14 +8,14 @@
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
 .topic .topic-header .topic-title i 			{ cursor: help; }
-.topic .topic-header .topic-info 				{ margin-bottom: 10px; }
+.topic .topic-header .topic-info 				{ margin-bottom: 20px; }
 .topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; text-decoration: underline; }
 .topic .topic-header .topic-info .actions,
 .topic .topic-header .topic-info .actions li	{ display: inline; float: none; }
 
 
 /* Content */
-.topic .topic-content 	{ margin-bottom: 10px; }
+.topic .topic-content 	{ margin-bottom: 20px; }
 
 
 /* Topic Link */

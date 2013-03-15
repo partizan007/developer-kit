@@ -109,13 +109,14 @@
 			<div class="row">
 				{if !$noSidebar && $sidebarPosition == 'left'}
 					{include file='sidebar.tpl'}
-				{/if} 
-		
-				<div role="main" 
-					class="{if $noSidebar}span12{else}span8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
-					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
+				{/if}
 				
-					{include file='nav_content.tpl'}
-					{include file='system_message.tpl'}
+				<div class="{if $noSidebar}span12{else}span8{/if}">
+					<div role="main" 
+						class="content{if $sidebarPosition == 'left'} content-right{/if}"
+						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 				
-					{hook run='content_begin'}
+						{include file='nav_content.tpl'}
+						{include file='system_message.tpl'}
+				
+						{hook run='content_begin'}
