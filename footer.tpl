@@ -1,6 +1,5 @@
-						{hook run='content_end'}
-					</div> <!-- /content -->
-				</div> <!-- /span -->
+					{hook run='content_end'}
+				</div> <!-- /content -->
 
 				{if !$noSidebar && $sidebarPosition != 'left'}
 					{include file='sidebar.tpl'}

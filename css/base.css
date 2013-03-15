@@ -5,13 +5,11 @@
 body { padding-top: 40px; position: relative; background-color: #f0f0f0; }
 
 #nav { margin-bottom: 40px; }
-#nav .container { background-color: #ffffff; }
+#nav .container { padding: 10px 20px; background-color: #ffffff; }
 #nav .nav { margin-bottom: 0; }
 #nav .navbar-search { margin-top: 2px; }
 
-#wrapper.container { background-color: #ffffff; }
-.content { padding: 30px 0 30px 30px; }
-.sidebar { padding: 30px 30px 30px 0; }
+#wrapper.container { padding: 20px; background-color: #ffffff; }
 
 a:focus, a:hover, a:active { outline: 0; }
 .btn:focus { outline: 0; }

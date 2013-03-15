@@ -1,5 +1,3 @@
-<div class="span4">
-	<aside class="sidebar">
-		{include file='blocks.tpl' group='right'}
-	</aside>
-</div>
+<aside class="span4 sidebar">
+	{include file='blocks.tpl' group='right'}
+</aside>
