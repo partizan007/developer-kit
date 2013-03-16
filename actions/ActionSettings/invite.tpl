@@ -16,7 +16,7 @@
 	</p>
 
 	<p><label for="invite_mail">{$aLang.settings_invite_mail}:</label>
-	<input type="text" name="invite_mail" id="invite_mail" class="span4" /><br />
+	<input type="text" name="invite_mail" id="invite_mail" class="span6" /><br />
 	<span class="help-block"><small>{$aLang.settings_invite_mail_notice}</small></span></p>
 
 	{hook run='form_settings_invite_end'}

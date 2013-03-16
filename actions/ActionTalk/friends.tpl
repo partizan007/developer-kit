@@ -5,7 +5,7 @@
 
 	<div class="block-content" id="block_talk_friends_content">
 		{if $aUsersFriend}
-			<ul class="unstyled" id="friends">
+			<ul id="friends" class="unstyled friend-list">
 				{foreach from=$aUsersFriend item=oFriend}
 					<li>
 						<label class="checkbox">

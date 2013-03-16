@@ -1,7 +1,7 @@
 <div class="profile">
 	{hook run='profile_top_begin' oUserProfile=$oUserProfile}
 	
-	<a href="{$oUserProfile->getUserWebPath()}"><img src="{$oUserProfile->getProfileAvatarPath(48)}" alt="avatar" class="avatar" itemprop="photo" /></a>
+	<a href="{$oUserProfile->getUserWebPath()}"><img src="{$oUserProfile->getProfileAvatarPath(64)}" alt="avatar" class="avatar" itemprop="photo" /></a>
 	
 	<div id="vote_area_user_{$oUserProfile->getId()}" class="vote {if $oUserProfile->getRating()>=0}vote-count-positive{else}vote-count-negative{/if} {if $oVote} voted {if $oVote->getDirection()>0}voted-up{elseif $oVote->getDirection()<0}voted-down{/if}{/if}">
 		<div class="vote-label">{$aLang.user_rating}</div>

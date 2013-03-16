@@ -68,7 +68,7 @@
 	<input type="hidden" name="topic_type" value="link" />
 	
 	{hook run='form_add_topic_link_end'}
-
+	<br />
 	
 	<button type="submit" name="submit_topic_publish" id="submit_topic_publish" class="btn btn-primary pull-right">{$aLang.topic_create_submit_publish}</button>
 	<button type="submit" name="submit_preview" onclick="jQuery('#text_preview').parent().show(); ls.topic.preview('form-topic-add','text_preview'); return false;" class="btn">{$aLang.topic_create_submit_preview}</button>

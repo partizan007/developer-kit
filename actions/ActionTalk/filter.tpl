@@ -19,8 +19,8 @@
 			
 
 			<p><label for="talk_filter_start">{$aLang.talk_filter_label_date}:</label>
-			<input type="text" id="talk_filter_start" name="start" value="{$_aRequest.start}" class="span3 date-picker" readonly="readonly" /> &mdash; 
-			<input type="text" id="talk_filter_end" name="end" value="{$_aRequest.end}" class="span3 date-picker" readonly="readonly" /></p>
+			<input type="text" id="talk_filter_start" name="start" value="{$_aRequest.start}" class="span4 date-picker" readonly="readonly" /> &mdash; 
+			<input type="text" id="talk_filter_end" name="end" value="{$_aRequest.end}" class="span4 date-picker" readonly="readonly" /></p>
 
 			<p><label for="talk_filter_favourite" class="checkbox"><input type="checkbox" {if $_aRequest.favourite}checked="checked" {/if} class="input-checkbox" name="favourite" value="1" id="talk_filter_favourite" />
 			{$aLang.talk_filter_label_favourite}</label></p>

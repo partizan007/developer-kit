@@ -42,13 +42,13 @@
 			{if count($_aRequest.answer)>=2}
 				{foreach from=$_aRequest.answer item=sAnswer key=i}
 					<li>
-						<input type="text" value="{$sAnswer}" name="answer[]" class="span4" {if $bEditDisabled}disabled{/if} />
-						{if !$bEditDisabled and $i>1}<a href="#" class="text-error" onClick="return ls.poll.removeAnswer(this);"><i class="icon-trash"></i></a>{/if}
+						<input type="text" value="{$sAnswer}" name="answer[]" class="span6" {if $bEditDisabled}disabled{/if} />
+						{if !$bEditDisabled and $i>1} <a href="#" class="icon-trash" onClick="return ls.poll.removeAnswer(this);"></a>{/if}
 					</li>
 				{/foreach}
 			{else}
-				<li><input type="text" value="" name="answer[]" class="span4" {if $bEditDisabled}disabled{/if} /></li>
-				<li><input type="text" value="" name="answer[]" class="span4" {if $bEditDisabled}disabled{/if} /></li>
+				<li><input type="text" value="" name="answer[]" class="span6" {if $bEditDisabled}disabled{/if} /></li>
+				<li><input type="text" value="" name="answer[]" class="span6" {if $bEditDisabled}disabled{/if} /></li>
 			{/if}
 		</ul>
 	
@@ -87,6 +87,7 @@
 	<input type="hidden" name="topic_type" value="question" />
 
 	{hook run='form_add_topic_question_end'}
+	<br />
 
 	<button type="submit" name="submit_topic_publish" id="submit_topic_publish" class="btn btn-primary pull-right">{$aLang.topic_create_submit_publish}</button>
 	<button type="submit" name="submit_preview" onclick="jQuery('#text_preview').parent().show(); ls.topic.preview('form-topic-add','text_preview'); return false;" class="btn">{$aLang.topic_create_submit_preview}</button>

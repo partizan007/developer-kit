@@ -32,7 +32,7 @@
 	
 
 	<p><label for="blog_type">{$aLang.blog_create_type}:</label>
-	<select name="blog_type" id="blog_type" class="span3" onChange="ls.blog.loadInfoType(jQuery(this).val());">
+	<select name="blog_type" id="blog_type" class="span4" onChange="ls.blog.loadInfoType(jQuery(this).val());">
 		<option value="open" {if $_aRequest.blog_type=='open'}selected{/if}>{$aLang.blog_create_type_open}</option>
 		<option value="close" {if $_aRequest.blog_type=='close'}selected{/if}>{$aLang.blog_create_type_close}</option>
 	</select>
@@ -45,7 +45,7 @@
 
 	
 	<p><label for="blog_limit_rating_topic">{$aLang.blog_create_rating}:</label>
-	<input type="text" id="blog_limit_rating_topic" name="blog_limit_rating_topic" value="{$_aRequest.blog_limit_rating_topic}" class="span3" />
+	<input type="text" id="blog_limit_rating_topic" name="blog_limit_rating_topic" value="{$_aRequest.blog_limit_rating_topic}" class="span4" />
 	<span class="help-block"><small>{$aLang.blog_create_rating_notice}</small></span></p>
 
 	
@@ -64,9 +64,10 @@
 		<input type="file" name="avatar" id="avatar">
 	</p>
 
-	
+
 	{hook run='form_add_blog_end'}
 	<br />
+	
 	<button type="submit" name="submit_blog_add" class="btn btn-primary">{$aLang.blog_create_submit}</button>
 </form>
 

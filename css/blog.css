@@ -6,7 +6,7 @@
 
 
 /* Header */
-.blog .blog-header 			{ position: relative; padding: 0 100px 0 68px; margin-bottom: 20px; min-height: 48px; }
+.blog .blog-header 			{ position: relative; padding: 0 100px 0 79px; margin-bottom: 20px; min-height: 64px; }
 .blog .blog-header h2 		{ margin: 0; }
 .blog .blog-header .avatar 	{ position: absolute; top: 0; left: 0; }
 

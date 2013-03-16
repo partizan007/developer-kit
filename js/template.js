@@ -167,6 +167,16 @@ jQuery(document).ready(function($){
 	ls.hook.add('ls_favourite_toggle_after',function(idTarget,objFavourite,type,params,result){
 		$('#fav_count_'+type+'_'+idTarget).text((result.iCount>0) ? result.iCount : '');
 	});
+	
+	// опрос
+	ls.hook.add('ls_pool_add_answer_after',function(removeAnchor){
+		var removeAnchor = $('<a href="#" class="icon-trash" />').attr('title', ls.lang.get('delete')).click(function(e){
+			e.preventDefault();
+			return this.removeAnswer(e.target);
+		}.bind(ls.poll));
+		$(this).find('a').remove();
+		$(this).append(removeAnchor);
+	});
 
 	/****************
 	 * TALK
