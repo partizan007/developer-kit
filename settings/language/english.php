@@ -12,6 +12,9 @@ return array(
 	'footer_menu_project_advert' => 'Ads',
 	'footer_menu_project_help' => 'Help',
 	
+	'blog_expand_info' => 'About blog',
+	'blog_fold_info' => 'Hide',
+	
 	'blogs_name_search' => 'Blogs search',
 	'people_name_search' => 'People search',
 	'tags_name_search' => 'Tags search',

@@ -53,10 +53,6 @@
 		<h2>{$oBlog->getTitle()|escape:'html'}{if $oBlog->getType()=='close'} <i title="{$aLang.blog_closed}" class="icon icon-lock"></i>{/if}</h2>
 		
 		<ul class="unstyled inline actions">
-			<li><a href="{router page='rss'}blog/{$oBlog->getUrl()}/" class="rss">RSS</a></li>
-			{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId()}
-				<li><a href="#" onclick="ls.blog.toggleJoin(this,{$oBlog->getId()}); return false;" class="link-dotted">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</a></li>
-			{/if}
 			{if $oUserCurrent and ($oUserCurrent->getId()==$oBlog->getOwnerId() or $oUserCurrent->isAdministrator() or $oBlog->getUserIsAdministrator() )}
 				<li>
 					<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="text-success">{$aLang.blog_edit}</a></li>
@@ -71,53 +67,89 @@
 	</header>
 	
 	
+	<div class="blog-mini" id="blog-mini">
+		<div class="row-fluid">
+			<div class="span6">
+				<small class="muted">
+					<span id="blog_user_count_{$oBlog->getId()}">{$iCountBlogUsers}</span> {$iCountBlogUsers|declension:$aLang.reader_declension:'russian'},
+					{$oBlog->getCountTopic()} {$oBlog->getCountTopic()|declension:$aLang.topic_declension:'russian'}
+				</small>
+			</div>
+			<div class="span6 blog-mini-header">
+				<small>
+					<a href="#" class="link-dotted" onclick="ls.blog.toggleInfo(); return false;">{$aLang.blog_expand_info}</a>
+					<a href="{router page='rss'}blog/{$oBlog->getUrl()}/">RSS</a>
+				</small>
+				{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId()}
+					<button type="submit"  class="btn btn-small" id="button-blog-join-first-{$oBlog->getId()}" data-button-additional="button-blog-join-second-{$oBlog->getId()}" data-only-text="1" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</button>
+				{/if}
+			</div>
+		</div>
+	</div>
+	
+	
 	<div class="blog-more-content" id="blog-more-content" style="display: none;">
 		<div class="blog-content">
 			<p class="blog-description">{$oBlog->getDescription()}</p>
 		</div>
 		
-		
 		<footer class="blog-footer">
 			{hook run='blog_info_begin' oBlog=$oBlog}
-			<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong>							
-			<a href="{$oUserOwner->getUserWebPath()}" class="user"><i class="icon-user"></i>{$oUserOwner->getLogin()}</a>
-			{if $aBlogAdministrators}			
-				{foreach from=$aBlogAdministrators item=oBlogUser}
-					{assign var="oUser" value=$oBlogUser->getUser()}  									
-					<a href="{$oUser->getUserWebPath()}" class="user"><i class="icon-user"></i>{$oUser->getLogin()}</a>
-				{/foreach}	
-			{/if}<br /><br />
+			
+			<div class="row-fluid">
+				<div class="span6">
+					<dl class="dl-horizontal blog-info">
+						<dt>{$aLang.infobox_blog_create}</dt>
+						<dd>{date_format date=$oBlog->getDateAdd() format="j F Y"}</dd>
+						
+						<dt>{$aLang.infobox_blog_topics}</dt>
+						<dd>{$oBlog->getCountTopic()}</dd>
+						
+						<dt><a href="{$oBlog->getUrlFull()}users/">{$aLang.infobox_blog_users}</a></dt>
+						<dd>{$iCountBlogUsers}</dd>
+						
+						<dt>{$aLang.infobox_blog_rating}</dt>
+						<dd class="rating">{$oBlog->getRating()}</dd>
+					</dl>
+				</div>
+			
+				<div class="span6">
+					<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong><br />							
+					<span class="user-avatar">
+						<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>		
+						<a href="{$oUserOwner->getUserWebPath()}">{$oUserOwner->getLogin()}</a>
+					</span>
+					{if $aBlogAdministrators}			
+						{foreach from=$aBlogAdministrators item=oBlogUser}
+							{assign var="oUser" value=$oBlogUser->getUser()}  									
+							<span class="user-avatar">
+								<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a>		
+								<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+							</span>
+						{/foreach}	
+					{/if}<br /><br />
 
 			
-			<strong>{$aLang.blog_user_moderators} ({$iCountBlogModerators}):</strong>
-			{if $aBlogModerators}						
-				{foreach from=$aBlogModerators item=oBlogUser}  
-					{assign var="oUser" value=$oBlogUser->getUser()}									
-					<a href="{$oUser->getUserWebPath()}" class="user"><i class="icon-user"></i>{$oUser->getLogin()}</a>
-				{/foreach}							
-			{else}
-				{$aLang.blog_user_moderators_empty}
-			{/if}<br /><br />
+					<strong>{$aLang.blog_user_moderators} ({$iCountBlogModerators}):</strong><br />
+					{if $aBlogModerators}						
+						{foreach from=$aBlogModerators item=oBlogUser}  
+							{assign var="oUser" value=$oBlogUser->getUser()}									
+							<span class="user-avatar">
+								<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a>		
+								<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+							</span>
+						{/foreach}							
+					{else}
+						<span class="muted">{$aLang.blog_user_moderators_empty}</span>
+					{/if}
+				</div>
+			</div>
 			
 			
-			<a href="{$oBlog->getUrlFull()}users/"><strong>{$aLang.blog_user_readers} ({$iCountBlogUsers}):</strong></a>
-			{if $aBlogUsers}
-				{foreach from=$aBlogUsers item=oBlogUser}
-					{assign var="oUser" value=$oBlogUser->getUser()}
-					<a href="{$oUser->getUserWebPath()}" class="user"><i class="icon-user"></i>{$oUser->getLogin()}</a>
-				{/foreach}
-				
-				{if count($aBlogUsers) < $iCountBlogUsers}
-					<br /><a href="{$oBlog->getUrlFull()}users/">{$aLang.blog_user_readers_all}</a>
-				{/if}
-			{else}
-				{$aLang.blog_user_readers_empty}
-			{/if}
 			{hook run='blog_info_end' oBlog=$oBlog}
 		</footer>
 	</div>
 	
-	<a href="#" class="blog-more" id="blog-more" onclick="return ls.blog.toggleInfo()">{$aLang.blog_expand_info}</a>
 </div>
 
 {hook run='blog_info' oBlog=$oBlog}

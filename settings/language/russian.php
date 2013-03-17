@@ -12,6 +12,9 @@ return array(
 	'footer_menu_project_contact' => 'Контакты',
 	'footer_menu_project_advert' => 'Реклама',
 	'footer_menu_project_help' => 'Помощь',
+	
+	'blog_expand_info' => 'О блоге',
+	'blog_fold_info' => 'Свернуть',
 
 	'blogs_name_search' => 'Поиск по названию',
 	'people_name_search' => 'Поиск по логину',

@@ -55,7 +55,7 @@
 			</div>
 			
 			{if count($aStreamSubscribedUsers)}
-				<ul id="stream_block_users_list" class="unstyled max-height-200">
+				<ul id="stream_block_users_list" class="unstyled user-list-mini max-height-200">
 					{foreach from=$aStreamSubscribedUsers item=oUser}
 						{assign var=iUserId value=$oUser->getId()}
 						
@@ -67,6 +67,7 @@
 											id="strm_u_{$iUserId}"
 											checked="checked"
 											onClick="if (jQuery(this).prop('checked')) { ls.stream.subscribe({$iUserId}) } else { ls.stream.unsubscribe({$iUserId}) } " />
+									<a href="{$oUser->getUserWebPath()}" title="{$oUser->getLogin()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
 									<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 								</label>
 							</li>
@@ -101,6 +102,7 @@
 										id="strm_u_{$iUserId}"
 										{if isset($aStreamSubscribedUsers.$iUserId)} checked="checked"{/if}
 										onClick="if (jQuery(this).prop('checked')) { ls.stream.subscribe({$iUserId}) } else { ls.stream.unsubscribe({$iUserId}) } " />
+								<a href="{$oUser->getUserWebPath()}" title="{$oUser->getLogin()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
 								<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 							</label>
 						</li>

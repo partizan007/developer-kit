@@ -14,17 +14,29 @@
 .blog .blog-header .vote-label	{ text-align: center; font-size: 12px; color: #aaaaaa; }
 
 .blog .blog-header .actions 	{ font-size: 12px; }
+.blog .blog-header .actions li:first-child 	{ padding-left: 0px; }
+
+
+/* Blog Mini */
+.blog-mini 							{ padding: 10px 20px; background-color: #f5f5f5; line-height: 26px; }
+.blog-mini .span6 					{ min-height: 26px; }
+.blog-mini .blog-mini-header 		{ text-align: right; }
+.blog-mini .blog-mini-header a 		{ margin-left: 10px; }
+.blog-mini .blog-mini-header .btn 	{ margin-left: 10px; }
 
 
 /* Content */
-.blog .blog-more-content 	{ margin-bottom: 20px; }
-.blog .blog-content 		{ padding: 20px 0 10px; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee; }
+.blog .blog-more-content 	{ padding: 20px; background-color: #f5f5f5; border-top: 1px solid #eeeeee; }
+.blog .blog-content 		{ padding: 0 0 10px; border-bottom: 1px solid #eeeeee; }
 
 
 /* Footer */
-.blog .blog-footer 	{ padding: 20px 0; border-bottom: 1px solid #eeeeee; }
+.blog .blog-footer 	{ padding: 20px 0; font-size: 12px; }
 
+.blog-info 				{ margin: 0; }
+.blog-info dt 			{ text-align: left; font-weight: normal; border-bottom: 1px solid #eeeeee; }
+.blog-info dd 			{ margin-left: 160px; border-bottom: 1px solid #f5f5f5; }
+.blog-info dd.rating 	{ color: #468847; }
 
-/* More Button */
-.blog-more 			{ display: block; padding: 12px 0; text-align: center; text-decoration: none; color: #999999; background: #eeeeee; }
-.blog-more:hover 	{ background: #e6e6e6; }
+.user-avatar a 		{ text-decoration: underline; }
+.user-avatar img 	{ margin-right: 1px; width: 16px; height: 16px; vertical-align: text-bottom; }

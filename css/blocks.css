@@ -15,6 +15,11 @@
 
 .block .max-height-200 	{ overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
 
+.user-list-mini li > input,
+.stream-settings-friends li > input { float: left; margin-right: 7px; }
+
+.user-list-mini li img,
+.stream-settings-friends li img { margin-right: 2px; position: relative; width: 16px; height: 16px; }
 
 /* Block Type - Stream */
 .block .block-update 		{ position: absolute; top: 3px; right: 0; width: 16px; height: 16px; background: url(../images/update.gif) no-repeat; cursor: pointer; opacity: .3; }

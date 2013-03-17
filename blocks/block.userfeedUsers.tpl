@@ -22,12 +22,12 @@
 			
 			<div class="stream-settings-userlist">
 				<div class="input-append">
-					<input type="text" id="userfeed_users_complete" autocomplete="off" class="span6 autocomplete-users input-text input-width-150" />
+					<input type="text" id="userfeed_users_complete" autocomplete="off" class="span6 autocomplete-users input-text" />
 					<a href="javascript:ls.userfeed.appendUser()" class="btn">{$aLang.userfeed_block_users_append}</a>
 				</div>
 				
 				{if count($aUserfeedSubscribedUsers)}
-					<ul id="userfeed_block_users_list" class="unstyled max-height-200">
+					<ul id="userfeed_block_users_list" class="unstyled user-list-mini max-height-200">
 						{foreach from=$aUserfeedSubscribedUsers item=oUser}
 							{assign var=iUserId value=$oUser->getId()}
 							
@@ -39,6 +39,7 @@
 												id="usf_u_{$iUserId}"
 												checked="checked"
 												onClick="if (jQuery(this).prop('checked')) { ls.userfeed.subscribe('users',{$iUserId}) } else { ls.userfeed.unsubscribe('users',{$iUserId}) } " />
+										<a href="{$oUser->getUserWebPath()}" title="{$oUser->getLogin()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
 										<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 									</label>
 								</li>
@@ -73,6 +74,7 @@
 										id="usf_u_{$iUserId}"
 										{if isset($aUserfeedSubscribedUsers.$iUserId)} checked="checked"{/if}
 										onClick="if (jQuery(this).prop('checked')) { ls.userfeed.subscribe('users',{$iUserId}) } else { ls.userfeed.unsubscribe('users',{$iUserId}) } " />
+								<a href="{$oUser->getUserWebPath()}" title="{$oUser->getLogin()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
 								<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 							</label>
 						</li>

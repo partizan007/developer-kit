@@ -25,7 +25,9 @@
 	margin-bottom: 10px;
 	
 	color: #ffffff; 
-	background: #000000; 
+	background: #000000;
+
+	opacity: 0.9; filter: alpha(opacity=90); 
 	
 	cursor: pointer;
 }
@@ -33,6 +35,5 @@
 #notifier .n-box h3 { margin-top: 0; color: #ffffff; }
 #notifier .n-box p 	{ margin-bottom: 0; font-size: 12px; }
 
-#notifier .n-box.n-notice 		{ background: #fff1a8; color: #333333; }
-#notifier .n-box.n-notice h3 	{ color: #333333; }
-#notifier .n-box.n-error 		{ background: #000000; color: #ffffff; opacity: 0.8; filter: alpha(opacity=80); }
+#notifier .n-box.n-notice 		{ background: #063573; }
+#notifier .n-box.n-error 		{ background: #850505; }

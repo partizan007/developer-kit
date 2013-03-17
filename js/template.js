@@ -168,6 +168,13 @@ jQuery(document).ready(function($){
 		$('#fav_count_'+type+'_'+idTarget).text((result.iCount>0) ? result.iCount : '');
 	});
 	
+	// лента активности
+	ls.hook.add('ls_stream_append_user_after',function(length,data){
+		if (length==0) {
+			$('#strm_u_'+data.uid).parent().find('a').before('<a href="'+data.user_web_path+'"><img src="'+data.user_avatar_48+'" alt="avatar" class="avatar" /></a> ');
+		}
+	});
+	
 	// опрос
 	ls.hook.add('ls_pool_add_answer_after',function(removeAnchor){
 		var removeAnchor = $('<a href="#" class="icon-trash" />').attr('title', ls.lang.get('delete')).click(function(e){
