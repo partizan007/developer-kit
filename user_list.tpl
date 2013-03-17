@@ -28,14 +28,22 @@
 				{assign var="oUserNote" value=$oUserList->getUserNote()}
 				<tr>
 					<td class="cell-name">
-						<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
-						<p class="username word-wrap"><a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
-							{if $oUserNote}
-								<i class="icon-comment js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
-							{/if}
-						</p>
+						<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(48)}" alt="avatar" class="avatar" /></a>
+						<div class="name {if !$oUserList->getProfileName()}no-realname{/if}">
+							<p class="username">
+								<a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
+								{if $oUserNote}
+									<i class="icon-comment js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
+								{/if}
+							</p>
+							{if $oUserList->getProfileName()}<p class="realname">{$oUserList->getProfileName()}</p>{/if}
+						</div>
 					</td>
-					<td class="cell-date">{if $oSession}{date_format date=$oSession->getDateLast() format="d.m.y, H:i"}{/if}</td>
+					<td class="cell-date">
+						{if $oSession}
+							{date_format date=$oSession->getDateLast() hours_back="12" minutes_back="60" now="60" day="day H:i" format="d.m.y, H:i"}
+						{/if}
+					</td>
 					<td class="cell-date">{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</td>
 					<td class="cell-skill">{$oUserList->getSkill()}</td>
 					<td class="cell-rating{if $oUserList->getRating() < 0} negative{/if}"><strong>{$oUserList->getRating()}</strong></td>
