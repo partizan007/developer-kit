@@ -81,7 +81,7 @@
 					<a href="{router page='rss'}blog/{$oBlog->getUrl()}/">RSS</a>
 				</small>
 				{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId()}
-					<button type="submit"  class="btn btn-small" id="button-blog-join-first-{$oBlog->getId()}" data-button-additional="button-blog-join-second-{$oBlog->getId()}" data-only-text="1" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</button>
+					<button type="submit" class="btn btn-small {if $oBlog->getUserIsJoin()}active{/if}" id="button-blog-join-first-{$oBlog->getId()}" data-button-additional="button-blog-join-second-{$oBlog->getId()}" data-only-text="1" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</button>
 				{/if}
 			</div>
 		</div>
