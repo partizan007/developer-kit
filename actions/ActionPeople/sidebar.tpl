@@ -1,5 +1,8 @@
 {hook run='people_sidebar_begin'}
 
+{insert name="block" block='tagsCity'}
+{insert name="block" block='tagsCountry'}
+
 <section class="block">
 
 	<header class="block-header">
@@ -23,8 +26,5 @@
 	</div>
 	
 </section>
-
-{insert name="block" block='tagsCountry'}
-{insert name="block" block='tagsCity'}
 
 {hook run='people_sidebar_end'}
