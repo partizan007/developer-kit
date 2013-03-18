@@ -11,6 +11,14 @@ body { position: relative; background-color: #f0f0f0; }
 .wrapper-inner 	{ background-color: #ffffff; }
 
 
+/* Шапка сайта
+---------------------------------------------------- */
+#header { position: relative; }
+
+.navbar .nav > li > a img.avatar 			{ width: 20px; height: 20px; vertical-align: top; }
+.navbar .nav > li > a.new-messages:hover i 	{ opacity: .8; }
+
+
 /* Навигация
 ---------------------------------------------------- */
 #nav .nav 			{ margin-bottom: 0; }

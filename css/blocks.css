@@ -21,6 +21,15 @@
 .user-list-mini li img,
 .stream-settings-friends li img { margin-right: 2px; position: relative; width: 16px; height: 16px; }
 
+
+/* Block Nav-Pills */
+.block .nav-pills 			{ margin-bottom: 10px; }
+.block .nav-pills > li > a 	{ padding: 4px 8px; font-size: 12px; border-radius: 3px; }
+
+.modal .nav-pills 			{ margin-bottom: 10px; }
+.modal .nav-pills > li > a 	{ padding: 4px 8px; font-size: 12px; border-radius: 3px; }
+
+
 /* Block Type - Stream */
 .block .block-update 		{ position: absolute; top: 3px; right: 0; width: 16px; height: 16px; background: url(../images/update.gif) no-repeat; cursor: pointer; opacity: .3; }
 .block .block-update:hover 	{ opacity: .5; }
