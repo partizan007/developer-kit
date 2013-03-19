@@ -1,4 +1,5 @@
 LiveStreet Template
+
 Copyright © 2013 Kulesh Uladzimir
 
 Contact e-mail: vl-team@yandex.ru
