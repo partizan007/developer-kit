@@ -3,8 +3,7 @@
 		<thead>
 			<tr>
 				<th class="cell-name"><a href="{$sUsersRootPage}?order=user_login&order_way={if $sUsersOrder=='user_login'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_login'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user}</span></a></th>
-				<th>{$aLang.user_date_last}</th>
-				<th><a href="{$sUsersRootPage}?order=user_date_register&order_way={if $sUsersOrder=='user_date_register'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_date_register'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_date_registration}</span></a></th>
+				<th class="cell-date">{$aLang.user_date_last}</th>
 				<th class="cell-skill"><a href="{$sUsersRootPage}?order=user_skill&order_way={if $sUsersOrder=='user_skill'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_skill'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_skill}</span></a></th>
 				<th class="cell-rating"><a href="{$sUsersRootPage}?order=user_rating&order_way={if $sUsersOrder=='user_rating'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_rating'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_rating}</span></a></th>
 			</tr>
@@ -14,7 +13,6 @@
 			<tr>
 				<th class="cell-name">{$aLang.user}</th>
 				<th class="cell-date">{$aLang.user_date_last}</th>
-				<th class="cell-date">{$aLang.user_date_registration}</th>
 				<th class="cell-skill">{$aLang.user_skill}</th>
 				<th class="cell-rating">{$aLang.user_rating}</th>
 			</tr>
@@ -44,7 +42,6 @@
 							{date_format date=$oSession->getDateLast() hours_back="12" minutes_back="60" now="60" day="day H:i" format="d.m.y, H:i"}
 						{/if}
 					</td>
-					<td class="cell-date">{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</td>
 					<td class="cell-skill">{$oUserList->getSkill()}</td>
 					<td class="cell-rating{if $oUserList->getRating() < 0} negative{/if}"><strong>{$oUserList->getRating()}</strong></td>
 				</tr>
