@@ -60,7 +60,7 @@
 		<h2>{$oTopic->getPhotosetCount()} {$oTopic->getPhotosetCount()|declension:$aLang.topic_photoset_count_images}</h2>
 		<a name="photoset"></a>
 		
-		<ul id="topic-photo-images" class="unstyled inline">
+		<ul id="topic-photo-images" class="unstyled inline clearfix">
 			{assign var=aPhotos value=$oTopic->getPhotosetPhotos(0, $oConfig->get('module.topic.photoset.per_page'))}
 			{if count($aPhotos)}                                
 				{foreach from=$aPhotos item=oPhoto}
@@ -74,7 +74,7 @@
 		</ul>
 		
 		{if count($aPhotos)<$oTopic->getPhotosetCount()}
-			<a href="javascript:ls.photoset.getMore({$oTopic->getId()})" id="topic-photo-more" class="topic-photo-more">{$aLang.topic_photoset_show_more} &darr;</a>
+			<a href="javascript:ls.photoset.getMore({$oTopic->getId()})" id="topic-photo-more" class="btn btn-large btn-block topic-photo-more">{$aLang.topic_photoset_show_more} &darr;</a>
 		{/if}
 	</div>
 {/if}
