@@ -31,6 +31,11 @@
 @media (max-width: 767px) {
   body { padding-left: 0; padding-right: 0; }
   .toolbar { display: none; }
+  
+  /* Модальные окна */
+  .modal.modal-write,
+  .modal.modal-upload-photo,
+  .modal.modal-upload-avatar { width: auto; margin-left: 0; }
 }
 
 

@@ -85,7 +85,7 @@
 							<a href="#" id="avatar-remove" class="link-dotted" onclick="return ls.user.removeAvatar();" style="{if !$oUserCurrent->getProfileAvatar()}display:none;{/if}">{$aLang.settings_profile_avatar_delete}</a>
 						</div>
 		
-						<div id="avatar-resize" class="modal">
+						<div id="avatar-resize" class="modal modal-upload-avatar">
 							<header class="modal-header">
 								<h3>{$aLang.uploadimg}</h3>
 							</header>

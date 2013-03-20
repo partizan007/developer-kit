@@ -21,7 +21,7 @@
 			<a href="#" id="foto-remove" class="link-dotted" onclick="return ls.user.removeFoto();" style="{if !$oUserCurrent->getProfileFoto()}display:none;{/if}">{$aLang.settings_profile_foto_delete}</a>
 		</p>
 
-		<div class="modal" id="foto-resize">
+		<div class="modal modal-upload-photo" id="foto-resize">
 			<header class="modal-header">
 				<h3>{$aLang.uploadimg}</h3>
 			</header>
