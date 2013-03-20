@@ -41,7 +41,7 @@
 						</a>
 						
 						<p>
-							<a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a>
+							<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a>
 
 							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="icon-question-sign"></a>
 
@@ -50,6 +50,11 @@
 							{/if}
 
 						</p>
+						
+						<span class="user-avatar">
+							<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>
+							<a href="{$oUserOwner->getUserWebPath()}">{$oUserOwner->getLogin()}</a>
+						</span>
 					</td>
 
 					{if $oUserCurrent}

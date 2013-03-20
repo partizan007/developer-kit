@@ -17,10 +17,12 @@
 
 
 /* Table Blogs */
-.table.table-blogs 						{ margin-bottom: 40px; }
+.table.table-blogs 								{ margin-bottom: 40px; }
 
-.table.table-blogs .cell-name .avatar 	{ float: left; margin-right: 10px; clear: right; width: 36px; height: 36px; }
-.table.table-blogs .cell-name p			{ overflow: hidden; }
+.table.table-blogs .cell-name .avatar 			{ float: left; margin-right: 15px; }
+.table.table-blogs .cell-name p					{ overflow: hidden; margin-bottom: 5px; }
+.table.table-blogs .cell-name p .blog-name 		{ font-size: 16px; text-decoration: underline; }
+.table.table-blogs .cell-name .user-avatar a 	{ color: #333333; }
 
 .table.table-blogs .cell-join 			{ width: 130px; text-align: center; vertical-align: middle; }
 .table.table-blogs .cell-readers,
@@ -34,11 +36,13 @@
 /* Table Users */
 .table.table-users 								{ margin-bottom: 40px; }
 
-.table.table-users .cell-name .avatar 			{ float: left; }
-.table.table-users .cell-name .no-realname 		{ margin-top: 12px; }
-.table.table-users .cell-name .username 		{ margin: 3px 0 3px 58px; width: 120px; position: relative; }
+.table.table-users .cell-name .avatar 			{ float: left; margin-right: 15px; }
+.table.table-users .cell-name .name 			{ float: left; width: 120px; }
+
+.table.table-users .cell-name .name.no-realname { margin-top: 10px; }
+.table.table-users .cell-name .username 		{ margin: 3px 0 3px 0; }
 .table.table-users .cell-name .username a 		{ text-decoration: underline; }
-.table.table-users .cell-name .realname 		{ margin: 0 0 0 58px; width: 120px; position: relative; font-size: 12px; color: #999999; }
+.table.table-users .cell-name .realname 		{ margin: 0; font-size: 12px; color: #999999; }
 
 .table.table-users .cell-date 					{ width: 130px; }
 
