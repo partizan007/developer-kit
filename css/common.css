@@ -38,8 +38,12 @@
 ---------------------------------------------------- */
 .toolbar 					{ float: right; position: fixed; top: 310px; right: 10px; z-index: 100; }
 .toolbar section 			{ width: 34px; line-height: 16px; background-color: #ffffff; border: 1px solid #eeeeee; margin-bottom: 10px; }
+
+.toolbar section.toolbar-topic .toolbar-topic-prev:hover 		{ background-color: #f5f5f5; }
+.toolbar section.toolbar-topic .toolbar-topic-next:hover 		{ background-color: #f5f5f5; }
+.toolbar section.toolbar-admin:hover 							{ background-color: #f5f5f5; }
+
 .toolbar section a			{ display: block; padding: 10px; }
-.toolbar section a:hover 	{ background-color: #f5f5f5; }
 .toolbar section i			{ display: block; }
 
 
@@ -55,7 +59,7 @@
 
 /* Scroll up */
 .toolbar .toolbar-scrollup 			{ display: none; background-color: #111111; border: 1px solid #111111; }
-.toolbar .toolbar-scrollup a:hover	{ background-color: #222222; }
+.toolbar .toolbar-scrollup:hover	{ background-color: #222222; }
 .toolbar .toolbar-scrollup i		{ opacity: 1; }
 
 

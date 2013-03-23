@@ -2,7 +2,7 @@
 	ТОПИК
 -------------------------------------------- */
 
-.topic 				{ overflow: hidden; zoom: 1; margin-bottom: 40px; }
+.topic { overflow: hidden; zoom: 1; margin-bottom: 40px; }
 
 
 /* Header */
@@ -12,8 +12,7 @@
 .topic .topic-header .topic-title i 			{ cursor: help; }
 .topic .topic-header .topic-info 				{ margin-bottom: 20px; }
 .topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; text-decoration: underline; }
-.topic .topic-header .topic-info .actions,
-.topic .topic-header .topic-info .actions li	{ display: inline; float: none; }
+.topic .topic-header .topic-info .actions 		{ display: inline; }
 
 
 /* Content */
