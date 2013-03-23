@@ -31,6 +31,8 @@
 ------------------------- */
 @media (max-width: 767px) {
   body { padding-left: 0; padding-right: 0; }
+  .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top { margin-left: 0; margin-right: 0; }
+  .navbar-inner { padding-left: 0; padding-right: 0; }
   .toolbar { display: none; }
   
   /* Модальные окна */
