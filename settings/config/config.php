@@ -3,7 +3,7 @@
 $config = array();
 
 /* Theme */
-$config['view']['theme'] = 'developer-kit';
+$config['view']['theme'] = 'default';
 
 
 
