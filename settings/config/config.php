@@ -3,7 +3,7 @@
 $config = array();
 
 /* Theme */
-$config['view']['theme'] = 'likesynio';
+$config['view']['theme'] = 'developer-kit';
 
 
 
