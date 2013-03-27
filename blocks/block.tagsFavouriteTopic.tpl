@@ -12,7 +12,6 @@
 			{hook run='block_favourite_topic_tags_nav_item'}
 		</ul>
 		
-		
 		<div class="js-block-favourite-topic-tags-content" data-type="all">
 			{if $aFavouriteTopicTags}
 				<ul class="unstyled inline tag-cloud word-wrap">

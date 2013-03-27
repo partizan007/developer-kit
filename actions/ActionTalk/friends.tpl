@@ -16,9 +16,11 @@
 				{/foreach}
 			</ul>
 			
-			<footer>
-				<a href="#" id="friend_check_all" class="link-dotted">{$aLang.block_friends_check}</a> | 
-				<a href="#" id="friend_uncheck_all" class="link-dotted">{$aLang.block_friends_uncheck}</a>
+			<footer class="muted">
+				<small>
+					<a href="#" id="friend_check_all" class="link-dotted muted">{$aLang.block_friends_check}</a> | 
+					<a href="#" id="friend_uncheck_all" class="link-dotted muted">{$aLang.block_friends_uncheck}</a>
+				</small>
 			</footer>
 		{else}
 			<div class="notice-empty">{$aLang.block_friends_empty}</div>

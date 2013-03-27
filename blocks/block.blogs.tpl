@@ -18,7 +18,9 @@
 		</div>
 
 		<footer>
-			<a href="{router page='blogs'}">{$aLang.block_blogs_all}</a>
+			<small>
+				<a href="{router page='blogs'}" class="muted">{$aLang.block_blogs_all}</a>
+			</small>
 		</footer>
 	</div>
 </div>

@@ -16,6 +16,8 @@
 	{/foreach}
 </ul>
 
-<footer>
-	<a href="{router page='index'}new/">{$aLang.block_stream_topics_all}</a> | <a href="{router page='rss'}new/">RSS</a>
+<footer class="muted">
+	<small>
+		<a href="{router page='index'}new/" class="muted">{$aLang.block_stream_topics_all}</a> | <a href="{router page='rss'}new/" class="muted">RSS</a>
+	</small>
 </footer>
