@@ -37,7 +37,7 @@
 				<tr>
 					<td class="cell-name">
 						<a href="{$oBlog->getUrlFull()}">
-							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" alt="avatar" class="avatar" />
+							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" alt="avatar" class="avatar visible-desktop" />
 						</a>
 						
 						<p>
