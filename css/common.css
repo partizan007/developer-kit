@@ -47,7 +47,6 @@
 .toolbar section a			{ display: block; padding: 10px; }
 .toolbar section i			{ display: block; }
 
-
 /* Update comments button */
 .toolbar .toolbar-update .update-comments 			{ padding: 9px; }
 .toolbar .toolbar-update .update-comments i 		{ display: block; width: 16px; height: 16px; background: url(../images/update.gif) no-repeat; opacity: .3; }
@@ -57,6 +56,9 @@
 
 /* Topic navigation */
 .toolbar .toolbar-topic a.toolbar-topic-prev { border-bottom: 1px solid #eeeeee; }
+
+/* Scroll Up */
+.toolbar .toolbar-scrollup { display: none; }
 
 
 /* Список пользователей 
