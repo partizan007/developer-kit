@@ -47,11 +47,11 @@ body { position: relative; }
 
 /* Ссылки
 ---------------------------------------------------- */
-a.link-dashed 		{ border-bottom: 1px dashed #0088cc; }
-a.link-dashed:hover { color: #005580; border-color: #005580; text-decoration: none; }
+a.link-dashed 		{ border-bottom: 1px dashed; }
+a.link-dashed:hover { text-decoration: none; }
 
-a.link-dotted 		{ border-bottom: 1px dotted #0088cc; }
-a.link-dotted:hover { color: #005580; border-color: #005580; text-decoration: none; }
+a.link-dotted 		{ border-bottom: 1px dotted; }
+a.link-dotted:hover { text-decoration: none; }
 
 
 /* Заголовки
