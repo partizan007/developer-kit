@@ -7,7 +7,7 @@ form .icon-question-sign { cursor: help; }
 .captcha-image { vertical-align: top; }
 
 .form-profile 					{ position: relative; }
-.form-profile .avatar-change 	{ font-size: 11px; }
+.form-profile .form-actions 	{ margin-top: 0; margin-bottom: 0; }
 
 .mceEditor { display: block; margin-bottom: 20px; }
 

@@ -115,7 +115,6 @@
 .ls-user:before 	{ content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icons.png) -168px 0 no-repeat; vertical-align: middle; opacity: .5; }
 .user.inactive 		{ color: #999999; }
 
-.wrapper-content 						{ background-color: #f5f5f5; padding: 20px; }
 .wrapper-content.wrapper-content-dark 	{ background-color: #f0f0f0; }
 
 a.blogs-search,

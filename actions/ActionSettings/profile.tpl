@@ -14,7 +14,7 @@
 {hook run='settings_profile_begin'}
 
 <form method="post" enctype="multipart/form-data" class="form-profile">
-	<div class="wrapper-content">	
+	<div class="wrapper-content form-actions">	
 
 		{hook run='form_settings_profile_begin'}
 
@@ -81,8 +81,10 @@
 						<img src="{$oUserCurrent->getProfileAvatarPath(100)}" id="avatar-img" />
 
 						<div>
-							<a href="#" id="avatar-upload" class="link-dotted">{if $oUserCurrent->getProfileAvatar()}{$aLang.settings_profile_avatar_change}{else}{$aLang.settings_profile_avatar_upload}{/if}</a><br />
-							<a href="#" id="avatar-remove" class="link-dotted" onclick="return ls.user.removeAvatar();" style="{if !$oUserCurrent->getProfileAvatar()}display:none;{/if}">{$aLang.settings_profile_avatar_delete}</a>
+							<small>
+								<a href="#" id="avatar-upload" class="link-dotted">{if $oUserCurrent->getProfileAvatar()}{$aLang.settings_profile_avatar_change}{else}{$aLang.settings_profile_avatar_upload}{/if}</a><br />
+								<a href="#" id="avatar-remove" class="link-dotted" onclick="return ls.user.removeAvatar();" style="{if !$oUserCurrent->getProfileAvatar()}display:none;{/if}">{$aLang.settings_profile_avatar_delete}</a>
+							</small>
 						</div>
 		
 						<div id="avatar-resize" class="modal modal-upload-avatar">
@@ -150,7 +152,7 @@
 	</div>
 	
 	
-	<div class="wrapper-content wrapper-content-dark">
+	<div class="wrapper-content form-actions wrapper-content-dark">
 		<fieldset>
 			<legend>{$aLang.settings_profile_section_contacts}</legend>
 
@@ -175,7 +177,7 @@
 	</div>
 	
 	
-	<div class="wrapper-content">
+	<div class="wrapper-content form-actions">
 		<script type="text/javascript">
 			jQuery(function($){
 				$('#avatar-upload').file({ name:'avatar' }).choose(function(e, input) {

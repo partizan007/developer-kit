@@ -15,7 +15,7 @@
 </script>
 
 
-<form method="post" enctype="multipart/form-data" class="wrapper-content">
+<form method="post" enctype="multipart/form-data" class="wrapper-content form-actions">
 	{hook run='form_add_blog_begin'}
 	
 	<input type="hidden" name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}" />

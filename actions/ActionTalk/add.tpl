@@ -12,7 +12,7 @@
 
 {include file='editor.tpl' sImgToLoad='talk_text' sSettingsTinymce='ls.settings.getTinymceComment()' sSettingsMarkitup='ls.settings.getMarkitupComment()'}
 
-<form action="" method="POST" enctype="multipart/form-data" class="wrapper-content">
+<form action="" method="POST" enctype="multipart/form-data" class="wrapper-content form-actions">
 	{hook run='form_add_talk_begin'}
 	
 	<input type="hidden" name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}" />
