@@ -5,15 +5,10 @@
 .table th 					{ font-size: 12px; }
 
 .table thead a 				{ text-decoration: none; }
-.table thead a span 		{ border-bottom: 1px dotted #007fff; }
+.table thead a span 		{ border-bottom: 1px dotted; }
 
 .table a.asc:after			{ content: " ↑"; }
 .table a.desc:after			{ content: " ↓"; }
-
-
-/* Table Plugins */
-.table tr.active td,
-.table tr.active:hover td 	{ background: #dfffdf; }
 
 
 /* Table Blogs */

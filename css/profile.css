@@ -16,5 +16,5 @@
 .profile .user-login.no-user-name 	{ position: relative; }
 .profile .user-name 				{ color: #999999; }
 
-.profile-info-about 	{ padding: 15px 20px 20px; background: #ffffcc; margin-bottom: 40px; }
+.profile-info-about 	{ padding: 10px 20px 20px; background: #ffffcc; margin-bottom: 40px; }
 .profile-info-about h3 	{ margin-top: 0; }

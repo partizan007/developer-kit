@@ -18,7 +18,7 @@
 		
 		<p class="upload-photo">
 			<a href="#" id="foto-upload" class="link-dotted">{if $oUserCurrent->getProfileFoto()}{$aLang.settings_profile_photo_change}{else}{$aLang.settings_profile_photo_upload}{/if}</a>&nbsp;&nbsp;&nbsp;
-			<a href="#" id="foto-remove" class="link-dotted" onclick="return ls.user.removeFoto();" style="{if !$oUserCurrent->getProfileFoto()}display:none;{/if}">{$aLang.settings_profile_foto_delete}</a>
+			<a href="#" id="foto-remove" class="link-dotted text-error" onclick="return ls.user.removeFoto();" style="{if !$oUserCurrent->getProfileFoto()}display:none;{/if}">{$aLang.settings_profile_foto_delete}</a>
 		</p>
 
 		<div class="modal modal-upload-photo" id="foto-resize">
@@ -98,8 +98,8 @@
 			</p>
 			
 			<ul class="unstyled inline actions">
-				<li><a href="#" onclick="return ls.usernote.showForm();" class="link-dotted">{$aLang.user_note_form_edit}</a></li>
-				<li><a href="#" onclick="return ls.usernote.remove({$oUserProfile->getId()});" class="link-dotted">{$aLang.user_note_form_delete}</a></li>
+				<li><a href="#" onclick="return ls.usernote.showForm();" class="link-dotted text-success">{$aLang.user_note_form_edit}</a></li>
+				<li><a href="#" onclick="return ls.usernote.remove({$oUserProfile->getId()});" class="link-dotted text-error">{$aLang.user_note_form_delete}</a></li>
 			</ul>
 		</div>
 		
