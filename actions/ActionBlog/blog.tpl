@@ -42,7 +42,7 @@
 <div class="blog">
 	<header class="blog-header">
 		<div id="vote_area_blog_{$oBlog->getId()}" class="vote {if $oBlog->getRating() > 0}vote-count-positive{elseif $oBlog->getRating() < 0}vote-count-negative{/if} {if $oVote} voted {if $oVote->getDirection()>0}voted-up{elseif $oVote->getDirection()<0}voted-down{/if}{/if}">
-			<div class="vote-label">Рейтинг</div>
+			<div class="muted vote-label"><small>Рейтинг</small></div>
 			<a href="#" class="vote-down" onclick="return ls.vote.vote({$oBlog->getId()},this,-1,'blog');"></a>
 			<div id="vote_total_blog_{$oBlog->getId()}" class="vote-count count" title="{$aLang.blog_vote_count}: {$oBlog->getCountVote()}">{if $oBlog->getRating() > 0}+{/if}{$oBlog->getRating()}</div>
 			<a href="#" class="vote-up" onclick="return ls.vote.vote({$oBlog->getId()},this,1,'blog');"></a>
@@ -52,18 +52,20 @@
 		
 		<h2>{$oBlog->getTitle()|escape:'html'}{if $oBlog->getType()=='close'} <i title="{$aLang.blog_closed}" class="icon icon-lock"></i>{/if}</h2>
 		
-		<ul class="unstyled inline actions">
-			{if $oUserCurrent and ($oUserCurrent->getId()==$oBlog->getOwnerId() or $oUserCurrent->isAdministrator() or $oBlog->getUserIsAdministrator() )}
-				<li>
-					<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="text-success">{$aLang.blog_edit}</a></li>
-					{if $oUserCurrent->isAdministrator()}
-						<li><a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="text-error">{$aLang.blog_delete}</a>
-					{else}
-						<a href="{router page='blog'}delete/{$oBlog->getId()}/?security_ls_key={$LIVESTREET_SECURITY_KEY}" title="{$aLang.blog_delete}" onclick="return confirm('{$aLang.blog_admin_delete_confirm}');" >{$aLang.blog_delete}</a>
-					{/if}
-				</li>
-			{/if}
-		</ul>
+		{if $oUserCurrent and ($oUserCurrent->getId()==$oBlog->getOwnerId() or $oUserCurrent->isAdministrator() or $oBlog->getUserIsAdministrator() )}
+			<small>
+				<ul class="unstyled inline actions">
+					<li>
+						<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="text-success">{$aLang.blog_edit}</a></li>
+						{if $oUserCurrent->isAdministrator()}
+							<li><a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="text-error">{$aLang.blog_delete}</a>
+						{else}
+							<a href="{router page='blog'}delete/{$oBlog->getId()}/?security_ls_key={$LIVESTREET_SECURITY_KEY}" title="{$aLang.blog_delete}" onclick="return confirm('{$aLang.blog_admin_delete_confirm}');" >{$aLang.blog_delete}</a>
+						{/if}
+					</li>
+				</ul>
+			</small>
+		{/if}
 	</header>
 	
 	
@@ -94,59 +96,59 @@
 		</div>
 		
 		<footer class="blog-footer">
-			{hook run='blog_info_begin' oBlog=$oBlog}
+			<small>
+				{hook run='blog_info_begin' oBlog=$oBlog}
 			
-			<div class="row-fluid">
-				<div class="span6">
-					<dl class="dl-horizontal blog-info">
-						<dt>{$aLang.infobox_blog_create}</dt>
-						<dd>{date_format date=$oBlog->getDateAdd() format="j F Y"}</dd>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl class="dl-horizontal blog-info">
+							<dt>{$aLang.infobox_blog_create}</dt>
+							<dd>{date_format date=$oBlog->getDateAdd() format="j F Y"}</dd>
 						
-						<dt>{$aLang.infobox_blog_topics}</dt>
-						<dd>{$oBlog->getCountTopic()}</dd>
+							<dt>{$aLang.infobox_blog_topics}</dt>
+							<dd>{$oBlog->getCountTopic()}</dd>
 						
-						<dt><a href="{$oBlog->getUrlFull()}users/">{$aLang.infobox_blog_users}</a></dt>
-						<dd>{$iCountBlogUsers}</dd>
+							<dt><a href="{$oBlog->getUrlFull()}users/">{$aLang.infobox_blog_users}</a></dt>
+							<dd>{$iCountBlogUsers}</dd>
 						
-						<dt>{$aLang.infobox_blog_rating}</dt>
-						<dd class="rating">{$oBlog->getRating()}</dd>
-					</dl>
-				</div>
+							<dt>{$aLang.infobox_blog_rating}</dt>
+							<dd class="text-success rating">{$oBlog->getRating()}</dd>
+						</dl>
+					</div>
 			
-				<div class="span6">
-					<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong><br />							
-					<span class="user-avatar">
-						<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>		
-						<a href="{$oUserOwner->getUserWebPath()}">{$oUserOwner->getLogin()}</a>
-					</span>
-					{if $aBlogAdministrators}			
-						{foreach from=$aBlogAdministrators item=oBlogUser}
-							{assign var="oUser" value=$oBlogUser->getUser()}  									
-							<span class="user-avatar">
-								<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a>		
-								<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
-							</span>
-						{/foreach}	
-					{/if}<br /><br />
+					<div class="span6">
+						<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong><br />							
+						<span class="user-avatar">
+							<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>		
+							<a href="{$oUserOwner->getUserWebPath()}">{$oUserOwner->getLogin()}</a>
+						</span>
+						{if $aBlogAdministrators}			
+							{foreach from=$aBlogAdministrators item=oBlogUser}
+								{assign var="oUser" value=$oBlogUser->getUser()}  									
+								<span class="user-avatar">
+									<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a>		
+									<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+								</span>
+							{/foreach}	
+						{/if}<br /><br />
 
-			
-					<strong>{$aLang.blog_user_moderators} ({$iCountBlogModerators}):</strong><br />
-					{if $aBlogModerators}						
-						{foreach from=$aBlogModerators item=oBlogUser}  
-							{assign var="oUser" value=$oBlogUser->getUser()}									
-							<span class="user-avatar">
-								<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a>		
-								<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
-							</span>
-						{/foreach}							
-					{else}
-						<span class="muted">{$aLang.blog_user_moderators_empty}</span>
-					{/if}
+						<strong>{$aLang.blog_user_moderators} ({$iCountBlogModerators}):</strong><br />
+						{if $aBlogModerators}						
+							{foreach from=$aBlogModerators item=oBlogUser}  
+								{assign var="oUser" value=$oBlogUser->getUser()}									
+								<span class="user-avatar">
+									<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" /></a>		
+									<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+								</span>
+							{/foreach}							
+						{else}
+							<span class="muted">{$aLang.blog_user_moderators_empty}</span>
+						{/if}
+					</div>
 				</div>
-			</div>
 			
-			
-			{hook run='blog_info_end' oBlog=$oBlog}
+				{hook run='blog_info_end' oBlog=$oBlog}
+			</small>
 		</footer>
 	</div>
 	
@@ -186,7 +188,6 @@
 	{/if}
 	</div>
 </div>
-
 
 {if $bCloseBlog}
 	{$aLang.blog_close_show}
