@@ -4,7 +4,7 @@
 			<dl>
 				<dt>
 					{$oTopic->getQuestionAnswerPercent($key)}%<br />
-					<span>({$aAnswer.count})</span>
+					<span class="muted"><small>({$aAnswer.count})</small></span>
 				</dt>
 				<dd>{$aAnswer.text|escape:'html'}<div style="width: {$oTopic->getQuestionAnswerPercent($key)}%;" ></div></dd>
 			</dl>
@@ -29,4 +29,4 @@
 
 <button type="submit" class="btn btn-icon" title="{$aLang.topic_question_vote_result_sort}" onclick="return ls.poll.switchResult(this, {$oTopic->getId()});"><i class="icon-align-left"></i></button>
 
-<span class="poll-total poll-total-result">{$aLang.topic_question_vote_result}: {$oTopic->getQuestionCountVote()} | {$aLang.topic_question_abstain_result}: {$oTopic->getQuestionCountVoteAbstain()}</span>
+<span class="muted poll-total poll-total-result"><small>{$aLang.topic_question_vote_result}: {$oTopic->getQuestionCountVote()} | {$aLang.topic_question_abstain_result}: {$oTopic->getQuestionCountVoteAbstain()}</small></span>
