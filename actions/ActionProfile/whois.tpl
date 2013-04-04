@@ -29,7 +29,7 @@
 			<table class="table table-profile-info">		
 				{if $oUserProfile->getProfileSex()!='other'}
 					<tr>
-						<td class="cell-label">{$aLang.profile_sex}:</td>
+						<td class="muted cell-label">{$aLang.profile_sex}:</td>
 						<td>
 							{if $oUserProfile->getProfileSex()=='man'}
 								{$aLang.profile_sex_man}
@@ -43,7 +43,7 @@
 			
 				{if $oUserProfile->getProfileBirthday()}
 					<tr>
-						<td class="cell-label">{$aLang.profile_birthday}:</td>
+						<td class="muted cell-label">{$aLang.profile_birthday}:</td>
 						<td>{date_format date=$oUserProfile->getProfileBirthday() format="j F Y"}</td>
 					</tr>
 				{/if}
@@ -51,7 +51,7 @@
 		
 				{if $oGeoTarget}
 					<tr>
-						<td class="cell-label">{$aLang.profile_place}:</td>
+						<td class="muted cell-label">{$aLang.profile_place}:</td>
 						<td itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
 							{if $oGeoTarget->getCountryId()}
 								<a href="{router page='people'}country/{$oGeoTarget->getCountryId()}/" itemprop="country-name">{$oUserProfile->getProfileCountry()|escape:'html'}</a>{if $oGeoTarget->getCityId()},{/if}
@@ -67,7 +67,7 @@
 				{if $aUserFieldValues}
 					{foreach from=$aUserFieldValues item=oField}
 						<tr>
-							<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
+							<td class="muted cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
 							<td>{$oField->getValue(true,true)}</td>
 						</tr>
 					{/foreach}
@@ -90,7 +90,7 @@
 			<table class="table table-profile-info">
 				{foreach from=$aUserFieldContactValues item=oField}
 					<tr>
-						<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
+						<td class="muted cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
 						<td>{$oField->getValue(true,true)}</td>
 					</tr>
 				{/foreach}
@@ -105,7 +105,7 @@
 			<table class="table table-profile-info">
 				{foreach from=$aUserFieldContactValues item=oField}
 					<tr>
-						<td class="cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
+						<td class="muted cell-label"><i class="icon-contact icon-contact-{$oField->getName()}"></i> {$oField->getTitle()|escape:'html'}:</td>
 						<td>{$oField->getValue(true,true)}</td>
 					</tr>
 				{/foreach}
@@ -125,7 +125,7 @@
 
 	{if $oConfig->GetValue('general.reg.invite') and $oUserInviteFrom}
 		<tr>
-			<td class="cell-label">{$aLang.profile_invite_from}:</td>
+			<td class="muted cell-label">{$aLang.profile_invite_from}:</td>
 			<td>							       						
 				<a href="{$oUserInviteFrom->getUserWebPath()}">{$oUserInviteFrom->getLogin()}</a>&nbsp;         					
 			</td>
@@ -134,7 +134,7 @@
 	
 	{if $oConfig->GetValue('general.reg.invite') and $aUsersInvite}
 		<tr>
-			<td class="cell-label">{$aLang.profile_invite_to}:</td>
+			<td class="muted cell-label">{$aLang.profile_invite_to}:</td>
 			<td>
 				{foreach from=$aUsersInvite item=oUserInvite}        						
 					<a href="{$oUserInvite->getUserWebPath()}">{$oUserInvite->getLogin()}</a>&nbsp; 
@@ -145,7 +145,7 @@
 	
 	{if $aBlogsOwner}
 		<tr>
-			<td class="cell-label">{$aLang.profile_blogs_self}:</td>
+			<td class="muted cell-label">{$aLang.profile_blogs_self}:</td>
 			<td>							
 				{foreach from=$aBlogsOwner item=oBlog name=blog_owner}
 					<a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a>{if !$smarty.foreach.blog_owner.last}, {/if}								      		
@@ -156,7 +156,7 @@
 	
 	{if $aBlogAdministrators}
 		<tr>
-			<td class="cell-label">{$aLang.profile_blogs_administration}:</td>
+			<td class="muted cell-label">{$aLang.profile_blogs_administration}:</td>
 			<td>
 				{foreach from=$aBlogAdministrators item=oBlogUser name=blog_user}
 					{assign var="oBlog" value=$oBlogUser->getBlog()}
@@ -168,7 +168,7 @@
 	
 	{if $aBlogModerators}
 		<tr>
-			<td class="cell-label">{$aLang.profile_blogs_moderation}:</td>
+			<td class="muted cell-label">{$aLang.profile_blogs_moderation}:</td>
 			<td>
 				{foreach from=$aBlogModerators item=oBlogUser name=blog_user}
 					{assign var="oBlog" value=$oBlogUser->getBlog()}
@@ -180,7 +180,7 @@
 	
 	{if $aBlogUsers}
 		<tr>
-			<td class="cell-label">{$aLang.profile_blogs_join}:</td>
+			<td class="muted cell-label">{$aLang.profile_blogs_join}:</td>
 			<td>
 				{foreach from=$aBlogUsers item=oBlogUser name=blog_user}
 					{assign var="oBlog" value=$oBlogUser->getBlog()}
@@ -193,13 +193,13 @@
 	{hook run='profile_whois_activity_item' oUserProfile=$oUserProfile}
 	
 	<tr>
-		<td class="cell-label">{$aLang.profile_date_registration}:</td>
+		<td class="muted cell-label">{$aLang.profile_date_registration}:</td>
 		<td>{date_format date=$oUserProfile->getDateRegister()}</td>
 	</tr>	
 	
 	{if $oSession}				
 		<tr>
-			<td class="cell-label">{$aLang.profile_date_last}:</td>
+			<td class="muted cell-label">{$aLang.profile_date_last}:</td>
 			<td>{date_format date=$oSession->getDateLast()}</td>
 		</tr>
 	{/if}

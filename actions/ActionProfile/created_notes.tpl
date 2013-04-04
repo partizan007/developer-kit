@@ -9,9 +9,9 @@
 	<table class="table table-profile-notes" cellspacing="0">
 		{foreach from=$aNotes item=oNote}
 			<tr>
-				<td class="cell-username"><a href="{$oNote->getTargetUser()->getUserWebPath()}" class="user">{$oNote->getTargetUser()->getLogin()}</a></td>
+				<td class="cell-username"><small><a href="{$oNote->getTargetUser()->getUserWebPath()}" class="user">{$oNote->getTargetUser()->getLogin()}</a></small></td>
 				<td class="cell-note">{$oNote->getText()}</td>
-				<td class="cell-date">{date_format date=$oNote->getDateAdd() format="j F Y"}</td>
+				<td class="muted cell-date"><small>{date_format date=$oNote->getDateAdd() format="j F Y"}</small></td>
 			</tr>
 		{/foreach}
 	</table>

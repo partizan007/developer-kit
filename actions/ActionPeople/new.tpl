@@ -6,10 +6,10 @@
 <table class="table table-hover table-users">
 	<thead>
 		<tr>
-			<th class="cell-name">{$aLang.user}</th>
-			<th class="cell-date">{$aLang.user_date_registration}</th>
-			<th class="cell-skill">{$aLang.user_skill}</th>
-			<th class="cell-rating">{$aLang.user_rating}</th>
+			<th class="cell-name"><small>{$aLang.user}</small></th>
+			<th class="cell-date"><small>{$aLang.user_date_registration}</small></th>
+			<th class="cell-skill"><small>{$aLang.user_skill}</small></th>
+			<th class="cell-rating"><small>{$aLang.user_rating}</small></th>
 		</tr>
 	</thead>
 
@@ -28,12 +28,12 @@
 									<i class="icon-comment js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
 								{/if}
 							</p>
-							{if $oUserList->getProfileName()}<p class="realname">{$oUserList->getProfileName()}</p>{/if}
+							{if $oUserList->getProfileName()}<p class="muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
 						</div>
 					</td>
-					<td class="cell-date">{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</td>
-					<td class="cell-skill">{$oUserList->getSkill()}</td>
-					<td class="cell-rating{if $oUserList->getRating() < 0} negative{/if}"><strong>{$oUserList->getRating()}</strong></td>
+					<td class="muted cell-date"><small>{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</small></td>
+					<td class="text-info cell-skill"><small>{$oUserList->getSkill()}</small></td>
+					<td class="cell-rating{if $oUserList->getRating() < 0} text-error negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
 				</tr>
 			{/foreach}
 		{else}

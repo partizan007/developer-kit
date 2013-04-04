@@ -6,10 +6,10 @@
 	<table class="table table-talk">
 		<thead>
 			<tr>
-				<th class="cell-recipients">{$aLang.talk_inbox_target}</th>
+				<th class="cell-recipients"><small>{$aLang.talk_inbox_target}</small></th>
 				<th class="cell-favourite"></th>
-				<th class="cell-title">{$aLang.talk_inbox_title}</th>
-				<th class="cell-date ta-r">{$aLang.talk_inbox_date}</th>
+				<th class="cell-title"><small>{$aLang.talk_inbox_title}</small></th>
+				<th class="cell-date ta-r"><small>{$aLang.talk_inbox_date}</small></th>
 			</tr>
 		</thead>
 
@@ -17,19 +17,21 @@
 		{foreach from=$aTalks item=oTalk}
 			{assign var="oTalkUserAuthor" value=$oTalk->getTalkUser()}
 			<tr>
-				<td>
-					{strip}
-						{assign var="aTalkUserOther" value=[]}
-						{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
-							{if $oTalkUser->getUserId()!=$oUserCurrent->getId()}
-								{$aTalkUserOther[]=$oTalkUser}
-							{/if}
-						{/foreach}
-						{foreach from=$aTalkUserOther item=oTalkUser name=users}
-							{assign var="oUser" value=$oTalkUser->getUser()}
-							{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
-						{/foreach}
-					{/strip}
+				<td class="muted">
+					<small>
+						{strip}
+							{assign var="aTalkUserOther" value=[]}
+							{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
+								{if $oTalkUser->getUserId()!=$oUserCurrent->getId()}
+									{$aTalkUserOther[]=$oTalkUser}
+								{/if}
+							{/foreach}
+							{foreach from=$aTalkUserOther item=oTalkUser name=users}
+								{assign var="oUser" value=$oTalkUser->getUser()}
+								{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
+							{/foreach}
+						{/strip}
+					</small>
 				</td>
 				<td class="cell-favourite">
 					<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a>
@@ -42,10 +44,10 @@
 				{/if}
 				&nbsp;
 				{if $oTalk->getCountComment()}
-					({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()} +{$oTalkUserAuthor->getCommentCountNew()}{/if})
+					<span class="muted">({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()}<span class="text-info">+{$oTalkUserAuthor->getCommentCountNew()}</span>{/if})</span>
 				{/if}
 				</td>
-				<td class="cell-date ta-r">{date_format date=$oTalk->getDate()}</td>
+				<td class="muted cell-date ta-r"><small>{date_format date=$oTalk->getDate()}</small></td>
 			</tr>
 		{/foreach}
 		</tbody>

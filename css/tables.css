@@ -2,13 +2,11 @@
 	ТАБЛИЦЫ
 ------------------------------------------------------------------- */
 
-.table th 					{ font-size: 12px; }
+.table thead a 		{ text-decoration: none; }
+.table thead a span { border-bottom: 1px dotted; }
 
-.table thead a 				{ text-decoration: none; }
-.table thead a span 		{ border-bottom: 1px dotted; }
-
-.table a.asc:after			{ content: " ↑"; }
-.table a.desc:after			{ content: " ↓"; }
+.table a.asc:after	{ content: " ↑"; }
+.table a.desc:after	{ content: " ↓"; }
 
 
 /* Table Blogs */
@@ -23,10 +21,6 @@
 .table.table-blogs .cell-readers,
 .table.table-blogs .cell-rating 		{ width: 70px; text-align: center; vertical-align: middle; }
 
-.table.table-blogs  tbody .cell-join 	{ font-size: 12px; }
-.table.table-blogs  tbody .cell-readers { font-size: 12px; font-weight: bold; }
-.table.table-blogs  tbody .cell-rating 	{ font-size: 12px; font-weight: bold; color: #468847; }
-
 
 /* Table Users */
 .table.table-users 								{ margin-bottom: 40px; }
@@ -37,17 +31,15 @@
 .table.table-users .cell-name .name.no-realname { margin-top: 10px; }
 .table.table-users .cell-name .username 		{ margin: 3px 0 3px 0; }
 .table.table-users .cell-name .username a 		{ text-decoration: underline; }
-.table.table-users .cell-name .realname 		{ margin: 0; font-size: 12px; color: #999999; }
+.table.table-users .cell-name .realname 		{ margin: 0; }
 
 .table.table-users .cell-date 					{ width: 130px; }
-
 .table.table-users .cell-rating,
-.table.table-users .cell-skill 					{ text-align: center; width: 70px; }
+.table.table-users .cell-skill 					{ width: 70px; text-align: center; }
 
-.table.table-users tbody .cell-date 			{ font-size: 12px; color: #999; vertical-align: middle; }
-.table.table-users tbody .cell-skill 			{ font-size: 12px; font-weight: bold; color: #0088cc; vertical-align: middle; }
-.table.table-users tbody .cell-rating 			{ font-size: 12px; font-weight: bold; color: #468847; vertical-align: middle; }
-.table.table-users tbody .cell-rating.negative	{ color: #b94a48; }
+.table.table-users tbody .cell-date, 
+.table.table-users tbody .cell-skill, 
+.table.table-users tbody .cell-rating 			{ vertical-align: middle; }
 
 
 /* Table Talk */
@@ -57,18 +49,18 @@
 .table.table-talk .cell-favourite 		{ width: 16px; text-align: center; }
 .table.table-talk .cell-recipients 		{ width: 130px; }
 
-.table.table-talk tbody .cell-date 		{ font-size: 12px; width: 150px; color: #999999; }
+.table.table-talk tbody .cell-date 		{ width: 150px; }
 
 
 /* Table Profile Notes */
 .table.table-profile-notes .cell-username 	{ width: 20%; }
 .table.table-profile-notes .cell-note 		{ width: 50%; }
-.table.table-profile-notes .cell-date 		{ text-align: right; color: #999999; font-size: 12px; }
+.table.table-profile-notes .cell-date 		{ text-align: right; }
 
 
 /* Table Profile Info */
 .table.table-profile-info 				{ margin-bottom: 40px; }
-.table.table-profile-info .cell-label 	{ color: #999999; width: 33%; }
+.table.table-profile-info .cell-label 	{ width: 33%; }
 
 /* Table Plugins */
 .table.table-plugins .cell-checkbox 	{ width: 16px; }
