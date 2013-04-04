@@ -10,7 +10,7 @@
 		{/foreach}
 		
 		{if $oTalk->getUserId()==$oUserCurrent->getId() or $oUserCurrent->isAdministrator()}
-			&nbsp;&nbsp;&nbsp;<a href="#" class="link-dotted" onclick="jQuery('#talk_recipients').toggle(); return false;">{$aLang.talk_speaker_edit}</a>
+			&nbsp;&nbsp;&nbsp;<a href="#" class="text-success link-dotted" onclick="jQuery('#talk_recipients').toggle(); return false;">{$aLang.talk_speaker_edit}</a>
 		{/if}
 		
 	</header>

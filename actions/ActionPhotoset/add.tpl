@@ -78,36 +78,40 @@
 	<div class="topic-photo-upload">
 		<h4>{$aLang.topic_photoset_upload_title}</h4>
 		
-		<div class="topic-photo-upload-rules">
-			{$aLang.topic_photoset_upload_rules|ls_lang:"SIZE%%`$oConfig->get('module.topic.photoset.photo_max_size')`":"COUNT%%`$oConfig->get('module.topic.photoset.count_photos_max')`"}
+		<div class="muted topic-photo-upload-rules">
+			<small>
+				{$aLang.topic_photoset_upload_rules|ls_lang:"SIZE%%`$oConfig->get('module.topic.photoset.photo_max_size')`":"COUNT%%`$oConfig->get('module.topic.photoset.count_photos_max')`"}
+			</small>
 		</div>
 		
 		<input type="hidden" name="topic_main_photo" id="topic_main_photo" value="{$_aRequest.topic_main_photo}" />
 		
-		<ul id="swfu_images" class="unstyled">
-			{if count($aPhotos)}
-				{foreach from=$aPhotos item=oPhoto}
-					{if $_aRequest.topic_main_photo && $_aRequest.topic_main_photo == $oPhoto->getId()}
-						{assign var=bIsMainPhoto value=true}
-					{/if}
+		<small>
+			<ul id="swfu_images" class="unstyled">
+				{if count($aPhotos)}
+					{foreach from=$aPhotos item=oPhoto}
+						{if $_aRequest.topic_main_photo && $_aRequest.topic_main_photo == $oPhoto->getId()}
+							{assign var=bIsMainPhoto value=true}
+						{/if}
 					
-					<li id="photo_{$oPhoto->getId()}" {if $bIsMainPhoto}class="marked-as-preview"{/if}>
-						<img src="{$oPhoto->getWebPath('100crop')}" alt="image" />
-						<textarea onBlur="ls.photoset.setPreviewDescription({$oPhoto->getId()}, this.value)" class="input-block-level">{$oPhoto->getDescription()}</textarea>
-						<a href="javascript:ls.photoset.deletePhoto({$oPhoto->getId()})" class="image-delete text-error">{$aLang.topic_photoset_photo_delete}</a>
-						<span id="photo_preview_state_{$oPhoto->getId()}" class="photo-preview-state">
-							{if $bIsMainPhoto}
-								{$aLang.topic_photoset_is_preview}
-							{else}
-								<a href="javascript:ls.photoset.setPreview({$oPhoto->getId()})" class="mark-as-preview">{$aLang.topic_photoset_mark_as_preview}</a>
-							{/if}
-						</span>
-					</li>
+						<li id="photo_{$oPhoto->getId()}" {if $bIsMainPhoto}class="marked-as-preview"{/if}>
+							<img src="{$oPhoto->getWebPath('100crop')}" alt="image" />
+							<textarea onBlur="ls.photoset.setPreviewDescription({$oPhoto->getId()}, this.value)" class="input-block-level">{$oPhoto->getDescription()}</textarea>
+							<a href="javascript:ls.photoset.deletePhoto({$oPhoto->getId()})" class="text-error image-delete">{$aLang.topic_photoset_photo_delete}</a>
+							<span id="photo_preview_state_{$oPhoto->getId()}" class="photo-preview-state">
+								{if $bIsMainPhoto}
+									{$aLang.topic_photoset_is_preview}
+								{else}
+									<a href="javascript:ls.photoset.setPreview({$oPhoto->getId()})" class="text-success mark-as-preview">{$aLang.topic_photoset_mark_as_preview}</a>
+								{/if}
+							</span>
+						</li>
 					
-					{assign var=bIsMainPhoto value=false}
-				{/foreach}
-			{/if}
-		</ul>
+						{assign var=bIsMainPhoto value=false}
+					{/foreach}
+				{/if}
+			</ul>
+		</small>
 		
 		<a href="javascript:ls.photoset.showForm()" id="photoset-start-upload">{$aLang.topic_photoset_upload_choose}</a>
 	</div>

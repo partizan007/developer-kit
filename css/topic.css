@@ -8,11 +8,12 @@
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
 .topic .topic-header .topic-title a 			{ color: #333333; }
-
 .topic .topic-header .topic-title i 			{ cursor: help; }
+
 .topic .topic-header .topic-info 				{ margin-bottom: 20px; }
 .topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; text-decoration: underline; }
-.topic .topic-header .topic-info .actions 		{ display: inline; }
+.topic .topic-header .topic-info .actions 					{ display: inline; }
+.topic .topic-header .topic-info .actions li:first-child 	{ padding-left: 0; }
 
 
 /* Content */
@@ -73,19 +74,17 @@
 
 .topic-photo-upload 								{ background-color: #eeeeee; padding: 15px; margin-bottom: 20px; }
 .topic-photo-upload ul 								{ overflow: hidden; zoom: 1; }
-.topic-photo-upload ul li 							{ min-height: 100px; _height: 100px; margin-bottom: 10px; padding-left: 110px; position: relative; font-size: 12px; }
+.topic-photo-upload ul li 							{ min-height: 100px; _height: 100px; margin-bottom: 10px; padding-left: 110px; position: relative; }
 .topic-photo-upload ul li img 						{ position: absolute; top: 0; left: 0; }
-.topic-photo-upload ul li label 					{ color: #999999; }
-.topic-photo-upload ul li textarea 					{ height: 60px; -moz-box-sizing: border-box; display: block; width: 100%; }
-.topic-photo-upload ul li .image-delete 			{ margin-right: 10px; color: #b94a48; }
+.topic-photo-upload ul li textarea 					{ -moz-box-sizing: border-box; width: 100%; }
+.topic-photo-upload ul li .image-delete 			{ margin-right: 10px; }
 .topic-photo-upload ul li .mark-as-preview 			{ display: none; }
 .topic-photo-upload ul li:hover .mark-as-preview 	{ display: inline; }
-.topic-photo-upload .topic-photo-upload-rules 		{ color: #999999; font-size: 12px; line-height: 16px; margin-bottom: 20px; }
+.topic-photo-upload .topic-photo-upload-rules 		{ margin-bottom: 20px; }
 
 
 /* Topic Talk */
 .topic.topic-type-talk .talk-recipients 		{ padding: 10px 15px; background: #f5f5f5; }
-.topic.topic-type-talk .talk-recipients-header 	{ font-size: 12px; }
 
 .talk-search .talk-search-content 				{ border-top: 1px solid #eeeeee; display: none; padding-top: 10px; margin-top: 10px; }
 

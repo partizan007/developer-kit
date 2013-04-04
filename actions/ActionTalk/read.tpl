@@ -22,19 +22,21 @@
 	{include file='actions/ActionTalk/speakers.tpl'}
 
 	<footer class="topic-footer">
-		<ul class="unstyled inline topic-info">
-			<li class="topic-info-author">
-				<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
-				<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
-			</li>
-			<li class="topic-info-date">
-				<time datetime="{date_format date=$oTalk->getDate() format='c'}" pubdate>
-					{date_format date=$oTalk->getDate() format="j F Y, H:i"}
-				</time>
-			</li>
-			<li class="topic-info-favourite"><a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a></li>
-			{hook run='talk_read_info_item' talk=$oTalk}
-		</ul>
+		<small>
+			<ul class="muted unstyled inline topic-info">
+				<li class="topic-info-author">
+					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
+					<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+				</li>
+				<li class="topic-info-date">
+					<time datetime="{date_format date=$oTalk->getDate() format='c'}" pubdate>
+						{date_format date=$oTalk->getDate() format="j F Y, H:i"}
+					</time>
+				</li>
+				<li class="topic-info-favourite"><a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a></li>
+				{hook run='talk_read_info_item' talk=$oTalk}
+			</ul>
+		</small>
 	</footer>
 </article>
 
