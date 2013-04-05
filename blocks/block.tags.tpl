@@ -25,7 +25,7 @@
 			{if $aTags}
 				<ul class="unstyled inline tag-cloud word-wrap">
 					{foreach from=$aTags item=oTag}
-						<li><a class="tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
+						<li><a class="muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
 					{/foreach}
 				</ul>
 			{else}
@@ -38,7 +38,7 @@
 				{if $aTagsUser}
 					<ul class="unstyled inline tag-cloud word-wrap">
 						{foreach from=$aTagsUser item=oTag}
-							<li><a class="tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
+							<li><a class="muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
 						{/foreach}
 					</ul>
 				{else}

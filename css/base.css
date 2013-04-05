@@ -74,7 +74,7 @@ a.link-dotted:hover { text-decoration: none; }
 
 /* Userfields
 ---------------------------------------------------- */
-.userfield-list li 							{ margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; color: #999999; background-color: #eeeeee; }
+.userfield-list li 							{ margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; background-color: #eeeeee; }
 .userfield-list li .userfield_admin_name 	{ font-weight: bold; color: #333333; }
 
 
@@ -84,7 +84,7 @@ a.link-dotted:hover { text-decoration: none; }
 .question-list li .span4	{ margin-right: 10px; }
 
 
-.help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; color: #999999; font-size: 12px; line-height: 18px; border: 1px solid #dddddd; background-color: #ffffff; }
+.help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; border: 1px solid #dddddd; background-color: #ffffff; }
 .help:before 				{ display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #ffffff transparent; border-style: solid; }
 .help .help-col 			{ float: left; width: 44%; padding: 0 3%; margin: 0; font-weight: normal;}
 .help .help-col.help-wide 	{ float: none; width: 94%; }

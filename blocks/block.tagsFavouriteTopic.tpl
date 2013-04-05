@@ -16,7 +16,7 @@
 			{if $aFavouriteTopicTags}
 				<ul class="unstyled inline tag-cloud word-wrap">
 					{foreach from=$aFavouriteTopicTags item=oTag}
-						<li><a class="tag-size-{$oTag->getSize()} {if $sFavouriteTag==$oTag->getText()}tag-current{/if}" title="{$oTag->getCount()}" href="{$oFavouriteUser->getUserWebPath()}favourites/topics/tag/{$oTag->getText()|escape:'url'}/">{$oTag->getText()}</a></li>
+						<li><a class="muted tag-size-{$oTag->getSize()} {if $sFavouriteTag==$oTag->getText()}tag-current{/if}" title="{$oTag->getCount()}" href="{$oFavouriteUser->getUserWebPath()}favourites/topics/tag/{$oTag->getText()|escape:'url'}/">{$oTag->getText()}</a></li>
 					{/foreach}
 				</ul>
 			{else}
@@ -28,7 +28,7 @@
 			{if $aFavouriteTopicUserTags}
 				<ul class="unstyled inline tag-cloud word-wrap">
 					{foreach from=$aFavouriteTopicUserTags item=oTag}
-						<li><a class="tag-size-{$oTag->getSize()}" title="{$oTag->getCount()}" href="{$oFavouriteUser->getUserWebPath()}favourites/topics/tag/{$oTag->getText()|escape:'url'}/">{$oTag->getText()}</a></li>
+						<li><a class="muted tag-size-{$oTag->getSize()}" title="{$oTag->getCount()}" href="{$oFavouriteUser->getUserWebPath()}favourites/topics/tag/{$oTag->getText()|escape:'url'}/">{$oTag->getText()}</a></li>
 					{/foreach}
 				</ul>
 			{else}

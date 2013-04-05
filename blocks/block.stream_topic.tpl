@@ -5,13 +5,15 @@
 		
 		<li class="js-title-topic" title="{$oTopic->getText()|strip_tags|trim|truncate:150:'...'|escape:'html'}">
 			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="avatar" class="avatar" /></a>
-			<p>
-				<a href="{$oUser->getUserWebPath()}" class="author">{$oUser->getLogin()}</a>
-				<time datetime="{date_format date=$oTopic->getDate() format='c'}">{date_format date=$oTopic->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time>
+			<p class="muted">
+				<small>
+					<a href="{$oUser->getUserWebPath()}" class="author">{$oUser->getLogin()}</a>
+					<time datetime="{date_format date=$oTopic->getDate() format='c'}">{date_format date=$oTopic->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time>
+				</small>
 			</p>
 			<a href="{$oBlog->getUrlFull()}" class="text-success blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
 			<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<span><i class="icon-comment"></i>{$oTopic->getCountComment()}</span>
+			<span class="muted"><small><i class="icon-comment"></i>{$oTopic->getCountComment()}</small></span>
 		</li>
 	{/foreach}
 </ul>

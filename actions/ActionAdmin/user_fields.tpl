@@ -40,7 +40,7 @@
 <a href="javascript:ls.userfield.showAddForm()" class="link-dotted" id="userfield_form_show">{$aLang.user_field_add}</a>
 <br /><br />
 
-<ul class="unstyled userfield-list" id="user_field_list">
+<ul class="muted unstyled userfield-list" id="user_field_list">
 	{foreach from=$aUserFields item=oField}
 		<li id="field_{$oField->getId()}"><strong class="userfield_admin_name">{$oField->getName()|escape:"html"}</strong>
 			/ <span class="userfield_admin_title">{$oField->getTitle()|escape:"html"}</span>
