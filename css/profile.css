@@ -9,8 +9,7 @@
 .profile .vote-label,
 .profile .count 		{ text-align: center; }
 
-.profile .vote 			{ float: right; margin-left: 20px; }
-.profile .strength 		{ float: right; }
+.profile .vote 			{ margin-left: 20px; }
 
 .profile .user-login 				{ margin: 0 160px 0 0; }
 .profile .user-login.no-user-name 	{ position: relative; }

@@ -16,7 +16,7 @@
 <form action="{router page='login'}reactivation/" method="POST" id="reactivation-form">
 	<p><label for="reactivation-mail">{$aLang.password_reminder_email}</label>
 	<input type="text" name="mail" id="reactivation-mail" class="span3" />
-	<small class="validate-error-hide validate-error-reactivation"></small></p>
+	<span class="help-block"><small class="text-error validate-error-hide validate-error-reactivation"></small></span></p>
 
 	<button type="submit" name="submit_reactivation" class="btn btn-primary" id="reactivation-form-submit" disabled="disabled">{$aLang.reactivation_submit}</button>
 </form>

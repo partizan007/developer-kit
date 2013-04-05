@@ -23,7 +23,7 @@
 	
 	<p><label for="password">{$aLang.user_password}</label>
 	<input type="password" id="password" name="password" class="span3" />
-	<small class="validate-error-hide validate-error-login"></small></p>
+	<span class="help-block"><small class="text-error validate-error-hide validate-error-login"></small></span></p>
 	
 	<p><label class="checkbox"><input type="checkbox" name="remember" checked class="input-checkbox" />{$aLang.user_login_remember}</label></p>
 	

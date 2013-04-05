@@ -16,7 +16,7 @@
 <form action="{router page='login'}reminder/" method="POST" id="reminder-form">
 	<p><label for="reminder-mail">{$aLang.password_reminder_email}</label>
 	<input type="text" name="mail" id="reminder-mail" class="span4" />
-	<small class="validate-error-hide validate-error-reminder"></small></p>
+	<span class="help-block"><small class="text-error validate-error-hide validate-error-reminder"></small></span></p>
 
 	<button type="submit" name="submit_reminder" class="btn btn-primary" id="reminder-form-submit" disabled="disabled">{$aLang.password_reminder_submit}</button>
 </form>

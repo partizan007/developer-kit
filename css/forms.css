@@ -20,4 +20,3 @@ select, input[type="file"] { height: auto; }
 /* Валидатор (регистрация)
 ---------------------------------------------------------------*/
 .validate-error-hide { display: none; }
-.validate-error-show { display: block; color: #b94a48; font-size: 11px; }
