@@ -4,7 +4,7 @@
 
 /* Блок с комментариями */
 .comments-header 					{ margin-bottom: 20px; position: relative; }
-.comments-header .subscribe 		{ color: #999999; font-size: 12px; position: absolute; right: 0; top: 10px; }
+.comments-header .subscribe 		{ position: absolute; right: 0; top: 10px; }
 
 .comments 							{ margin-bottom: 40px; }
 
@@ -15,8 +15,7 @@
 
 
 /* Стили для списка комментариев на странице http://ваш_сайт/comments/ */
-.comments.comment-list .comment-path 			{ font-size: 12px; padding: 0 15px; }
-.comments.comment-list .comment-path .blog-name { color: #999999; }
+.comments.comment-list .comment-path { padding: 0 15px; }
 
 
 /* Комментарий */

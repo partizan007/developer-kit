@@ -11,14 +11,14 @@
 	<header class="comments-header">
 		<h3><span id="count-comments">{$iCountComment}</span> {$iCountComment|declension:$aLang.comment_declension:'russian'}</h3>
 		
-		<div class="subscribe">
-			{if $bAllowSubscribe and $oUserCurrent}
+		{if $bAllowSubscribe and $oUserCurrent}
+			<div class="muted subscribe">
 				<label class="checkbox">
 					<input {if $oSubscribeComment and $oSubscribeComment->getStatus()}checked="checked"{/if} type="checkbox" id="comment_subscribe" class="input-checkbox" onchange="ls.subscribe.toggle('{$sTargetType}_new_comment','{$iTargetId}','',this.checked);">
-					{$aLang.comment_subscribe}
+					<small>{$aLang.comment_subscribe}</small>
 				</label>
-			{/if}
-		</div>
+			</div>
+		{/if}
 	
 		<a name="comments"></a>
 	</header>

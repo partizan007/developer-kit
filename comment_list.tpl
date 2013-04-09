@@ -6,10 +6,12 @@
 		
 		
 		
-		<div class="comment-path">
-			<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
-			<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<a href="{$oTopic->getUrl()}#comments">({$oTopic->getCountComment()})</a>
+		<div class="muted comment-path">
+			<small>
+				<a href="{$oBlog->getUrlFull()}" class="text-success blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
+				<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
+				<a href="{$oTopic->getUrl()}#comments" class="muted">({$oTopic->getCountComment()})</a>
+			</small>
 		</div>
 		
 		
