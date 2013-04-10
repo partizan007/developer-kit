@@ -47,7 +47,7 @@
 .comment .comment-info 							{ font-size: 12px; position: relative; overflow: hidden; zoom: 1; }
 .comment .comment-info li 						{ float: left; padding-left: 5px; padding-right: 5px; }
 .comment .comment-info li:first-child 			{ padding-left: 0; }
-.comment .comment-info li.comment-author a 		{ font-weight: bold; color: #333333; }
+.comment .comment-info li.comment-author a 		{ color: #333333; text-decoration: underline; }
 .comment .comment-info li.comment-author .comment-topic-author { color: #468847; }
 .comment .comment-info li.comment-date 			{ color: #999999; }
 .comment .comment-info li.comment-date a 		{ color: #999999; border-color: #999999; }

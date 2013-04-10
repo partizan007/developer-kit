@@ -99,15 +99,17 @@
 .item-list li p 			{ margin-bottom: 0; }
 .item-list li i 			{ margin-right: 2px; }
 .item-list li .avatar 		{ position: absolute; top: 10px; left: 0; margin-right: 10px; width: 36px; height: 36px; }
-.item-list li .author 		{ color: #333333; font-weight: bold; margin-right: 5px; }
+.item-list li .author 		{ margin-right: 5px; color: #333333; text-decoration: underline; }
 
 
 /* Разное
 ---------------------------------------------------- */
 .loader { background: #f5f5f5 url(../images/loader.gif) 50% 50% no-repeat; }
 
-.user, .ls-user 	{ text-decoration: underline; }
-.ls-user:before 	{ content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icons.png) -168px 0 no-repeat; vertical-align: middle; opacity: .5; }
+.user, .ls-user 				{ color: #333333; text-decoration: underline; }
+.user.inactive 					{ color: #999999; }
+.user:hover, .ls-user:hover 	{ color: #333333; text-decoration: none; }
+.ls-user:before 				{ content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icons.png) -168px 0 no-repeat; vertical-align: middle; opacity: .5; }
 
 .wrapper-content.wrapper-content-dark 	{ background-color: #f0f0f0; }
 

@@ -26,7 +26,7 @@
 						{/if}
 					
 						<li class="topic-tags-edit js-favourite-tag-edit" {if !$oFavourite}style="display:none;"{/if}>
-							<a href="#" onclick="return ls.favourite.showEditTags({$oTopic->getId()},'topic',this);" class="text-success link-dotted">{$aLang.favourite_form_tags_button_show}</a>
+							<a href="#" onclick="return ls.favourite.showEditTags({$oTopic->getId()},'topic',this);" class="text-warning link-dotted">{$aLang.favourite_form_tags_button_show}</a>
 						</li>
 					{/if}
 				{/strip}
