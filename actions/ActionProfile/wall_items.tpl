@@ -6,22 +6,26 @@
 		<div class="comment">
 			<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(48)}" alt="avatar" class="comment-avatar" /></a>
 			
-			<ul class="unstyled inline comment-info">
-				<li class="comment-author"><a href="{$oWallUser->getUserWebPath()}">{$oWallUser->getLogin()}</a></li>
-				<li class="comment-date"><time datetime="{date_format date=$oWall->getDateAdd() format='c'}">{date_format date=$oWall->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time></li>
-				{if $oWall->isAllowDelete()}
-					<li><a href="#" onclick="return ls.wall.remove({$oWall->getId()});" class="link-dotted">{$aLang.wall_action_delete}</a></li>
-				{/if}
-			</ul>
+			<small>
+				<ul class="unstyled inline comment-info">
+					<li class="comment-author"><a href="{$oWallUser->getUserWebPath()}">{$oWallUser->getLogin()}</a></li>
+					<li class="muted comment-date"><time datetime="{date_format date=$oWall->getDateAdd() format='c'}">{date_format date=$oWall->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time></li>
+				</ul>
+			</small>
 
 			<div class="comment-content text">
 				{$oWall->getText()}
 			</div>
 			
 			{if $oUserCurrent and !$aReplyWall}
-				<ul class="unstyled inline comment-actions">
-					<li><a href="#" class="link-dotted" onclick="return ls.wall.toggleReply({$oWall->getId()});">{$aLang.wall_action_reply}</a></li>
-				</ul>
+				<small>
+					<ul class="unstyled inline comment-actions">
+						<li><a href="#" class="link-dotted" onclick="return ls.wall.toggleReply({$oWall->getId()});">{$aLang.wall_action_reply}</a></li>
+						{if $oWall->isAllowDelete()}
+							<li><a href="#" onclick="return ls.wall.remove({$oWall->getId()});" class="text-error link-dotted">{$aLang.wall_action_delete}</a></li>
+						{/if}
+					</ul>
+				</small>
 			{/if}
 		</div>
 		
