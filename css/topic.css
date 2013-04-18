@@ -7,7 +7,6 @@
 
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
-.topic .topic-header .topic-title a 			{ color: #333333; }
 .topic .topic-header .topic-title i 			{ cursor: help; }
 
 .topic .topic-header .topic-info 				{ margin-bottom: 20px; }

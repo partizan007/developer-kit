@@ -43,8 +43,9 @@
 .block.block-type-profile .status.status-offline 	{ background-color: #333333; color: #ffffff; opacity: .5; filter: alpha(opacity=50); }
 .block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; max-width: 230px; background-color: #eeeeee; }
 
-.block.block-type-profile-note	 					{ background: #ffffcc; border: 1px solid #ffcc66; }
-.block.block-type-profile-note .actions 			{ margin-bottom: 0; }
+.block.block-type-profile-note	 						{ background: #ffffde; border: 1px solid #ffcc66; }
+.block.block-type-profile-note .actions 				{ margin-bottom: 0; }
+.block.block-type-profile-note .actions li:first-child 	{ margin-bottom: 0; padding-left: 0; }
 
 .block.block-type-profile-nav 						{ padding: 8px 0; }
 .block.block-type-profile-nav .nav 					{ padding: 0 20px; }

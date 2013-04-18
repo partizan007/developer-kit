@@ -13,7 +13,7 @@
 			</p>
 			<a href="{$oBlog->getUrlFull()}" class="text-success blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
 			<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<span class="muted"><small><i class="icon-comment"></i>{$oTopic->getCountComment()}</small></span>
+			<span class="muted"><i class="icon-comment"></i>{$oTopic->getCountComment()}</span>
 		</li>
 	{/foreach}
 </ul>

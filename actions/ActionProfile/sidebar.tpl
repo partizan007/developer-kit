@@ -98,7 +98,7 @@
 			</p>
 			
 			<ul class="unstyled inline actions">
-				<li><a href="#" onclick="return ls.usernote.showForm();" class="link-dotted text-success">{$aLang.user_note_form_edit}</a></li>
+				<li><a href="#" onclick="return ls.usernote.showForm();" class="link-dotted text-warning">{$aLang.user_note_form_edit}</a></li>
 				<li><a href="#" onclick="return ls.usernote.remove({$oUserProfile->getId()});" class="link-dotted text-error">{$aLang.user_note_form_delete}</a></li>
 			</ul>
 		</div>

@@ -56,7 +56,7 @@
 			<small>
 				<ul class="unstyled inline actions">
 					<li>
-						<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="text-success">{$aLang.blog_edit}</a></li>
+						<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="text-warning">{$aLang.blog_edit}</a></li>
 						{if $oUserCurrent->isAdministrator()}
 							<li><a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="text-error">{$aLang.blog_delete}</a>
 						{else}

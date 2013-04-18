@@ -15,6 +15,8 @@ return array(
 	
 	'blog_expand_info' => 'О блоге',
 	'blog_fold_info' => 'Свернуть',
+	
+	'topic_create_submit_preview_close' => 'Свернуть',
 
 	'blogs_name_search' => 'Поиск по названию',
 	'people_name_search' => 'Поиск по логину',

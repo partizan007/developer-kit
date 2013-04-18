@@ -15,7 +15,7 @@
 				</small>
 			</p>
 			<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}{$oTopic->getUrl()}#comment{/if}{$oComment->getId()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<span class="muted"><small><i class="icon-comment"></i>{$oTopic->getCountComment()}</small></span>
+			<span class="muted"><i class="icon-comment"></i>{$oTopic->getCountComment()}</span>
 		</li>
 	{/foreach}
 </ul>

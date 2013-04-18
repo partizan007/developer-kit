@@ -7,8 +7,7 @@ body { position: relative; }
 
 /* Оформление
 ---------------------------------------------------- */
-.nav-inner 		{ background-color: #ffffff; }
-.wrapper-inner 	{ background-color: #ffffff; }
+#nav { background-color: #f5f5f5; }
 
 
 /* Шапка сайта
@@ -33,15 +32,13 @@ body { position: relative; }
 
 /* Футер
 ---------------------------------------------------- */
-#footer 					{ color: #999999; background-color: #1b1b1b; }
-#footer a 					{ color: #555555; }
-#footer .footer-list-header	{ margin-bottom: 5px; font-weight: bold; border-bottom: 1px solid #333333; }
+#footer 					{ background-color: #f5f5f5; }
+#footer .footer-list-header	{ font-weight: bold; }
 #footer .copyright 			{ font-size: 12px; text-align: right; }
 
 
 /* Stat
 ---------------------------------------------------- */
-#stat-performance 			{ background-color: #000000; }
 #stat-performance table td 	{ width: 200px; vertical-align: top; }
 
 
