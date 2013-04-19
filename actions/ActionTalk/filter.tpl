@@ -7,15 +7,15 @@
 		<form action="{router page='talk'}" method="GET" name="talk_filter_form">
 			<p><label for="talk_filter_sender">{$aLang.talk_filter_label_sender}:</label>
 			<input type="text" id="talk_filter_sender" name="sender" value="{$_aRequest.sender}" class="input-block-level" />
-			<span class="help-block"><small>{$aLang.talk_filter_notice_sender}</small></span></p>
+			<span class="help-block">{$aLang.talk_filter_notice_sender}</span></p>
 
 			<p><label for="talk_filter_keyword">{$aLang.talk_filter_label_keyword}:</label>
 			<input type="text" id="talk_filter_keyword" name="keyword" value="{$_aRequest.keyword}" class="input-block-level" />
-			<span class="help-block"><small>{$aLang.talk_filter_notice_keyword}</small></span></p>
+			<span class="help-block">{$aLang.talk_filter_notice_keyword}</span></p>
 
 			<p><label for="talk_filter_keyword_text">{$aLang.talk_filter_label_keyword_text}:</label>
 			<input type="text" id="talk_filter_keyword_text" name="keyword_text" value="{$_aRequest.keyword_text}" class="input-block-level" />
-			<span class="help-block"><small>{$aLang.talk_filter_notice_keyword}</small></span></p>
+			<span class="help-block">{$aLang.talk_filter_notice_keyword}</span></p>
 			
 
 			<p><label for="talk_filter_start">{$aLang.talk_filter_label_date}:</label>
