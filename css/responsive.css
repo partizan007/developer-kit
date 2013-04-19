@@ -29,7 +29,11 @@
 /* Tablet
 ------------------------- */
 @media (max-width: 767px) {
-  .navbar-inner { padding-left: 0; padding-right: 0; }
+  #nav 			{ margin-right: -20px; margin-left: -20px; }
+  .nav-inner 	{ padding-right: 20px; padding-left: 20px; }
+  
+  #footer 		{ margin-right: -20px; margin-left: -20px; }
+  .footer-inner { padding-right: 20px; padding-left: 20px; }
   
   /* Модальные окна */
   .modal.modal-write,
