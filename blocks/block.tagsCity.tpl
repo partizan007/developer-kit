@@ -7,7 +7,7 @@
 		<div class="block-content">
 			<ul class="unstyled inline tag-cloud word-wrap">
 				{foreach from=$aCityList item=oCity}
-					<li><a class="tag-size-{$oCity->getSize()}" href="{router page='people'}city/{$oCity->getId()}/">{$oCity->getName()|escape:'html'}</a></li>
+					<li><a class="muted tag-size-{$oCity->getSize()}" href="{router page='people'}city/{$oCity->getId()}/">{$oCity->getName()|escape:'html'}</a></li>
 				{/foreach}					
 			</ul>	
 		</div>		
