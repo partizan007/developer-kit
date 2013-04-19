@@ -46,19 +46,6 @@
 /* Poll */
 .topic .poll { margin-bottom: 20px; }
 
-.topic .poll .poll-vote 					{ margin-bottom: 20px; }
-.topic .poll .poll-vote li 					{ margin-bottom: 10px; }
-.topic .poll .poll-vote li:last-child 		{ margin-bottom: 0; }
-.topic .poll .poll-result li dl 			{ overflow: hidden; zoom: 1; }
-.topic .poll .poll-result li dl dt 			{ float: left; width: 50px; }
-.topic .poll .poll-result li dl dt span 	{ font-weight: normal; }
-.topic .poll .poll-result li dl dd 			{ float: left; width: 400px; }
-
-.topic .poll .poll-result li dl dd div 		{ height: 6px; margin-top: 8px; background-color: #eeeeee; overflow: hidden; }
-.topic .poll .poll-result li.most dl dd div { background-color: #468847; }
-
-.topic .poll .poll-total 					{ margin-left: 10px; }
-
 
 /* Topic Photo */
 .topic.topic-type-photoset .topic-photo-preview 					{ position: relative; margin-bottom: 20px; cursor: pointer; }
