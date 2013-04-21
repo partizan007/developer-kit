@@ -3,7 +3,7 @@
 $config = array();
 
 /* Theme */
-$config['view']['theme'] = 'with-padding';
+$config['view']['theme'] = 'without-padding';
 
 
 
