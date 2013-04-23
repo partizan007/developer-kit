@@ -29,8 +29,8 @@
 						{else}
 							<ul class="unstyled footer-list">
 								<li class="footer-list-header word-wrap">{$aLang.footer_menu_user_quest_title}</li>
-								<li><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}</a></li>
-								<li><a href="{router page='login'}" class="js-login-form-show sign-in">{$aLang.user_login_submit}</a></li>
+								<li><a class="js-registration-form-show" href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}</a></li>
+								<li><a class="js-login-form-show" href="{router page='login'}" class="js-login-form-show sign-in">{$aLang.user_login_submit}</a></li>
 								{hook run='footer_menu_user_item' isGuest=true}
 							</ul>
 						{/if}
