@@ -9,10 +9,10 @@
 {assign var=oMainPhoto value=$oTopic->getPhotosetMainPhoto()}
 {if $oMainPhoto}
 	<div class="topic-photo-preview" id="photoset-main-preview-{$oTopic->getId()}" onclick="window.location='{$oTopic->getUrl()}#photoset'">
-		<div class="topic-photo-count" id="photoset-photo-count-{$oTopic->getId()}">{$oTopic->getPhotosetCount()} {$aLang.topic_photoset_photos}</div>
+		<div class="topic-photo-count" id="photoset-photo-count-{$oTopic->getId()}"><small>{$oTopic->getPhotosetCount()} {$aLang.topic_photoset_photos}</small></div>
 	
 		{if $oMainPhoto->getDescription()}
-			<div class="topic-photo-desc" id="photoset-photo-desc-{$oTopic->getId()}">{$oMainPhoto->getDescription()}</div>
+			<div class="topic-photo-desc" id="photoset-photo-desc-{$oTopic->getId()}"><small>{$oMainPhoto->getDescription()}</small></div>
 		{/if}
 	
 		<img src="{$oMainPhoto->getWebPath(500)}" alt="image" id="photoset-main-image-{$oTopic->getId()}" />

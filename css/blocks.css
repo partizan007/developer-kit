@@ -38,7 +38,7 @@
 /* Block Type - Profile */
 .block.block-type-profile .profile-photo-wrapper 	{ position: relative; margin: 0 auto; min-height: 50px; max-width: 250px; }
 .block.block-type-profile .profile-photo 			{ vertical-align: top; }
-.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; padding: 0 5px; font-size: 11px; }
+.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; padding: 0 5px; }
 .block.block-type-profile .status.status-online 	{ background-color: #3fb618; color: #ffffff; }
 .block.block-type-profile .status.status-offline 	{ background-color: #333333; color: #ffffff; opacity: .5; filter: alpha(opacity=50); }
 .block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; max-width: 230px; background-color: #eeeeee; }

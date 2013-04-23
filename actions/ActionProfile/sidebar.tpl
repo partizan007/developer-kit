@@ -3,7 +3,7 @@
 
 <section class="block block-type-profile">
 	<div class="profile-photo-wrapper">
-		<div class="status {if $oUserProfile->isOnline()}status-online{else}status-offline{/if}">{if $oUserProfile->isOnline()}{$aLang.user_status_online}{else}{$aLang.user_status_offline}{/if}</div>
+		<div class="status {if $oUserProfile->isOnline()}status-online{else}status-offline{/if}"><small>{if $oUserProfile->isOnline()}{$aLang.user_status_online}{else}{$aLang.user_status_offline}{/if}</small></div>
 		<a href="{$oUserProfile->getUserWebPath()}"><img src="{$oUserProfile->getProfileFotoPath()}" alt="photo" class="profile-photo" id="foto-img" /></a>
 	</div>
 	
