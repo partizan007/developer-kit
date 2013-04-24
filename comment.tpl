@@ -63,7 +63,7 @@
 			
 				{if $oUserCurrent and !$bNoCommentFavourites}
 					<li class="comment-favourite">
-						<div onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="muted favourite {if $oComment->getIsFavourite()}active{/if}"><i class="icon-star-empty"></i></div>
+						<a href="#" onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="muted favourite {if $oComment->getIsFavourite()}active{/if}"><i class="icon-star-empty"></i></a>
 						<span class="muted favourite-count" id="fav_count_comment_{$oComment->getId()}">{if $oComment->getCountFavourite() > 0}{$oComment->getCountFavourite()}{/if}</span>
 					</li>
 				{/if}
