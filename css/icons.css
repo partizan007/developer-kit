@@ -12,18 +12,7 @@
 
 ------------------------------------------------------------------- */
 
-[class^="icon-"],
-[class*=" icon-"]  { 
-	opacity: .3;
-}
-
-[class^="icon-"]:hover, 
-[class*=" icon-"]:hover  { 
-	opacity: .5;
-}
-
 .icon-contact				{ width: 16px; height: 16px; background: url(../images/icons-contact.png) no-repeat; opacity: 1; }
-.icon-contact:hover			{ opacity: 1; } 
 .icon-contact-default		{ background-position: 0 0; } 
 .icon-contact-mail			{ background-position: -20px 0; } 
 .icon-contact-icq			{ background-position: -40px 0; } 

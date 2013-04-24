@@ -10,14 +10,16 @@ $config['view']['theme'] = 'default';
 
 $config['head']['default']['js'] = Config::Get('head.default.js');
 $config['head']['default']['js'][] = '___path.static.skin___/js/template.js';
-/* Framework */
+/* Bootstrap */
 $config['head']['default']['js'][] = '___path.static.skin___/bootstrap/js/bootstrap.min.js';
 
 
 $config['head']['default']['css'] = array(
-	/* Framework */
+	/* Bootstrap */
 	"___path.static.skin___/bootstrap/css/bootstrap.min.css",
 	"___path.static.skin___/bootstrap/css/bootstrap-responsive.min.css",
+	/* Font-Awesome */
+	"___path.static.skin___/font-awesome/css/font-awesome.min.css",
 
 	/* Structure */
 	"___path.static.skin___/css/base.css",

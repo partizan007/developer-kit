@@ -33,7 +33,7 @@
 						{date_format date=$oTalk->getDate() format="j F Y, H:i"}
 					</time>
 				</li>
-				<li class="topic-info-favourite"><a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a></li>
+				<li class="topic-info-favourite"><a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"><i class="icon-star-empty muted"></i></a></li>
 				{hook run='talk_read_info_item' talk=$oTalk}
 			</ul>
 		</small>

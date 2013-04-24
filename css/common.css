@@ -28,9 +28,9 @@
 
 /* Избранное 
 ---------------------------------------------------- */
-.favourite 			{ display: inline-block; width: 14px; height: 14px; vertical-align: text-top; background: url(../images/icons.png) -144px 0 no-repeat; opacity: .3; filter: alpha(opacity=30); cursor: pointer; }
-.favourite.active 	{ background-position: -120px 0; }
-.favourite:hover 	{ opacity: .5; filter: alpha(opacity=50); }
+.favourite 			{ display: inline-block; cursor: pointer; }
+.favourite.active 	{  }
+.favourite:hover 	{ text-decoration: none; }
 
 
 /* Toolbar 

@@ -26,7 +26,6 @@
 /* Tags */
 .topic .topic-footer .topic-tags 						{ margin-bottom: 5px; }
 .topic .topic-footer .topic-tags li 					{ padding: 0; }
-.topic .topic-footer .topic-tags li i 					{ margin-right: 3px; }
 .topic .topic-footer .topic-tags li.topic-tags-edit 	{ margin-left: 10px; }
 
 
@@ -36,7 +35,7 @@
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; text-decoration: underline; }
 .topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: middle; }
-.topic .topic-footer .topic-info li.topic-info-share a 			{ position: relative; top: -1px; }
+.topic .topic-footer .topic-info li.topic-info-share a:hover 	{ text-decoration: none; }
 
 
 /* Share */
