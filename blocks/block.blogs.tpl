@@ -1,7 +1,7 @@
 <div class="block" id="block_blogs">
 	<header class="block-header">
 		<h3>{$aLang.block_blogs}</h3>
-		<div class="block-update js-block-blogs-update"></div>
+		<div class="icon-refresh muted block-update js-block-blogs-update"></div>
 	</header>
 	
 	<div class="block-content">

@@ -1,7 +1,7 @@
 <section class="block">
 	<header class="block-header">
 		<h3>{$aLang.block_tags}</h3>
-		<a id="block-more" class="icon-search tags-search" title="{$aLang.tags_name_search}" href=""></a>
+		<a id="block-more" class="icon-search muted tags-search" title="{$aLang.tags_name_search}" href=""></a>
 	</header>
 	
 	

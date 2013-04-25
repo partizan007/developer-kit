@@ -3,7 +3,7 @@
 
 <h2 class="page-header">{$aLang.blogs}</h2>
 
-<a id="block-more" class="icon-search blogs-search" title="{$aLang.blogs_name_search}" href="#"></a>
+<a id="block-more" class="icon-search muted blogs-search" title="{$aLang.blogs_name_search}" href="#"></a>
 
 <div id="block-more-content" style="display: none;">
 	<form action="" method="POST" id="form-blogs-search" onsubmit="return false;" class="search-item">

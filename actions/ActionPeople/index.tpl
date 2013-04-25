@@ -2,7 +2,7 @@
 
 <h2 class="page-header">{$aLang.people}</h2>
 
-<a id="block-more" class="icon-search people-search" title="{$aLang.people_name_search}" href="#"></a>
+<a id="block-more" class="icon-search muted people-search" title="{$aLang.people_name_search}" href="#"></a>
 
 <div id="block-more-content" style="display: none;">
 	<form action="" method="POST" id="form-users-search" onsubmit="return false;" class="search-item">

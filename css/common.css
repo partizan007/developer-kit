@@ -107,6 +107,5 @@
 
 .wrapper-content.wrapper-content-dark 	{ background-color: #f0f0f0; }
 
-a.blogs-search,
-a.people-search 	{ position: absolute; right: 0; top: 5px; }
-a.tags-search 		{ position: absolute; right: 0; top: 3px; }
+a.blogs-search, a.people-search, a.tags-search 						{ position: absolute; right: 0; top: 5px; }
+a.blogs-search:hover, a.people-search:hover, a.tags-search:hover 	{ text-decoration: none; }
