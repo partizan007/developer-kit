@@ -43,7 +43,7 @@
 						<p>
 							<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a>
 
-							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="icon-question-sign"></a>
+							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="muted question-sign"><i class="icon-question-sign"></i></a>
 
 							{if $oBlog->getType() == 'close'}
 								<i title="{$aLang.blog_closed}" class="icon-lock muted"></i>

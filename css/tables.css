@@ -10,16 +10,18 @@
 
 
 /* Table Blogs */
-.table.table-blogs 								{ margin-bottom: 40px; }
+.table.table-blogs { margin-bottom: 40px; }
 
-.table.table-blogs .cell-name .avatar 			{ float: left; margin-right: 15px; }
-.table.table-blogs .cell-name p					{ overflow: hidden; margin-bottom: 5px; }
-.table.table-blogs .cell-name p .blog-name 		{ font-size: 16px; text-decoration: underline; }
-.table.table-blogs .cell-name .user-avatar a 	{ color: #333333; }
+.table.table-blogs .cell-name .avatar 					{ float: left; margin-right: 15px; }
+.table.table-blogs .cell-name p							{ overflow: hidden; margin-bottom: 5px; }
+.table.table-blogs .cell-name p .blog-name 				{ font-size: 16px; text-decoration: underline; }
+.table.table-blogs .cell-name p .question-sign:hover 	{ text-decoration: none; }
 
-.table.table-blogs .cell-join 			{ width: 130px; text-align: center; vertical-align: middle; }
+.table.table-blogs .cell-name .user-avatar a { color: #333333; }
+
+.table.table-blogs .cell-join 		{ width: 130px; text-align: center; vertical-align: middle; }
 .table.table-blogs .cell-readers,
-.table.table-blogs .cell-rating 		{ width: 70px; text-align: center; vertical-align: middle; }
+.table.table-blogs .cell-rating 	{ width: 70px; text-align: center; vertical-align: middle; }
 
 
 /* Table Users */
