@@ -46,7 +46,7 @@
 							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="icon-question-sign"></a>
 
 							{if $oBlog->getType() == 'close'}
-								<i title="{$aLang.blog_closed}" class="icon-lock"></i>
+								<i title="{$aLang.blog_closed}" class="icon-lock muted"></i>
 							{/if}
 
 						</p>
