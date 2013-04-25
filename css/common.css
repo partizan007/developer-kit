@@ -29,7 +29,7 @@
 /* Избранное 
 ---------------------------------------------------- */
 .favourite 			{ display: inline-block; cursor: pointer; }
-.favourite.active 	{  }
+.favourite.active 	{ color: #c09853; }
 .favourite:hover 	{ text-decoration: none; }
 
 
