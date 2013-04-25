@@ -38,19 +38,16 @@
 .toolbar 					{ float: right; position: fixed; top: 130px; right: 10px; z-index: 100; }
 .toolbar section 			{ width: 34px; line-height: 16px; background-color: #ffffff; border: 1px solid #eeeeee; margin-bottom: 10px; }
 
-.toolbar section.toolbar-admin:hover,
-.toolbar section.toolbar-topic .toolbar-topic-prev:hover,
-.toolbar section.toolbar-topic .toolbar-topic-next:hover,
-.toolbar section.toolbar-scrollup:hover { background-color: #f5f5f5; }
+.toolbar section a 			{ display: block; padding: 10px; }
+.toolbar section a:hover 	{ text-decoration: none; background-color: #f5f5f5; }
 
-.toolbar section a			{ display: block; padding: 10px; }
 .toolbar section i			{ display: block; }
 
 /* Update comments button */
-.toolbar .toolbar-update .update-comments 			{ padding: 9px; }
-.toolbar .toolbar-update .update-comments i 		{ display: block; width: 16px; height: 16px; background: url(../images/update.gif) no-repeat; opacity: .3; }
-.toolbar .toolbar-update .update-comments:hover i 	{ opacity: .5; }
-.toolbar .toolbar-update .update-comments.active i 	{ background-position: -16px 0; opacity: .5; }
+.toolbar .toolbar-update .update-comments 			{  }
+.toolbar .toolbar-update .update-comments i 		{  }
+.toolbar .toolbar-update .update-comments:hover i 	{  }
+.toolbar .toolbar-update .update-comments.active i 	{ opacity: .5; }
 .toolbar .toolbar-update .new-comments 				{ border-top: 1px solid #eeeeee; padding: 10px 0; text-align: center; font-size: 11px; }
 
 /* Topic navigation */
