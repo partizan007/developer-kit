@@ -4,26 +4,25 @@
 
 /* Голосование 
 ---------------------------------------------------- */
-.vote .vote-count 							{ display: inline-block; color: #999999; font-size: 12px; }
+.vote .vote-count 							{ display: inline-block; color: #999999; }
 .vote .vote-count a 						{ text-decoration: none; color: #999999; outline: none; }
 
 .vote.vote-count-positive .vote-count 		{ color: #468847; }
 .vote.vote-count-negative .vote-count 		{ color: #b94a48; }
 
 .vote .vote-up,
-.vote .vote-down 							{ display: inline-block; cursor: pointer; vertical-align: text-top; width: 14px; height: 14px; background: url(../images/icons.png) no-repeat; opacity: .3; filter: alpha(opacity=30); }
-.vote .vote-up 								{ background-position: -96px -144px; }
-.vote .vote-down 							{ background-position: -120px -144px; }
-.vote .vote-up:hover 						{ opacity: .5; filter: alpha(opacity=50); }
-.vote .vote-down:hover 						{ opacity: .5; filter: alpha(opacity=50); }
+.vote .vote-down 							{ display: inline-block; cursor: pointer; }
 
-.vote.voted.voted-up 	.vote-up 			{ opacity: .5; filter: alpha(opacity=50); }
-.vote.voted.voted-down 	.vote-down 			{ opacity: .5; filter: alpha(opacity=50); }
-.vote.voted.voted-up 	.vote-down:hover 	{ opacity: .3; filter: alpha(opacity=30); }
-.vote.voted.voted-down 	.vote-up:hover 		{ opacity: .3; filter: alpha(opacity=30); }
+.vote .vote-up:hover 						{ color: #468847; text-decoration: none; }
+.vote .vote-down:hover 						{ color: #b94a48; text-decoration: none; }
 
-.vote-topic-info li i 						{ margin-right: 5px; opacity: 1; }
-.vote-topic-info li i:hover 				{ opacity: 1; }
+.vote.voted.voted-up 	.vote-up 			{ color: #468847; }
+.vote.voted.voted-down 	.vote-down 			{ color: #b94a48; }
+
+.vote.voted.voted-up 	.vote-down:hover 	{ color: #b94a48; }
+.vote.voted.voted-down 	.vote-up:hover 		{ color: #468847; }
+
+.vote-topic-info li i 						{ margin-right: 5px; }
 
 
 /* Избранное 

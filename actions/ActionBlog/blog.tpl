@@ -41,12 +41,14 @@
 
 <div class="blog">
 	<header class="blog-header">
-		<div id="vote_area_blog_{$oBlog->getId()}" class="vote {if $oBlog->getRating() > 0}vote-count-positive{elseif $oBlog->getRating() < 0}vote-count-negative{/if} {if $oVote} voted {if $oVote->getDirection()>0}voted-up{elseif $oVote->getDirection()<0}voted-down{/if}{/if}">
-			<div class="muted vote-label"><small>Рейтинг</small></div>
-			<a href="#" class="vote-down" onclick="return ls.vote.vote({$oBlog->getId()},this,-1,'blog');"></a>
-			<div id="vote_total_blog_{$oBlog->getId()}" class="vote-count count" title="{$aLang.blog_vote_count}: {$oBlog->getCountVote()}">{if $oBlog->getRating() > 0}+{/if}{$oBlog->getRating()}</div>
-			<a href="#" class="vote-up" onclick="return ls.vote.vote({$oBlog->getId()},this,1,'blog');"></a>
-		</div>
+		<small>
+			<div id="vote_area_blog_{$oBlog->getId()}" class="vote {if $oBlog->getRating() > 0}vote-count-positive{elseif $oBlog->getRating() < 0}vote-count-negative{/if} {if $oVote} voted {if $oVote->getDirection()>0}voted-up{elseif $oVote->getDirection()<0}voted-down{/if}{/if}">
+				<div class="muted vote-label">Рейтинг</div>
+				<a href="#" class="muted vote-down" onclick="return ls.vote.vote({$oBlog->getId()},this,-1,'blog');"><i class="icon-thumbs-down"></i></a>
+				<div id="vote_total_blog_{$oBlog->getId()}" class="vote-count count" title="{$aLang.blog_vote_count}: {$oBlog->getCountVote()}">{if $oBlog->getRating() > 0}+{/if}{$oBlog->getRating()}</div>
+				<a href="#" class="muted vote-up" onclick="return ls.vote.vote({$oBlog->getId()},this,1,'blog');"><i class="icon-thumbs-up"></i></a>
+			</div>
+		</small>
 		
 		<img src="{$oBlog->getAvatarPath(64)}" alt="avatar" class="avatar" />
 		

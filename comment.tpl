@@ -38,7 +38,7 @@
 			
 			
 				{if $oComment->getTargetType() != 'talk'}						
-					<li id="vote_area_comment_{$oComment->getId()}" class="vote 
+					<li id="vote_area_comment_{$oComment->getId()}" class="muted vote 
 																			{if $oComment->getRating() > 0}
 																				vote-count-positive
 																			{elseif $oComment->getRating() < 0}
@@ -54,9 +54,9 @@
 																					voted-down
 																				{/if}
 																			{/if}">
-						<div class="vote-down" onclick="return ls.vote.vote({$oComment->getId()},this,-1,'comment');"></div>
+						<div class="vote-down" onclick="return ls.vote.vote({$oComment->getId()},this,-1,'comment');"><i class="icon-thumbs-down"></i></div>
 						<span class="vote-count" id="vote_total_comment_{$oComment->getId()}">{if $oComment->getRating() > 0}+{/if}{$oComment->getRating()}</span>
-						<div class="vote-up" onclick="return ls.vote.vote({$oComment->getId()},this,1,'comment');"></div>
+						<div class="vote-up" onclick="return ls.vote.vote({$oComment->getId()},this,1,'comment');"><i class="icon-thumbs-up"></i></div>
 					</li>
 				{/if}
 			

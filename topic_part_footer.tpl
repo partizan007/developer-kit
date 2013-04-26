@@ -86,7 +86,7 @@
 					{if $oVote || ($oUserCurrent && $oTopic->getUserId() == $oUserCurrent->getId()) || strtotime($oTopic->getDateAdd()) < $smarty.now-$oConfig->GetValue('acl.vote.topic.limit_time')}
 						{assign var="bVoteInfoShow" value=true}
 					{/if}
-					<div class="vote-down" onclick="return ls.vote.vote({$oTopic->getId()},this,-1,'topic');"></div>
+					<div class="vote-down" onclick="return ls.vote.vote({$oTopic->getId()},this,-1,'topic');"><i class="icon-thumbs-down"></i></div>
 					<div class="vote-count {if $bVoteInfoShow}js-infobox-vote-topic{/if}" id="vote_total_topic_{$oTopic->getId()}" title="{$aLang.topic_vote_count}: {$oTopic->getCountVote()}">
 						{if $bVoteInfoShow}
 							{if $oTopic->getRating() > 0}+{/if}{$oTopic->getRating()}
@@ -94,7 +94,7 @@
 							<a href="#" onclick="return ls.vote.vote({$oTopic->getId()},this,0,'topic');">?</a> 
 						{/if}
 					</div>
-					<div class="vote-up" onclick="return ls.vote.vote({$oTopic->getId()},this,1,'topic');"></div>
+					<div class="vote-up" onclick="return ls.vote.vote({$oTopic->getId()},this,1,'topic');"><i class="icon-thumbs-up"></i></div>
 					{if $bVoteInfoShow}
 						<div id="vote-info-topic-{$oTopic->getId()}" style="display: none;">
 							<ul class="unstyled vote-topic-info">
