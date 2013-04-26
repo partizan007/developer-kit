@@ -12,8 +12,8 @@
 				</small>
 			</p>
 			<a href="{$oBlog->getUrlFull()}" class="text-success blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
-			<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<span class="muted"><i class="icon-comment"></i>{$oTopic->getCountComment()}</span>
+			<a href="{$oTopic->getUrl()}" class="stream-topic">{$oTopic->getTitle()|escape:'html'}</a>
+			<small class="text-error">{$oTopic->getCountComment()}</small>
 		</li>
 	{/foreach}
 </ul>

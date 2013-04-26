@@ -3,7 +3,7 @@
 		<li>
 			<a href="{$oBlog->getUrlFull()}"><img src="{$oBlog->getAvatarPath(48)}" alt="avatar" class="avatar" /></a>
 			
-			<a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a>
+			<a href="{$oBlog->getUrlFull()}" class="blog-top" >{$oBlog->getTitle()|escape:'html'}</a>
 			{if $oBlog->getType()=='close'}<i title="{$aLang.blog_closed}" class="icon icon-lock muted"></i>{/if}
 			
 			<p class="muted"><small>{$aLang.blog_rating}: <strong>{$oBlog->getRating()}</strong></small></p>

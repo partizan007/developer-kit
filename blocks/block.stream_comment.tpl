@@ -14,8 +14,8 @@
 					</time>
 				</small>
 			</p>
-			<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}{$oTopic->getUrl()}#comment{/if}{$oComment->getId()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<span class="muted"><i class="icon-comment"></i>{$oTopic->getCountComment()}</span>
+			<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}{$oTopic->getUrl()}#comment{/if}{$oComment->getId()}" class="stream-topic">{$oTopic->getTitle()|escape:'html'}</a>
+			<small class="text-error">{$oTopic->getCountComment()}</small>
 		</li>
 	{/foreach}
 </ul>
