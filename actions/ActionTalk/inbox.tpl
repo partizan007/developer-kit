@@ -41,7 +41,7 @@
 									{/foreach}
 									{foreach from=$aTalkUserOther item=oTalkUser name=users}
 										{assign var="oUser" value=$oTalkUser->getUser()}
-										{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
+										{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}muted inactive{/if}">{$oUser->getLogin()}</a>
 									{/foreach}
 								{/strip}
 							</small>
@@ -51,7 +51,7 @@
 						</td>
 						<td>
 							{strip}
-								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="js-title-talk" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
+								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="text-success js-title-talk" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
 									{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
 										<strong>{$oTalk->getTitle()|escape:'html'}</strong>
 									{else}

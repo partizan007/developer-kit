@@ -28,7 +28,7 @@
 							{/foreach}
 							{foreach from=$aTalkUserOther item=oTalkUser name=users}
 								{assign var="oUser" value=$oTalkUser->getUser()}
-								{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
+								{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}muted inactive{/if}">{$oUser->getLogin()}</a>
 							{/foreach}
 						{/strip}
 					</small>
@@ -38,9 +38,9 @@
 				</td>
 				<td>
 				{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
-					<a href="{router page='talk'}read/{$oTalk->getId()}/"><strong>{$oTalk->getTitle()|escape:'html'}</strong></a>
+					<a href="{router page='talk'}read/{$oTalk->getId()}/" class="text-success"><strong>{$oTalk->getTitle()|escape:'html'}</strong></a>
 				{else}
-					<a href="{router page='talk'}read/{$oTalk->getId()}/">{$oTalk->getTitle()|escape:'html'}</a>
+					<a href="{router page='talk'}read/{$oTalk->getId()}/" class="text-success">{$oTalk->getTitle()|escape:'html'}</a>
 				{/if}
 				&nbsp;
 				{if $oTalk->getCountComment()}
