@@ -26,8 +26,8 @@
 .icon-contact-www			{ background-position: -200px 0; }
 
 
-.form-profile .icon-remove { color: #999999; margin-left: 3px; position: relative; top: -4px; }
-.form-profile .icon-remove:hover { color: #777777; text-decoration: none; }
+.form-profile .icon-remove,
+.poll-create .icon-trash 			{ color: #999999; margin-left: 3px; position: relative; top: -4px; }
 
-.poll-create .icon-trash { color: #999999; margin-left: 3px; position: relative; top: -4px; }
-.poll-create .icon-trash:hover { color: #777777; text-decoration: none; }
+.form-profile .icon-remove:hover,
+.poll-create .icon-trash:hover 		{ color: #777777; text-decoration: none; }
