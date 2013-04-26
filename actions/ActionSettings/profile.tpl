@@ -160,13 +160,13 @@
 			<div id="user-field-contact-contener">
 				{foreach from=$aUserFieldContactValues item=oField}
 					<p class="js-user-field-item">
-						<select name="profile_user_field_type[]"  onchange="ls.userfield.changeFormField(this);" class="span4">
+						<select name="profile_user_field_type[]"  onchange="ls.userfield.changeFormField(this);" class="span3">
 							{foreach from=$aUserFieldsContact item=oFieldAll}
 								<option value="{$oFieldAll->getId()}" {if $oFieldAll->getId()==$oField->getId()}selected="selected"{/if}>{$oFieldAll->getTitle()|escape:'html'}</option>
 							{/foreach}
 						</select>
-						<input type="text" name="profile_user_field_value[]" value="{$oField->getValue()|escape:'html'}" class="span4">
-						<a class="icon-remove" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
+						<input type="text" name="profile_user_field_value[]" value="{$oField->getValue()|escape:'html'}" class="span3">
+						<a class="icon-remove muted" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
 					</p>
 				{/foreach}
 			</div>
