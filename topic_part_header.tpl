@@ -12,11 +12,11 @@
 			{/if}
 			
 			{if $oTopic->getPublish() == 0}   
-				<i class="icon-file" title="{$aLang.topic_unpublish}"></i>
+				<i class="icon-file muted" title="{$aLang.topic_unpublish}"></i>
 			{/if}
 			
 			{if $oTopic->getType() == 'link'} 
-				<i class="icon-globe" title="{$aLang.topic_link}"></i>
+				<i class="icon-globe muted" title="{$aLang.topic_link}"></i>
 			{/if}
 		{if $bTopicList}</h2>{else}</h1>{/if}
 

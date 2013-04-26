@@ -60,8 +60,23 @@
 			
 				{if $bTopicList}
 					<li class="topic-info-comments">
-						<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}">{$oTopic->getCountComment()} {$oTopic->getCountComment()|declension:$aLang.comment_declension:'russian'}</a>
-						{if $oTopic->getCountCommentNew()}<span class="muted">+{$oTopic->getCountCommentNew()}</span>{/if}
+						{if $oTopic->getCountCommentNew()}
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="text-success new">
+								<i class="icon-comment"></i>
+								<span>{$oTopic->getCountComment()}</span>
+								<span class="count text-error">+{$oTopic->getCountCommentNew()}</span>
+							</a>
+						{elseif $oTopic->getCountComment()}
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="text-success">
+								<i class="icon-comment"></i>
+								<span>{$oTopic->getCountComment()}</span>
+							</a>
+						{else}
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="muted">
+								<i class="icon-comment"></i>
+								<span>{$oTopic->getCountComment()}</span>
+							</a>
+						{/if}
 					</li>
 				{/if}
 			
