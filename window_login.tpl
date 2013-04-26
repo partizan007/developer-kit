@@ -80,25 +80,25 @@
 					{hook run='form_registration_begin' isPopup=true}
 
 					<label for="popup-registration-login">{$aLang.registration_login}
-					<i class="icon-question-sign js-tip-help" title="{$aLang.registration_login_notice}"></i>
-					<i class="icon-ok-green validate-ok-field-login" style="display: none"></i></label>
+					<i class="icon-question-sign muted js-tip-help" title="{$aLang.registration_login_notice}"></i>
+					<i class="icon-ok text-success validate-ok-field-login" style="display: none"></i></label>
 					<input type="text" name="login" id="popup-registration-login" value="{$_aRequest.login}" class="input-block-level js-ajax-validate" />
 					<span class="help-block"><small class="text-error validate-error-hide validate-error-field-login"></small></span>
 
 					<label for="popup-registration-mail">{$aLang.registration_mail}
-					<i class="icon-question-sign js-tip-help" title="{$aLang.registration_mail_notice}"></i>
-					<i class="icon-ok-green validate-ok-field-mail" style="display: none"></i></label>
+					<i class="icon-question-sign muted js-tip-help" title="{$aLang.registration_mail_notice}"></i>
+					<i class="icon-ok text-success validate-ok-field-mail" style="display: none"></i></label>
 					<input type="text" name="mail" id="popup-registration-mail" value="{$_aRequest.mail}" class="input-block-level js-ajax-validate" />
 					<span class="help-block"><small class="text-error validate-error-hide validate-error-field-mail"></small></span>
 
 					<label for="popup-registration-user-password">{$aLang.registration_password}
-					<i class="icon-question-sign js-tip-help" title="{$aLang.registration_password_notice}"></i>
-					<i class="icon-ok-green validate-ok-field-password" style="display: none"></i></label>
+					<i class="icon-question-sign muted js-tip-help" title="{$aLang.registration_password_notice}"></i>
+					<i class="icon-ok text-success validate-ok-field-password" style="display: none"></i></label>
 					<input type="password" name="password" id="popup-registration-user-password" value="" class="input-block-level js-ajax-validate" />
 					<span class="help-block"><small class="text-error validate-error-hide validate-error-field-password"></small></span>
 
 					<label for="popup-registration-user-password-confirm">{$aLang.registration_password_retry}
-					<i class="icon-ok-green validate-ok-field-password_confirm" style="display: none"></i></label>
+					<i class="icon-ok text-success validate-ok-field-password_confirm" style="display: none"></i></label>
 					<input type="password" value="" id="popup-registration-user-password-confirm" name="password_confirm" class="input-block-level js-ajax-validate" />
 					<span class="help-block"><small class="text-error validate-error-hide validate-error-field-password_confirm"></small></span>
 
