@@ -19,10 +19,10 @@
 
 	{$aHtmlHeadFiles.css}
 	
-	{if {cfg name='view.theme'} == 'likesynio'}
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	{/if}
-
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="{cfg name="path.static.skin"}/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+	
 	<link href="{cfg name='path.static.skin'}/images/favicon.ico?v1" rel="shortcut icon" />
 	<link rel="search" type="application/opensearchdescription+xml" href="{router page='search'}opensearch/" title="{cfg name='view.name'}" />
 
