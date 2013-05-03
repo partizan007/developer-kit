@@ -1,7 +1,7 @@
 {foreach from=$aReplyWall item=oReplyWall}
 	{assign var="oReplyUser" value=$oReplyWall->getUser()}
 	<div id="wall-reply-item-{$oReplyWall->getId()}" class="js-wall-reply-item comment wall-comment-reply">
-		<a href="{$oReplyUser->getUserWebPath()}"><img src="{$oReplyUser->getProfileAvatarPath(48)}" alt="avatar" class="comment-avatar" /></a>
+		<a href="{$oReplyUser->getUserWebPath()}"><img src="{$oReplyUser->getProfileAvatarPath(48)}" alt="{$oReplyUser->getLogin()}" class="comment-avatar" /></a>
 		
 		<small>
 			<ul class="unstyled inline comment-info">

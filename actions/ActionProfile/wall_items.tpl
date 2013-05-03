@@ -4,7 +4,7 @@
 
 	<div id="wall-item-{$oWall->getId()}" class="js-wall-item comment-wrapper">
 		<div class="comment">
-			<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(48)}" alt="avatar" class="comment-avatar" /></a>
+			<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(48)}" alt="{$oWallUser->getLogin()}" class="comment-avatar" /></a>
 			
 			<small>
 				<ul class="unstyled inline comment-info">

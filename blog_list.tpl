@@ -37,7 +37,7 @@
 				<tr>
 					<td class="cell-name">
 						<a href="{$oBlog->getUrlFull()}">
-							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" alt="avatar" class="avatar visible-desktop" />
+							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" class="avatar visible-desktop" />
 						</a>
 						
 						<p>
@@ -52,7 +52,7 @@
 						</p>
 						
 						<span class="user-avatar">
-							<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>
+							<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" /></a>
 							<small><a href="{$oUserOwner->getUserWebPath()}">{$oUserOwner->getLogin()}</a></small>
 						</span>
 					</td>

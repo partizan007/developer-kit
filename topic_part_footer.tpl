@@ -44,7 +44,7 @@
 		<small>
 			<ul class="muted unstyled inline topic-info">
 				<li class="topic-info-author">
-					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
+					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
 					<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 				</li>
 				<li class="topic-info-date">
