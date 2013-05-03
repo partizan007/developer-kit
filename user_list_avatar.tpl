@@ -1,13 +1,3 @@
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$('.user-list-avatar').tooltip({
-			trigger: "hover",
-			selector: "a[data-toggle=tooltip]"
-		})
-	});
-</script>
-
-
 {if $aUsersList}
 	<ul class="unstyled inline user-list-avatar">
 		{foreach from=$aUsersList item=oUserList}
