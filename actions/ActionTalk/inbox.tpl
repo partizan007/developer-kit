@@ -51,7 +51,7 @@
 						</td>
 						<td>
 							{strip}
-								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="text-success" data-placement="left" data-toggle="tooltip" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
+								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="text-success" data-placement="top" data-toggle="tooltip" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
 									{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
 										<strong>{$oTalk->getTitle()|escape:'html'}</strong>
 									{else}
