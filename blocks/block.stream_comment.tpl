@@ -4,7 +4,7 @@
 		{assign var="oTopic" value=$oComment->getTarget()}
 		{assign var="oBlog" value=$oTopic->getBlog()}
 		
-		<li data-placement="top" data-toggle="tooltip" title="{$oComment->getText()|strip_tags|trim|truncate:100:'...'|escape:'html'}">
+		<li data-placement="left" data-toggle="tooltip" title="{$oComment->getText()|strip_tags|trim|truncate:100:'...'|escape:'html'}">
 			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
 			<p class="muted">
 				<small>
