@@ -3,7 +3,7 @@
 		{assign var="oUser" value=$oTopic->getUser()}
 		{assign var="oBlog" value=$oTopic->getBlog()}
 		
-		<li data-placement="left" data-toggle="tooltip" title="{$oTopic->getText()|strip_tags|trim|truncate:150:'...'|escape:'html'}">
+		<li class="js-title-topic" title="{$oTopic->getText()|strip_tags|trim|truncate:150:'...'|escape:'html'}">
 			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
 			<p class="muted">
 				<small>
