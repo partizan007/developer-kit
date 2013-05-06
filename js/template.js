@@ -89,6 +89,28 @@ jQuery(document).ready(function($){
 
 	
 	// Всплывающие сообщения
+	if (ls.registry.get('block_stream_show_tip')) {
+		$('.js-title-comment, .js-title-topic').poshytip({
+			className: 'infobox-yellow',
+			alignTo: 'target',
+			alignX: 'left',
+			alignY: 'center',
+			offsetX: 10,
+			liveEvents: true,
+			showTimeout: 1000
+		});
+	}
+
+	$('.js-title-talk').poshytip({
+		className: 'infobox-yellow',
+		alignTo: 'target',
+		alignX: 'left',
+		alignY: 'center',
+		offsetX: 10,
+		liveEvents: true,
+		showTimeout: 500
+	});
+
 	$('.js-infobox-vote-topic').poshytip({
 		content: function() {
 			var id = $(this).attr('id').replace('vote_total_topic_','vote-info-topic-');
