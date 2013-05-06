@@ -70,14 +70,6 @@
 	</script>
 	
 	
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$('.container').tooltip({
-				selector: "[data-toggle=tooltip]"
-			})
-		});
-	</script>
-	
 	{hook run='html_head_end'}
 </head>
 

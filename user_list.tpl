@@ -31,7 +31,7 @@
 							<p class="username">
 								<a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
 								{if $oUserNote}
-									<i class="icon-comment muted" data-toggle="tooltip" title="{$oUserNote->getText()|escape:'html'}"></i>
+									<i class="icon-comment muted js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
 								{/if}
 							</p>
 							{if $oUserList->getProfileName()}<p class="muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
