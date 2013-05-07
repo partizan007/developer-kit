@@ -4,7 +4,7 @@
 
 form .icon-question-sign { cursor: help; }
 
-.captcha-image { vertical-align: top; }
+.captcha-image { vertical-align: top; margin-left: 0; margin-right: 30px; }
 
 .form-profile 					{ position: relative; }
 .form-profile .form-actions 	{ margin-top: 0; margin-bottom: 0; }
