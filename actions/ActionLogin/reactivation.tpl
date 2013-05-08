@@ -13,12 +13,20 @@
 
 <h2 class="page-header">{$aLang.reactivation}</h2>
 
-<form action="{router page='login'}reactivation/" method="POST" id="reactivation-form">
-	<p><label for="reactivation-mail">{$aLang.password_reminder_email}</label>
-	<input type="text" name="mail" id="reactivation-mail" class="span3" />
-	<span class="help-block"><small class="text-error validate-error-hide validate-error-reactivation"></small></span></p>
-
-	<button type="submit" name="submit_reactivation" class="btn btn-primary" id="reactivation-form-submit" disabled="disabled">{$aLang.reactivation_submit}</button>
+<form action="{router page='login'}reactivation/" method="POST" id="reactivation-form" class="form-horizontal">
+	<div class="control-group">
+		<label for="reactivation-mail" class="control-label">{$aLang.password_reminder_email}:</label>
+		<div class="controls">
+			<input type="text" name="mail" id="reactivation-mail" class="span3" />
+			<span class="help-block"><small class="text-error validate-error-hide validate-error-reactivation"></small></span>
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" name="submit_reactivation" class="btn btn-primary" id="reactivation-form-submit" disabled="disabled">{$aLang.reactivation_submit}</button>
+		</div>
+	</div>
 </form>
 
 

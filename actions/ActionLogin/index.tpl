@@ -15,37 +15,58 @@
 
 {hook run='login_begin'}
 
-<form action="{router page='login'}" method="POST" id="login-form">
+<form action="{router page='login'}" method="POST" id="login-form" class="form-horizontal">
 	{hook run='form_login_begin'}
-
-	<p><label for="login">{$aLang.user_login}</label>
-	<input type="text" id="login" name="login" class="span3" /></p>
 	
-	<p><label for="password">{$aLang.user_password}</label>
-	<input type="password" id="password" name="password" class="span3" />
-	<span class="help-block"><small class="text-error validate-error-hide validate-error-login"></small></span></p>
+	<div class="control-group">
+		<label for="login" class="control-label">{$aLang.user_login}:</label>
+		<div class="controls">
+			<input type="text" id="login" name="login" class="span3" />
+		</div>
+	</div>
 	
-	<p><label class="checkbox"><input type="checkbox" name="remember" checked class="input-checkbox" />{$aLang.user_login_remember}</label></p>
+	<div class="control-group">
+		<label for="password" class="control-label">{$aLang.user_password}:</label>
+		<div class="controls">
+			<input type="password" id="password" name="password" class="span3" />
+			<span class="help-block"><small class="text-error validate-error-hide validate-error-login"></small></span>
+		</div>
+	</div>
 	
-	{hook run='form_login_end'}
-
-	<button type="submit" name="submit_login" class="btn btn-primary" id="login-form-submit" disabled="disabled">{$aLang.user_login_submit}</button>
-
-	<br />
-	<br />
-	<a href="{router page='registration'}">{$aLang.user_registration}</a><br />
-	<a href="{router page='login'}reminder/">{$aLang.user_password_reminder}</a>
+	<div class="control-group">
+		<div class="controls">
+			<label class="checkbox"><input type="checkbox" name="remember" checked class="input-checkbox" />{$aLang.user_login_remember}</label>
+			
+			{hook run='form_login_end'}
+			
+			<button type="submit" name="submit_login" class="btn btn-primary" id="login-form-submit" disabled="disabled">{$aLang.user_login_submit}</button>
+			
+			<br />
+			<br />
+			<a href="{router page='registration'}">{$aLang.user_registration}</a><br />
+			<a href="{router page='login'}reminder/">{$aLang.user_password_reminder}</a>
+		</div>
+	</div>
 </form>
 
 
 {if $oConfig->GetValue('general.reg.invite')}
 	<br /><br />
-	<form action="{router page='registration'}invite/" method="POST">
-		<h3>{$aLang.registration_invite}</h3>
-
-		<p><label>{$aLang.registration_invite_code}<br />
-		<input type="text" name="invite_code" class="span3" /></label></p>
-		<input type="submit" name="submit_invite" value="{$aLang.registration_invite_check}" class="btn" />
+	<form action="{router page='registration'}invite/" method="POST" class="form-horizontal">
+		<h3 class="page-header">{$aLang.registration_invite}</h3>
+		
+		<div class="control-group">
+			<label class="control-label">{$aLang.registration_invite_code}:</label>
+			<div class="controls">
+				<input type="text" name="invite_code" class="span3" />
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" name="submit_invite" value="{$aLang.registration_invite_check}" class="btn" />
+			</div>
+		</div>
 	</form>
 {/if}
 

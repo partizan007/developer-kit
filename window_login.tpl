@@ -134,11 +134,15 @@
 					<div class="control-group">
 						<label for="popup-registration-captcha" class="control-label">{$aLang.registration_captcha}:</label>
 						<div class="controls">
-							<img src="{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}" 
-								onclick="this.src='{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}&n='+Math.random();"
-								class="span1 captcha-image" />
-							<input type="text" name="captcha" id="popup-registration-captcha" value="" maxlength="3" class="span2 js-ajax-validate" />
-							<span class="help-block"><small class="text-error validate-error-hide validate-error-field-captcha"></small></span>
+							<div class="span1 captcha-image-div">
+								<img src="{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}" 
+									onclick="this.src='{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}&n='+Math.random();"
+									class="captcha-image" />
+							</div>
+							<div class="span2">
+								<input type="text" name="captcha" id="popup-registration-captcha" value="" maxlength="3" class="input-block-level js-ajax-validate" />
+								<span class="help-block"><small class="text-error validate-error-hide validate-error-field-captcha"></small></span>
+							</div>
 						</div>
 					</div>
 					{/hookb}
