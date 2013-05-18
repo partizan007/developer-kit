@@ -50,7 +50,7 @@
 			</div>
 		</small>
 		
-		<img src="{$oBlog->getAvatarPath(64)}" alt="avatar" class="avatar" />
+		<img src="{$oBlog->getAvatarPath(64)}" class="avatar" />
 		
 		<h2>{$oBlog->getTitle()|escape:'html'}{if $oBlog->getType()=='close'} <i title="{$aLang.blog_closed}" class="icon icon-lock"></i>{/if}</h2>
 		
