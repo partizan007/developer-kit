@@ -57,5 +57,7 @@
 			<button type="submit" class="btn jqmClose">{$aLang.uploadimg_cancel}</button>
 		</form>
 	</div>
+	
+	<footer class="modal-footer"></footer>
 </div>
 	

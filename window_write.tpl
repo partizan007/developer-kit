@@ -35,5 +35,7 @@
 		</ul>
 	</div>
 	{/strip}
+	
+	<footer class="modal-footer"></footer>
 </div>
 	

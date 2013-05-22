@@ -15,5 +15,7 @@
 				<button type="submit" name="" class="btn jqmClose" />{$aLang.favourite_form_tags_button_cancel}</button>
 			</form>
 		</div>
+		
+		<footer class="modal-footer"></footer>
 	</div>
 {/if}

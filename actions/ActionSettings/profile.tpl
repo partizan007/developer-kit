@@ -97,6 +97,8 @@
 								<button type="submit" class="btn btn-primary" onclick="return ls.user.resizeAvatar();">{$aLang.settings_profile_avatar_resize_apply}</button>
 								<button type="submit" class="btn" onclick="return ls.user.cancelAvatar();">{$aLang.settings_profile_avatar_resize_cancel}</button>
 							</div>
+							
+							<footer class="modal-footer"></footer>
 						</div>
 					</div>
 				</div>
