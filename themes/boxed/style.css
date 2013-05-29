@@ -1,6 +1,6 @@
 body { background-color: #f0f0f0; }
 
-/* Сетка */
+/* РЎРµС‚РєР° */
 .header-inner 			{ padding: 0 30px; }
 .nav-inner 				{ padding-right: 30px; padding-left: 30px; }
 .wrapper-inner 			{ padding: 30px; }
@@ -8,17 +8,17 @@ body { background-color: #f0f0f0; }
 .stat-performance-inner { padding-right: 30px; padding-left: 30px; }
 
 
-/* Оформление */
+/* РћС„РѕСЂРјР»РµРЅРёРµ */
 #nav 			{ background-color: #f0f0f0; }
 .nav-inner 		{ background-color: #ffffff; }
 .wrapper-inner 	{ background-color: #ffffff; }
 
 
-/* Топик */
-.topic .topic-header .topic-title a 			{ color: #333333; }
+/* РўРѕРїРёРє */
+.topic .topic-header .topic-title a { color: #333333; }
 
 
-/* Футер */
+/* Р¤СѓС‚РµСЂ */
 #footer 					{ color: #999999; background-color: #1b1b1b; }
 #footer a 					{ color: #555555; }
 #footer .footer-list-header	{ margin-bottom: 5px; border-bottom: 1px solid #333333; }
@@ -28,7 +28,7 @@ body { background-color: #f0f0f0; }
 #stat-performance 			{ background-color: #000000; }
 
 
-/* Адаптивность - Tablet
+/* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ - Tablet
 ------------------------- */
 @media (max-width: 767px) {
   body 		{ padding-left: 0; padding-right: 0; }
