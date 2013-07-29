@@ -1,5 +1,5 @@
 {if $aCityList && count($aCityList)>0}
-	<section class="block">
+	<section class="panel block">
 		<header class="block-header">
 			<h3>{$aLang.block_city_tags}</h3>
 		</header>

@@ -1,8 +1,11 @@
 {if !$oUserCurrent}
-	<div class="modal modal-login" id="window_login_form">
+	<div class="modal fade in modal-login" id="window_login_form">
+		<div class="modal-dialog">
+			<div class="modal-content">
+	
 		<header class="modal-header">
 			<button type="button" class="close jqmClose" data-dismiss="modal" aria-hidden="true">&times;</button>
-			<h3>{$aLang.user_authorization}</h3>
+			<h4 class="modal-title">{$aLang.user_authorization}</h4>
 		</header>
 		
 		<script type="text/javascript">
@@ -186,5 +189,8 @@
 		</div>
 		
 		<footer class="modal-footer"></footer>
-	</div>
+		
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 {/if}

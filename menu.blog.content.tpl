@@ -1,5 +1,5 @@
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-12">
 
 		{if $sMenuItemSelect=='index'}
 			<ul class="nav nav-pills pull-left">

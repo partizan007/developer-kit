@@ -2,9 +2,6 @@
 	БЛОКИ
 ------------------------------------------------------------------- */
 
-.block 						{ padding: 20px; margin-bottom: 20px; background-color: #f5f5f5; }
-.block:last-child 			{ margin-bottom: 0 !important; }
-
 .block .block-header 			{ position: relative; }
 .block .block-header h3 		{ margin-top: 0; line-height: 30px; }
 .block .block-header h3 a 		{ color: #333333; }

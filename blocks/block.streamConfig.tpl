@@ -12,7 +12,7 @@
 	{/literal}
 
 
-	<section class="block block-type-activity">
+	<section class="panel block block-type-activity">
 		<header class="block-header">
 			<h3>{$aLang.stream_block_config_title}</h3>
 		</header>
@@ -41,7 +41,7 @@
 	</section>
 
 
-	<section class="block block-type-activity">
+	<section class="panel block block-type-activity">
 		<header class="block-header">
 			<h3>{$aLang.stream_block_users_title}</h3>
 		</header>
@@ -83,7 +83,7 @@
 		
 		
 		
-	<section class="block block-type-activity">
+	<section class="panel block block-type-activity">
 		<header class="block-header">
 			<h3>{$aLang.stream_block_users_friends}</h3>
 		</header>

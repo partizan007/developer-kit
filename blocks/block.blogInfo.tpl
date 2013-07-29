@@ -1,4 +1,4 @@
-<section class="block">
+<section class="panel block">
 	<header class="block-header">
 		<h3>{$aLang.block_blog_info}</h3>
 	</header>

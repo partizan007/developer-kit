@@ -1,4 +1,4 @@
-<section class="block">
+<section class="panel block">
 	<header class="block-header">
 		<h3>{$aLang.block_tags}</h3>
 		<a id="block-more" class="icon-search muted tags-search" title="{$aLang.tags_name_search}" href=""></a>
@@ -23,9 +23,9 @@
 
 		<div class="js-block-tags-content" data-type="all">
 			{if $aTags}
-				<ul class="unstyled inline tag-cloud word-wrap">
+				<ul class="list-unstyled list-inline tag-cloud word-wrap">
 					{foreach from=$aTags item=oTag}
-						<li><a class="muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
+						<li><a class="text-muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
 					{/foreach}
 				</ul>
 			{else}
@@ -36,13 +36,13 @@
 		{if $oUserCurrent}
 			<div class="js-block-tags-content" data-type="user" style="display: none;">
 				{if $aTagsUser}
-					<ul class="unstyled inline tag-cloud word-wrap">
+					<ul class="list-unstyled list-inline tag-cloud word-wrap">
 						{foreach from=$aTagsUser item=oTag}
-							<li><a class="muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
+							<li><a class="text-muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
 						{/foreach}
 					</ul>
 				{else}
-					<p class="muted">{$aLang.block_tags_empty}</p>
+					<p class="text-muted">{$aLang.block_tags_empty}</p>
 				{/if}
 			</div>
 		{/if}

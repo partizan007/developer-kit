@@ -6,13 +6,13 @@
 
 	<footer class="topic-footer">
 		<small>
-			<ul class="muted unstyled inline topic-tags js-favourite-insert-after-form js-favourite-tags-topic-{$oTopic->getId()}">
+			<ul class="text-muted list-unstyled list-inline topic-tags js-favourite-insert-after-form js-favourite-tags-topic-{$oTopic->getId()}">
 				<li><i class="icon-tags"></i></li>
 			
 				{strip}
 					{if $oTopic->getTagsArray()}
 						{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
-							<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/" class="muted">{$sTag|escape:'html'}</a></li>
+							<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/" class="text-muted">{$sTag|escape:'html'}</a></li>
 						{/foreach}
 					{else}
 						<li>{$aLang.topic_tags_empty}</li>
@@ -42,7 +42,7 @@
 
 		
 		<small>
-			<ul class="muted unstyled inline topic-info">
+			<ul class="text-muted list-unstyled list-inline topic-info">
 				<li class="topic-info-author">
 					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
 					<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
@@ -53,10 +53,10 @@
 					</time>
 				</li>
 				<li class="topic-info-favourite">
-					<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><i class="icon-star-empty muted"></i></a>
+					<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><i class="icon-star-empty text-muted"></i></a>
 					<span class="favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span>
 				</li>
-				<li class="topic-info-share"><a href="#" class="icon-share-alt muted" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>
+				<li class="topic-info-share"><a href="#" class="icon-share-alt text-muted" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>
 			
 				{if $bTopicList}
 					<li class="topic-info-comments">
@@ -72,7 +72,7 @@
 								<span>{$oTopic->getCountComment()}</span>
 							</a>
 						{else}
-							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="muted">
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="text-muted">
 								<i class="icon-comment"></i>
 								<span>{$oTopic->getCountComment()}</span>
 							</a>

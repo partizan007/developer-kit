@@ -111,13 +111,13 @@
 		<div id="wrapper" class="container {hook run='wrapper_class'}">
 			<div class="wrapper-inner">
 
-				<div class="row-fluid">
+				<div class="row">
 					{if !$noSidebar && $sidebarPosition == 'left'}
 						{include file='sidebar.tpl'}
 					{/if} 
 		
 					<div role="main" 
-						class="{if $noSidebar}span12{else}span8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
+						class="{if $noSidebar}col-lg-12{else}col-lg-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
 						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 				
 						{include file='nav_content.tpl'}

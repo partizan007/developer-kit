@@ -1,4 +1,4 @@
-<section class="block block-type-stream">
+<section class="panel block block-type-stream">
 	<header class="block-header">
 		<h3><a href="{router page='comments'}" title="{$aLang.block_stream_comments_all}">{$aLang.block_stream}</a></h3>
 		<div class="icon-refresh muted block-update js-block-stream-update"></div>

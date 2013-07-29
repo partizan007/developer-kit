@@ -12,7 +12,7 @@
 	{/literal}
 
 
-	<section class="block block-type-activity">
+	<section class="panel block block-type-activity">
 		<header class="block-header">
 			<h3>{$aLang.userfeed_block_users_title}</h3>
 		</header>
@@ -55,7 +55,7 @@
 	
 	
 	{if count($aUserfeedFriends)}
-		<section class="block block-type-activity">
+		<section class="panelblock block-type-activity">
 			<header class="block-header">
 				<h3>{$aLang.userfeed_block_users_friends}</h3>
 			</header>

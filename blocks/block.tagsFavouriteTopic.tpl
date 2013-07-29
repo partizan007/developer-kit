@@ -1,4 +1,4 @@
-<section class="block block-type-foldable block-type-favourite-topic">
+<section class="panel block block-type-foldable block-type-favourite-topic">
 	<header class="block-header">
 		<a href="#" class="link-dotted" onclick="jQuery('#block_favourite_topic_content').toggle(); return false;">{$aLang.topic_favourite_tags_block}</a>
 	</header>
