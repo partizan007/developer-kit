@@ -1,11 +1,11 @@
 {if $aPaging and $aPaging.iCountPage>1} 
-	<div class="pagination">
+	<div class="paging">
 	
-		<ul>
+		<ul class="pagination">
 			{if $aPaging.iPrevPage}
 				<li class="prev"><a href="{$aPaging.sBaseUrl}/page{$aPaging.iPrevPage}/{$aPaging.sGetParams}" class="js-paging-prev-page" title="{$aLang.paging_previos}">&larr;</a></li>
 			{else}
-				<li class="muted prev"><span>&larr;</span></li>
+				<li class="disabled prev"><span>&larr;</span></li>
 			{/if}
 		
 			{if $aPaging.iCurrentPage>1}<li><a href="{$aPaging.sBaseUrl}/{$aPaging.sGetParams}" title="{$aLang.paging_first}">...</a></li>{/if}
@@ -25,7 +25,7 @@
 			{if $aPaging.iNextPage}
 				<li class="next"><a href="{$aPaging.sBaseUrl}/page{$aPaging.iNextPage}/{$aPaging.sGetParams}" class="js-paging-next-page" title="{$aLang.paging_next}">&rarr;</a></li>
 			{else}
-				<li class="muted next"><span>&rarr;</span></li>
+				<li class="disabled next"><span>&rarr;</span></li>
 			{/if}
 		</ul>
 		

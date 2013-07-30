@@ -2,7 +2,7 @@
 	
 	{hook run='header_banner_begin'}
 	
-	<nav class="navbar navbar-static-top">
+	<nav class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="header-inner">
 				

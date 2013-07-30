@@ -17,7 +17,6 @@ $config['head']['default']['js'][] = '___path.static.skin___/bootstrap/js/bootst
 $config['head']['default']['css'] = array(
 	/* Bootstrap */
 	"___path.static.skin___/bootstrap/css/bootstrap.min.css",
-	"___path.static.skin___/bootstrap/css/bootstrap-responsive.min.css",
 	/* Font-Awesome */
 	"___path.static.skin___/font-awesome/css/font-awesome.min.css",
 

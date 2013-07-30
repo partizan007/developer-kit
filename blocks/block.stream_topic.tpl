@@ -1,4 +1,4 @@
-<ul class="unstyled item-list">
+<ul class="list-unstyled item-list">
 	{foreach from=$oTopics item=oTopic name="cmt"}
 		{assign var="oUser" value=$oTopic->getUser()}
 		{assign var="oBlog" value=$oTopic->getBlog()}
