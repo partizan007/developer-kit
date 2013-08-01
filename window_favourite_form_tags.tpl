@@ -9,7 +9,7 @@
 				</header>
 		
 				<div class="modal-body">
-					<form onsubmit="return ls.favourite.saveTags(this);>
+					<form onsubmit="return ls.favourite.saveTags(this);">
 						<input type="hidden" name="target_type" value="" id="favourite-form-tags-target-type">
 						<input type="hidden" name="target_id" value="" id="favourite-form-tags-target-id">
 
