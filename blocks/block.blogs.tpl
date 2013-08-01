@@ -1,7 +1,6 @@
 <div class="panel block" id="block_blogs">
 	<header class="block-header">
 		<h3>{$aLang.block_blogs}</h3>
-		<div class="icon-refresh muted block-update js-block-blogs-update"></div>
 	</header>
 	
 	<div class="block-content">
@@ -19,7 +18,7 @@
 
 		<footer>
 			<small>
-				<a href="{router page='blogs'}" class="muted">{$aLang.block_blogs_all}</a>
+				<a href="{router page='blogs'}">{$aLang.block_blogs_all}</a>
 			</small>
 		</footer>
 	</div>

@@ -1,3 +1,3 @@
-<aside class="col-lg-4 sidebar">
+<aside class="col-lg-3 sidebar">
 	{include file='blocks.tpl' group='right'}
 </aside>

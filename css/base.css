@@ -7,16 +7,17 @@ body { position: relative; }
 
 /* Оформление
 ---------------------------------------------------- */
-#header .navbar { margin-bottom: 0; }
-#nav { background-color: #f5f5f5; }
+#nav { background-color: #f7f7f7; }
 
 
 /* Шапка сайта
 ---------------------------------------------------- */
 #header { position: relative; }
 
-.navbar .nav > li > a img.avatar 			{ width: 20px; height: 20px; vertical-align: top; }
-.navbar .nav > li > a.new-messages:hover i 	{ opacity: .8; }
+#header .navbar { margin-bottom: 0; }
+#header .navbar h1.site-name { margin: 0; }
+#header .navbar .nav > li > a img.avatar 			{ width: 20px; height: 20px; vertical-align: top; }
+#header .navbar .nav > li > a.new-messages:hover i 	{ opacity: .8; }
 
 
 /* Навигация
@@ -30,10 +31,12 @@ body { position: relative; }
 ---------------------------------------------------- */
 .content { position: relative; }
 
+.nav-filter-wrapper { margin-bottom: 20px; }
+
 
 /* Футер
 ---------------------------------------------------- */
-#footer 					{ background-color: #f5f5f5; }
+#footer 					{ background-color: #eeeeee; }
 #footer .footer-list-header	{ font-weight: bold; }
 #footer .copyright 			{ font-size: 12px; text-align: right; }
 
@@ -51,6 +54,8 @@ a.link-dashed:hover { text-decoration: none; }
 a.link-dotted 		{ border-bottom: 1px dotted; }
 a.link-dotted:hover { text-decoration: none; }
 
+a.actions-edit { color: #c09853; }
+a.actions-delete { color: #b94a48; }
 
 /* Заголовки
 ---------------------------------------------------- */

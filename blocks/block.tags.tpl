@@ -1,7 +1,6 @@
 <section class="panel block">
 	<header class="block-header">
 		<h3>{$aLang.block_tags}</h3>
-		<a id="block-more" class="icon-search muted tags-search" title="{$aLang.tags_name_search}" href=""></a>
 	</header>
 	
 	
@@ -15,17 +14,11 @@
 			</ul>
 		{/if}
 
-		<div id="block-more-content" style="display: none;">
-			<form action="" method="GET" class="js-tag-search-form search-tags">
-				<input type="text" name="tag" placeholder="{$aLang.block_tags_search}" value="" class="input-block-level autocomplete-tags js-tag-search" />
-			</form>
-		</div>
-
 		<div class="js-block-tags-content" data-type="all">
 			{if $aTags}
 				<ul class="list-unstyled list-inline tag-cloud word-wrap">
 					{foreach from=$aTags item=oTag}
-						<li><a class="text-muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
+						<li><a class="tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
 					{/foreach}
 				</ul>
 			{else}
@@ -38,7 +31,7 @@
 				{if $aTagsUser}
 					<ul class="list-unstyled list-inline tag-cloud word-wrap">
 						{foreach from=$aTagsUser item=oTag}
-							<li><a class="text-muted tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
+							<li><a class="tag-size-{$oTag->getSize()}" href="{router page='tag'}{$oTag->getText()|escape:'url'}/">{$oTag->getText()|escape:'html'}</a></li>
 						{/foreach}
 					</ul>
 				{else}

@@ -12,6 +12,8 @@
 
 ------------------------------------------------------------------- */
 
+.glyphicon:before { vertical-align: text-top; }
+
 .icon-contact				{ display: inline-block; width: 16px; height: 16px; vertical-align: text-top; background: url(../images/icons-contact.png) no-repeat; }
 .icon-contact-default		{ background-position: 0 0; }
 .icon-contact-mail			{ background-position: -20px 0; }

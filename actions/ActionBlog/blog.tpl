@@ -158,8 +158,8 @@
 
 {hook run='blog_info' oBlog=$oBlog}
 
-<div class="row-fluid nav-filter-wrapper">
-	<div class="span12">
+<div class="row nav-filter-wrapper">
+	<div class="col-12">
 	<ul class="nav nav-pills pull-left">
 		<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
 		<li {if $sMenuSubItemSelect=='new'}class="active"{/if}><a href="{$sMenuSubBlogUrl}newall/">{$aLang.blog_menu_collective_new}{if $iCountTopicsBlogNew>0} +{$iCountTopicsBlogNew}{/if}</a></li>

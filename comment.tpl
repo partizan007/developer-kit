@@ -21,7 +21,7 @@
 		<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="comment-avatar" /></a>
 		
 		<small>
-			<ul class="unstyled comment-info">
+			<ul class="list-unstyled comment-info">
 				<li class="comment-author">
 					<a href="{$oUser->getUserWebPath()}"  {if $iAuthorId == $oUser->getId()}title="{if $sAuthorNotice}{$sAuthorNotice}{/if}" class="text-success comment-topic-author"{/if}>{$oUser->getLogin()}</a>
 				</li>
@@ -78,7 +78,7 @@
 			
 		{if $oUserCurrent}
 			<small>
-				<ul class="unstyled inline comment-actions">
+				<ul class="list-unstyled inline comment-actions">
 					{if !$oComment->getDelete() and !$bAllowNewComment}
 						<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
 					{/if}

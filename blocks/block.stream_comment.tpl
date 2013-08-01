@@ -5,23 +5,22 @@
 		{assign var="oBlog" value=$oTopic->getBlog()}
 		
 		<li class="js-title-comment" title="{$oComment->getText()|strip_tags|trim|truncate:100:'...'|escape:'html'}">
-			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
-			<p class="muted">
+			<p>
 				<small>
 					<a href="{$oUser->getUserWebPath()}" class="author">{$oUser->getLogin()}</a>
-					<time datetime="{date_format date=$oComment->getDate() format='c'}">
+					<time datetime="{date_format date=$oComment->getDate() format='c'}" class="text-muted">
 						{date_format date=$oComment->getDate() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
 					</time>
 				</small>
 			</p>
 			<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}{$oTopic->getUrl()}#comment{/if}{$oComment->getId()}" class="stream-topic">{$oTopic->getTitle()|escape:'html'}</a>
-			<small class="text-error">{$oTopic->getCountComment()}</small>
+			<small class="text-danger">{$oTopic->getCountComment()}</small>
 		</li>
 	{/foreach}
 </ul>
 
-<footer class="muted">
-	<small>
-		<a href="{router page='comments'}" class="muted">{$aLang.block_stream_comments_all}</a> | <a href="{router page='rss'}allcomments/" class="muted">RSS</a>
+<footer>
+	<small class="text-muted">
+		<a href="{router page='comments'}">{$aLang.block_stream_comments_all}</a> · <a href="{router page='rss'}allcomments/">RSS</a>
 	</small>
 </footer>

@@ -16,7 +16,7 @@
 			<div class="footer-inner">
 		
 				<div class="row">
-					<div class="col-lg-3">
+					<div class="col-sm-3 col-lg-3">
 						{if $oUserCurrent}
 							<ul class="list-unstyled footer-list">
 								<li class="footer-list-header word-wrap">{$oUserCurrent->getLogin()}</li>
@@ -36,7 +36,7 @@
 						{/if}
 					</div>
 				
-					<div class="col-lg-3">
+					<div class="col-sm-3 col-lg-3">
 						<ul class="list-unstyled footer-list">
 							<li class="footer-list-header">{$aLang.footer_menu_navigate_title}</li>
 							<li><a href="{cfg name='path.root.web'}">{$aLang.topic_title}</a></li>
@@ -47,7 +47,7 @@
 						</ul>
 					</div>
 				
-					<div class="col-lg-3">
+					<div class="col-sm-3 col-lg-3">
 						<ul class="list-unstyled footer-list">
 							<li class="footer-list-header">{cfg name='view.name'}</li>
 							<li><a href="#">{$aLang.footer_menu_project_about}</a></li>
@@ -58,7 +58,7 @@
 						</ul>
 					</div>
 		
-					<div class="col-lg-3 copyright">
+					<div class="col-sm-3 col-lg-3 copyright">
 						{hook run='copyright'}
 						<br />
 						Автор шаблона &mdash; <a href="http://webtown.by/profile/vOFFka/">вOFFка</a>

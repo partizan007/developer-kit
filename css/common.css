@@ -11,7 +11,7 @@
 .vote.vote-count-negative .vote-count 		{ color: #b94a48; }
 
 .vote .vote-up,
-.vote .vote-down 							{ display: inline-block; cursor: pointer; }
+.vote .vote-down 							{ display: inline-block; cursor: pointer; color: #999999; }
 
 .vote .vote-up:hover 						{ color: #468847; text-decoration: none; }
 .vote .vote-down:hover 						{ color: #b94a48; text-decoration: none; }
@@ -28,17 +28,20 @@
 /* Избранное 
 ---------------------------------------------------- */
 .favourite 			{ display: inline-block; cursor: pointer; }
-.favourite.active 	{ color: #c09853; }
+.favourite, 
+.favourite:hover, 
+.favourite:focus 	{ color: #999999; }
 .favourite:hover 	{ text-decoration: none; }
+.favourite.active 	{ color: #c09853; }
 
 
 /* Toolbar 
 ---------------------------------------------------- */
-.toolbar 					{ float: right; position: fixed; top: 130px; right: 10px; z-index: 100; }
-.toolbar section 			{ width: 34px; line-height: 16px; background-color: #ffffff; border: 1px solid #eeeeee; margin-bottom: 10px; }
+.toolbar 					{ float: right; position: fixed; top: 150px; right: 10px; z-index: 100; }
+.toolbar section 			{ width: 36px; line-height: 14px; background-color: #ffffff; border: 1px solid #eeeeee; margin-bottom: 10px; border-radius: 4px; }
 
-.toolbar section a 			{ display: block; padding: 10px; }
-.toolbar section a:hover 	{ text-decoration: none; background-color: #f5f5f5; }
+.toolbar section a 			{ display: block; padding: 10px; color: #999999; }
+.toolbar section a:hover 	{ text-decoration: none; color: #B94A48; }
 
 .toolbar section i			{ display: block; }
 
@@ -73,6 +76,7 @@
 ---------------------------------------------------- */
 .tag-cloud 					{ text-align: center; }
 .tag-cloud li 				{ line-height: 24px; }
+.tag-cloud li a 			{ color: #999999; }
 .tag-cloud li .tag-size-1 	{ font-size: 12px; }
 .tag-cloud li .tag-size-2 	{ font-size: 12px; }
 .tag-cloud li .tag-size-3 	{ font-size: 14px; }
@@ -87,8 +91,8 @@
 
 /* Item List 
 ---------------------------------------------------- */
-.item-list 					{ border-top: 1px solid #eeeeee; }
-.item-list li 				{ min-height: 36px; padding: 10px 0 10px 46px; border-bottom: 1px solid #eeeeee; position: relative; zoom: 1; }
+.item-list 					{ border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee }
+.item-list li 				{ padding: 10px 0; position: relative; zoom: 1; }
 .item-list li p 			{ margin-bottom: 0; }
 .item-list li i 			{ margin-right: 2px; }
 .item-list li .avatar 		{ position: absolute; top: 10px; left: 0; margin-right: 10px; width: 36px; height: 36px; }

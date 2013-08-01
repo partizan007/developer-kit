@@ -7,12 +7,12 @@
 	<footer class="topic-footer">
 		<small>
 			<ul class="text-muted list-unstyled list-inline topic-tags js-favourite-insert-after-form js-favourite-tags-topic-{$oTopic->getId()}">
-				<li><i class="icon-tags"></i></li>
+				<li><span class="glyphicon glyphicon-tags"></span></li>
 			
 				{strip}
 					{if $oTopic->getTagsArray()}
 						{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
-							<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/" class="text-muted">{$sTag|escape:'html'}</a></li>
+							<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
 						{/foreach}
 					{else}
 						<li>{$aLang.topic_tags_empty}</li>
@@ -21,12 +21,12 @@
 					{if $oUserCurrent}
 						{if $oFavourite}
 							{foreach from=$oFavourite->getTagsArray() item=sTag name=tags_list_user}
-								<li class="topic-tags-user js-favourite-tag-user">, <a rel="tag" href="{$oUserCurrent->getUserWebPath()}favourites/topics/tag/{$sTag|escape:'url'}/" class="text-success">{$sTag|escape:'html'}</a></li>
+								<li class="topic-tags-user js-favourite-tag-user">, <a rel="tag" href="{$oUserCurrent->getUserWebPath()}favourites/topics/tag/{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
 							{/foreach}
 						{/if}
 					
 						<li class="topic-tags-edit js-favourite-tag-edit" {if !$oFavourite}style="display:none;"{/if}>
-							<a href="#" onclick="return ls.favourite.showEditTags({$oTopic->getId()},'topic',this);" class="text-warning link-dotted">{$aLang.favourite_form_tags_button_show}</a>
+							<a href="#" onclick="return ls.favourite.showEditTags({$oTopic->getId()},'topic',this);" class="link-dotted">{$aLang.favourite_form_tags_button_show}</a>
 						</li>
 					{/if}
 				{/strip}
@@ -42,38 +42,38 @@
 
 		
 		<small>
-			<ul class="text-muted list-unstyled list-inline topic-info">
+			<ul class="list-unstyled list-inline topic-info">
 				<li class="topic-info-author">
 					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
 					<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 				</li>
 				<li class="topic-info-date">
-					<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}">
+					<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}" class="text-muted">
 						{date_format date=$oTopic->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
 					</time>
 				</li>
 				<li class="topic-info-favourite">
-					<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><i class="icon-star-empty text-muted"></i></a>
-					<span class="favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span>
+					<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
+					<span class="text-muted favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span>
 				</li>
-				<li class="topic-info-share"><a href="#" class="icon-share-alt text-muted" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>
-			
+				<li class="topic-info-share"><a href="#" class="glyphicon glyphicon-share-alt" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>
+				
 				{if $bTopicList}
 					<li class="topic-info-comments">
 						{if $oTopic->getCountCommentNew()}
-							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="text-success new">
-								<i class="icon-comment"></i>
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="new">
+								<span class="glyphicon glyphicon-comment icon-active"></span>
 								<span>{$oTopic->getCountComment()}</span>
-								<span class="count text-error">+{$oTopic->getCountCommentNew()}</span>
+								<span class="count">+{$oTopic->getCountCommentNew()}</span>
 							</a>
 						{elseif $oTopic->getCountComment()}
-							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="text-success">
-								<i class="icon-comment"></i>
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="icon-active">
+								<span class="glyphicon glyphicon-comment"></span>
 								<span>{$oTopic->getCountComment()}</span>
 							</a>
 						{else}
-							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="text-muted">
-								<i class="icon-comment"></i>
+							<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}">
+								<span class="glyphicon glyphicon-comment"></span>
 								<span>{$oTopic->getCountComment()}</span>
 							</a>
 						{/if}
@@ -101,7 +101,7 @@
 					{if $oVote || ($oUserCurrent && $oTopic->getUserId() == $oUserCurrent->getId()) || strtotime($oTopic->getDateAdd()) < $smarty.now-$oConfig->GetValue('acl.vote.topic.limit_time')}
 						{assign var="bVoteInfoShow" value=true}
 					{/if}
-					<div class="vote-down" onclick="return ls.vote.vote({$oTopic->getId()},this,-1,'topic');"><i class="icon-thumbs-down"></i></div>
+					<div class="vote-down" onclick="return ls.vote.vote({$oTopic->getId()},this,-1,'topic');"><span class="glyphicon glyphicon-thumbs-down"></span></div>
 					<div class="vote-count {if $bVoteInfoShow}js-infobox-vote-topic{/if}" id="vote_total_topic_{$oTopic->getId()}" title="{$aLang.topic_vote_count}: {$oTopic->getCountVote()}">
 						{if $bVoteInfoShow}
 							{if $oTopic->getRating() > 0}+{/if}{$oTopic->getRating()}
@@ -109,13 +109,13 @@
 							<a href="#" onclick="return ls.vote.vote({$oTopic->getId()},this,0,'topic');">?</a> 
 						{/if}
 					</div>
-					<div class="vote-up" onclick="return ls.vote.vote({$oTopic->getId()},this,1,'topic');"><i class="icon-thumbs-up"></i></div>
+					<div class="vote-up" onclick="return ls.vote.vote({$oTopic->getId()},this,1,'topic');"><span class="glyphicon glyphicon-thumbs-up"></span></div>
 					{if $bVoteInfoShow}
 						<div id="vote-info-topic-{$oTopic->getId()}" style="display: none;">
-							<ul class="unstyled vote-topic-info">
-								<li><i class="icon-thumbs-up icon-white"></i>{$oTopic->getCountVoteUp()}</li>
-								<li><i class="icon-thumbs-down icon-white"></i>{$oTopic->getCountVoteDown()}</li>
-								<li><i class="icon-eye-open icon-white"></i>{$oTopic->getCountVoteAbstain()}</li>
+							<ul class="list-unstyled vote-topic-info">
+								<li><span class="glyphicon glyphicon-thumbs-up"></span>{$oTopic->getCountVoteUp()}</li>
+								<li><span class="glyphicon glyphicon-thumbs-down"></span>{$oTopic->getCountVoteDown()}</li>
+								<li><span class="glyphicon glyphicon-eye-open"></span>{$oTopic->getCountVoteAbstain()}</li>
 								{hook run='topic_show_vote_stats' topic=$oTopic}
 							</ul>
 						</div>

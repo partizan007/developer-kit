@@ -2,7 +2,7 @@
 	
 	{hook run='header_banner_begin'}
 	
-	<nav class="navbar navbar-inverse navbar-static-top">
+	<nav class="navbar navbar-static-top">
 		<div class="container">
 			<div class="header-inner">
 				
@@ -13,7 +13,7 @@
 				</button>
 				
 				<hgroup class="site-info">
-					<a class="navbar-brand" href="{cfg name='path.root.web'}">{cfg name='view.name'}</a>
+					<h1 class="site-name"><a class="navbar-brand" href="{cfg name='path.root.web'}">{cfg name='view.name'}</a></h1>
 				</hgroup>
 				
 				{hook run='userbar_nav'}
@@ -35,7 +35,7 @@
 							{if $iUserCurrentCountTalkNew}
 								<li>
 									<a href="{router page='talk'}" class="new-messages" title="{if $iUserCurrentCountTalkNew}{$aLang.user_privat_messages_new}{/if}">
-										{$iUserCurrentCountTalkNew} <i class="icon-envelope icon-white"></i>
+										{$iUserCurrentCountTalkNew} <span class="glyphicon glyphicon-envelope"></span>
 									</a>
 								</li>
 							{/if}
@@ -47,7 +47,7 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="{$oUserCurrent->getUserWebPath()}">{$aLang.user_menu_profile}</a></li>
-									<li><a href="{router page='talk'}" id="new_messages" title="{if $iUserCurrentCountTalkNew}{$aLang.user_privat_messages_new}{/if}">{$aLang.user_privat_messages}{if $iUserCurrentCountTalkNew} ({$iUserCurrentCountTalkNew}){/if}</a></li>
+									<li><a href="{router page='talk'}" id="new_messages" title="{if $iUserCurrentCountTalkNew}{$aLang.user_privat_messages_new}{/if}">{$aLang.user_privat_messages}{if $iUserCurrentCountTalkNew} <span class="badge">{$iUserCurrentCountTalkNew}</span>{/if}</a></li>
 									<li><a href="{$oUserCurrent->getUserWebPath()}favourites/topics/">{$aLang.user_menu_profile_favourites}</a></li>
 									<li><a href="{router page='settings'}profile/">{$aLang.user_settings}</a></li>
 									{hook run='userbar_item'}

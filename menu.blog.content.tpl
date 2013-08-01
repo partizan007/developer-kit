@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row nav-filter-wrapper">
 	<div class="col-12">
 
 		{if $sMenuItemSelect=='index'}

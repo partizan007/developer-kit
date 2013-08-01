@@ -9,14 +9,15 @@
 .topic .topic-header .topic-title 				{ margin-top: 0; }
 .topic .topic-header .topic-title i 			{ cursor: help; font-size: 16px; vertical-align: text-top; }
 
-.topic .topic-header .topic-info 				{ margin-bottom: 20px; }
-.topic .topic-header .topic-info .topic-blog 	{ margin-right: 10px; text-decoration: underline; }
+.topic .topic-header .topic-info 					{ margin-bottom: 20px; }
+.topic .topic-header .topic-info .topic-blog 		{ margin-right: 10px; color: #468847; font-size: 16px; text-decoration: underline; }
+.topic .topic-header .topic-info .topic-blog:hover 	{ text-decoration: none; }
 .topic .topic-header .topic-info .actions 					{ display: inline; }
 .topic .topic-header .topic-info .actions li:first-child 	{ padding-left: 0; }
 
 
 /* Content */
-.topic .topic-content 	{ margin-bottom: 20px; }
+.topic .topic-content 	{ margin-bottom: 20px; font-size: 16px; }
 
 
 /* Topic Link */
@@ -26,6 +27,9 @@
 /* Tags */
 .topic .topic-footer .topic-tags 						{ margin-bottom: 5px; }
 .topic .topic-footer .topic-tags li 					{ padding: 0; }
+.topic .topic-footer .topic-tags li a 					{ color: #999999; }
+
+.topic .topic-footer .topic-tags li span 				{ margin-right: 5px; }
 .topic .topic-footer .topic-tags li.topic-tags-edit 	{ margin-left: 10px; }
 
 
@@ -35,13 +39,19 @@
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; text-decoration: underline; }
 .topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: middle; }
+.topic .topic-footer .topic-info li.topic-info-share a { color: #999999; }
 .topic .topic-footer .topic-info li.topic-info-share a:hover 	{ text-decoration: none; }
-.topic .topic-footer .topic-info li.topic-info-comments a:hover { text-decoration: none; }
 
+.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #999999; }
+.topic .topic-footer .topic-info li.topic-info-comments a:hover 		{ text-decoration: none; }
+.topic .topic-footer .topic-info li.topic-info-comments a.icon-active, 
+.topic .topic-footer .topic-info li.topic-info-comments a.new 			{ color: #468847; }
+.topic .topic-footer .topic-info li.topic-info-comments a.new .count 	{ color: #b94a48; }
 
 
 /* Share */
 .topic .topic-share { display: none; padding: 3px; margin-bottom: 10px; border: 1px solid #eeeeee; }
+.topic .topic-share .yashare-auto-init {  }
 
 
 /* Poll */

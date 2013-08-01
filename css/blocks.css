@@ -8,6 +8,7 @@
 .block .block-header h3 a:hover { text-decoration: none; color: #555555; }
 
 .block footer 			{ margin-top: 15px; }
+.block footer a 		{ color: #999999; }
 
 .block .max-height-200 	{ overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
 
@@ -21,12 +22,6 @@
 /* Block Nav-Pills */
 .block .nav-pills 			{ margin-bottom: 10px; }
 .block .nav-pills > li > a 	{ padding: 4px 8px; font-size: 12px; }
-
-
-/* Block Type - Stream */
-.block .block-update 		{ position: absolute; top: 5px; right: 0; cursor: pointer; }
-.block .block-update:hover 	{ color: #808080; }
-.block .block-update.active { opacity: .5; }
 
 
 /* Block Type - Profile */

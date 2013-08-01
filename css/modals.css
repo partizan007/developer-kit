@@ -19,9 +19,11 @@
 
 
 /* Добавление топика */
-.modal.modal-write { width: 690px; margin-left: -345px; }
+.modal.modal-write .modal-dialog { width: 712px; margin-left: -356px; }
 
 .modal.modal-write .write-list li 					{ text-align: center; }
+.modal.modal-write .write-list li:first-child 		{ padding-left: 0; }
+.modal.modal-write .write-list li:last-child 		{ padding-right: 0; }
 .modal.modal-write .write-list li:hover a 			{ text-decoration: underline; }
 
 .modal.modal-write .write-list li .write-item-image { display: block; width: 100px; height: 100px; background: url(../images/write.png) no-repeat; margin-bottom: 10px; }
