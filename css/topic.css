@@ -30,6 +30,8 @@
 .topic .topic-footer .topic-tags li a 					{ color: #999999; }
 
 .topic .topic-footer .topic-tags li span 				{ margin-right: 5px; }
+.topic .topic-footer .topic-tags li.topic-tags-user a 	{ color: #468847; }
+
 .topic .topic-footer .topic-tags li.topic-tags-edit 	{ margin-left: 10px; }
 
 

@@ -58,7 +58,7 @@
 
 /* Список пользователей 
 ---------------------------------------------------- */
-.user-list-avatar li 		{ width: 48px; margin-bottom: 10px; }
+.user-list-avatar li 		{ margin-bottom: 10px; }
 .user-list-avatar li img	{ display: block; }
 
 

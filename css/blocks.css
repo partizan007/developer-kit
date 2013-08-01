@@ -19,26 +19,15 @@
 .stream-settings-friends li img { margin-right: 2px; position: relative; width: 16px; height: 16px; }
 
 
-/* Block Nav-Pills */
-.block .nav-pills 			{ margin-bottom: 10px; }
-.block .nav-pills > li > a 	{ padding: 4px 8px; font-size: 12px; }
-
-
 /* Block Type - Profile */
-.block.block-type-profile .profile-photo-wrapper 	{ position: relative; margin: 0 auto; min-height: 50px; max-width: 250px; }
-.block.block-type-profile .profile-photo 			{ vertical-align: top; }
-.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; padding: 0 5px; }
-.block.block-type-profile .status.status-online 	{ background-color: #3fb618; color: #ffffff; }
-.block.block-type-profile .status.status-offline 	{ background-color: #333333; color: #ffffff; opacity: .5; filter: alpha(opacity=50); }
+.block.block-type-profile .profile-photo-wrapper 	{ position: relative; margin: 0 auto; min-height: 50px; }
+.block.block-type-profile .profile-photo 			{ max-width: 100%; vertical-align: top; }
+.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; line-height: 1.5; }
 .block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; max-width: 230px; background-color: #eeeeee; }
 
 .block.block-type-profile-note	 						{ background: #ffffde; border: 1px solid #ffcc66; }
 .block.block-type-profile-note .actions 				{ margin-bottom: 0; }
 .block.block-type-profile-note .actions li:first-child 	{ margin-bottom: 0; padding-left: 0; }
-
-.block.block-type-profile-nav 						{ padding: 8px 0; }
-.block.block-type-profile-nav .nav 					{ padding: 0 20px; }
-.block.block-type-profile-nav .nav-list > li > a 	{ padding: 3px 20px; margin-left: -20px; margin-right: -20px; }
 
 .block.block-type-profile-actions ul 				{ margin-bottom: 0; }
 .block.block-type-profile-actions ul li				{ margin-bottom: 5px; }

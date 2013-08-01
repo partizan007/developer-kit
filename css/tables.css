@@ -37,7 +37,7 @@
 
 .table.table-users .cell-date 					{ width: 130px; }
 .table.table-users .cell-rating,
-.table.table-users .cell-skill 					{ width: 70px; text-align: center; }
+.table.table-users .cell-skill 					{ width: 72px; text-align: center; }
 
 .table.table-users tbody .cell-date, 
 .table.table-users tbody .cell-skill, 
