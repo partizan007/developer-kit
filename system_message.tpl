@@ -1,28 +1,32 @@
 {if !$noShowSystemMessage}
 	{if $aMsgError}
-		<ul class="unstyled alert alert-error">
-			{foreach from=$aMsgError item=aMsg}
-				<li>
-					{if $aMsg.title!=''}
-						<strong>{$aMsg.title}</strong>:
-					{/if}
-					{$aMsg.msg}
-				</li>
-			{/foreach}
-		</ul>
+		<div class="alert alert-danger">
+			<ul class="list-unstyled">
+				{foreach from=$aMsgError item=aMsg}
+					<li>
+						{if $aMsg.title!=''}
+							<strong>{$aMsg.title}</strong>:
+						{/if}
+						{$aMsg.msg}
+					</li>
+				{/foreach}
+			</ul>
+		</div>
 	{/if}
 
 
 	{if $aMsgNotice}
-		<ul class="unstyled alert alert-success">
-			{foreach from=$aMsgNotice item=aMsg}
-				<li>
-					{if $aMsg.title!=''}
-						<strong>{$aMsg.title}</strong>:
-					{/if}
-					{$aMsg.msg}
-				</li>
-			{/foreach}
-		</ul>
+		<div class="alert alert-success">...</div>
+			<ul class="list-unstyled">
+				{foreach from=$aMsgNotice item=aMsg}
+					<li>
+						{if $aMsg.title!=''}
+							<strong>{$aMsg.title}</strong>:
+						{/if}
+						{$aMsg.msg}
+					</li>
+				{/foreach}
+			</ul>
+		</div>
 	{/if}
 {/if}

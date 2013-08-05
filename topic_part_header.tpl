@@ -12,11 +12,11 @@
 			{/if}
 			
 			{if $oTopic->getPublish() == 0}   
-				<i class="icon-file muted" title="{$aLang.topic_unpublish}"></i>
+				<span class="glyphicon glyphicon-file text-muted" title="{$aLang.topic_unpublish}"></span>
 			{/if}
 			
 			{if $oTopic->getType() == 'link'} 
-				<i class="icon-globe muted" title="{$aLang.topic_link}"></i>
+				<span class="glyphicon glyphicon-globe text-muted" title="{$aLang.topic_link}"></span>
 			{/if}
 		</h1>
 

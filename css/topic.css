@@ -65,7 +65,7 @@
 .topic.topic-type-photoset .topic-photo-preview img 				{ vertical-align: top; }
 
 .topic.topic-type-photoset .topic-photo-preview .topic-photo-count 	{ display: none; cursor: pointer; position: absolute; top: 5px; right: 5px; color: #3fb618; padding: 4px 7px; background: rgba(0,0,0,.6); }
-.topic.topic-type-photoset .topic-photo-preview .topic-photo-desc 	{ display: none; width: 96%; padding: 7px 2%; position: absolute; bottom: 0; left: 0; color: #ffffff; line-height: 16px; background: rgba(0,0,0,.7); }
+.topic.topic-type-photoset .topic-photo-preview .topic-photo-desc 	{ display: none; width: 100%; padding: 7px 2%; position: absolute; bottom: 0; left: 0; color: #ffffff; line-height: 16px; background: rgba(0,0,0,.7); }
 
 .topic.topic-type-photoset .topic-photo-images 						{ padding-top: 10px; margin-bottom: 10px; }
 .topic.topic-type-photoset .topic-photo-images h2 					{ border-bottom: 1px solid #eee; }

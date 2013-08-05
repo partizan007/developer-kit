@@ -26,18 +26,18 @@
 				{assign var="oUserNote" value=$oUserList->getUserNote()}
 				<tr>
 					<td class="cell-name">
-						<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(48)}" alt="{$oUserList->getLogin()}" class="avatar visible-desktop" /></a>
+						<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(48)}" alt="{$oUserList->getLogin()}" class="avatar visible-lg" /></a>
 						<div class="name {if !$oUserList->getProfileName()}no-realname{/if}">
 							<p class="username">
 								<a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
 								{if $oUserNote}
-									<i class="icon-comment muted js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
+									<span class="glyphicon glyphicon-comment text-muted js-infobox" title="{$oUserNote->getText()|escape:'html'}"></span>
 								{/if}
 							</p>
-							{if $oUserList->getProfileName()}<p class="muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
+							{if $oUserList->getProfileName()}<p class="text-muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
 						</div>
 					</td>
-					<td class="muted cell-date">
+					<td class="text-muted cell-date">
 						<small>
 							{if $oSession}
 								{date_format date=$oSession->getDateLast() hours_back="12" minutes_back="60" now="60" day="day H:i" format="d.m.y, H:i"}
@@ -45,7 +45,7 @@
 						</small>
 					</td>
 					<td class="text-info cell-skill"><small>{$oUserList->getSkill()}</small></td>
-					<td class="cell-rating{if $oUserList->getRating() < 0} text-error negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
+					<td class="cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
 				</tr>
 			{/foreach}
 		{else}
