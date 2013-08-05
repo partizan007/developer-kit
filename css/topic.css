@@ -41,10 +41,10 @@
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; text-decoration: underline; }
 .topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: middle; }
-.topic .topic-footer .topic-info li.topic-info-share a { color: #999999; }
+.topic .topic-footer .topic-info li.topic-info-share a { color: #aaaaaa; }
 .topic .topic-footer .topic-info li.topic-info-share a:hover 	{ text-decoration: none; }
 
-.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #999999; }
+.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #aaaaaa; }
 .topic .topic-footer .topic-info li.topic-info-comments a:hover 		{ text-decoration: none; }
 .topic .topic-footer .topic-info li.topic-info-comments a.icon-active, 
 .topic .topic-footer .topic-info li.topic-info-comments a.new 			{ color: #468847; }
