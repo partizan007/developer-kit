@@ -65,4 +65,5 @@
 .table.table-profile-info .cell-label 	{ width: 33%; }
 
 /* Table Plugins */
+.table.table-plugins h4 				{ margin-top: 0; }
 .table.table-plugins .cell-checkbox 	{ width: 16px; }

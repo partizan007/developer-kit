@@ -2,7 +2,9 @@
 {include file='header.tpl'}
 
 
-<h2 class="page-header"><a href="{router page='admin'}">{$aLang.admin_header}</a> <span>&raquo;</span> {$aLang.admin_list_plugins}</h2>
+<div class="page-header">
+	<h1><a href="{router page='admin'}">{$aLang.admin_header}</a> <span>&raquo;</span> {$aLang.admin_list_plugins}</h1>
+</div>
 
 <form action="{router page='admin'}plugins/" method="post" id="form_plugins_list">
 	<table class="table table-hover table-plugins">
@@ -55,7 +57,7 @@
 	<input type="submit" 
 		   name="submit_plugins_del" 
 		   value="{$aLang.plugins_submit_delete}" 
-		   class="btn" 
+		   class="btn btn-danger" 
 		   onclick="return (jQuery('.form_plugins_checkbox:checked').length==0)?false:confirm('{$aLang.plugins_delete_confirm}');" />
 </form>
 

@@ -1,7 +1,9 @@
 {include file='header.tpl'}
 
 
-<h2 class="page-header">{$aLang.user_field_admin_title}</h2>
+<div class="page-header">
+	<h1>{$aLang.user_field_admin_title}</h1>
+</div>
 
 <div class="modal" id="userfield_form">
 	<header class="modal-header">

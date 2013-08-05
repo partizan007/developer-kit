@@ -16,7 +16,7 @@
 
 
 	{if $aMsgNotice}
-		<div class="alert alert-success">...</div>
+		<div class="alert alert-success">
 			<ul class="list-unstyled">
 				{foreach from=$aMsgNotice item=aMsg}
 					<li>
