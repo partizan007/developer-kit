@@ -93,31 +93,31 @@
 					
 								<div class="form-group">
 									<label for="popup-registration-login">{$aLang.registration_login}</label>
-									<i class="icon-question-sign text-muted js-tip-help" title="{$aLang.registration_login_notice}"></i>
-									<i class="icon-ok text-success validate-ok-field-login" style="display: none"></i>
+									<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_login_notice}"></span>
+									<span class="glyphicon glyphicon-ok text-success validate-ok-field-login" style="display: none"></span>
 									<input type="text" name="login" id="popup-registration-login" value="{$_aRequest.login}" class="form-control js-ajax-validate" />
 									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-login"></small></span>
 								</div>
 					
 								<div class="form-group">
 									<label for="popup-registration-mail">{$aLang.registration_mail}</label>
-									<i class="icon-question-sign text-muted js-tip-help" title="{$aLang.registration_mail_notice}"></i>
-									<i class="icon-ok text-success validate-ok-field-mail" style="display: none"></i>
+									<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_mail_notice}"></span>
+									<span class="glyphicon glyphicon-ok text-success validate-ok-field-mail" style="display: none"></span>
 									<input type="text" name="mail" id="popup-registration-mail" value="{$_aRequest.mail}" class="form-control js-ajax-validate" />
 									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-mail"></small></span>
 								</div>
 					
 								<div class="form-group">
 									<label for="popup-registration-user-password">{$aLang.registration_password}</label>
-									<i class="icon-question-sign text-muted js-tip-help" title="{$aLang.registration_password_notice}"></i>
-									<i class="icon-ok text-success validate-ok-field-password" style="display: none"></i>
+									<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_password_notice}"></span>
+									<span class="glyphicon glyphicon-ok text-success validate-ok-field-password" style="display: none"></span>
 									<input type="password" name="password" id="popup-registration-user-password" value="" class="form-control js-ajax-validate" />
 									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-password"></small></span>
 								</div>
 					
 								<div class="form-group">
 									<label for="popup-registration-user-password-confirm">{$aLang.registration_password_retry}</label>
-									<i class="icon-ok text-success validate-ok-field-password_confirm" style="display: none"></i>
+									<span class="glyphicon glyphicon-ok text-success validate-ok-field-password_confirm" style="display: none"></span>
 									<input type="password" value="" id="popup-registration-user-password-confirm" name="password_confirm" class="form-control js-ajax-validate" />
 									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-password_confirm"></small></span>
 								</div>
