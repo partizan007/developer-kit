@@ -1,4 +1,6 @@
-<h2 class="page-header">{$aLang.settings_menu}</h2>
+<div class="page-header">
+	<h1>{$aLang.settings_menu}</h1>
+</div>
 
 <ul class="nav nav-pills">
 	<li {if $sMenuSubItemSelect=='profile'}class="active"{/if}><a href="{router page='settings'}profile/">{$aLang.settings_menu_profile}</a></li>

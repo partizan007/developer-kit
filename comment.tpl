@@ -23,10 +23,10 @@
 		<small>
 			<ul class="list-unstyled comment-info">
 				<li class="comment-author">
-					<a href="{$oUser->getUserWebPath()}"  {if $iAuthorId == $oUser->getId()}title="{if $sAuthorNotice}{$sAuthorNotice}{/if}" class="text-success comment-topic-author"{/if}>{$oUser->getLogin()}</a>
+					<a href="{$oUser->getUserWebPath()}"  {if $iAuthorId == $oUser->getId()}title="{if $sAuthorNotice}{$sAuthorNotice}{/if}" class="comment-topic-author"{/if}>{$oUser->getLogin()}</a>
 				</li>
 				<li class="comment-date">
-					<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}#comment{/if}{$oComment->getId()}" class="muted link-dotted" title="{$aLang.comment_url_notice}">
+					<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}#comment{/if}{$oComment->getId()}" class="text-muted link-dotted" title="{$aLang.comment_url_notice}">
 						<time datetime="{date_format date=$oComment->getDate() format='c'}">{date_format date=$oComment->getDate() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time>
 					</a>
 				</li>
@@ -38,7 +38,7 @@
 			
 			
 				{if $oComment->getTargetType() != 'talk'}						
-					<li id="vote_area_comment_{$oComment->getId()}" class="muted vote 
+					<li id="vote_area_comment_{$oComment->getId()}" class="vote 
 																			{if $oComment->getRating() > 0}
 																				vote-count-positive
 																			{elseif $oComment->getRating() < 0}
@@ -54,17 +54,17 @@
 																					voted-down
 																				{/if}
 																			{/if}">
-						<div class="vote-down" onclick="return ls.vote.vote({$oComment->getId()},this,-1,'comment');"><i class="icon-thumbs-down"></i></div>
+						<div class="vote-down" onclick="return ls.vote.vote({$oComment->getId()},this,-1,'comment');"><span class="glyphicon glyphicon-thumbs-down"></span></div>
 						<span class="vote-count" id="vote_total_comment_{$oComment->getId()}">{if $oComment->getRating() > 0}+{/if}{$oComment->getRating()}</span>
-						<div class="vote-up" onclick="return ls.vote.vote({$oComment->getId()},this,1,'comment');"><i class="icon-thumbs-up"></i></div>
+						<div class="vote-up" onclick="return ls.vote.vote({$oComment->getId()},this,1,'comment');"><span class="glyphicon glyphicon-thumbs-up"></span></div>
 					</li>
 				{/if}
 			
 			
 				{if $oUserCurrent and !$bNoCommentFavourites}
 					<li class="comment-favourite">
-						<a href="#" onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="muted favourite {if $oComment->getIsFavourite()}active{/if}"><i class="icon-star-empty"></i></a>
-						<span class="muted favourite-count" id="fav_count_comment_{$oComment->getId()}">{if $oComment->getCountFavourite() > 0}{$oComment->getCountFavourite()}{/if}</span>
+						<a href="#" onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="favourite {if $oComment->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
+						<span class="text-muted favourite-count" id="fav_count_comment_{$oComment->getId()}">{if $oComment->getCountFavourite() > 0}{$oComment->getCountFavourite()}{/if}</span>
 					</li>
 				{/if}
 			</ul>
@@ -78,17 +78,17 @@
 			
 		{if $oUserCurrent}
 			<small>
-				<ul class="list-unstyled inline comment-actions">
+				<ul class="list-unstyled list-inline comment-actions">
 					{if !$oComment->getDelete() and !$bAllowNewComment}
 						<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
 					{/if}
 					
 					{if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
-						<li><a href="#" class="text-error comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
+						<li><a href="#" class="comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
 					{/if}
 				
 					{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}   										
-						<li><a href="#" class="text-success comment-repair link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
+						<li><a href="#" class="comment-repair link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
 					{/if}
 				
 					{hook run='comment_action' comment=$oComment}
@@ -96,6 +96,6 @@
 			</small>
 		{/if}
 	{else}				
-		<span class="muted">{$aLang.comment_was_delete}</span>
+		<span class="text-muted">{$aLang.comment_was_delete}</span>
 	{/if}	
 </section>

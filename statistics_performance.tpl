@@ -3,8 +3,8 @@
 		<div class="container">
 			<div class="stat-performance-inner">
 			
-				<div class="row-fluid">
-					<div class="span12">
+				<div class="row">
+					<div class="col-12">
 						{hook run='statistics_performance_begin'}
 						
 						<table>

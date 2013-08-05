@@ -1,28 +1,28 @@
-<ul class="unstyled poll-result" id="poll-result-original-{$oTopic->getId()}">
+<ul class="list-unstyled poll-result" id="poll-result-original-{$oTopic->getId()}">
 	{foreach from=$oTopic->getQuestionAnswers() key=key item=aAnswer}
 		<li {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}class="most"{/if}>
-			<strong>{$aAnswer.text|escape:'html'}</strong> <span class="muted">({$aAnswer.count})</span>
+			<strong>{$aAnswer.text|escape:'html'}</strong> <span class="text-muted">({$aAnswer.count})</span>
 			<span class="pull-right">{$oTopic->getQuestionAnswerPercent($key)}%</span>
-			<div class="progress {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}progress-success{else}progress-info{/if}">
-				<div class="bar" style="width: {$oTopic->getQuestionAnswerPercent($key)}%;"></div>
+			<div class="progress">
+				<div class="progress-bar {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}progress-bar-success{else}progress-bar-info{/if}" style="width: {$oTopic->getQuestionAnswerPercent($key)}%;"></div>
 			</div>
 		</li>
 	{/foreach}
 </ul>
 
 
-<ul class="unstyled poll-result" id="poll-result-sort-{$oTopic->getId()}" style="display: none;">
+<ul class="list-unstyled poll-result" id="poll-result-sort-{$oTopic->getId()}" style="display: none;">
 	{foreach from=$oTopic->getQuestionAnswers(true) key=key item=aAnswer}
 		<li {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}class="most"{/if}>
-			<strong>{$aAnswer.text|escape:'html'}</strong> <span class="muted">({$aAnswer.count})</span>
+			<strong>{$aAnswer.text|escape:'html'}</strong> <span class="text-muted">({$aAnswer.count})</span>
 			<span class="pull-right">{$oTopic->getQuestionAnswerPercent($key)}%</span>
-			<div class="progress {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}progress-success{else}progress-info{/if}">
-				<div class="bar" style="width: {$oTopic->getQuestionAnswerPercent($key)}%;"></div>
+			<div class="progress">
+				<div class="progress-bar {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}progress-bar-success{else}progress-bar-info{/if}" style="width: {$oTopic->getQuestionAnswerPercent($key)}%;"></div>
 			</div>
 		</li>
 	{/foreach}
 </ul>
 
-<button type="submit" class="btn btn-icon" title="{$aLang.topic_question_vote_result_sort}" onclick="return ls.poll.switchResult(this, {$oTopic->getId()});"><i class="icon-align-left"></i></button>
+<button type="submit" class="btn btn-default" title="{$aLang.topic_question_vote_result_sort}" onclick="return ls.poll.switchResult(this, {$oTopic->getId()});"><span class="glyphicon glyphicon-align-left"></span></button>
 
-<span class="muted pull-right poll-total poll-total-result"><small>{$aLang.topic_question_vote_result}: {$oTopic->getQuestionCountVote()} | {$aLang.topic_question_abstain_result}: {$oTopic->getQuestionCountVoteAbstain()}</small></span>
+<span class="text-muted pull-right poll-total poll-total-result"><small>{$aLang.topic_question_vote_result}: {$oTopic->getQuestionCountVote()} | {$aLang.topic_question_abstain_result}: {$oTopic->getQuestionCountVoteAbstain()}</small></span>

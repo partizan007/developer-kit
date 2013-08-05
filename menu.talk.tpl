@@ -1,4 +1,6 @@
-<h2 class="page-header">{$aLang.talk_menu_inbox}</h2>
+<div class="page-header">
+	<h1>{$aLang.talk_menu_inbox}</h1>
+</div>
 
 <ul class="nav nav-pills">					
 	<li {if $sMenuSubItemSelect=='inbox'}class="active"{/if}><a href="{router page='talk'}">{$aLang.talk_menu_inbox}</a></li>

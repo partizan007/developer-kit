@@ -12,11 +12,13 @@
 		<h3><span id="count-comments">{$iCountComment}</span> {$iCountComment|declension:$aLang.comment_declension:'russian'}</h3>
 		
 		{if $bAllowSubscribe and $oUserCurrent}
-			<div class="muted subscribe">
-				<label class="checkbox">
-					<input {if $oSubscribeComment and $oSubscribeComment->getStatus()}checked="checked"{/if} type="checkbox" id="comment_subscribe" class="input-checkbox" onchange="ls.subscribe.toggle('{$sTargetType}_new_comment','{$iTargetId}','',this.checked);">
-					<small>{$aLang.comment_subscribe}</small>
-				</label>
+			<div class="text-muted subscribe">
+				<div class="checkbox">
+					<label>
+						<input {if $oSubscribeComment and $oSubscribeComment->getStatus()}checked="checked"{/if} type="checkbox" id="comment_subscribe" class="input-checkbox" onchange="ls.subscribe.toggle('{$sTargetType}_new_comment','{$iTargetId}','',this.checked);">
+						{$aLang.comment_subscribe}
+					</label>
+				</div>
 			</div>
 		{/if}
 	
@@ -60,24 +62,24 @@
 	{if $oUserCurrent}
 		{include file='editor.tpl' sImgToLoad='form_comment_text' sSettingsTinymce='ls.settings.getTinymceComment()' sSettingsMarkitup='ls.settings.getMarkitupComment()'}
 
-		<h4 class="reply-header" id="comment_id_0">
+		<h3 class="reply-header" id="comment_id_0">
 			<a href="#" class="link-dotted" onclick="ls.comments.toggleCommentForm(0); return false;">{$sNoticeCommentAdd}</a>
-		</h4>
+		</h3>
 		
 		
 		<div id="reply" class="reply">		
 			<form method="post" id="form_comment" onsubmit="return false;" enctype="multipart/form-data">
 				{hook run='form_add_comment_begin'}
 				
-				<textarea name="comment_text" id="form_comment_text" class="mce-editor markitup-editor input-width-full"></textarea>
+				<textarea name="comment_text" id="form_comment_text" class="mce-editor markitup-editor form-control"></textarea>
 				
 				{hook run='form_add_comment_end'}
 				
 				<button type="submit" name="submit_comment" 
 						id="comment-button-submit" 
 						onclick="ls.comments.add('form_comment',{$iTargetId},'{$sTargetType}'); return false;" 
-						class="btn btn-primary">{$aLang.comment_add}</button>
-				<button type="button" onclick="ls.comments.preview();" class="btn">{$aLang.comment_preview}</button>
+						class="btn btn-success">{$aLang.comment_add}</button>
+				<button type="button" onclick="ls.comments.preview();" class="btn btn-default">{$aLang.comment_preview}</button>
 				
 				<input type="hidden" name="reply" value="0" id="form_comment_reply" />
 				<input type="hidden" name="cmt_target_id" value="{$iTargetId}" />

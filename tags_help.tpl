@@ -3,7 +3,7 @@
 </script>
 <a href="#" class="link-dotted help-link" onclick="jQuery('#tags-help').toggle(); return false;">{$aLang.topic_create_text_notice}</a>
 
-<dl class="muted help clearfix" id="tags-help">
+<dl class="help clearfix" id="tags-help">
 	<dt class="help-col help-wide">
 		<h3>Специальные теги</h3>
 		<div class="help-item">

@@ -22,8 +22,8 @@ $config['head']['default']['css'] = array(
 
 	/* Structure */
 	"___path.static.skin___/css/base.css",
-	"___path.root.engine_lib___/external/jquery/markitup/skins/simple/style.css",
-	"___path.root.engine_lib___/external/jquery/markitup/sets/default/style.css",
+	"___path.root.engine_lib___/external/jquery/markitup/skins/synio/style.css",
+	"___path.root.engine_lib___/external/jquery/markitup/sets/synio/style.css",
 	"___path.root.engine_lib___/external/jquery/jcrop/jquery.Jcrop.css",
 	"___path.root.engine_lib___/external/prettify/prettify.css",
 	"___path.static.skin___/css/grid.css",

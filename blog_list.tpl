@@ -37,16 +37,16 @@
 				<tr>
 					<td class="cell-name">
 						<a href="{$oBlog->getUrlFull()}">
-							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" class="avatar visible-desktop" />
+							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" class="avatar visible-lg" />
 						</a>
 						
 						<p>
 							<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a>
 
-							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="muted question-sign"><i class="icon-question-sign"></i></a>
+							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="question-sign"><span class="glyphicon glyphicon-question-sign text-muted"></i></span></a>
 
 							{if $oBlog->getType() == 'close'}
-								<i title="{$aLang.blog_closed}" class="icon-lock muted"></i>
+								<span title="{$aLang.blog_closed}" class="glyphicon glyphicon-lock text-muted"></i>
 							{/if}
 
 						</p>
