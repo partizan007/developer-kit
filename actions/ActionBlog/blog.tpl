@@ -11,29 +11,37 @@
 
 
 {if $oUserCurrent and $oUserCurrent->isAdministrator()}
-	<div id="blog_delete_form" class="modal">
-		<header class="modal-header">
-			<button type="button" class="close jqmClose" data-dismiss="modal" aria-hidden="true">&times;</button>
-			<h3>{$aLang.blog_admin_delete_title}</h3>
-		</header>
-		
-		<div class="modal-body">
-			<form action="{router page='blog'}delete/{$oBlog->getId()}/" method="POST" class="modal-content">
-				<p><label for="topic_move_to">{$aLang.blog_admin_delete_move}:</label>
-				<select name="topic_move_to" id="topic_move_to" class="input-block-level">
-					<option value="-1">{$aLang.blog_delete_clear}</option>
-					{if $aBlogs}
-						<optgroup label="{$aLang.blogs}">
-							{foreach from=$aBlogs item=oBlogDelete}
-								<option value="{$oBlogDelete->getId()}">{$oBlogDelete->getTitle()|escape:'html'}</option>
-							{/foreach}
-						</optgroup>
-					{/if}
-				</select></p>
+	<div class="modal fade in modal-login" id="blog_delete_form">
+		<div class="modal-dialog">
+			<div class="modal-content">
 			
-				<input type="hidden" value="{$LIVESTREET_SECURITY_KEY}" name="security_ls_key" />
-				<button type="submit" class="btn btn-primary">{$aLang.blog_delete}</button>
-			</form>
+				<header class="modal-header">
+					<button type="button" class="close jqmClose" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">{$aLang.blog_admin_delete_title}</h4>
+				</header>
+		
+				<div class="modal-body">
+					<form action="{router page='blog'}delete/{$oBlog->getId()}/" method="POST">
+						<div class="form-group">
+							<label for="topic_move_to">{$aLang.blog_admin_delete_move}</label>
+							<select name="topic_move_to" id="topic_move_to" class="form-control">
+								<option value="-1">{$aLang.blog_delete_clear}</option>
+								{if $aBlogs}
+									<optgroup label="{$aLang.blogs}">
+										{foreach from=$aBlogs item=oBlogDelete}
+											<option value="{$oBlogDelete->getId()}">{$oBlogDelete->getTitle()|escape:'html'}</option>
+										{/foreach}
+									</optgroup>
+								{/if}
+							</select>
+						</div>
+			
+						<input type="hidden" value="{$LIVESTREET_SECURITY_KEY}" name="security_ls_key" />
+						<button type="submit" class="btn btn-success">{$aLang.blog_delete}</button>
+					</form>
+				</div>
+			
+			</div>
 		</div>
 	</div>
 {/if}
@@ -43,26 +51,26 @@
 	<header class="blog-header">
 		<small>
 			<div id="vote_area_blog_{$oBlog->getId()}" class="vote {if $oBlog->getRating() > 0}vote-count-positive{elseif $oBlog->getRating() < 0}vote-count-negative{/if} {if $oVote} voted {if $oVote->getDirection()>0}voted-up{elseif $oVote->getDirection()<0}voted-down{/if}{/if}">
-				<div class="muted vote-label">Рейтинг</div>
-				<a href="#" class="muted vote-down" onclick="return ls.vote.vote({$oBlog->getId()},this,-1,'blog');"><i class="icon-thumbs-down"></i></a>
+				<div class="text-muted vote-label">Рейтинг</div>
+				<a href="#" class="vote-down" onclick="return ls.vote.vote({$oBlog->getId()},this,-1,'blog');"><span class="glyphicon glyphicon-thumbs-down"></span></a>
 				<div id="vote_total_blog_{$oBlog->getId()}" class="vote-count count" title="{$aLang.blog_vote_count}: {$oBlog->getCountVote()}">{if $oBlog->getRating() > 0}+{/if}{$oBlog->getRating()}</div>
-				<a href="#" class="muted vote-up" onclick="return ls.vote.vote({$oBlog->getId()},this,1,'blog');"><i class="icon-thumbs-up"></i></a>
+				<a href="#" class="vote-up" onclick="return ls.vote.vote({$oBlog->getId()},this,1,'blog');"><span class="glyphicon glyphicon-thumbs-up"></span></a>
 			</div>
 		</small>
 		
 		<img src="{$oBlog->getAvatarPath(64)}" class="avatar" />
 		
-		<h2>{$oBlog->getTitle()|escape:'html'}{if $oBlog->getType()=='close'} <i title="{$aLang.blog_closed}" class="icon icon-lock"></i>{/if}</h2>
+		<h1>{$oBlog->getTitle()|escape:'html'}{if $oBlog->getType()=='close'} <span title="{$aLang.blog_closed}" class="glyphicon glyphicon-lock"></span>{/if}</h1>
 		
 		{if $oUserCurrent and ($oUserCurrent->getId()==$oBlog->getOwnerId() or $oUserCurrent->isAdministrator() or $oBlog->getUserIsAdministrator() )}
 			<small>
-				<ul class="unstyled inline actions">
+				<ul class="list-unstyled list-inline actions">
 					<li>
-						<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="text-warning">{$aLang.blog_edit}</a></li>
+						<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="actions-edit">{$aLang.blog_edit}</a></li>
 						{if $oUserCurrent->isAdministrator()}
-							<li><a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="text-error">{$aLang.blog_delete}</a>
+							<li><a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="actions-delete">{$aLang.blog_delete}</a>
 						{else}
-							<a href="{router page='blog'}delete/{$oBlog->getId()}/?security_ls_key={$LIVESTREET_SECURITY_KEY}" title="{$aLang.blog_delete}" onclick="return confirm('{$aLang.blog_admin_delete_confirm}');" >{$aLang.blog_delete}</a>
+							<a href="{router page='blog'}delete/{$oBlog->getId()}/?security_ls_key={$LIVESTREET_SECURITY_KEY}" title="{$aLang.blog_delete}" onclick="return confirm('{$aLang.blog_admin_delete_confirm}');" class="actions-delete">{$aLang.blog_delete}</a>
 						{/if}
 					</li>
 				</ul>
@@ -72,20 +80,20 @@
 	
 	
 	<div class="blog-mini" id="blog-mini">
-		<div class="row-fluid">
-			<div class="span6">
-				<small class="muted">
+		<div class="row">
+			<div class="col-sm-6 col-lg-6">
+				<small class="text-muted">
 					<span id="blog_user_count_{$oBlog->getId()}">{$iCountBlogUsers}</span> {$iCountBlogUsers|declension:$aLang.reader_declension:'russian'},
 					{$oBlog->getCountTopic()} {$oBlog->getCountTopic()|declension:$aLang.topic_declension:'russian'}
 				</small>
 			</div>
-			<div class="span6 blog-mini-header">
+			<div class="col-sm-6 col-lg-6 blog-mini-header">
 				<small>
 					<a href="#" class="link-dotted" onclick="ls.blog.toggleInfo(); return false;">{$aLang.blog_expand_info}</a>
 					<a href="{router page='rss'}blog/{$oBlog->getUrl()}/">RSS</a>
 				</small>
 				{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId()}
-					<button type="submit" class="btn btn-small {if $oBlog->getUserIsJoin()}active{/if}" id="button-blog-join-first-{$oBlog->getId()}" data-button-additional="button-blog-join-second-{$oBlog->getId()}" data-only-text="1" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</button>
+					<button type="submit" class="btn btn-success btn-sm{if $oBlog->getUserIsJoin()} active{/if}" id="button-blog-join-first-{$oBlog->getId()}" data-button-additional="button-blog-join-second-{$oBlog->getId()}" data-only-text="1" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</button>
 				{/if}
 			</div>
 		</div>
@@ -101,8 +109,8 @@
 			<small>
 				{hook run='blog_info_begin' oBlog=$oBlog}
 			
-				<div class="row-fluid">
-					<div class="span6">
+				<div class="row">
+					<div class="col-lg-6">
 						<dl class="dl-horizontal blog-info">
 							<dt>{$aLang.infobox_blog_create}</dt>
 							<dd>{date_format date=$oBlog->getDateAdd() format="j F Y"}</dd>
@@ -118,7 +126,7 @@
 						</dl>
 					</div>
 			
-					<div class="span6">
+					<div class="col-lg-6">
 						<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong><br />							
 						<span class="user-avatar">
 							<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>		
@@ -144,7 +152,7 @@
 								</span>
 							{/foreach}							
 						{else}
-							<span class="muted">{$aLang.blog_user_moderators_empty}</span>
+							<span class="text-muted">{$aLang.blog_user_moderators_empty}</span>
 						{/if}
 					</div>
 				</div>
@@ -169,7 +177,7 @@
 	</ul>
 
 	{if $sPeriodSelectCurrent}
-		<ul class="nav nav-pills pull-right nav-pills">
+		<ul class="nav nav-pills pull-right">
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 					{if $sPeriodSelectCurrent=='1'}{$aLang.blog_menu_top_period_24h}{/if}

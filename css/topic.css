@@ -7,10 +7,13 @@
 
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
-.topic .topic-header .topic-title i 			{ cursor: help; font-size: 16px; vertical-align: text-top; }
+.topic .topic-header .topic-title a 			{ color: #333333; text-decoration: underline; }
+.topic .topic-header .topic-title a:hover 		{ text-decoration: none; }
+
+.topic .topic-header .topic-title span 			{ cursor: help; font-size: 16px; vertical-align: text-top; }
 
 .topic .topic-header .topic-info 					{ margin-bottom: 20px; }
-.topic .topic-header .topic-info .topic-blog 		{ margin-right: 10px; color: #468847; font-size: 16px; text-decoration: underline; }
+.topic .topic-header .topic-info .topic-blog 		{ margin-right: 10px; font-size: 16px; text-decoration: underline; }
 .topic .topic-header .topic-info .topic-blog:hover 	{ text-decoration: none; }
 .topic .topic-header .topic-info .actions 					{ display: inline; }
 .topic .topic-header .topic-info .actions li:first-child 	{ padding-left: 0; }

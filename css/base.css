@@ -54,7 +54,7 @@ a.link-dashed:hover { text-decoration: none; }
 a.link-dotted 		{ border-bottom: 1px dotted; }
 a.link-dotted:hover { text-decoration: none; }
 
-a.actions-edit { color: #c09853; }
+a.actions-edit { color: #468847; }
 a.actions-delete { color: #b94a48; }
 
 /* Заголовки

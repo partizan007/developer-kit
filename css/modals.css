@@ -19,7 +19,7 @@
 
 
 /* Добавление топика */
-.modal.modal-write .modal-dialog { width: 712px; margin-left: -356px; }
+.modal.modal-write .modal-dialog { width: 712px; }
 
 .modal.modal-write .write-list li 					{ text-align: center; }
 .modal.modal-write .write-list li:first-child 		{ padding-left: 0; }
