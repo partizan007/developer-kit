@@ -3,7 +3,9 @@
 
 
 {if $aMsgError[0].title}
-	<h2 class="page-header">{$aLang.error}: <span>{$aMsgError[0].title}</span></h2>
+	<div class="page-header">
+		<h1>{$aLang.error}: <span>{$aMsgError[0].title}</span></h1>
+	</div>
 {/if}
 
 <p>{$aMsgError[0].msg}</p>

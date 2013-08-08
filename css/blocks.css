@@ -7,6 +7,8 @@
 .block .block-header h3 a 		{ color: #333333; }
 .block .block-header h3 a:hover { text-decoration: none; color: #555555; }
 
+.block-content .nav > li > a { padding: 10px 15px; }
+
 .block footer 			{ margin-top: 15px; }
 .block footer a 		{ color: #999999; }
 
