@@ -3,14 +3,14 @@
 {insert name="block" block='tagsCity'}
 {insert name="block" block='tagsCountry'}
 
-<section class="block">
+<section class="panel block">
 
 	<header class="block-header">
 		<h3>{$aLang.user_stats}</h3>
 	</header>
 	
 	<div class="block-content">
-		<ul class="unstyled">
+		<ul class="list-unstyled">
 			<li>{$aLang.user_stats_all}: <strong>{$aStat.count_all}</strong></li>
 			<li>{$aLang.user_stats_active}: <strong>{$aStat.count_active}</strong></li>
 			<li>{$aLang.user_stats_noactive}: <strong>{$aStat.count_inactive}</strong></li>
@@ -18,7 +18,7 @@
 		
 		<br />
 		
-		<ul class="unstyled">
+		<ul class="list-unstyled">
 			<li>{$aLang.user_stats_sex_man}: <strong>{$aStat.count_sex_man}</strong></li>
 			<li>{$aLang.user_stats_sex_woman}: <strong>{$aStat.count_sex_woman}</strong></li>
 			<li>{$aLang.user_stats_sex_other}: <strong>{$aStat.count_sex_other}</strong></li>

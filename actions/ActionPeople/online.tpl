@@ -1,6 +1,8 @@
 {include file='header.tpl' menu='people'}
 
-<h2 class="page-header">{$aLang.people}</h2>
+<div class="page-header">
+	<h1>{$aLang.people}</h1>
+</div>
 
 {include file='user_list.tpl' aUsersList=$aUsersLast}
 

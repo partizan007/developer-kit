@@ -1,7 +1,8 @@
 {include file='header.tpl' menu='people'}
 
-
-<h2 class="page-header">{$aLang.people}</h2>
+<div class="page-header">
+	<h1>{$aLang.people}</h1>
+</div>
 
 <table class="table table-hover table-users">
 	<thead>
@@ -25,15 +26,15 @@
 							<p class="username">
 								<a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
 								{if $oUserNote}
-									<i class="icon-comment js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
+									<span class="glyphicon glyphicon-comment text-muted js-infobox" title="{$oUserNote->getText()|escape:'html'}"></span>
 								{/if}
 							</p>
-							{if $oUserList->getProfileName()}<p class="muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
+							{if $oUserList->getProfileName()}<p class="text-muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
 						</div>
 					</td>
-					<td class="muted cell-date"><small>{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</small></td>
+					<td class="text-muted cell-date"><small>{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</small></td>
 					<td class="text-info cell-skill"><small>{$oUserList->getSkill()}</small></td>
-					<td class="cell-rating{if $oUserList->getRating() < 0} text-error negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
+					<td class="cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
 				</tr>
 			{/foreach}
 		{else}
