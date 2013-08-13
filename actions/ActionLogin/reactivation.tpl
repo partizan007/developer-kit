@@ -11,23 +11,25 @@
 	});
 </script>
 
-<h2 class="page-header">{$aLang.reactivation}</h2>
+<div class="page-header">
+	<h1>{$aLang.reactivation}</h1>
+</div>
 
-<form action="{router page='login'}reactivation/" method="POST" id="reactivation-form" class="form-horizontal">
-	<div class="control-group">
-		<label for="reactivation-mail" class="control-label">{$aLang.password_reminder_email}:</label>
-		<div class="controls">
-			<input type="text" name="mail" id="reactivation-mail" class="span3" />
-			<span class="help-block"><small class="text-error validate-error-hide validate-error-reactivation"></small></span>
-		</div>
-	</div>
+<div class="row">
+	<div class="col-sm-4 col-lg-4">
+
+		<form action="{router page='login'}reactivation/" method="POST" id="reactivation-form">
+			<div class="form-group">
+				<label for="reactivation-mail">{$aLang.password_reminder_email}</label>
+				<input type="text" name="mail" id="reactivation-mail" class="form-control" />
+				<p class="help-block"><small class="text-danger validate-error-hide validate-error-reactivation"></small></p>
+			</div>
 	
-	<div class="control-group">
-		<div class="controls">
-			<button type="submit" name="submit_reactivation" class="btn btn-primary" id="reactivation-form-submit" disabled="disabled">{$aLang.reactivation_submit}</button>
-		</div>
+			<button type="submit" name="submit_reactivation" class="btn btn-success" id="reactivation-form-submit" disabled="disabled">{$aLang.reactivation_submit}</button>
+		</form>
+		
 	</div>
-</form>
+</div>
 
 
 {include file='footer.tpl'}

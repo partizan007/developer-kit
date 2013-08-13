@@ -1,6 +1,9 @@
 {include file='header.tpl'}
 
-<h2 class="page-header">{$aLang.password_reminder}</h2>
+<div class="page-header">
+	<h1>{$aLang.password_reminder}</h1>
+</div>
+
 {$aLang.password_reminder_send_password}
 
 {include file='footer.tpl'}
