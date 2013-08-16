@@ -6,19 +6,22 @@
 		<div class="container">
 			<div class="header-inner">
 				
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 				
-				<hgroup class="site-info">
-					<h1 class="site-name"><a class="navbar-brand" href="{cfg name='path.root.web'}">{cfg name='view.name'}</a></h1>
-				</hgroup>
+					<hgroup class="site-info">
+						<h1 class="site-name"><a class="navbar-brand" href="{cfg name='path.root.web'}">{cfg name='view.name'}</a></h1>
+					</hgroup>
+				</div>
 				
 				{hook run='userbar_nav'}
 				
-				<div class="nav-collapse collapse">
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
 						<li {if $sMenuHeadItemSelect=='blog'}class="active"{/if}><a href="{cfg name='path.root.web'}">{$aLang.topic_title}</a></li>
 						<li {if $sMenuHeadItemSelect=='blogs'}class="active"{/if}><a href="{router page='blogs'}">{$aLang.blogs}</a></li>
@@ -30,7 +33,7 @@
 					
 					{hook run='main_menu'}
 					
-					<ul class="nav navbar-nav pull-right">
+					<ul class="nav navbar-nav navbar-right">
 						{if $oUserCurrent}
 							{if $iUserCurrentCountTalkNew}
 								<li>

@@ -1,5 +1,5 @@
 <div class="row nav-filter-wrapper">
-	<div class="col-12">
+	<div class="col-lg-12">
 
 		{if $sMenuItemSelect=='index'}
 			<ul class="nav nav-pills pull-left">
