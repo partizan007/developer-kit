@@ -22,10 +22,12 @@
 
 {if $oUserCurrent}
 	<form class="wall-submit">
-		<label for="wall-text">{$aLang.wall_add_title}:</label>
-		<textarea rows="4" id="wall-text" class="input-block-level js-wall-reply-parent-text"></textarea>
+		<div class="form-group">
+			<label for="wall-text">{$aLang.wall_add_title}</label>
+			<textarea rows="4" id="wall-text" class="form-control js-wall-reply-parent-text"></textarea>
+		</div>
 
-		<button type="button" onclick="ls.wall.add(jQuery('#wall-text').val(),0);" class="btn btn-primary js-button-wall-submit">{$aLang.wall_add_submit}</button>
+		<button type="button" onclick="ls.wall.add(jQuery('#wall-text').val(),0);" class="btn btn-success js-button-wall-submit">{$aLang.wall_add_submit}</button>
 	</form>
 {else}
 	<div class="wall-note" id="wall-note-list-empty">
@@ -45,7 +47,7 @@
 
 
 {if $iCountWall-count($aWall)}
-	<a href="#" onclick="return ls.wall.loadNext();" id="wall-button-next" class="btn btn-large btn-block btn-primary"><span class="wall-more-inner">{$aLang.wall_load_more} (<span id="wall-count-next">{$iCountWall-count($aWall)}</span>)</span></a>
+	<a href="#" onclick="return ls.wall.loadNext();" id="wall-button-next" class="btn btn-success btn-lg btn-block"><span class="wall-more-inner">{$aLang.wall_load_more} (<span id="wall-count-next">{$iCountWall-count($aWall)}</span>)</span></a>
 {/if}
 
 

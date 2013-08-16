@@ -2,7 +2,7 @@
 	<h1>{$aLang.talk_menu_inbox}</h1>
 </div>
 
-<ul class="nav nav-pills">					
+<ul class="nav nav-pills nav-filter-wrapper">					
 	<li {if $sMenuSubItemSelect=='inbox'}class="active"{/if}><a href="{router page='talk'}">{$aLang.talk_menu_inbox}</a></li>
 	{if $iUserCurrentCountTalkNew}
 		<li {if $sMenuSubItemSelect=='new'}class="active"{/if}><a href="{router page='talk'}inbox/new/">{$aLang.talk_menu_inbox_new}</a></li>

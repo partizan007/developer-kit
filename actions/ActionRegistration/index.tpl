@@ -25,75 +25,75 @@
 </script>
 
 
-<h2 class="page-header">{$aLang.registration}</h2>
+<div class="page-header">
+	<h1>{$aLang.registration}</h1>
+</div>
 
-{hook run='registration_begin'}
+<div class="row">
+	<div class="col-sm-4 col-lg-4">
 
-<form action="{router page='registration'}" method="post" id="registration-form" class="form-horizontal">
-	{hook run='form_registration_begin'}
+		{hook run='registration_begin'}
 
-	<div class="control-group">
-		<label for="registration-login" class="control-label">{$aLang.registration_login}:</label>
-		<div class="controls">
-			<input type="text" name="login" id="registration-login" value="{$_aRequest.login}" class="span4 js-ajax-validate" />
-			<i class="icon-question-sign muted js-tip-help" title="{$aLang.registration_login_notice}"></i>
-			<i class="icon-ok text-success validate-ok-field-login" style="display: none"></i>
-			<span class="help-block"><small class="text-error validate-error-hide validate-error-field-login"></small></span>
-		</div>
-	</div>
-	
-	<div class="control-group">
-		<label for="registration-mail" class="control-label">{$aLang.registration_mail}:</label>
-		<div class="controls">
-			<input type="text" name="mail" id="registration-mail" value="{$_aRequest.mail}" class="span4 js-ajax-validate" />
-			<i class="icon-question-sign muted js-tip-help" title="{$aLang.registration_mail_notice}"></i>
-			<i class="icon-ok text-success validate-ok-field-mail" style="display: none"></i>
-			<span class="help-block"><small class="text-error validate-error-hide validate-error-field-mail"></small></span>
-		</div>
-	</div>
-	
-	<div class="control-group">
-		<label for="registration-user-password" class="control-label">{$aLang.registration_password}:</label>
-		<div class="controls">
-			<input type="password" name="password" id="registration-user-password" value="" class="span4 js-ajax-validate" />
-			<i class="icon-question-sign muted js-tip-help" title="{$aLang.registration_password_notice}"></i>
-			<i class="icon-ok text-success validate-ok-field-password" style="display: none"></i>
-			<span class="help-block"><small class="text-error validate-error-hide validate-error-field-password"></small></span>
-		</div>
-	</div>
-	
-	<div class="control-group">
-		<label for="registration-user-password-confirm" class="control-label">{$aLang.registration_password_retry}:</label>
-		<div class="controls">
-			<input type="password" value="" id="registration-user-password-confirm" name="password_confirm" class="span4 js-ajax-validate" />
-			<i class="icon-ok text-success validate-ok-field-password_confirm" style="display: none"></i>
-			<span class="help-block"><small class="text-error validate-error-hide validate-error-field-password_confirm"></small></span>
-		</div>
-	</div>
-	
-	{hookb run="registration_captcha"}
-	<div class="control-group">
-		<label for="captcha" class="control-label">{$aLang.registration_captcha}:</label>
-		<div class="controls">
-			<img src="{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}" 
-				onclick="this.src='{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}&n='+Math.random();" 
-				class="captcha-image" />
-			<input type="text" name="captcha" id="captcha" value="" maxlength="3" class="span2 js-ajax-validate" />
-			<span class="help-block"><small class="text-error validate-error-hide validate-error-field-captcha"></small></span>
-		</div>
-	</div>
-	{/hookb}
+		<form action="{router page='registration'}" method="post" id="registration-form">
+			{hook run='form_registration_begin'}
 
-	{hook run='form_registration_end'}
-	<br />
+			<div class="form-group">
+				<label for="registration-login">{$aLang.registration_login}</label>
+				<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_login_notice}"></span>
+				<span class="glyphicon glyphicon-ok text-success validate-ok-field-login" style="display: none"></span>
+				<input type="text" name="login" id="registration-login" value="{$_aRequest.login}" class="form-control js-ajax-validate" />
+				<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-login"></small></p>
+			</div>
 	
-	<div class="control-group">
-		<div class="controls">
-			<button type="submit" name="submit_register" class="btn btn-primary" id="registration-form-submit" disabled="disabled">{$aLang.registration_submit}</button>
-		</div>
-	</div>
-</form>
+			<div class="form-group">
+				<label for="registration-mail">{$aLang.registration_mail}</label>
+				<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_mail_notice}"></span>
+				<span class="glyphicon glyphicon-ok text-success validate-ok-field-mail" style="display: none"></span>
+				<input type="text" name="mail" id="registration-mail" value="{$_aRequest.mail}" class="form-control js-ajax-validate" />
+				<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-mail"></small></p>
+			</div>
+	
+			<div class="form-group">
+				<label for="registration-user-password">{$aLang.registration_password}</label>
+				<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_password_notice}"></span>
+				<span class="glyphicon glyphicon-ok text-success validate-ok-field-password" style="display: none"></span>
+				<input type="password" name="password" id="registration-user-password" value="" class="form-control js-ajax-validate" />
+				<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-password"></small></p>
+			</div>
+	
+			<div class="form-group">
+				<label for="registration-user-password-confirm">{$aLang.registration_password_retry}</label>
+				<span class="glyphicon glyphicon-ok text-success validate-ok-field-password_confirm" style="display: none"></span>
+				<input type="password" value="" id="registration-user-password-confirm" name="password_confirm" class="form-control js-ajax-validate" />
+				<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-password_confirm"></small></p>
+			</div>
+	
+			{hookb run="registration_captcha"}
+				<div class="form-group">
+					<label for="captcha">{$aLang.registration_captcha}</label>
+					<div class="row">
+						<div class="col-6 col-sm-4 col-lg-3">
+							<img src="{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}" 
+								onclick="this.src='{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}&n='+Math.random();" 
+								class="captcha-image" />
+						</div>
+						<div class="col-6 col-sm-6 col-lg-4">
+							<input type="text" name="captcha" id="captcha" value="" maxlength="3" class="form-control js-ajax-validate" />
+						</div>
+					</div>
+					<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-captcha"></small></p>
+				</div>
+			{/hookb}
 
-{hook run='registration_end'}
+			{hook run='form_registration_end'}
+			<br />
+	
+			<button type="submit" name="submit_register" class="btn btn-success" id="registration-form-submit" disabled="disabled">{$aLang.registration_submit}</button>
+		</form>
+
+		{hook run='registration_end'}
+
+	</div>
+<div>
 
 {include file='footer.tpl'}

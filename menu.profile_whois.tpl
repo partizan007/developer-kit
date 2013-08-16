@@ -1,4 +1,4 @@
-<ul class="nav nav-pills">
+<ul class="nav nav-pills nav-filter-wrapper">
 	<li {if $sMenuSubItemSelect=='main'}class="active"{/if}>
 		<a href="{$oUserProfile->getUserWebPath()}">{$aLang.user_menu_profile_whois}</a>
 	</li>

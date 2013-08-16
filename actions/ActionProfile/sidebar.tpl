@@ -19,23 +19,30 @@
 		</script>
 		
 		<p class="upload-photo">
-			<a href="#" id="foto-upload" class="link-dotted">{if $oUserCurrent->getProfileFoto()}{$aLang.settings_profile_photo_change}{else}{$aLang.settings_profile_photo_upload}{/if}</a>&nbsp;&nbsp;&nbsp;
-			<a href="#" id="foto-remove" class="link-dotted text-error" onclick="return ls.user.removeFoto();" style="{if !$oUserCurrent->getProfileFoto()}display:none;{/if}">{$aLang.settings_profile_foto_delete}</a>
+			<small>
+				<a href="#" id="foto-upload" class="link-dotted">{if $oUserCurrent->getProfileFoto()}{$aLang.settings_profile_photo_change}{else}{$aLang.settings_profile_photo_upload}{/if}</a>&nbsp;&nbsp;&nbsp;
+				<a href="#" id="foto-remove" class="link-dotted" onclick="return ls.user.removeFoto();" style="{if !$oUserCurrent->getProfileFoto()}display:none;{/if}">{$aLang.settings_profile_foto_delete}</a>
+			</small>
 		</p>
 
-		<div class="modal modal-upload-photo" id="foto-resize">
-			<header class="modal-header">
-				<h3>{$aLang.uploadimg}</h3>
-			</header>
+		<div class="modal fade in modal-login" id="foto-resize">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				
+					<header class="modal-header">
+						<h4 class="modal-title">{$aLang.uploadimg}</h4>
+					</header>
 			
-			<div class="modal-body">
-				<img src="" alt="" id="foto-resize-original-img"><br />
-				<button type="submit" class="btn btn-primary" onclick="return ls.user.resizeFoto();">{$aLang.settings_profile_avatar_resize_apply}</button>
-				<button type="submit" class="btn" onclick="return ls.user.cancelFoto();">{$aLang.settings_profile_avatar_resize_cancel}</button>
+					<div class="modal-body">
+						<img src="" alt="" id="foto-resize-original-img"><br />
+						<button type="submit" class="btn btn-success" onclick="return ls.user.resizeFoto();">{$aLang.settings_profile_avatar_resize_apply}</button>
+						<button type="submit" class="btn btn-default" onclick="return ls.user.cancelFoto();">{$aLang.settings_profile_avatar_resize_cancel}</button>
+					</div>
+			
+				</div>
 			</div>
-			
-			<footer class="modal-footer"></footer>
 		</div>
+		
 	{/if}
 </section>
 
@@ -47,13 +54,13 @@
 		});
 	</script>
 
-	<section class="block block-type-profile-actions">
+	<section class="panel block block-type-profile-actions">
 		<div class="block-content">
-			<ul class="unstyled profile-actions" id="profile_actions">
+			<ul class="list-unstyled profile-actions" id="profile_actions">
 				{include file='actions/ActionProfile/friend_item.tpl' oUserFriend=$oUserProfile->getUserFriend()}
 				<li><a href="{router page='talk'}add/?talk_users={$oUserProfile->getLogin()}">{$aLang.user_write_prvmsg}</a></li>						
 				<li>
-					<a href="#" onclick="ls.user.followToggle(this, {$oUserProfile->getId()}); return false;" class="{if $oUserProfile->isFollow()}text-error followed{/if}">
+					<a href="#" onclick="ls.user.followToggle(this, {$oUserProfile->getId()}); return false;" class="{if $oUserProfile->isFollow()}followed{/if}">
 						{if $oUserProfile->isFollow()}{$aLang.profile_user_unfollow}{else}{$aLang.profile_user_follow}{/if}
 					</a>
 				</li>						
@@ -86,7 +93,7 @@
 
 
 {if $oUserCurrent && $oUserCurrent->getId() != $oUserProfile->getId()}
-	<section class="block block-type-profile-note">
+	<section class="panel block block-type-profile-note">
 		{if $oUserNote}
 			<script type="text/javascript">
 				ls.usernote.sText = {json var = $oUserNote->getText()};
@@ -100,16 +107,18 @@
 				{/if}
 			</p>
 			
-			<ul class="unstyled inline actions">
-				<li><a href="#" onclick="return ls.usernote.showForm();" class="link-dotted text-warning">{$aLang.user_note_form_edit}</a></li>
-				<li><a href="#" onclick="return ls.usernote.remove({$oUserProfile->getId()});" class="link-dotted text-error">{$aLang.user_note_form_delete}</a></li>
+			<ul class="list-unstyled list-inline actions">
+				<li><a href="#" onclick="return ls.usernote.showForm();" class="link-dotted">{$aLang.user_note_form_edit}</a></li>
+				<li><a href="#" onclick="return ls.usernote.remove({$oUserProfile->getId()});" class="link-dotted">{$aLang.user_note_form_delete}</a></li>
 			</ul>
 		</div>
 		
 		<div id="usernote-form" style="display: none;">
-			<p><textarea rows="4" cols="20" id="usernote-form-text" class="input-block-level"></textarea></p>
-			<button type="submit" onclick="return ls.usernote.save({$oUserProfile->getId()});" class="btn btn-primary">{$aLang.user_note_form_save}</button>
-			<button type="submit" onclick="return ls.usernote.hideForm();" class="btn">{$aLang.user_note_form_cancel}</button>
+			<div class="form-group">
+				<textarea rows="4" cols="20" id="usernote-form-text" class="form-control"></textarea>
+			</div>
+			<button type="submit" onclick="return ls.usernote.save({$oUserProfile->getId()});" class="btn btn-success">{$aLang.user_note_form_save}</button>
+			<button type="submit" onclick="return ls.usernote.hideForm();" class="btn btn-default">{$aLang.user_note_form_cancel}</button>
 		</div>
 		
 		<a href="#" onclick="return ls.usernote.showForm();" id="usernote-button-add" class="link-dotted" {if $oUserNote}style="display:none;"{/if}>{$aLang.user_note_add}</a>

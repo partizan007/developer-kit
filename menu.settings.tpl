@@ -2,7 +2,7 @@
 	<h1>{$aLang.settings_menu}</h1>
 </div>
 
-<ul class="nav nav-pills">
+<ul class="nav nav-pills nav-filter-wrapper">
 	<li {if $sMenuSubItemSelect=='profile'}class="active"{/if}><a href="{router page='settings'}profile/">{$aLang.settings_menu_profile}</a></li>
 	<li {if $sMenuSubItemSelect=='account'}class="active"{/if}><a href="{router page='settings'}account/">{$aLang.settings_menu_account}</a></li>
 	<li {if $sMenuSubItemSelect=='tuning'}class="active"{/if}><a href="{router page='settings'}tuning/">{$aLang.settings_menu_tuning}</a></li>

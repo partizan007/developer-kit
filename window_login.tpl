@@ -44,7 +44,7 @@
 							<div class="form-group">
 								<label for="popup-password">{$aLang.user_password}</label>
 								<input type="password" name="password" id="popup-password" class="form-control">
-								<span class="help-block"><small class="text-danger validate-error-hide validate-error-login"></small></span>
+								<p class="help-block"><small class="text-danger validate-error-hide validate-error-login"></small></p>
 							</div>
 							
 							<div class="form-group">
@@ -96,7 +96,7 @@
 									<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_login_notice}"></span>
 									<span class="glyphicon glyphicon-ok text-success validate-ok-field-login" style="display: none"></span>
 									<input type="text" name="login" id="popup-registration-login" value="{$_aRequest.login}" class="form-control js-ajax-validate" />
-									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-login"></small></span>
+									<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-login"></small></p>
 								</div>
 					
 								<div class="form-group">
@@ -104,7 +104,7 @@
 									<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_mail_notice}"></span>
 									<span class="glyphicon glyphicon-ok text-success validate-ok-field-mail" style="display: none"></span>
 									<input type="text" name="mail" id="popup-registration-mail" value="{$_aRequest.mail}" class="form-control js-ajax-validate" />
-									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-mail"></small></span>
+									<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-mail"></small></p>
 								</div>
 					
 								<div class="form-group">
@@ -112,14 +112,14 @@
 									<span class="glyphicon glyphicon-question-sign text-muted js-tip-help" title="{$aLang.registration_password_notice}"></span>
 									<span class="glyphicon glyphicon-ok text-success validate-ok-field-password" style="display: none"></span>
 									<input type="password" name="password" id="popup-registration-user-password" value="" class="form-control js-ajax-validate" />
-									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-password"></small></span>
+									<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-password"></small></p>
 								</div>
 					
 								<div class="form-group">
 									<label for="popup-registration-user-password-confirm">{$aLang.registration_password_retry}</label>
 									<span class="glyphicon glyphicon-ok text-success validate-ok-field-password_confirm" style="display: none"></span>
 									<input type="password" value="" id="popup-registration-user-password-confirm" name="password_confirm" class="form-control js-ajax-validate" />
-									<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-password_confirm"></small></span>
+									<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-password_confirm"></small></p>
 								</div>
 
 								{hookb run="popup_registration_captcha"}
@@ -135,16 +135,14 @@
 												<input type="text" name="captcha" id="popup-registration-captcha" value="" maxlength="3" class="form-control js-ajax-validate" />
 											</div>
 										</div>
-										<span class="help-block"><small class="text-danger validate-error-hide validate-error-field-captcha"></small></span>
+										<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-captcha"></small></p>
 									</div>
 								{/hookb}
 					
 								{hook run='form_registration_end' isPopup=true}
 					
-								<div class="form-group">
-									<input type="hidden" name="return-path" value="{$PATH_WEB_CURRENT|escape:'html'}">
-									<button type="submit" name="submit_register" class="btn btn-success" id="popup-registration-form-submit" disabled="disabled">{$aLang.registration_submit}</button>
-								</div>
+								<input type="hidden" name="return-path" value="{$PATH_WEB_CURRENT|escape:'html'}">
+								<button type="submit" name="submit_register" class="btn btn-success" id="popup-registration-form-submit" disabled="disabled">{$aLang.registration_submit}</button>
 								
 							</form>
 							{hook run='registration_end' isPopup=true}
@@ -168,7 +166,7 @@
 							<div class="form-group">
 								<label for="popup-reminder-mail">{$aLang.password_reminder_email}</label>
 								<input type="text" name="mail" id="popup-reminder-mail" class="form-control" />
-								<span class="help-block"><small class="text-danger validate-error-hide validate-error-reminder"></small></span>
+								<p class="help-block"><small class="text-danger validate-error-hide validate-error-reminder"></small></p>
 							</div>
 					
 							<div class="form-group">
