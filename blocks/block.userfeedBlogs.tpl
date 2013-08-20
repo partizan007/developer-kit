@@ -1,5 +1,5 @@
 {if $oUserCurrent}
-	<section class="panel block block-type-activity">
+	<section class="panel panel-default block block-type-activity">
 		<header class="block-header">
 			<h3>{$aLang.userfeed_block_blogs_title}</h3>
 		</header>

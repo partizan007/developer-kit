@@ -7,7 +7,7 @@ body { position: relative; }
 
 /* Оформление
 ---------------------------------------------------- */
-#nav { background-color: #f7f7f7; }
+#nav { background-color: #efefef; }
 
 
 /* Шапка сайта
@@ -36,7 +36,7 @@ body { position: relative; }
 
 /* Футер
 ---------------------------------------------------- */
-#footer 					{ background-color: #eeeeee; }
+#footer 					{ background-color: #efefef; }
 #footer .footer-list-header	{ font-weight: bold; }
 #footer .copyright 			{ font-size: 12px; text-align: right; }
 

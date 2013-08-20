@@ -12,7 +12,7 @@
 	{/literal}
 
 
-	<section class="panel block block-type-activity">
+	<section class="panel panel-default block block-type-activity">
 		<header class="block-header">
 			<h3>{$aLang.stream_block_config_title}</h3>
 		</header>

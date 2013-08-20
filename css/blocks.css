@@ -24,7 +24,7 @@
 /* Block Type - Profile */
 .block.block-type-profile .profile-photo-wrapper 	{ position: relative; margin: 0 auto; min-height: 50px; }
 .block.block-type-profile .profile-photo 			{ max-width: 100%; vertical-align: top; }
-.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; line-height: 1.5; }
+.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; }
 .block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; background-color: #eeeeee; }
 
 .block.block-type-profile-note	 						{ background-color: #ffffde; border: 1px solid #ffcc66; }

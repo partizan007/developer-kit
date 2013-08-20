@@ -1,5 +1,5 @@
 {if $aCountryList && count($aCountryList)>0}
-	<section class="panel block">
+	<section class="panel panel-default block">
 		<header class="block-header">
 			<h3>{$aLang.block_country_tags}</h3>
 		</header>

@@ -17,8 +17,7 @@ $config['head']['default']['js'][] = '___path.static.skin___/bootstrap/js/bootst
 $config['head']['default']['css'] = array(
 	/* Bootstrap */
 	"___path.static.skin___/bootstrap/css/bootstrap.min.css",
-	/* Glyphicons */
-	"___path.static.skin___/fonts/bootstrap-glyphicons.css",
+
 
 	/* Structure */
 	"___path.static.skin___/css/base.css",

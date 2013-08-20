@@ -40,7 +40,7 @@
 .toolbar 					{ float: right; position: fixed; top: 150px; right: 10px; z-index: 100; }
 .toolbar section 			{ width: 36px; line-height: 14px; background-color: #ffffff; border: 1px solid #eeeeee; margin-bottom: 10px; border-radius: 4px; }
 
-.toolbar section a 			{ display: block; padding: 10px; color: #aaaaaa; }
+.toolbar section a 			{ display: block; padding: 10px; color: #aaaaaa; line-height: 1; }
 .toolbar section a:hover 	{ text-decoration: none; color: #B94A48; }
 
 .toolbar section i			{ display: block; }
