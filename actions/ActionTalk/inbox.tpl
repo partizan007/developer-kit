@@ -10,8 +10,8 @@
 		<input type="hidden" name="submit_talk_read" id="form_talks_list_submit_read" value="" />
 		<input type="hidden" name="submit_talk_del" id="form_talks_list_submit_del" value="" />
 
-		<button type="submit" onclick="ls.talk.makeReadTalks()" class="btn">{$aLang.talk_inbox_make_read}</button>
-		<button type="submit" onclick="if (confirm('{$aLang.talk_inbox_delete_confirm}')){ ls.talk.removeTalks() };" class="btn">{$aLang.talk_inbox_delete}</button>
+		<button type="submit" onclick="ls.talk.makeReadTalks()" class="btn btn-default">{$aLang.talk_inbox_make_read}</button>
+		<button type="submit" onclick="if (confirm('{$aLang.talk_inbox_delete_confirm}')){ ls.talk.removeTalks() };" class="btn btn-default">{$aLang.talk_inbox_delete}</button>
 		<br /><br />
 		
 		<table class="table table-hover table-talk">
@@ -30,7 +30,7 @@
 					{assign var="oTalkUserAuthor" value=$oTalk->getTalkUser()}
 					<tr>
 						<td class="cell-checkbox"><input type="checkbox" name="talk_select[{$oTalk->getId()}]" class="form_talks_checkbox input-checkbox" /></td>
-						<td class="muted">
+						<td class="text-muted">
 							<small>
 								{strip}
 									{assign var="aTalkUserOther" value=[]}
@@ -41,17 +41,17 @@
 									{/foreach}
 									{foreach from=$aTalkUserOther item=oTalkUser name=users}
 										{assign var="oUser" value=$oTalkUser->getUser()}
-										{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}muted inactive{/if}">{$oUser->getLogin()}</a>
+										{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
 									{/foreach}
 								{/strip}
 							</small>
 						</td>
 						<td class="cell-favourite">
-							<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="muted favourite {if $oTalk->getIsFavourite()}active{/if}"><i class="icon-star-empty"></i></a>
+							<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="muted favourite {if $oTalk->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
 						</td>
 						<td>
 							{strip}
-								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="text-success js-title-talk" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
+								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="js-title-talk" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
 									{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
 										<strong>{$oTalk->getTitle()|escape:'html'}</strong>
 									{else}
@@ -61,15 +61,15 @@
 							{/strip}
 							&nbsp;
 							{if $oTalk->getCountComment()}
-								<span class="muted">({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()}<span class="text-info">+{$oTalkUserAuthor->getCommentCountNew()}</span>{/if})</span>
+								<span class="text-muted">({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()}<span class="text-info">+{$oTalkUserAuthor->getCommentCountNew()}</span>{/if})</span>
 							{/if}
 							{if $oUserCurrent->getId()==$oTalk->getUserIdLast()}
 								<span class="text-success">&rarr;</span>
 							{else}
-								<span class="text-error">&larr;</span>
+								<span class="text-danger">&larr;</span>
 							{/if}
 						</td>
-						<td class="muted cell-date ta-r"><small>{date_format date=$oTalk->getDate() format="j F Y, H:i"}</small></td>
+						<td class="text-muted cell-date ta-r"><small>{date_format date=$oTalk->getDate() format="j F Y, H:i"}</small></td>
 					</tr>
 				{/foreach}
 			</tbody>

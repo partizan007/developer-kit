@@ -256,7 +256,7 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	// Раскрывающиеся блоки (поиск по блогам, людям, тегам)
+	// Раскрывающиеся блоки (поиск по блогам и людям)
 	$("#block-more").click(function () {
 		if ($('#block-more-content').is(':visible')) {
 			$('#block-more-content').hide();

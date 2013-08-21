@@ -2,7 +2,9 @@
 
 
 <form action="" method="GET" class="js-tag-search-form search-tags">
-	<input type="text" name="tag" placeholder="{$aLang.block_tags_search}" value="{$sTag|escape:'html'}" class="input-block-level autocomplete-tags js-tag-search" />
+	<div class="form-group">
+		<input type="text" name="tag" placeholder="{$aLang.block_tags_search}" value="{$sTag|escape:'html'}" class="form-control autocomplete-tags js-tag-search" />
+	</div>
 </form>
 
 {include file='topic_list.tpl'}

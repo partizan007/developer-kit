@@ -5,12 +5,14 @@
 		{if {date_format date=$oStreamEvent->getDateAdded() format="j F Y"} != $sDateLast}
 			{assign var=sDateLast value={date_format date=$oStreamEvent->getDateAdded() format="j F Y"}}
 			
-			<li class="lead stream-header-date">
-				{if {date_format date=$smarty.now format="j F Y"} == $sDateLast}
-					{$aLang.today}
-				{else}
-					{date_format date=$oStreamEvent->getDateAdded() format="j F Y"}
-				{/if}
+			<li class="stream-header-date">
+				<p class="lead">
+					{if {date_format date=$smarty.now format="j F Y"} == $sDateLast}
+						{$aLang.today}
+					{else}
+						{date_format date=$oStreamEvent->getDateAdded() format="j F Y"}
+					{/if}
+				</p>
 			</li>
 		{/if}
 
@@ -19,7 +21,7 @@
 
 		<li class="stream-item stream-item-type-{$oStreamEvent->getEventType()}">
 			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
-			<span class="muted date" title="{date_format date=$oStreamEvent->getDateAdded()}"><small>{date_format date=$oStreamEvent->getDateAdded() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</small></span> 
+			<span class="text-muted date" title="{date_format date=$oStreamEvent->getDateAdded()}"><small>{date_format date=$oStreamEvent->getDateAdded() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</small></span> 
 
 			<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 

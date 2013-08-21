@@ -79,13 +79,13 @@
 				
 				<div class="col-lg-4">
 					<p id="profile_user_field_template" style="display:none;" class="js-user-field-item">
-						<select name="profile_user_field_type[]" onchange="ls.userfield.changeFormField(this);" class="span3">
+						<select name="profile_user_field_type[]" onchange="ls.userfield.changeFormField(this);" class="form-control">
 							{foreach from=$aUserFieldsContact item=oFieldAll}
 								<option value="{$oFieldAll->getId()}">{$oFieldAll->getTitle()|escape:'html'}</option>
 							{/foreach}
 						</select>
-						<input type="text" name="profile_user_field_value[]" value="" class="span3">
-						<a class="icon-remove" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
+						<input type="text" name="profile_user_field_value[]" value="" class="form-control">
+						<a class="glyphicon glyphicon-trash icon-remove" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
 					</p>
 		
 					<div class="pull-right avatar-change">
@@ -183,21 +183,13 @@
 			<div id="user-field-contact-contener">
 				{foreach from=$aUserFieldContactValues item=oField}
 					<p class="js-user-field-item">
-					
-						<form class="form-inline" role="form">
-							<div class="form-group">
-								<select name="profile_user_field_type[]"  onchange="ls.userfield.changeFormField(this);" class="form-control">
-									{foreach from=$aUserFieldsContact item=oFieldAll}
-										<option value="{$oFieldAll->getId()}" {if $oFieldAll->getId()==$oField->getId()}selected="selected"{/if}>{$oFieldAll->getTitle()|escape:'html'}</option>
-									{/foreach}
-								</select>
-							</div>
-							
-							<div class="form-group">
-								<input type="text" name="profile_user_field_value[]" value="{$oField->getValue()|escape:'html'}" class="form-control">
-							</div>
-							<a class="icon-remove muted" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
-						</form>
+						<select name="profile_user_field_type[]"  onchange="ls.userfield.changeFormField(this);" class="form-control">
+							{foreach from=$aUserFieldsContact item=oFieldAll}
+								<option value="{$oFieldAll->getId()}" {if $oFieldAll->getId()==$oField->getId()}selected="selected"{/if}>{$oFieldAll->getTitle()|escape:'html'}</option>
+							{/foreach}
+						</select>
+						<input type="text" name="profile_user_field_value[]" value="{$oField->getValue()|escape:'html'}" class="form-control">
+						<a class="glyphicon glyphicon-trash icon-remove" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
 					</p>
 				{/foreach}
 			</div>

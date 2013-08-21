@@ -3,7 +3,7 @@
 ------------------------------------------------------------------- */
 
 .block .block-header 			{ position: relative; }
-.block .block-header h3 		{ margin-top: 0; line-height: 30px; }
+.block .block-header h3 		{ margin-top: 0; }
 .block .block-header h3 a 		{ color: #333333; }
 .block .block-header h3 a:hover { text-decoration: none; color: #555555; }
 
