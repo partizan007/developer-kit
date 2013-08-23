@@ -7,18 +7,21 @@
 .block .block-header h3 a 		{ color: #333333; }
 .block .block-header h3 a:hover { text-decoration: none; color: #555555; }
 
-.block-content .nav > li > a { padding: 10px 15px; }
+.block-content .nav 				{ margin-bottom: 10px; }
+.block-content .nav > li > a 		{ padding: 3px 6px; font-size: 12px; border: 1px solid #ffffff; }
+.block-content .nav > li > a:hover 	{ border-color: #eeeeee; }
+.block-content .nav > li.active > a { background-color: #ffffff; border-color: #cfe1ef; color: #555555; }
 
-.block footer 			{ margin-top: 15px; }
-.block footer a 		{ color: #999999; }
+.block footer 	{ margin-top: 15px; }
+.block footer a { color: #999999; }
 
-.block .max-height-200 	{ overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
+.block .max-height-200 { overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
 
 .user-list-mini li > input,
 .stream-settings-friends li > input { float: left; margin-right: 7px; }
 
 .user-list-mini li img,
-.stream-settings-friends li img { margin-right: 2px; position: relative; width: 16px; height: 16px; }
+.stream-settings-friends li img 	{ margin-right: 2px; position: relative; width: 16px; height: 16px; }
 
 
 /* Block Type - Profile */
@@ -27,14 +30,13 @@
 .block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; }
 .block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; background-color: #eeeeee; }
 
-.block.block-type-profile-note	 						{ background-color: #ffffde; border: 1px solid #ffcc66; }
 .block.block-type-profile-note .actions 				{ margin-bottom: 0; }
 .block.block-type-profile-note .actions li:first-child 	{ margin-bottom: 0; padding-left: 0; }
 
 .block.block-type-profile-actions ul 				{ margin-bottom: 0; }
 .block.block-type-profile-actions ul li				{ margin-bottom: 5px; }
-.block.block-type-profile-actions ul li:last-child	{ margin-bottom: 0; }
+.block.block-type-profile-actions ul li:last-child 	{ margin-bottom: 0; }
 
 
 /* Block Type - Foldable */
-.block.block-type-foldable .block-content 			{ display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eeeeee; }
+.block.block-type-foldable .block-content { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eeeeee; }

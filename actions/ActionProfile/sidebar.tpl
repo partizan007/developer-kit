@@ -27,7 +27,7 @@
 				</small>
 			</p>
 
-			<div class="modal fade in modal-login" id="foto-resize">
+			<div class="modal fade in modal-upload-photo" id="foto-resize">
 				<div class="modal-dialog">
 					<div class="modal-content">
 				

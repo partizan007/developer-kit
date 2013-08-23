@@ -43,11 +43,9 @@
 .toolbar section a 			{ display: block; padding: 10px; color: #aaaaaa; line-height: 1; }
 .toolbar section a:hover 	{ text-decoration: none; color: #B94A48; }
 
-.toolbar section i			{ display: block; }
-
 /* Update comments button */
-.toolbar .toolbar-update .update-comments.active i 	{ opacity: .5; }
-.toolbar .toolbar-update .new-comments 				{ border-top: 1px solid #eeeeee; padding: 10px 0; text-align: center; font-size: 11px; }
+.toolbar .toolbar-update .update-comments.active span 	{ opacity: .5; }
+.toolbar .toolbar-update .new-comments 					{ border-top: 1px solid #eeeeee; padding: 10px 0; text-align: center; font-size: 11px; }
 
 /* Topic navigation */
 .toolbar .toolbar-topic a.toolbar-topic-prev { border-bottom: 1px solid #eeeeee; }
@@ -68,8 +66,6 @@
 
 .search-abc li 				{ padding-left: 0 !important; }
 .search-abc li.active a 	{ color: #333333; border: none; }
-
-.search-tags 				{ margin-bottom: 20px; }
 
 
 /* Облако тегов 
@@ -94,8 +90,6 @@
 .item-list 					{ border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee }
 .item-list li 				{ padding: 10px 0; position: relative; zoom: 1; }
 .item-list li p 			{ margin-bottom: 0; }
-.item-list li i 			{ margin-right: 2px; }
-.item-list li .avatar 		{ position: absolute; top: 10px; left: 0; margin-right: 10px; width: 36px; height: 36px; }
 .item-list li .author 		{ margin-right: 5px; color: #333333; text-decoration: underline; }
 .item-list li .blog-name 	{ text-decoration: underline; }
 .item-list li .stream-topic { text-decoration: underline; }
@@ -112,7 +106,8 @@
 
 .ls-user:before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icon-user.png) 0 0 no-repeat; vertical-align: text-top; }
 
+.wrapper-content { background-color: #f5f5f5; padding: 15px; }
 .wrapper-content.wrapper-content-dark 	{ background-color: #f0f0f0; }
 
-a.blogs-search, a.people-search, a.tags-search 						{ position: absolute; right: 0; top: 5px; }
-a.blogs-search:hover, a.people-search:hover, a.tags-search:hover 	{ text-decoration: none; }
+a.blogs-search, a.people-search 			{ position: absolute; right: 15px; top: 5px; color: #999999; }
+a.blogs-search:hover, a.people-search:hover { text-decoration: none; }

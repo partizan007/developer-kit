@@ -2,9 +2,6 @@
 	АДАПТИВНОСТЬ
 -------------------------------------------- */
 
-.navbar .btn-navbar .icon-bar { opacity: 1; }
-
-
 /* Desktop large
 ------------------------- */
 @media (min-width: 1200px) {
@@ -29,16 +26,11 @@
 /* Tablet
 ------------------------- */
 @media (max-width: 767px) {
-  #nav 			{ margin-right: -20px; margin-left: -20px; }
-  .nav-inner 	{ padding-right: 20px; padding-left: 20px; }
-  
-  #footer 		{ margin-right: -20px; margin-left: -20px; }
-  .footer-inner { padding-right: 20px; padding-left: 20px; }
   
   /* Модальные окна */
-  .modal.modal-write,
-  .modal.modal-upload-photo,
-  .modal.modal-upload-avatar { width: auto; margin-left: 0; }
+  .modal.modal-write .modal-dialog,
+  .modal.modal-upload-photo .modal-dialog,
+  .modal.modal-upload-avatar .modal-dialog { width: auto; }
 }
 
 

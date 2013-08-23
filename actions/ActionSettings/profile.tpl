@@ -98,7 +98,7 @@
 							</small>
 						</div>
 		
-						<div class="modal fade in modal-login" id="avatar-resize">
+						<div class="modal fade in modal-upload-avatar" id="avatar-resize">
 							<div class="modal-dialog">
 								<div class="modal-content">
 								

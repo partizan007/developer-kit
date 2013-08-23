@@ -5,33 +5,33 @@
 body { position: relative; }
 
 
-/* Оформление
+/* Ссылки
 ---------------------------------------------------- */
-#nav { background-color: #efefef; }
+a.actions-edit 		{ color: #468847; }
+a.actions-delete 	{ color: #b94a48; }
 
 
 /* Шапка сайта
 ---------------------------------------------------- */
-#header { position: relative; }
-
-#header .navbar { margin-bottom: 0; }
-#header .navbar h1.site-name { margin: 0; }
-#header .navbar .nav > li > a img.avatar 			{ width: 20px; height: 20px; vertical-align: top; }
-#header .navbar .nav > li > a.new-messages:hover i 	{ opacity: .8; }
+#header 										{ position: relative; }
+#header .navbar 								{ margin-bottom: 0; }
+#header .navbar h1.site-name 					{ margin: 0; }
+#header .navbar .nav > li > a img.avatar 		{ width: 20px; height: 20px; vertical-align: top; }
+#header .navbar .nav > li > a.new-messages span { top: 2px; }
 
 
 /* Навигация
 ---------------------------------------------------- */
-#nav .nav 			{ margin-bottom: 0; }
+#nav 				{ background-color: #efefef; }
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
 #nav .btn-write 	{ margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
+
+.nav-filter-wrapper { margin-bottom: 20px; }
 
 
 /* Контейнер
 ---------------------------------------------------- */
 .content { position: relative; }
-
-.nav-filter-wrapper { margin-bottom: 20px; }
 
 
 /* Футер
@@ -43,7 +43,7 @@ body { position: relative; }
 
 /* Stat
 ---------------------------------------------------- */
-#stat-performance table td 	{ width: 200px; vertical-align: top; }
+#stat-performance table td { width: 200px; vertical-align: top; }
 
 
 /* Ссылки
@@ -54,12 +54,10 @@ a.link-dashed:hover { text-decoration: none; }
 a.link-dotted 		{ border-bottom: 1px dotted; }
 a.link-dotted:hover { text-decoration: none; }
 
-a.actions-edit { color: #468847; }
-a.actions-delete { color: #b94a48; }
 
 /* Заголовки
 ---------------------------------------------------- */
-.page-header { margin-top: 0; }
+.page-header 	{ margin-top: 0; }
 .page-header h1 { margin-top: 0; }
 
 
@@ -79,17 +77,13 @@ a.actions-delete { color: #b94a48; }
 
 /* Userfields
 ---------------------------------------------------- */
-.userfield-list li 							{ margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; background-color: #eeeeee; }
-.userfield-list li .userfield_admin_name 	{ font-weight: bold; color: #333333; }
+.userfield-list li { margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; background-color: #eeeeee; }
+.userfield-list li .userfield_admin_name { font-weight: bold; color: #333333; }
 
 
 /* Misc
 ---------------------------------------------------- */
-.poll-create 				{ padding: 15px 20px; margin-bottom: 20px; background-color: #eeeeee; }
-.question-list li .span4	{ margin-right: 10px; }
-
-.wrapper-content { background-color: #f5f5f5; padding: 15px; }
-
+.poll-create { padding: 15px 20px; margin-bottom: 20px; background-color: #eeeeee; }
 
 .help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; border: 1px solid #dddddd; background-color: #ffffff; }
 .help:before 				{ display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #ffffff transparent; border-style: solid; }
@@ -97,8 +91,6 @@ a.actions-delete { color: #b94a48; }
 .help .help-col.help-wide 	{ float: none; width: 94%; }
 .help .help-item 			{ margin-bottom: 20px; }
 .help .help-item:last-child { margin-bottom: 0; }
-
-.help-block.span4 			{ margin-left: 0; }
 
 
 a:focus,

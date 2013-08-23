@@ -11,14 +11,13 @@
 .blog .blog-header .avatar 	{ position: absolute; top: 0; left: 0; }
 
 .blog .blog-header .vote 		{ position: absolute; top: 0; right: 0; }
-.blog .blog-header .vote-label	{ text-align: center; }
+.blog .blog-header .vote-label 	{ text-align: center; }
 
-.blog .blog-header .actions li:first-child 	{ padding-left: 0px; }
+.blog .blog-header .actions li:first-child { padding-left: 0px; }
 
 
 /* Blog Mini */
 .blog-mini 							{ padding: 10px 20px; background-color: #f5f5f5; line-height: 26px; }
-.blog-mini .span6 					{ min-height: 26px; }
 .blog-mini .blog-mini-header 		{ text-align: right; }
 .blog-mini .blog-mini-header a 		{ margin-left: 10px; }
 .blog-mini .blog-mini-header .btn 	{ margin-left: 10px; }
@@ -30,11 +29,11 @@
 
 
 /* Footer */
-.blog .blog-footer 	{ padding: 20px 0; }
+.blog .blog-footer { padding: 20px 0; }
 
-.blog-info 			{ margin: 0; }
-.blog-info dt 		{ text-align: left; font-weight: normal; border-bottom: 1px solid #eeeeee; }
-.blog-info dd 		{ margin-left: 160px; border-bottom: 1px solid #f5f5f5; }
+.blog-info 		{ margin: 0; }
+.blog-info dt 	{ text-align: left; font-weight: normal; border-bottom: 1px solid #eeeeee; }
+.blog-info dd 	{ margin-left: 160px; border-bottom: 1px solid #f5f5f5; }
 
 .user-avatar a 		{ text-decoration: underline; }
 .user-avatar img 	{ margin-right: 1px; width: 16px; height: 16px; vertical-align: middle; }
