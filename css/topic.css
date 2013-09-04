@@ -8,12 +8,12 @@
 /* Header */
 .topic .topic-header .topic-title 				{ margin-top: 0; }
 .topic .topic-header .topic-title a 			{ color: #333333; text-decoration: underline; }
-.topic .topic-header .topic-title a:hover 		{ text-decoration: none; }
+.topic .topic-header .topic-title a:hover 		{ color: #d73b37; }
 
 .topic .topic-header .topic-title span 			{ cursor: help; font-size: 16px; vertical-align: text-top; }
 
 .topic .topic-header .topic-info 					{ margin-bottom: 20px; }
-.topic .topic-header .topic-info .topic-blog 		{ margin-right: 10px; font-size: 16px; text-decoration: underline; }
+.topic .topic-header .topic-info .topic-blog 		{ font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; font-weight: bold; margin-right: 10px; text-decoration: underline; }
 .topic .topic-header .topic-info .topic-blog:hover 	{ text-decoration: none; }
 .topic .topic-header .topic-info .actions 					{ display: inline; }
 .topic .topic-header .topic-info .actions li:first-child 	{ padding-left: 0; }
@@ -30,32 +30,33 @@
 /* Tags */
 .topic .topic-footer .topic-tags 						{ margin-bottom: 5px; }
 .topic .topic-footer .topic-tags li 					{ padding: 0; }
-.topic .topic-footer .topic-tags li a 					{ color: #999999; }
+.topic .topic-footer .topic-tags li a 					{ color: #7b848d; }
+.topic .topic-footer .topic-tags li a:hover 			{ color: #969696; }
 
 .topic .topic-footer .topic-tags li span 				{ margin-right: 5px; }
-.topic .topic-footer .topic-tags li.topic-tags-user a 	{ color: #468847; }
+.topic .topic-footer .topic-tags li.topic-tags-user a 	{ color: #1b8937; }
 
 .topic .topic-footer .topic-tags li.topic-tags-edit 	{ margin-left: 10px; }
 
 
 /* Info */
-.topic .topic-footer .topic-info 								{ padding-top: 5px; border-top: 1px solid #eeeeee; }
+.topic .topic-footer .topic-info 								{ padding-top: 5px; border-top: 3px solid #f5f5f5; }
 .topic .topic-footer .topic-info li.vote 						{ padding-right: 0; }
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
-.topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; text-decoration: underline; }
-.topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: middle; }
-.topic .topic-footer .topic-info li.topic-info-share a { color: #aaaaaa; }
+.topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; font-weight: bold; line-height: 1; }
+.topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: top; }
+.topic .topic-footer .topic-info li.topic-info-share a 			{ color: #7b848d; }
 .topic .topic-footer .topic-info li.topic-info-share a:hover 	{ text-decoration: none; }
 
-.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #aaaaaa; }
+.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #7b848d; }
 .topic .topic-footer .topic-info li.topic-info-comments a:hover 		{ text-decoration: none; }
 .topic .topic-footer .topic-info li.topic-info-comments a.icon-active, 
-.topic .topic-footer .topic-info li.topic-info-comments a.new 			{ color: #468847; }
-.topic .topic-footer .topic-info li.topic-info-comments a.new .count 	{ color: #b94a48; }
+.topic .topic-footer .topic-info li.topic-info-comments a.new 			{ color: #1b8937; }
+.topic .topic-footer .topic-info li.topic-info-comments a.new .count 	{ color: #d73b37; }
 
 
 /* Share */
-.topic .topic-share { display: none; padding: 3px; margin-bottom: 10px; border: 1px solid #eeeeee; }
+.topic .topic-share { display: none; height: 40px; padding: 3px; margin-bottom: 10px; border: 1px solid #eeeeee; }
 
 
 /* Poll */

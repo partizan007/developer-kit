@@ -15,8 +15,8 @@
 
 
 /* Комментарий */
-.comment 					{ min-height: 36px; margin-bottom: 20px; padding: 15px 15px 15px 61px; position: relative; }
-.comment .comment-avatar 	{ position: absolute; top: 15px; left: 15px; height: 36px; width: 36px; }
+.comment 					{ min-height: 36px; padding: 20px 0 20px 58px; position: relative; }
+.comment .comment-avatar 	{ position: absolute; top: 15px; left: 0; height: 48px; width: 48px; }
 
 
 /* Типы комментариев
@@ -27,28 +27,34 @@
  * current 	- 	активный комментарий, который выделяется при исползование кнопки обновления в тулбаре
  *
  */
-.comment 					{ background-color: #f5f5f5; }
-.comment.comment-deleted 	{ background-color: #f8e3e3; }
-.comment.comment-self 		{ background-color: #e7eef7; }
-.comment.comment-new 		{ background-color: #e9ffd3; }
-.comment.comment-current 	{ background-color: #e1f9c7; }
-.comment.comment-bad 		{ opacity: 0.3; filter: alpha(opacity=30); }
-.comment.comment-bad:hover 	{ opacity: 1; filter: alpha(opacity=100); }
+.comment 					{ background-color: #ffffff; border-top: 3px solid #f7f7f7; }
+.comment.comment-deleted .comment-content 	{ background-color: #ffeaea; padding: 10px; }
+.comment.comment-self .comment-content 		{ background-color: #e9f5ec; padding: 10px; }
+.comment.comment-new .comment-content 		{ background-color: #f1f6f8; padding: 10px; }
+.comment.comment-current .comment-content 	{ background-color: #e7f3f8; padding: 10px; }
+.comment.comment-bad .comment-content 		{ opacity: 0.3; filter: alpha(opacity=30); }
+.comment.comment-bad:hover 					{ opacity: 1; filter: alpha(opacity=100); }
 
-.ls-user-role-not-admin .comment.comment-deleted { padding: 10px 15px; min-height: 0; background-color: #f5f5f5; }
+.ls-user-role-not-admin .comment.comment-deleted { padding: 10px 15px; margin-bottom: 20px; min-height: 0; background-color: #f5f5f5; border-top: none; }
 
 
 /* Info Block */
 .comment .comment-info 							{ position: relative; overflow: hidden; zoom: 1; }
 .comment .comment-info li 						{ float: left; padding-left: 5px; padding-right: 5px; }
 .comment .comment-info li:first-child 			{ padding-left: 0; }
-.comment .comment-info li.comment-author a 		{ text-decoration: underline; }
+.comment .comment-info li.comment-author a 		{ color: #333333; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; font-weight: bold; line-height: 1; }
+.comment .comment-info li.comment-author a.comment-topic-author { color: #d73b37; }
+.comment .comment-info li.comment-date a 		{ color: #7b848d; }
+.comment .comment-info li.goto-comment-parent,
+.comment .comment-info li.goto-comment-child 	{ font-size: 13px;line-height: 1.1; }
 .comment .comment-info li.goto-comment-child 	{ display: none; }
 .comment .comment-info li.vote 					{ position: absolute; top: 0; right: 0; padding-right: 0; }
 
 /* Actions */
-.comment .comment-actions 					{ margin: 10px 0 0; }
-.comment .comment-actions li:first-child 	{ padding-left: 0; }
+.comment .comment-actions 						{ margin: 10px 0 0; }
+.comment .comment-actions li:first-child 		{ padding-left: 0; }
+.comment .comment-actions li a.comment-delete 	{ color: #d73b37; }
+.comment .comment-actions li a.comment-repair 	{ color: #1b8937; }
 
 
 /* Форма комментирования */

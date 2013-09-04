@@ -1,12 +1,15 @@
 {if $bIsShowStatsPerformance and $oUserCurrent and $oUserCurrent->isAdministrator()}
 	<div id="stat-performance">
 		<div class="container">
-			<div class="stat-performance-inner">
+		
+			<button type="button" class="btn btn-link pull-right" data-toggle="collapse" data-target="#stat">{$aLang.stat_collapse_button}</button>
 			
+			<div id="stat" class="collapse stat-performance-inner">
+				
 				<div class="row">
-					<div class="col-12">
+					<div class="col-lg-12">
 						{hook run='statistics_performance_begin'}
-						
+					
 						<table>
 							<tr>
 								<td>
@@ -32,9 +35,10 @@
 			
 						{hook run='statistics_performance_end'}
 					</div>
-				</div>
-				
-			</div>			
+					
+				</div>			
+			</div>
+			
 		</div>
 	</div>
 {/if}

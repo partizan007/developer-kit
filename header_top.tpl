@@ -2,7 +2,7 @@
 	
 	{hook run='header_banner_begin'}
 	
-	<nav class="navbar navbar-inverse navbar-static-top">
+	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
 			<div class="header-inner">
 				
@@ -54,7 +54,6 @@
 									<li><a href="{$oUserCurrent->getUserWebPath()}favourites/topics/">{$aLang.user_menu_profile_favourites}</a></li>
 									<li><a href="{router page='settings'}profile/">{$aLang.user_settings}</a></li>
 									{hook run='userbar_item'}
-									<li class="divider"></li>
 									<li><a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}</a></li>
 							</li>
 						{else}

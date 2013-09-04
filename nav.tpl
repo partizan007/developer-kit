@@ -10,7 +10,7 @@
 					{/if}
 				</div>
 		
-				<div class="col-sm-4 col-lg-4 hidden-sm">
+				<div class="col-sm-4 col-lg-4 hidden-xs">
 					{if $oUserCurrent}
 						<a href="{router page='topic'}add/" class="btn btn-success btn-write pull-right" id="modal_write_show">{$aLang.block_create}</a>
 					{/if}
