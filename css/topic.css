@@ -40,7 +40,7 @@
 
 
 /* Info */
-.topic .topic-footer .topic-info 								{ padding-top: 5px; border-top: 3px solid #f5f5f5; }
+.topic .topic-footer .topic-info 								{ padding-top: 5px; border-top: 1px solid #eeeeee; }
 .topic .topic-footer .topic-info li.vote 						{ padding-right: 0; }
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; font-weight: bold; line-height: 1; }

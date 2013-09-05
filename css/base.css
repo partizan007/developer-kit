@@ -25,7 +25,7 @@ a.actions-delete 	{ color: #d73b37; }
 
 /* Навигация
 ---------------------------------------------------- */
-#nav 				{ background-color: #f5f5f5; border-bottom: 2px solid #eeeeee; }
+#nav 				{ background-color: #f5f5f5; border-bottom: 1px solid #eeeeee; }
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
 #nav .btn-write 	{ margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 

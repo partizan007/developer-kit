@@ -27,7 +27,7 @@
  * current 	- 	активный комментарий, который выделяется при исползование кнопки обновления в тулбаре
  *
  */
-.comment 					{ background-color: #ffffff; border-top: 3px solid #f7f7f7; }
+.comment 					{ background-color: #ffffff; border-top: 1px solid #eeeeee; }
 .comment.comment-deleted .comment-content 	{ background-color: #ffeaea; padding: 10px; }
 .comment.comment-self .comment-content 		{ background-color: #e9f5ec; padding: 10px; }
 .comment.comment-new .comment-content 		{ background-color: #f1f6f8; padding: 10px; }

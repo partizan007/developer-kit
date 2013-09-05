@@ -1,8 +1,6 @@
 /* -------------------------------------------------------------------
 	БЛОКИ
 ------------------------------------------------------------------- */
-.panel.block { border-width: 3px; }
-
 .block .block-header 			{ position: relative; }
 .block .block-header h3 		{ margin-top: 0; }
 .block .block-header h3 a 		{ color: #333333; }
@@ -24,7 +22,7 @@
 
 
 /* Block Type - Blog */
-.block.block-type-blog { margin-bottom: 20px; position: relative; border: 3px solid #f5f5f5; }
+.block.block-type-blog { margin-bottom: 20px; position: relative; border: 1px solid #eeeeee; }
 .block.block-type-blog .block-content { position: absolute; bottom: 0; left: 0; padding: 5px 15px 10px; width: 100%; background-color: rgba(0, 0, 0, 0.5); }
 .block.block-type-blog .blog-avatar { width: 100%; }
 .block.block-type-blog .block-header h3 { font-size: 20px; margin: 0; }
