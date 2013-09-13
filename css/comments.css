@@ -4,7 +4,7 @@
 
 /* Блок с комментариями */
 .comments-header 			{ margin-bottom: 20px; position: relative; }
-.comments-header .subscribe { position: absolute; right: 0; top: -7px; }
+.comments-header .subscribe { position: absolute; right: 0; top: -5px; }
 
 .comments { margin-bottom: 40px; }
 
@@ -46,13 +46,24 @@
 .comment .comment-info li.comment-author a.comment-topic-author { color: #d73b37; }
 .comment .comment-info li.comment-date a 		{ color: #7b848d; }
 .comment .comment-info li.goto-comment-parent,
-.comment .comment-info li.goto-comment-child 	{ font-size: 13px;line-height: 1.1; }
+.comment .comment-info li.goto-comment-child 	{ font-size: 13px; line-height: 1.1; }
+.comment .comment-info li.goto-comment-parent a,
+.comment .comment-info li.goto-comment-child a 	{ color: #7b848d; }
+.comment:hover .comment-info li.goto-comment-parent a,
+.comment:hover .comment-info li.goto-comment-child a 	{ color: #2985c6; }
 .comment .comment-info li.goto-comment-child 	{ display: none; }
 .comment .comment-info li.vote 					{ position: absolute; top: 0; right: 0; padding-right: 0; }
+
+.comment .comment-info li.vote .vote-up,
+.comment .comment-info li.vote .vote-down { color: #dddddd; transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
+.comment:hover .comment-info li.vote .vote-up,
+.comment:hover .comment-info li.vote .vote-down { color: #7b848d; }
 
 /* Actions */
 .comment .comment-actions 						{ margin: 10px 0 0; }
 .comment .comment-actions li:first-child 		{ padding-left: 0; }
+.comment .comment-actions li a.reply-link 		{ color: #7b848d; }
+.comment:hover .comment-actions li a.reply-link { color: #2985c6; }
 .comment .comment-actions li a.comment-delete 	{ color: #d73b37; }
 .comment .comment-actions li a.comment-repair 	{ color: #1b8937; }
 

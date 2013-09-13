@@ -45,14 +45,19 @@
 .topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; font-weight: bold; line-height: 1; }
 .topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: top; }
-.topic .topic-footer .topic-info li.topic-info-share a 			{ color: #7b848d; }
+.topic .topic-footer .topic-info li.topic-info-share a 			{ color: #a6b1bc; }
 .topic .topic-footer .topic-info li.topic-info-share a:hover 	{ text-decoration: none; }
 
-.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #7b848d; }
+.topic .topic-footer .topic-info li.topic-info-comments a 				{ color: #a6b1bc; }
 .topic .topic-footer .topic-info li.topic-info-comments a:hover 		{ text-decoration: none; }
 .topic .topic-footer .topic-info li.topic-info-comments a.icon-active, 
 .topic .topic-footer .topic-info li.topic-info-comments a.new 			{ color: #1b8937; }
 .topic .topic-footer .topic-info li.topic-info-comments a.new .count 	{ color: #d73b37; }
+
+.topic .topic-footer .topic-info li.vote .vote-up,
+.topic .topic-footer .topic-info li.vote .vote-down { color: #dddddd; transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
+.topic:hover .topic-footer .topic-info li.vote .vote-up,
+.topic:hover .topic-footer .topic-info li.vote .vote-down { color: #7b848d; }
 
 
 /* Share */

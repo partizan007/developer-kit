@@ -37,6 +37,22 @@ a.actions-delete 	{ color: #d73b37; }
 .content { position: relative; }
 
 
+/* Pagination
+---------------------------------------------------- */
+.pagination.pages { margin-right: 40px; }
+
+.pagination > li > a:hover,
+.pagination > li > a:focus {
+  text-decoration: underline;
+}
+.paging ul.pages > li:first-child > a,
+.paging ul.pages > li:first-child > span {
+  padding-left: 0;
+}
+.pagination .active a, .pagination .active span {
+    border-radius: 30px 30px 30px 30px !important;
+}
+
 /* Футер
 ---------------------------------------------------- */
 #footer 					{ background-color: #161616; color: #aaaaaa; }
