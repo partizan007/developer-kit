@@ -27,15 +27,15 @@
  * current 	- 	активный комментарий, который выделяется при исползование кнопки обновления в тулбаре
  *
  */
-.comment 					{ background-color: #ffffff; border-top: 1px solid #eeeeee; }
-.comment.comment-deleted .comment-content 	{ background-color: #ffeaea; padding: 10px; }
-.comment.comment-self .comment-content 		{ background-color: #e9f5ec; padding: 10px; }
-.comment.comment-new .comment-content 		{ background-color: #f1f6f8; padding: 10px; }
-.comment.comment-current .comment-content 	{ background-color: #e7f3f8; padding: 10px; }
+.comment { border-top: 1px solid #eeeeee; }
+.comment.comment-deleted .comment-content 	{ background-color: #ffd3d3; padding: 10px; }
+.comment.comment-self .comment-content 		{ background-color: #d6efdd; padding: 10px; }
+.comment.comment-new .comment-content 		{ background-color: #ddedf4; padding: 10px; }
+.comment.comment-current .comment-content 	{ background-color: #cde3ed; padding: 10px; }
 .comment.comment-bad .comment-content 		{ opacity: 0.3; filter: alpha(opacity=30); }
 .comment.comment-bad:hover 					{ opacity: 1; filter: alpha(opacity=100); }
 
-.ls-user-role-not-admin .comment.comment-deleted { padding: 10px 15px; margin-bottom: 20px; min-height: 0; background-color: #f5f5f5; border-top: none; }
+.ls-user-role-not-admin .comment.comment-deleted { padding: 10px 15px; margin-bottom: 20px; min-height: 0; background-color: #ffffff; border-top: none; }
 
 
 /* Info Block */

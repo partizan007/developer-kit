@@ -10,7 +10,7 @@
 .topic .topic-header .topic-title a 			{ color: #333333; text-decoration: underline; }
 .topic .topic-header .topic-title a:hover 		{ color: #d73b37; }
 
-.topic .topic-header .topic-title span 			{ cursor: help; font-size: 16px; vertical-align: text-top; }
+.topic .topic-header .topic-title span 			{ cursor: help; font-size: 14px; vertical-align: text-top; top: 7px; color: #d2dae3; }
 
 .topic .topic-header .topic-info 					{ margin-bottom: 20px; }
 .topic .topic-header .topic-info .topic-blog 		{ font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; font-weight: bold; margin-right: 10px; text-decoration: underline; }
@@ -25,6 +25,7 @@
 
 /* Topic Link */
 .topic .topic-url 		{ margin-top: 10px; }
+.topic .topic-url a 	{ color: #1b8937; font-size: 14px; }
 
 
 /* Tags */
@@ -61,7 +62,7 @@
 
 
 /* Share */
-.topic .topic-share { display: none; height: 40px; padding: 3px; margin-bottom: 10px; border: 1px solid #eeeeee; }
+.topic .topic-share { display: none; height: 40px; padding: 3px; margin-bottom: 10px; background-color: #ffffff; border: 1px solid #eeeeee; }
 
 
 /* Poll */

@@ -25,7 +25,8 @@ a.actions-delete 	{ color: #d73b37; }
 
 /* Навигация
 ---------------------------------------------------- */
-#nav 				{ background-color: #f5f5f5; border-bottom: 1px solid #eeeeee; }
+#nav 				{ background-color: #ffffff; border-bottom: 1px solid #eeeeee; }
+#nav .nav-pills > li.active > a:before { border-top-color: transparent; }
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
 #nav .btn-write 	{ margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 
@@ -57,7 +58,7 @@ a.actions-delete 	{ color: #d73b37; }
 ---------------------------------------------------- */
 #footer 					{ background-color: #161616; color: #aaaaaa; }
 #footer a 					{ color: #aaaaaa; }
-#footer a:hover 			{ color: #e3534e; text-decoration: none; }
+#footer a:hover 			{ color: #d73b37; text-decoration: none; }
 #footer .footer-list 		{ margin-bottom: 20px; }
 #footer .footer-list-header	{ color: #ffffff; font-size: 15px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
 #footer .footer-brand 		{ display: block; margin-bottom: 20px; font-family: 'PT Sans Narrow',Arial,sans-serif; color: #ffffff; font-size: 24px; font-weight: bold; line-height: 1; text-transform: uppercase; }

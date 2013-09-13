@@ -2,11 +2,11 @@
 	БЛОКИ
 ------------------------------------------------------------------- */
 .block .block-header 			{ position: relative; }
-.block .block-header h3 		{ margin-top: 0; }
+.block .block-header h3 		{ margin-top: 0; font-size: 28px; }
 .block .block-header h3 a 		{ color: #333333; }
 .block .block-header h3 a:hover { text-decoration: none; color: #7b848d; }
 
-.block-content .nav 				{ margin-bottom: 10px; }
+.block-content .nav 				{ margin-bottom: 15px; }
 .block-content .nav > li > a 		{ padding: 4px 8px; font-size: 12px; font-weight: normal; }
 
 .block footer 	{ margin-top: 15px; }
@@ -28,8 +28,6 @@
 .block.block-type-blog a.rss:hover { color: #d73b37; }
 
 
-
-#block_blogs .item-list { padding-top: 10px; }
 #block_blogs .item-list li { padding: 0 0 10px; }
 
 
