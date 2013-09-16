@@ -119,6 +119,7 @@ a.link-dotted:hover { text-decoration: none; }
 .help .help-item 			{ margin-bottom: 20px; }
 .help .help-item:last-child { margin-bottom: 0; }
 
+blockquote { background-color: #ffffff; }
 
 a:focus,
 a:hover,

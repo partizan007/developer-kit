@@ -25,6 +25,4 @@ return array(
 	'blogs_name_search' => 'Поиск по названию',
 	'people_name_search' => 'Поиск по логину',
 	'tags_name_search' => 'Поиск тегов',
-	
-	'stat_collapse_button' => 'Статистика',
 );

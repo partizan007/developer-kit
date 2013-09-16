@@ -2,9 +2,7 @@
 	<div id="stat-performance">
 		<div class="container">
 		
-			<button type="button" class="btn btn-link pull-right" data-toggle="collapse" data-target="#stat">{$aLang.stat_collapse_button}</button>
-			
-			<div id="stat" class="collapse stat-performance-inner">
+			<div id="stat" class="stat-performance-inner">
 				
 				<div class="row">
 					<div class="col-lg-12">
