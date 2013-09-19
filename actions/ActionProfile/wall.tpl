@@ -30,13 +30,13 @@
 		<button type="button" onclick="ls.wall.add(jQuery('#wall-text').val(),0);" class="btn btn-success js-button-wall-submit">{$aLang.wall_add_submit}</button>
 	</form>
 {else}
-	<div class="wall-note" id="wall-note-list-empty">
-		<h6>{$aLang.wall_add_quest}</h6>
+	<div id="wall-note-list-empty" class="text-center alert alert-info wall-note">
+		<h5>{$aLang.wall_add_quest}</h5>
 	</div>
 {/if}
 
 {if !count($aWall)}
-	<div id="wall-note-list-empty" class="wall-note">
+	<div id="wall-note-list-empty" class="text-center wall-note">
 		<h3>{$aLang.wall_list_empty}</h3>
 	</div>
 {/if}

@@ -62,18 +62,7 @@
 						</ul>
 					</div>
 					
-					<div class="col-sm-4 col-md-4 col-lg-2">
-						<ul class="list-unstyled footer-list">
-							<li class="footer-list-header">{$aLang.footer_menu_navigate_social}</li>
-							<li><a href="#">{$aLang.footer_menu_project_vk}</li>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Google +</a></li>
-							<li><a href="#">Twitter</a></li>
-							{hook run='footer_menu_project_item'}
-						</ul>
-					</div>
-					
-					<div class="col-sm-4 col-md-4 col-lg-2 copyright">
+					<div class="col-sm-4 col-md-4 col-lg-2 col-lg-offset-2 copyright">
 						{hook run='copyright'}
 						<br />
 						Автор шаблона &mdash; <a href="http://webtown.by/profile/vOFFka/">вOFFка</a>

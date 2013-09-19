@@ -12,12 +12,12 @@ $config['head']['default']['js'] = Config::Get('head.default.js');
 $config['head']['default']['js'][] = '___path.static.skin___/js/template.js';
 
 /* Bootstrap */
-$config['head']['default']['js'][] = '___path.static.skin___/bootstrap/js/bootstrap.min.js';
+$config['head']['default']['js'][] = '___path.static.skin___/themes/___view.theme___/bootstrap/js/bootstrap.min.js';
 
 
 $config['head']['default']['css'] = array(
 	/* Bootstrap */
-	"___path.static.skin___/bootstrap/css/bootstrap.min.css",
+	"___path.static.skin___/themes/___view.theme___/bootstrap/css/bootstrap.min.css",
 
 	/* Structure */
 	"___path.static.skin___/css/base.css",

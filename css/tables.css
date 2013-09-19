@@ -14,7 +14,7 @@
 
 .table.table-blogs .cell-name .avatar 					{ float: left; margin-right: 15px; }
 .table.table-blogs .cell-name p							{ overflow: hidden; margin-bottom: 5px; }
-.table.table-blogs .cell-name p .blog-name 				{ font-size: 16px; text-decoration: underline; }
+.table.table-blogs .cell-name p .blog-name 				{ font-size: 16px; }
 .table.table-blogs .cell-name p .question-sign:hover 	{ text-decoration: none; }
 
 .table.table-blogs .cell-name .user-avatar a { color: #333333; }
@@ -32,7 +32,7 @@
 
 .table.table-users .cell-name .name.no-realname { margin-top: 10px; }
 .table.table-users .cell-name .username 		{ margin: 3px 0 3px 0; }
-.table.table-users .cell-name .username a 		{ font-size: 16px; text-decoration: underline; }
+.table.table-users .cell-name .username a 		{ font-size: 16px; }
 .table.table-users .cell-name .realname 		{ margin: 0; }
 
 .table.table-users .cell-date 					{ width: 130px; }
@@ -61,7 +61,6 @@
 
 
 /* Table Profile Info */
-.table.table-profile-info 				{ margin-bottom: 40px; }
 .table.table-profile-info .cell-label 	{ width: 33%; }
 
 /* Table Plugins */

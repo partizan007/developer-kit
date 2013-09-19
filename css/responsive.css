@@ -26,6 +26,7 @@
 /* Tablet
 ------------------------- */
 @media (max-width: 767px) {
+  .sidebar { margin-top: 20px; }
   
   /* Модальные окна */
   .modal.modal-write .modal-dialog,

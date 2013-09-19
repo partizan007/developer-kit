@@ -18,7 +18,7 @@
 		<a name="comment{$oComment->getId()}"></a>
 		
 		
-		<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="img-circle comment-avatar" /></a>
+		<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="comment-avatar" /></a>
 		
 		<small>
 			<ul class="list-unstyled comment-info">

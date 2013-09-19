@@ -11,7 +11,7 @@
 
 
 {if $oUserProfile->getProfileAbout()}					
-	<div class="profile-info-about">
+	<div class="well profile-info-about">
 		<h3>{$aLang.profile_about}</h3>
 		{$oUserProfile->getProfileAbout()}
 	</div>
@@ -119,7 +119,7 @@
 {hook run='profile_whois_item' oUserProfile=$oUserProfile}
 
 
-<h3>{$aLang.profile_activity}</h3>
+<h4>{$aLang.profile_activity}</h4>
 
 <table class="table table-profile-info">
 

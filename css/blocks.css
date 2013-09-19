@@ -2,15 +2,15 @@
 	БЛОКИ
 ------------------------------------------------------------------- */
 .block .block-header 			{ position: relative; }
-.block .block-header h3 		{ margin-top: 0; font-size: 28px; }
+.block .block-header h3 		{ margin-top: 0; }
 .block .block-header h3 a 		{ color: #333333; }
-.block .block-header h3 a:hover { text-decoration: none; color: #7b848d; }
+.block .block-header h3 a:hover { text-decoration: none; color: #555555; }
 
 .block-content .nav 				{ margin-bottom: 15px; }
-.block-content .nav > li > a 		{ padding: 4px 8px; font-size: 12px; font-weight: normal; }
+.block-content .nav > li > a 		{ padding: 4px 8px; font-size: 12px; }
 
 .block footer 	{ margin-top: 15px; }
-.block footer a { color: #7b848d; }
+.block footer a { color: #999999; }
 
 .block .max-height-200 { overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
 
@@ -20,15 +20,10 @@
 .user-list-mini li img,
 .stream-settings-friends li img 	{ margin-right: 2px; position: relative; width: 16px; height: 16px; }
 
-.block .text-danger { color: #d73b37; }
-
 
 /* Block Type - Blog */
-.block.block-type-blog a.rss { color: #7b848d; }
-.block.block-type-blog a.rss:hover { color: #d73b37; }
-
-
-#block_blogs .item-list li { padding: 0 0 10px; }
+.block.block-type-blog a.rss { color: #999999; }
+.block.block-type-blog a.rss:hover { color: #777777; }
 
 
 /* Block Type - Profile */
@@ -43,6 +38,8 @@
 .block.block-type-profile-actions ul 				{ margin-bottom: 0; }
 .block.block-type-profile-actions ul li				{ margin-bottom: 5px; }
 .block.block-type-profile-actions ul li:last-child 	{ margin-bottom: 0; }
+
+.block.block-type-profile-nav { margin-bottom: 20px; }
 
 
 /* Block Type - Foldable */

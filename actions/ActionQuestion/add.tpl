@@ -50,7 +50,7 @@
 					{foreach from=$_aRequest.answer item=sAnswer key=i}
 						<li>
 							<input type="text" value="{$sAnswer}" name="answer[]" class="form-control" {if $bEditDisabled}disabled{/if} />
-							{if !$bEditDisabled and $i>1} <a href="#" class="icon-trash" onClick="return ls.poll.removeAnswer(this);"></a>{/if}
+							{if !$bEditDisabled and $i>1} <a href="#" class="glyphicon glyphicon-trash icon-remove" onClick="return ls.poll.removeAnswer(this);"></a>{/if}
 						</li>
 					{/foreach}
 				{else}
