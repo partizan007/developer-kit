@@ -11,14 +11,14 @@
 
 .topic .topic-header .topic-title span 			{ cursor: help; font-size: 14px; vertical-align: text-top; color: #dddddd; }
 
-.topic .topic-header .topic-info 					{ margin-bottom: 20px; }
+.topic .topic-header .topic-info 					{ margin-bottom: 15px; }
 .topic .topic-header .topic-info .topic-blog 		{ margin-right: 10px; }
 .topic .topic-header .topic-info .actions 					{ display: inline; }
 .topic .topic-header .topic-info .actions li:first-child 	{ padding-left: 0; }
 
 
 /* Content */
-.topic .topic-content 	{ margin-bottom: 20px; font-size: 16px; }
+.topic .topic-content 	{ margin-bottom: 15px; font-size: 16px; }
 
 
 /* Topic Link */
@@ -82,11 +82,27 @@
 .topic-photo-upload ul 								{ overflow: hidden; zoom: 1; }
 .topic-photo-upload ul li 							{ min-height: 100px; _height: 100px; margin-bottom: 10px; padding-left: 110px; position: relative; }
 .topic-photo-upload ul li img 						{ position: absolute; top: 0; left: 0; }
-.topic-photo-upload ul li textarea 					{ -moz-box-sizing: border-box; width: 100%; }
 .topic-photo-upload ul li .image-delete 			{ margin-right: 10px; }
 .topic-photo-upload ul li .mark-as-preview 			{ display: none; }
 .topic-photo-upload ul li:hover .mark-as-preview 	{ display: inline; }
 .topic-photo-upload .topic-photo-upload-rules 		{ margin-bottom: 20px; }
+
+.topic-photo-upload ul li textarea {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
 
 
 /* Topic Talk */

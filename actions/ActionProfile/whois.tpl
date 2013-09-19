@@ -7,7 +7,6 @@
 
 
 {include file='actions/ActionProfile/profile_top.tpl'}
-{include file='menu.profile_whois.tpl'}
 
 
 {if $oUserProfile->getProfileAbout()}					

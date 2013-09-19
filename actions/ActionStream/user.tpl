@@ -14,7 +14,9 @@
         <a class="btn btn-success btn-lg btn-block" id="stream_get_more" href="javascript:ls.stream.getMore()">{$aLang.stream_get_more} &darr;</a>
     {/if}
 {else}
-    {$aLang.stream_no_events}
+	<div class="alert alert-info">
+		{$aLang.stream_no_events}
+	</div>
 {/if}
 
 

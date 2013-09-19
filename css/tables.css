@@ -45,8 +45,9 @@
 
 
 /* Table Talk */
+.table.table-talk thead .cell-checkbox .input-checkbox { margin-top: 0; vertical-align: middle; }
+
 .table.table-talk .cell-checkbox 		{ width: 16px; }
-.table.table-talk .cell-checkbox input 	{ margin-top: 0; }
 
 .table.table-talk .cell-favourite 		{ width: 16px; text-align: center; }
 .table.table-talk .cell-recipients 		{ width: 130px; }

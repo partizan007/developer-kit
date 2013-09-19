@@ -103,8 +103,6 @@
 
 .alert ul { margin-bottom: 0; }
 
-.user, .ls-user { text-decoration: underline; }
-
 .ls-user:before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icon-user.png) 0 0 no-repeat; vertical-align: text-top; }
 
 .wrapper-content { background-color: #f5f5f5; padding: 20px; }

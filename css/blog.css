@@ -8,6 +8,7 @@
 /* Header */
 .blog .blog-header 			{ position: relative; padding: 0 100px 0 79px; margin-bottom: 20px; min-height: 64px; }
 .blog .blog-header h1 		{ margin-bottom: 5px; margin-top: 0; }
+.blog .blog-header h1 span 	{ cursor: help; font-size: 14px; vertical-align: text-top; color: #dddddd; }
 .blog .blog-header .avatar 	{ position: absolute; top: 0; left: 0; }
 
 .blog .blog-header .vote 		{ position: absolute; top: 0; right: 0; }

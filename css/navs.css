@@ -4,4 +4,4 @@
 
 /* Dropdown */
 .dropdown-create 		{ position: relative; }
-.dropdown-create h2 a 	{ text-transform: lowercase; }
+.dropdown-create h1 a 	{ text-transform: lowercase; }

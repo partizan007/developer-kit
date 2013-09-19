@@ -76,7 +76,7 @@
 		</table>
 	</form>
 {else}
-	<div class="notice-empty">{$aLang.talk_inbox_empty}</div>
+	<div class="alert alert-info notice-empty">{$aLang.talk_inbox_empty}</div>
 {/if}
 
 

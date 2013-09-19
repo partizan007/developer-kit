@@ -47,14 +47,16 @@
 								<p class="help-block"><small class="text-danger validate-error-hide validate-error-login"></small></p>
 							</div>
 							
-							<div class="form-group">
-								<label class="checkbox"><input type="checkbox" name="remember" class="input-checkbox" checked>{$aLang.user_login_remember}</label>
-							
-								{hook run='form_login_popup_end'}
-							
-								<input type="hidden" name="return-path" value="{$PATH_WEB_CURRENT|escape:'html'}">
-								<button type="submit" name="submit_login" class="btn btn-success" id="popup-login-form-submit" disabled="disabled">{$aLang.user_login_submit}</button>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="remember" checked> {$aLang.user_login_remember}
+								</label>
 							</div>
+							
+							{hook run='form_login_popup_end'}
+							
+							<input type="hidden" name="return-path" value="{$PATH_WEB_CURRENT|escape:'html'}">
+							<button type="submit" name="submit_login" class="btn btn-success" id="popup-login-form-submit" disabled="disabled">{$aLang.user_login_submit}</button>
 						
 						</form>
 						

@@ -200,7 +200,9 @@
 </div>
 
 {if $bCloseBlog}
-	{$aLang.blog_close_show}
+	<div class="alert alert-danger">
+		{$aLang.blog_close_show}
+	</div>
 {else}
 	{include file='topic_list.tpl'}
 {/if}

@@ -9,8 +9,6 @@
         <input type="hidden" id="userfeed_last_id" value="{$iUserfeedLastId}" />
         <a class="btn btn-success btn-lg btn-block" id="userfeed_get_more" href="javascript:ls.userfeed.getMore()">{$aLang.userfeed_get_more} &darr;</a>
     {/if}
-{else}
-    {$aLang.userfeed_no_events}
 {/if}
 
 

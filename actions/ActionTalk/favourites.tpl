@@ -53,7 +53,7 @@
 		</tbody>
 	</table>
 {else}
-	<div class="notice-empty">{$aLang.talk_favourite_empty}</div>
+	<div class="alert alert-info notice-empty">{$aLang.talk_favourite_empty}</div>
 {/if}
 
 
