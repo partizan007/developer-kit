@@ -27,6 +27,7 @@
 
 
 /* Block Type - Profile */
+.block.block-type-profile .panel-body 				{ padding: 5px; }
 .block.block-type-profile .profile-photo-wrapper 	{ position: relative; margin: 0 auto; min-height: 50px; }
 .block.block-type-profile .profile-photo 			{ max-width: 100%; vertical-align: top; }
 .block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; }
