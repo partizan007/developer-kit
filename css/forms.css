@@ -20,3 +20,6 @@ select, input[type="file"] { height: auto; }
 /* Валидатор (регистрация)
 ---------------------------------------------------------------*/
 .validate-error-hide { display: none; }
+
+.captcha { display: block; }
+.captcha-input { display: inline-block; max-width: 100px; }

@@ -126,17 +126,11 @@
 
 								{hookb run="popup_registration_captcha"}
 									<div class="form-group">
-										<label for="popup-registration-captcha">{$aLang.registration_captcha}</label>
-										<div class="row">
-											<div class="col-6 col-sm-2 col-lg-2">
-												<img src="{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}" 
-													onclick="this.src='{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}&n='+Math.random();"
-													class="captcha-image" />
-											</div>
-											<div class="col-6 col-sm-3 col-lg-3">
-												<input type="text" name="captcha" id="popup-registration-captcha" value="" maxlength="3" class="form-control js-ajax-validate" />
-											</div>
-										</div>
+										<label for="popup-registration-captcha" class="captcha">{$aLang.registration_captcha}</label>
+										<img src="{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}" 
+											onclick="this.src='{cfg name='path.root.engine_lib'}/external/kcaptcha/index.php?{$_sPhpSessionName}={$_sPhpSessionId}&n='+Math.random();"
+											class="captcha-image" />
+										<input type="text" name="captcha" id="popup-registration-captcha" value="" maxlength="3" class="form-control captcha-input js-ajax-validate" />
 										<p class="help-block"><small class="text-danger validate-error-hide validate-error-field-captcha"></small></p>
 									</div>
 								{/hookb}

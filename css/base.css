@@ -86,6 +86,16 @@ a.actions-delete 	{ color: #b94a48; }
 .userfield-list li .userfield_admin_name { font-weight: bold; color: #333333; }
 
 
+/* Light Pages
+---------------------------------------------------- */
+body.light { padding-bottom: 40px; padding-top: 40px; background-color: #f8f8f8; }
+body.light .site-info { margin-bottom: 40px; }
+body.light .site-info .site-name a { color: #333333; }
+body.light .site-info .site-name a:hover { color: #777777; text-decoration: none; }
+.light-form { margin: 0 auto; max-width: 400px; padding: 20px; background-color: #ffffff; border-radius: 5px; }
+.light-form .page-header h2, .light-form .page-header h3 { margin-top: 0; }
+
+
 /* Misc
 ---------------------------------------------------- */
 .help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; border: 1px solid #dddddd; background-color: #ffffff; }

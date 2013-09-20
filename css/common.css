@@ -11,7 +11,7 @@
 .vote.vote-count-negative .vote-count 		{ color: #b94a48; }
 
 .vote .vote-up,
-.vote .vote-down 							{ display: inline-block; cursor: pointer; color: #7b848d; }
+.vote .vote-down 							{ display: inline-block; cursor: pointer; color: #999999; }
 
 .vote .vote-up:hover 						{ color: #468847; text-decoration: none; }
 .vote .vote-down:hover 						{ color: #b94a48; text-decoration: none; }
