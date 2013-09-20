@@ -106,7 +106,7 @@
 
 
 /* Topic Talk */
-.topic.topic-type-talk .talk-recipients 		{ padding: 10px 15px; background: #f5f5f5; }
+.topic.topic-type-talk .talk-recipients 		{ padding: 10px 15px; margin-bottom: 20px; background-color: #f5f5f5; }
 
 .talk-search .talk-search-content 				{ border-top: 1px solid #eeeeee; display: none; padding-top: 10px; margin-top: 10px; }
 
