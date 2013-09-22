@@ -1,0 +1,27 @@
+a { transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: #151515; }
+
+
+
+.topic .topic-header .topic-title a { color: #151515; }
+.topic .topic-header .topic-title a:hover { color: #5d657d; text-decoration: none; }
+
+.topic .topic-header .topic-info .topic-blog { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; font-weight: bold; text-decoration: underline; }
+.topic .topic-header .topic-info .topic-blog:hover { text-decoration: none; }
+
+.topic .topic-footer .topic-info li.topic-info-author a { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; font-weight: bold; line-height: 1; }
+
+
+
+.block .block-header h3 a { color: #151515; }
+.block .block-header h3 a:hover { color: #5d657d; }
+
+
+.item-list li .author { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; font-weight: bold; }
+
+.item-list li .blog-name { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; text-decoration: underline; }
+.item-list li .blog-name:hover { text-decoration: none; }
+
+.item-list li .stream-topic { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; text-decoration: underline; }
+.item-list li .stream-topic:hover { text-decoration: none; }
