@@ -34,7 +34,6 @@
 .favourite:focus 	{ color: #999999; }
 .favourite:hover 	{ text-decoration: none; }
 .favourite.active 	{ color: #f2a809; }
-.favourite-count { color: #999999; }
 
 
 /* Toolbar 

@@ -1,20 +1,62 @@
 a { transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
+a.actions-edit { color: #008800; }
+a.actions-delete { color: #ff0000; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: #151515; }
 
+blockquote { background-color: #f6f6f6; color: #646c82; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; font-style: italic; }
 
 .navbar-brand { font-size: 24px; }
 .navbar-nav > li > a { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; }
 
+.favourite, .favourite:hover, .favourite:focus { color: #818189; }
+.favourite.active { color: #ff7f00; }
+
+
+#header .navbar .nav > li > a.new-messages { color: #ff7f00; }
+#header .navbar .nav > li > a.new-messages:hover { color: #e67200; }
+#header .navbar .nav > li > a.new-messages span { font-size: 14px; top: 1px; }
 
 
 .topic .topic-header .topic-title a { color: #151515; }
 .topic .topic-header .topic-title a:hover { color: #ff0000; text-decoration: none; }
 
 .topic .topic-header .topic-info .topic-blog { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; text-decoration: underline; }
-.topic .topic-header .topic-info .topic-blog:hover { text-decoration: none; }
+.topic .topic-header .topic-info .topic-blog:hover { color: #ff0000; }
+
+.topic .topic-footer .topic-tags li a { color: #818189; }
+.topic .topic-footer .topic-tags li.topic-tags-user a { color: #008800; }
+.topic .topic-footer .topic-tags li.topic-tags-edit a { color: #727a90; }
 
 .topic .topic-footer .topic-info li.topic-info-author a { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; line-height: 1; }
+
+.topic .topic-footer .topic-info li.topic-info-share a { color: #acb5d0; }
+.topic .topic-share { background-color: #f7f7f7; }
+
+.topic .topic-footer .topic-info li.topic-info-comments a { color: #818189; }
+.topic .topic-footer .topic-info li.topic-info-comments a.icon-active,
+.topic .topic-footer .topic-info li.topic-info-comments a.new { color: #008800; }
+.topic .topic-footer .topic-info li.topic-info-comments a.new .count { color: #ff0000; }
+
+.vote .vote-count 							{ color: #818189; }
+.vote .vote-count a 						{ color: #818189; }
+.vote.vote-count-positive .vote-count 		{ color: #008800; }
+.vote.vote-count-negative .vote-count 		{ color: #ff0000; }
+.vote .vote-up,
+.vote .vote-down 							{ color: #818189; }
+.vote .vote-up:hover 						{ color: #008800; }
+.vote .vote-down:hover 						{ color: #ff0000; }
+.vote.voted.voted-up 	.vote-up 			{ color: #008800; }
+.vote.voted.voted-down 	.vote-down 			{ color: #ff0000; }
+.vote.voted.voted-up 	.vote-down:hover 	{ color: #ff0000; }
+.vote.voted.voted-down 	.vote-up:hover 		{ color: #008800; }
+
+
+
+.comment .comment-info li.comment-author a { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; line-height: 1; }
+.comment .comment-info li.comment-author a.comment-topic-author { color: #008800; }
+
+.comment .comment-info li.comment-date a { color: #818189; }
 
 
 
@@ -24,8 +66,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: #151515; }
 
 .item-list li .author { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; }
 
-.item-list li .blog-name { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; text-decoration: underline; }
-.item-list li .blog-name:hover { text-decoration: none; }
+.item-list li .blog-name { color: #008800; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; text-decoration: underline; }
+.item-list li .blog-name:hover { color: #ff0000; }
 
 .item-list li .stream-topic { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; text-decoration: underline; }
-.item-list li .stream-topic:hover { text-decoration: none; }
+.item-list li .stream-topic:hover { color: #ff0000; }
+
+.item-list li .blog-top { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; text-decoration: underline; }
+.item-list li .blog-top:hover { color: #ff0000; }
+
+.tag-cloud li a { color: #727a90; font-family: 'PT Sans Narrow',Arial,sans-serif; text-decoration: underline; }
+.tag-cloud li a:hover { color: #ff0000; }
