@@ -130,3 +130,12 @@ blockquote { background-color: #f6f6f6; color: #646c82; font-family: 'PT Sans Na
 #footer .copyright { font-size: 14px; }
 #footer .copyright a { color: #727a90; }
 
+
+body.light { background: #f8f8f8 url(images/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+body.light .site-info .site-name { text-transform: uppercase; }
+body.light .site-info .site-name a:hover { color: #ff0000; }
+body.light .site-info .site-description { font-size: 18px; }
+
+.light-form { background-color: rgba(255, 255, 255, 0.8); }
+.light-form .page-header { border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+
