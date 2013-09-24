@@ -12,6 +12,9 @@ blockquote { background-color: #f6f6f6; color: #646c82; font-family: 'PT Sans Na
 .favourite, .favourite:hover, .favourite:focus { color: #818189; }
 .favourite.active { color: #ff7f00; }
 
+.progress { box-shadow: none; height: 10px; }
+.progress-bar { box-shadow: none; }
+
 
 
 #header .navbar .nav > li > a.new-messages { color: #ff7f00; }
@@ -30,25 +33,31 @@ blockquote { background-color: #f6f6f6; color: #646c82; font-family: 'PT Sans Na
 
 
 
-.nav-filter-wrapper.nav-pills > li > a { padding: 5px 10px; color: #727a90; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; border: 1px solid transparent; }
-.nav-filter-wrapper.nav-pills > li.active > a,
-.nav-filter-wrapper.nav-pills > li.active > a:hover,
-.nav-filter-wrapper.nav-pills > li.active > a:focus { background-color: transparent; border-color: #dddddd; color: #727a90; }
-.nav-filter-wrapper.nav-pills > li > a:hover,
-.nav-filter-wrapper.nav-pills > li > a:focus { background-color: transparent; color: #ff0000; }
-.nav-filter-wrapper.nav .open > a,
-.nav-filter-wrapper.nav .open > a:hover,
-.nav-filter-wrapper.nav .open > a:focus { background-color: transparent; border-color: #dddddd; }
-.nav-filter-wrapper.nav .caret { border-bottom-color: #727a90; border-top-color: #727a90; }
-
+.nav-filter-wrapper .nav-pills > li > a { padding: 5px 10px; color: #727a90; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; border: 1px solid transparent; }
+.nav-filter-wrapper .nav-pills > li.active > a,
+.nav-filter-wrapper .nav-pills > li.active > a:hover,
+.nav-filter-wrapper .nav-pills > li.active > a:focus { background-color: transparent; border-color: #dddddd; color: #727a90; }
+.nav-filter-wrapper .nav-pills > li > a:hover,
+.nav-filter-wrapper .nav-pills > li > a:focus { background-color: transparent; color: #ff0000; }
+.nav-filter-wrapper .nav .open > a,
+.nav-filter-wrapper .nav .open > a:hover,
+.nav-filter-wrapper .nav .open > a:focus { background-color: transparent; border-color: #dddddd; }
+.nav-filter-wrapper .nav .caret { border-bottom-color: #727a90; border-top-color: #727a90; }
 
 
 
 .topic .topic-header .topic-title a { color: #151515; }
 .topic .topic-header .topic-title a:hover { color: #ff0000; text-decoration: none; }
+.topic .topic-header .topic-title span { top: 5px; }
 
 .topic .topic-header .topic-info .topic-blog { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; text-decoration: underline; }
 .topic .topic-header .topic-info .topic-blog:hover { color: #ff0000; }
+
+.topic .topic-content h4 { font-size: 24px; }
+.topic .topic-content h5 { font-size: 22px; }
+.topic .topic-content h6 { font-size: 20px; }
+
+.topic .topic-url a { color: #008800; font-size: 14px; }
 
 .topic .topic-footer .topic-tags li a { color: #818189; }
 .topic .topic-footer .topic-tags li.topic-tags-user a { color: #008800; }
@@ -79,6 +88,10 @@ blockquote { background-color: #f6f6f6; color: #646c82; font-family: 'PT Sans Na
 
 
 
+.blog .blog-header h1 span { top: 5px; vertical-align: text-top; }
+
+
+
 .comment .comment-info li.comment-author a { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; line-height: 1; }
 .comment .comment-info li.comment-author a.comment-topic-author { color: #008800; }
 
@@ -103,6 +116,8 @@ blockquote { background-color: #f6f6f6; color: #646c82; font-family: 'PT Sans Na
 
 .tag-cloud li a { color: #727a90; font-family: 'PT Sans Narrow',Arial,sans-serif; text-decoration: underline; }
 .tag-cloud li a:hover { color: #ff0000; }
+
+.block footer a { color: #818189; }
 
 
 

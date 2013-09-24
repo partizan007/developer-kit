@@ -1,8 +1,8 @@
-<div class="row">
+<div class="row nav-filter-wrapper">
 	<div class="col-lg-12">
 
 		{if $sMenuItemSelect=='index'}
-			<ul class="nav nav-pills pull-left nav-filter-wrapper">
+			<ul class="nav nav-pills pull-left">
 				<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{cfg name='path.root.web'}/">{$aLang.blog_menu_all_good}</a></li>
 				<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 					<a href="{router page='index'}newall/" title="{$aLang.blog_menu_top_period_all}">{$aLang.blog_menu_all_new}{if $iCountTopicsNew>0} +{$iCountTopicsNew}{/if}</a>
@@ -14,7 +14,7 @@
 		{/if}
 
 		{if $sMenuItemSelect=='blog'}
-			<ul class="nav nav-pills pull-left nav-filter-wrapper">
+			<ul class="nav nav-pills pull-left">
 				<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
 				<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 					<a href="{$sMenuSubBlogUrl}newall/" title="{$aLang.blog_menu_top_period_all}">{$aLang.blog_menu_collective_new}{if $iCountTopicsBlogNew>0} +{$iCountTopicsBlogNew}{/if}</a>
@@ -26,7 +26,7 @@
 		{/if}
 
 		{if $sMenuItemSelect=='log'}
-			<ul class="nav nav-pills pull-left nav-filter-wrapper">
+			<ul class="nav nav-pills pull-left">
 				<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{router page='personal_blog'}">{$aLang.blog_menu_personal_good}</a></li>
 				<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 					<a href="{router page='personal_blog'}newall/" title="{$aLang.blog_menu_top_period_all}">{$aLang.blog_menu_personal_new}{if $iCountTopicsPersonalNew>0} +{$iCountTopicsPersonalNew}{/if}</a>
@@ -38,7 +38,7 @@
 		{/if}
 
 		{if $sPeriodSelectCurrent}
-			<ul class="nav nav-pills pull-right nav-filter-wrapper nav-period">
+			<ul class="nav nav-pills pull-right nav-period">
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 						{if $sPeriodSelectCurrent=='1'}{$aLang.blog_menu_top_period_24h}{/if}
