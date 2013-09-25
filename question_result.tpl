@@ -23,6 +23,6 @@
 	{/foreach}
 </ul>
 
-<button type="submit" class="btn btn-default" title="{$aLang.topic_question_vote_result_sort}" onclick="return ls.poll.switchResult(this, {$oTopic->getId()});"><span class="glyphicon glyphicon-align-left"></span></button>
+<button type="submit" class="btn btn-default btn-sm" title="{$aLang.topic_question_vote_result_sort}" onclick="return ls.poll.switchResult(this, {$oTopic->getId()});"><span class="glyphicon glyphicon-align-left"></span></button>
 
 <span class="text-muted pull-right poll-total poll-total-result"><small>{$aLang.topic_question_vote_result}: {$oTopic->getQuestionCountVote()} | {$aLang.topic_question_abstain_result}: {$oTopic->getQuestionCountVoteAbstain()}</small></span>
