@@ -26,6 +26,19 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 
 .toolbar { top: 170px; }
 
+.vote .vote-count 							{ color: #818189; }
+.vote .vote-count a 						{ color: #818189; }
+.vote.vote-count-positive .vote-count 		{ color: #008800 !important; }
+.vote.vote-count-negative .vote-count 		{ color: #ff0000 !important; }
+.vote .vote-up,
+.vote .vote-down 							{ color: #818189; }
+.vote .vote-up:hover 						{ color: #008800 !important; }
+.vote .vote-down:hover 						{ color: #ff0000 !important; }
+.vote.voted.voted-up 	.vote-up 			{ color: #008800 !important; }
+.vote.voted.voted-down 	.vote-down 			{ color: #ff0000 !important; }
+.vote.voted.voted-up 	.vote-down:hover 	{ color: #ff0000 !important; }
+.vote.voted.voted-down 	.vote-up:hover 		{ color: #008800 !important; }
+
 
 
 #header .navbar .nav > li > a.new-messages { color: #ff7f00; }
@@ -73,18 +86,10 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 .topic .topic-footer .topic-info li.topic-info-comments a.new { color: #008800; }
 .topic .topic-footer .topic-info li.topic-info-comments a.new .count { color: #ff0000; }
 
-.vote .vote-count 							{ color: #818189; }
-.vote .vote-count a 						{ color: #818189; }
-.vote.vote-count-positive .vote-count 		{ color: #008800; }
-.vote.vote-count-negative .vote-count 		{ color: #ff0000; }
-.vote .vote-up,
-.vote .vote-down 							{ color: #818189; }
-.vote .vote-up:hover 						{ color: #008800; }
-.vote .vote-down:hover 						{ color: #ff0000; }
-.vote.voted.voted-up 	.vote-up 			{ color: #008800; }
-.vote.voted.voted-down 	.vote-down 			{ color: #ff0000; }
-.vote.voted.voted-up 	.vote-down:hover 	{ color: #ff0000; }
-.vote.voted.voted-down 	.vote-up:hover 		{ color: #008800; }
+.topic .topic-footer .topic-info li.vote .vote-up,
+.topic .topic-footer .topic-info li.vote .vote-down { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+.topic:hover .topic-footer .topic-info li.vote .vote-up,
+.topic:hover .topic-footer .topic-info li.vote .vote-down { color: #aaaaaa; }
 
 
 
@@ -96,6 +101,25 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 .comment .comment-info li.comment-author a.comment-topic-author { color: #008800; }
 
 .comment .comment-info li.comment-date a { color: #818189; }
+
+.comment .comment-info li.vote .vote-up,
+.comment .comment-info li.vote .vote-down { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+.comment:hover .comment-info li.vote .vote-up,
+.comment:hover .comment-info li.vote .vote-down { color: #aaaaaa; }
+
+.comment.comment-self .comment-content { background-color: #e6f4e7; }
+.comment.comment-deleted .comment-content { background-color: #ffeaea; }
+.comment.comment-new .comment-content 		{ background-color: #e3eff9; }
+.comment.comment-current .comment-content 	{ background-color: #d8e9f7; }
+
+.comment .comment-actions li a.reply-link { color: #aaaaaa; }
+.comment:hover .comment-actions li a.reply-link { color: #428bca; }
+
+.comment .comment-actions li a.comment-delete { color: #aaaaaa; }
+.comment:hover .comment-actions li a.comment-delete { color: #ff0000; }
+
+.comment .comment-actions li a.comment-repair { color: #aaaaaa; }
+.comment:hover .comment-actions li a.comment-repair { color: #008800; }
 
 
 
@@ -135,6 +159,7 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 #footer .copyright a { color: #727a90; }
 
 
+
 body.light { background: #f8f8f8 url(images/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 body.light .site-info .site-name { text-transform: uppercase; }
 body.light .site-info .site-name a:hover { color: #ff0000; }
@@ -142,4 +167,9 @@ body.light .site-info .site-description { font-size: 18px; }
 
 .light-form { background-color: rgba(255, 255, 255, 0.8); }
 .light-form .page-header { border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+
+
+
+#stat-performance { border-top: 1px solid #eeeeee; display: none; }
+
 
