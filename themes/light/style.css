@@ -43,6 +43,11 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 
 .reply { background-color: #f6f5f3; border-radius: 4px; margin-bottom: 20px; }
 
+.help-block { color: #818189; }
+
+
+
+
 
 #header .navbar .nav > li > a.new-messages { color: #ff7f00; }
 #header .navbar .nav > li > a.new-messages:hover { color: #e67200; }
@@ -94,6 +99,13 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 .topic .topic-footer .topic-info li.vote .vote-down { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
 .topic:hover .topic-footer .topic-info li.vote .vote-up,
 .topic:hover .topic-footer .topic-info li.vote .vote-down { color: #aaaaaa; }
+
+.poll-create { background-color: #efefed; border-radius: 4px; }
+
+.topic-photo-upload { background-color: #efefed; border-radius: 4px; }
+.topic-photo-upload ul li { line-height: 1; margin-bottom: 15px; }
+.topic-photo-upload ul li .image-delete { color: #ff0000; }
+.topic-photo-upload ul li .mark-as-preview { color: #008800; }
 
 
 
@@ -177,6 +189,32 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 
 
 
+.stream-list li.stream-header-date .lead { color: #727a90; font-family: 'PT Sans Narrow',Arial,sans-serif; }
+
+.stream-comment-preview { position: relative; background-color: #f6f5f3; border: 1px solid #eeeeee; border-radius: 4px; color: #646C82; box-shadow: 0 2px 4px #eeeeee inset;}
+.stream-comment-preview:after { border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #eeeeee; border-style: solid; border-width: 6px; content: ""; display: block; height: 0; left: 15px; position: absolute; top: -12px; width: 0; }
+
+
+.table.table-blogs .cell-name p .blog-name { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; line-height: 1; text-decoration: underline; }
+.table.table-blogs .cell-name p .blog-name:hover { color: #ff0000; }
+
+.table.table-blogs .cell-name p .question-sign span { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+.table.table-blogs .cell-name p .question-sign span:hover { color: #acb5d0; }
+
+.table.table-blogs .cell-name p .glyphicon-lock { color: #acb5d0; }
+
+.table.table-blogs .cell-name .user-avatar a { color: #151515; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 15px; }
+
+
+
+.table.table-users .cell-name .username a { font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 18px; line-height: 1; text-decoration: underline; }
+.table.table-users .cell-name .username a:hover { color: #ff0000; }
+
+.table.table-users .cell-name p span { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+.table.table-users .cell-name p span:hover { color: #acb5d0; }
+
+
+
 body.light { background: #f8f8f8 url(images/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 body.light .site-info .site-name { text-transform: uppercase; }
 body.light .site-info .site-name a:hover { color: #ff0000; }
@@ -184,6 +222,27 @@ body.light .site-info .site-description { font-size: 18px; }
 
 .light-form { background-color: rgba(255, 255, 255, 0.8); }
 .light-form .page-header { border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+
+
+
+.search-item { background-color: #f6f5f3; border-radius: 4px; }
+a.blogs-search, a.people-search { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+a.blogs-search:hover, a.people-search:hover { color: #acb5d0; }
+
+.search-item input { margin-bottom: 5px; }
+.search-abc li a:hover { color: #ff0000; }
+.search-abc li.active a { color: #818189; }
+.search-abc { margin-bottom: 0; }
+
+
+.modal.modal-write .write-list li a { color: #646c82; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; }
+.modal.modal-write .write-list li:hover a { color: #ff0000; text-decoration: none; }
+.modal.modal-write .write-list li a.write-item-image { opacity: .8; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+.modal.modal-write .write-list li:hover a.write-item-image { opacity: 1; }
+
+
+
+.wrapper-content { background-color: #f6f5f3; border-radius: 4px; }
 
 
 

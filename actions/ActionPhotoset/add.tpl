@@ -110,6 +110,7 @@
 						<li id="photo_{$oPhoto->getId()}" {if $bIsMainPhoto}class="marked-as-preview"{/if}>
 							<img src="{$oPhoto->getWebPath('100crop')}" alt="image" />
 							<textarea onBlur="ls.photoset.setPreviewDescription({$oPhoto->getId()}, this.value)" class="form-control">{$oPhoto->getDescription()}</textarea>
+							<br />
 							<a href="javascript:ls.photoset.deletePhoto({$oPhoto->getId()})" class="image-delete">{$aLang.topic_photoset_photo_delete}</a>
 							<span id="photo_preview_state_{$oPhoto->getId()}" class="photo-preview-state">
 								{if $bIsMainPhoto}
