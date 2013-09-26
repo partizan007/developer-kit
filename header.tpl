@@ -117,7 +117,7 @@
 					{/if} 
 		
 					<div role="main" 
-						class="{if $noSidebar}col-lg-12{else}col-lg-9{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
+						class="{if $noSidebar}col-md-12 col-lg-12{else}col-md-9 col-lg-9{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
 						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 				
 						{include file='nav_content.tpl'}
