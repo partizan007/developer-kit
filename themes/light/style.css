@@ -52,6 +52,7 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 
 
 
+
 #header .navbar .nav > li > a.new-messages { color: #ff7f00; }
 #header .navbar .nav > li > a.new-messages:hover { color: #e67200; }
 #header .navbar .nav > li > a.new-messages span { font-size: 14px; top: 1px; }
@@ -192,6 +193,28 @@ pre.prettyprint { border: 1px solid #eaeaea; padding: 10px 15px; margin: 0; }
 
 .block footer a { color: #818189; }
 
+.block.block-type-profile-nav .nav-pills > li > a { padding: 10px 15px; font-size: 16px; background-color: #f6f5f3; line-height: 1; }
+.block.block-type-profile-nav .nav-pills > li.active > a,
+.block.block-type-profile-nav .nav-pills > li.active > a:hover,
+.block.block-type-profile-nav .nav-pills > li.active > a:focus { background-color: #5cb85c; border-color: #4cae4c; color: #ffffff; }
+.block.block-type-profile-nav .nav-pills > li > a:hover,
+.block.block-type-profile-nav .nav-pills > li > a:focus { color: #ff0000; }
+
+.block.block-type-profile-actions { background-color: #f6f5f3; border-color: #eeeeee; }
+.block.block-type-profile-actions a { color: #727a90; font-family: 'PT Sans Narrow',Arial,sans-serif; font-size: 16px; }
+.block.block-type-profile-actions a.followed { color: #ff0000; }
+
+.block.block-type-profile-note { background-color: #fcfce9; border-color: #f5f5c8; }
+
+
+
+.profile .vote .vote-up,
+.profile .vote .vote-down { color: #e7e7e7; transition: color 0.3s ease 0s; -webkit-transition: color 0.3s ease 0s; }
+.profile:hover .vote .vote-up,
+.profile:hover .vote .vote-down { color: #aaaaaa; }
+
+.profile-info-about { margin-top: 30px; }
+
 
 
 .toolbar section a:hover 	{ color: #008800; }
@@ -269,6 +292,8 @@ a.blogs-search:hover, a.people-search:hover { color: #acb5d0; }
 
 
 .wrapper-content { background-color: #f6f5f3; border-radius: 4px; }
+.wrapper-content.wrapper-content-dark { border-radius: 0; }
+
 
 
 .pagination > li > a, .pagination > li > span { border-radius: 4px; color: #727a90; margin-right: 7px; }
