@@ -20,9 +20,9 @@
 			{if $oUserCurrent and !$aReplyWall}
 				<small>
 					<ul class="list-unstyled list-inline comment-actions">
-						<li><a href="#" class="link-dotted" onclick="return ls.wall.toggleReply({$oWall->getId()});">{$aLang.wall_action_reply}</a></li>
+						<li><a href="#" onclick="return ls.wall.toggleReply({$oWall->getId()});" class="link-dotted reply-link">{$aLang.wall_action_reply}</a></li>
 						{if $oWall->isAllowDelete()}
-							<li><a href="#" onclick="return ls.wall.remove({$oWall->getId()});" class="link-dotted">{$aLang.wall_action_delete}</a></li>
+							<li><a href="#" onclick="return ls.wall.remove({$oWall->getId()});" class="link-dotted comment-delete">{$aLang.wall_action_delete}</a></li>
 						{/if}
 					</ul>
 				</small>

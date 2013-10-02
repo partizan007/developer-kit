@@ -17,7 +17,7 @@
 		{if $oReplyWall->isAllowDelete()}
 			<small>
 				<ul class="list-unstyled list-inline comment-actions">
-					<li><a href="#" onclick="return ls.wall.remove({$oReplyWall->getId()});" class="link-dotted">{$aLang.wall_action_delete}</a></li>
+					<li><a href="#" onclick="return ls.wall.remove({$oReplyWall->getId()});" class="link-dotted comment-delete">{$aLang.wall_action_delete}</a></li>
 				</ul>
 			</small>
 		{/if}
