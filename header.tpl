@@ -26,6 +26,7 @@
 	<link href="{cfg name='path.static.skin'}/images/favicon.ico?v1" rel="shortcut icon" />
 	<link rel="search" type="application/opensearchdescription+xml" href="{router page='search'}opensearch/" title="{cfg name='view.name'}" />
 
+
 	{if $aHtmlRssAlternate}
 		<link rel="alternate" type="application/rss+xml" href="{$aHtmlRssAlternate.url}" title="{$aHtmlRssAlternate.title}">
 	{/if}
