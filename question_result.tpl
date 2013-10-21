@@ -1,8 +1,8 @@
 <ul class="list-unstyled poll-result" id="poll-result-original-{$oTopic->getId()}">
 	{foreach from=$oTopic->getQuestionAnswers() key=key item=aAnswer}
 		<li {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}class="most"{/if}>
-			<strong>{$aAnswer.text|escape:'html'}</strong> <span class="text-muted">({$aAnswer.count})</span>
-			<span class="pull-right">{$oTopic->getQuestionAnswerPercent($key)}%</span>
+			{$aAnswer.text|escape:'html'} <span class="text-muted">({$aAnswer.count})</span>
+			<span class="pull-right text-muted">{$oTopic->getQuestionAnswerPercent($key)}%</span>
 			<div class="progress">
 				<div class="progress-bar {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}progress-bar-success{else}progress-bar-info{/if}" style="width: {$oTopic->getQuestionAnswerPercent($key)}%;"></div>
 			</div>
@@ -14,8 +14,8 @@
 <ul class="list-unstyled poll-result" id="poll-result-sort-{$oTopic->getId()}" style="display: none;">
 	{foreach from=$oTopic->getQuestionAnswers(true) key=key item=aAnswer}
 		<li {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}class="most"{/if}>
-			<strong>{$aAnswer.text|escape:'html'}</strong> <span class="text-muted">({$aAnswer.count})</span>
-			<span class="pull-right">{$oTopic->getQuestionAnswerPercent($key)}%</span>
+			{$aAnswer.text|escape:'html'} <span class="text-muted">({$aAnswer.count})</span>
+			<span class="pull-right text-muted">{$oTopic->getQuestionAnswerPercent($key)}%</span>
 			<div class="progress">
 				<div class="progress-bar {if $oTopic->getQuestionAnswerMax()==$aAnswer.count}progress-bar-success{else}progress-bar-info{/if}" style="width: {$oTopic->getQuestionAnswerPercent($key)}%;"></div>
 			</div>

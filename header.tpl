@@ -110,18 +110,17 @@
 	
 	<section id="container {hook run='container_class'}">
 		<div id="wrapper" class="container {hook run='wrapper_class'}">
-			<div class="wrapper-inner">
-
-				<div class="row">
-					{if !$noSidebar && $sidebarPosition == 'left'}
-						{include file='sidebar.tpl'}
-					{/if} 
-		
-					<div role="main" 
-						class="{if $noSidebar}col-md-12 col-lg-12{else}col-md-9 col-lg-9{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
-						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
-				
-						{include file='nav_content.tpl'}
-						{include file='system_message.tpl'}
-				
-						{hook run='content_begin'}
+			<div class="row">
+			
+				{if !$noSidebar && $sidebarPosition == 'left'}
+					{include file='sidebar.tpl'}
+				{/if} 
+	
+				<div role="main" 
+					class="{if $noSidebar}col-md-12 col-lg-12{else}col-md-9 col-lg-9{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
+					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
+			
+					{include file='nav_content.tpl'}
+					{include file='system_message.tpl'}
+			
+					{hook run='content_begin'}

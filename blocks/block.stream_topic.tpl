@@ -21,6 +21,6 @@
 
 <footer>
 	<small class="text-muted">
-		<a href="{router page='index'}new/" class="muted">{$aLang.block_stream_topics_all}</a> · <a href="{router page='rss'}new/">RSS</a>
+		<a href="{router page='index'}newall/" class="muted">{$aLang.block_stream_topics_all}</a> · <a href="{router page='rss'}new/">RSS</a>
 	</small>
 </footer>

@@ -18,12 +18,12 @@
 
 
 /* Content */
-.topic .topic-content 	{ margin-bottom: 15px; font-size: 16px; }
+.topic .topic-content 	{ margin-bottom: 15px; }
 
 
 /* Topic Link */
 .topic .topic-url 		{ margin-top: 10px; }
-.topic .topic-url a 	{ color: #468847; font-size: 14px; }
+.topic .topic-url a 	{ color: #468847; }
 
 
 /* Tags */
@@ -40,8 +40,8 @@
 
 /* Info */
 .topic .topic-footer .topic-info 								{ padding-top: 5px; border-top: 1px solid #eeeeee; }
-.topic .topic-footer .topic-info li.vote 						{ padding-right: 0; }
-.topic .topic-footer .topic-info li.topic-info-author 			{ padding-left: 0; }
+.topic .topic-footer .topic-info li:first-child 				{ padding-left: 0; }
+.topic .topic-footer .topic-info li:last-child 					{ padding-right: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a 		{ color: #333333; }
 .topic .topic-footer .topic-info li.topic-info-author a img 	{ margin-right: 2px; width: 16px; height: 16px; vertical-align: top; }
 .topic .topic-footer .topic-info li.topic-info-share a 			{ color: #999999; }

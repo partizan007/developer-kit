@@ -43,12 +43,11 @@
 						<p>
 							<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a>
 
-							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="question-sign"><span class="glyphicon glyphicon-question-sign text-muted"></i></span></a>
-
 							{if $oBlog->getType() == 'close'}
-								<span title="{$aLang.blog_closed}" class="glyphicon glyphicon-lock text-muted"></i>
+								<span title="{$aLang.blog_closed}" class="glyphicon glyphicon-lock text-muted"></span>
 							{/if}
 
+							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="question-sign"><span class="glyphicon glyphicon-question-sign text-muted"></i></span></a>
 						</p>
 						
 						<span class="user-avatar">

@@ -36,4 +36,4 @@
 .blog-info dt 	{ text-align: left; font-weight: normal; border-bottom: 1px solid #eeeeee; }
 .blog-info dd 	{ margin-left: 160px; border-bottom: 1px solid transparent; }
 
-.user-avatar img 	{ margin-right: 1px; width: 16px; height: 16px; vertical-align: middle; }
+.user-avatar img 	{ margin-right: 1px; width: 16px; height: 16px; vertical-align: text-top; }
