@@ -17,7 +17,7 @@
 .table.table-blogs .cell-name p .blog-name 				{ font-size: 16px; }
 .table.table-blogs .cell-name p .question-sign:hover 	{ text-decoration: none; }
 
-.table.table-blogs .cell-name .user-avatar a { color: #333333; }
+.table.table-blogs .cell-name .user-avatar a { color: #333; }
 
 .table.table-blogs .cell-join 		{ width: 130px; text-align: center; vertical-align: middle; }
 .table.table-blogs .cell-readers,

@@ -6,7 +6,7 @@
 
 .text a 		{ text-decoration: underline; }
 .text a:hover 	{ text-decoration: none; }
-.text a:visited { color: #993399; }
+.text a:visited { color: #939; }
 
 
 .text q { quotes: none; }
@@ -17,8 +17,8 @@
 .text blockquote:after { content: ""; }
 
 .text dfn 	{ font-style: italic; }
-.text ins 	{ background: #ffff99; color: #000000; text-decoration: none; }
-.text mark 	{ background: #ffff00; color: #000000; font-style: italic; font-weight: bold; }
+.text ins 	{ background: #ff9; color: #000; text-decoration: none; }
+.text mark 	{ background: #ff0; color: #000; font-style: italic; font-weight: bold; }
 
 
 .text img[align="right"] 	{ margin: 4px 0 10px 15px; }

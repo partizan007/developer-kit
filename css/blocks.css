@@ -3,14 +3,14 @@
 ------------------------------------------------------------------- */
 .block .block-header 			{ position: relative; }
 .block .block-header h3 		{ margin-top: 0; }
-.block .block-header h3 a 		{ color: #333333; }
-.block .block-header h3 a:hover { text-decoration: none; color: #555555; }
+.block .block-header h3 a 		{ color: #333; }
+.block .block-header h3 a:hover { text-decoration: none; color: #555; }
 
 .block-content .nav 				{ margin-bottom: 15px; }
 .block-content .nav > li > a 		{ padding: 4px 8px; font-size: 12px; }
 
 .block footer 	{ margin-top: 15px; }
-.block footer a { color: #999999; }
+.block footer a { color: #999; }
 
 .block .max-height-200 { overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
 
@@ -22,8 +22,8 @@
 
 
 /* Block Type - Blog */
-.block.block-type-blog a.rss { color: #999999; }
-.block.block-type-blog a.rss:hover { color: #777777; }
+.block.block-type-blog a.rss { color: #999; }
+.block.block-type-blog a.rss:hover { color: #777; }
 
 
 /* Block Type - Profile */
@@ -31,7 +31,7 @@
 .block.block-type-profile .profile-photo-wrapper 	{ position: relative; margin: 0 auto; min-height: 50px; }
 .block.block-type-profile .profile-photo 			{ max-width: 100%; vertical-align: top; }
 .block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; }
-.block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; background-color: #eeeeee; }
+.block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; margin: 0 auto; background-color: #eee; }
 
 .block.block-type-profile-note .actions 				{ margin-bottom: 0; }
 .block.block-type-profile-note .actions li:first-child 	{ margin-bottom: 0; padding-left: 0; }
@@ -44,4 +44,4 @@
 
 
 /* Block Type - Foldable */
-.block.block-type-foldable .block-content { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eeeeee; }
+.block.block-type-foldable .block-content { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; }

@@ -24,8 +24,8 @@
 	padding: 10px 15px 11px; 
 	margin-bottom: 10px;
 	
-	color: #ffffff; 
-	background: #000000;
+	color: #fff; 
+	background: #000;
 
 	opacity: 0.9; filter: alpha(opacity=90);
 	
@@ -36,7 +36,7 @@
 	cursor: pointer;
 }
 
-#notifier .n-box h3 { margin-top: 0; color: #ffffff; }
+#notifier .n-box h3 { margin-top: 0; color: #fff; }
 #notifier .n-box p 	{ margin-bottom: 0; font-size: 12px; }
 
 #notifier .n-box.n-notice 		{ background: #063573; }

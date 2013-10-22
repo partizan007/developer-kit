@@ -2,8 +2,6 @@
 	ОСНОВНЫЕ СТИЛИ
 ------------------------------------------------------------------- */
 
-body { position: relative; }
-
 
 /* Ссылки
 ---------------------------------------------------- */
@@ -29,7 +27,7 @@ a.actions-delete 	{ color: #b94a48; }
 
 /* Навигация
 ---------------------------------------------------- */
-#nav 				{ border-bottom: 1px solid #eeeeee; }
+#nav 				{ border-bottom: 1px solid #eee; }
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
 #nav .btn-write 	{ margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 
@@ -71,11 +69,11 @@ a.actions-delete 	{ color: #b94a48; }
 .stream_loading { background-color: #f5f5f5 url(../images/loader.gif) no-repeat center; }
 
 .stream-list 								{ margin-bottom: 20px; }
-.stream-list li.stream-item 				{ margin-bottom: 20px; min-height: 48px; _height: 48px; border-bottom: 1px solid #eeeeee; padding: 0 0 20px 63px; position: relative; }
+.stream-list li.stream-item 				{ margin-bottom: 20px; min-height: 48px; _height: 48px; border-bottom: 1px solid #eee; padding: 0 0 20px 63px; position: relative; }
 .stream-list li.stream-item .avatar 		{ position: absolute; top: 0; left: 0; }
 .stream-list li.stream-item .date 			{ display: block; }
 .stream-list li.stream-header-date 			{ margin-top: 40px; }
-.stream-list li.stream-header-date .lead 	{ border-bottom: 1px solid #eeeeee; }
+.stream-list li.stream-header-date .lead 	{ border-bottom: 1px solid #eee; }
 
 .stream-comment-preview { padding: 5px 10px; margin-top: 10px; background-color: #f5f5f5; }
 
@@ -83,23 +81,23 @@ a.actions-delete 	{ color: #b94a48; }
 /* Userfields
 ---------------------------------------------------- */
 .userfield-list li { margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; background-color: #f5f5f5; }
-.userfield-list li .userfield_admin_name { font-weight: bold; color: #333333; }
+.userfield-list li .userfield_admin_name { font-weight: bold; color: #333; }
 
 
 /* Light Pages
 ---------------------------------------------------- */
 body.light { padding-bottom: 40px; padding-top: 40px; background-color: #f8f8f8; }
 body.light .site-info { margin-bottom: 40px; }
-body.light .site-info .site-name a { color: #333333; }
-body.light .site-info .site-name a:hover { color: #777777; text-decoration: none; }
-.light-form { margin: 0 auto; max-width: 400px; padding: 20px; background-color: #ffffff; border-radius: 5px; }
+body.light .site-info .site-name a { color: #333; }
+body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
+.light-form { margin: 0 auto; max-width: 400px; padding: 20px; background-color: #fff; border-radius: 5px; }
 .light-form .page-header h2, .light-form .page-header h3 { margin-top: 0; }
 
 
 /* Misc
 ---------------------------------------------------- */
-.help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; border: 1px solid #dddddd; background-color: #ffffff; }
-.help:before 				{ display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #ffffff transparent; border-style: solid; }
+.help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; border: 1px solid #ddd; background-color: #fff; }
+.help:before 				{ display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #fff transparent; border-style: solid; }
 .help .help-col 			{ float: left; width: 44%; padding: 0 3%; margin: 0; font-weight: normal;}
 .help .help-col.help-wide 	{ float: none; width: 94%; }
 .help .help-item 			{ margin-bottom: 20px; }
