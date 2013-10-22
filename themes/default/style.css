@@ -1,1 +1,55 @@
+/* Reset */
+a:focus, a:hover, a:active, .btn:focus, select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { outline: 0; }
+iframe { border: none; }
+a:focus { text-decoration: none; }
+
+
+/* Ссылки */
 a { transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
+
+a.actions-edit 		{ color: #468847; }
+a.actions-delete 	{ color: #b94a48; }
+
+
+/* Шапка сайта */
+#header .navbar .nav > li > a.new-messages { color: #b94a48; }
+#header .navbar .nav > li > a.new-messages:hover { color: #d75c57; }
+
+
+/* Навигация */
+#nav { border-bottom: 1px solid #eee; }
+
+
+/* Футер */
+#footer { background-color: #f8f8f8; }
+#footer .footer-list { margin-bottom: 20px; }
+#footer .footer-list-header { font-weight: bold; }
+#footer .footer-brand { display: block; margin-bottom: 20px; font-size: 24px; line-height: 1; }
+#footer .copyright { font-size: 12px; }
+
+
+/* Stream */
+.stream-list li.stream-item { border-bottom: 1px solid #eee; }
+.stream-list li.stream-header-date .lead { border-bottom: 1px solid #eee; }
+
+.stream-comment-preview { background-color: #f5f5f5; }
+
+
+/* Userfields */
+.userfield-list li { background-color: #f5f5f5; }
+.userfield-list li .userfield_admin_name { font-weight: bold; color: #333; }
+
+
+/* Light Pages */
+body.light { background-color: #f8f8f8; }
+body.light .site-info .site-name a { color: #333; }
+body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
+.light-form { background-color: #fff; border-radius: 5px; }
+
+
+/* Misc */
+.help { border: 1px solid #ddd; background-color: #fff; }
+.help:before { display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #fff transparent; border-style: solid; }
+
+
+

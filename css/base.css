@@ -3,107 +3,66 @@
 ------------------------------------------------------------------- */
 
 
-/* Ссылки
----------------------------------------------------- */
-a.link-dashed 		{ border-bottom: 1px dashed; }
+/* Ссылки */
+a.link-dashed { border-bottom: 1px dashed; }
 a.link-dashed:hover { text-decoration: none; }
 
-a.link-dotted 		{ border-bottom: 1px dotted; }
+a.link-dotted { border-bottom: 1px dotted; }
 a.link-dotted:hover { text-decoration: none; }
 
-a.actions-edit 		{ color: #468847; }
-a.actions-delete 	{ color: #b94a48; }
 
-
-/* Шапка сайта
----------------------------------------------------- */
-#header 										{ position: relative; }
-#header .navbar h1.site-name 					{ margin: 0; }
-#header .navbar .nav > li > a img.avatar 		{ width: 20px; height: 20px; vertical-align: top; }
-#header .navbar .nav > li > a.new-messages 		{ color: #b94a48; }
-#header .navbar .nav > li > a.new-messages:hover { color: #d75c57; }
+/* Шапка сайта */
+#header .navbar h1.site-name { margin: 0; }
+#header .navbar .nav > li > a img.avatar { width: 20px; height: 20px; vertical-align: top; }
 #header .navbar .nav > li > a.new-messages span { top: 2px; }
 
 
-/* Навигация
----------------------------------------------------- */
-#nav 				{ border-bottom: 1px solid #eee; }
+/* Навигация */
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
-#nav .btn-write 	{ margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
+#nav .btn-write { margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 
-.nav-filter-wrapper { margin-bottom: 20px; }
-
-
-/* Контейнер
----------------------------------------------------- */
-.content { position: relative; }
+#wrapper .nav-filter-wrapper { margin-bottom: 20px; }
 
 
-/* Pagination
----------------------------------------------------- */
+/* Pagination */
 .pagination.pages { margin-right: 40px; }
 
 
-/* Футер
----------------------------------------------------- */
-#footer 					{ background-color: #f8f8f8; }
-#footer .footer-list 		{ margin-bottom: 20px; }
-#footer .footer-list-header	{ font-weight: bold; }
-#footer .footer-brand 		{ display: block; margin-bottom: 20px; font-size: 24px; line-height: 1; }
-#footer .copyright 			{ font-size: 12px; }
-
-
-/* Stat
----------------------------------------------------- */
+/* Stat */
 #stat-performance table td { width: 200px; vertical-align: top; }
 
 
-/* Заголовки
----------------------------------------------------- */
-.page-header 	{ margin-top: 0; }
+/* Заголовки */
+.page-header { margin-top: 0; }
 .page-header h1 { margin-top: 0; }
 
 
-/* Stream
----------------------------------------------------- */
+/* Stream */
 .stream_loading { background-color: #f5f5f5 url(../images/loader.gif) no-repeat center; }
 
-.stream-list 								{ margin-bottom: 20px; }
-.stream-list li.stream-item 				{ margin-bottom: 20px; min-height: 48px; _height: 48px; border-bottom: 1px solid #eee; padding: 0 0 20px 63px; position: relative; }
-.stream-list li.stream-item .avatar 		{ position: absolute; top: 0; left: 0; }
-.stream-list li.stream-item .date 			{ display: block; }
-.stream-list li.stream-header-date 			{ margin-top: 40px; }
-.stream-list li.stream-header-date .lead 	{ border-bottom: 1px solid #eee; }
+.stream-list { margin-bottom: 40px; }
+.stream-list li.stream-item { margin-bottom: 20px; min-height: 48px; _height: 48px; padding: 0 0 20px 63px; position: relative; }
+.stream-list li.stream-item .avatar { position: absolute; top: 0; left: 0; }
+.stream-list li.stream-item .date { display: block; }
+.stream-list li.stream-header-date { margin-top: 40px; }
 
-.stream-comment-preview { padding: 5px 10px; margin-top: 10px; background-color: #f5f5f5; }
-
-
-/* Userfields
----------------------------------------------------- */
-.userfield-list li { margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; background-color: #f5f5f5; }
-.userfield-list li .userfield_admin_name { font-weight: bold; color: #333; }
+.stream-comment-preview { padding: 5px 10px; margin-top: 10px; }
 
 
-/* Light Pages
----------------------------------------------------- */
-body.light { padding-bottom: 40px; padding-top: 40px; background-color: #f8f8f8; }
+/* Userfields */
+.userfield-list li { margin-bottom: 2px; padding: 10px; overflow: hidden; zoom: 1; }
+
+
+/* Light Pages */
+body.light { padding-bottom: 40px; padding-top: 40px; }
 body.light .site-info { margin-bottom: 40px; }
-body.light .site-info .site-name a { color: #333; }
-body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
-.light-form { margin: 0 auto; max-width: 400px; padding: 20px; background-color: #fff; border-radius: 5px; }
+.light-form { margin: 0 auto; max-width: 400px; padding: 20px; }
 .light-form .page-header h2, .light-form .page-header h3 { margin-top: 0; }
 
 
-/* Misc
----------------------------------------------------- */
-.help 						{ display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; border: 1px solid #ddd; background-color: #fff; }
-.help:before 				{ display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #fff transparent; border-style: solid; }
-.help .help-col 			{ float: left; width: 44%; padding: 0 3%; margin: 0; font-weight: normal;}
-.help .help-col.help-wide 	{ float: none; width: 94%; }
-.help .help-item 			{ margin-bottom: 20px; }
+/* Misc */
+.help { display: none; position: relative; padding: 0 0 20px; margin: 13px 0 0; }
+.help .help-col { float: left; width: 44%; padding: 0 3%; margin: 0; font-weight: normal;}
+.help .help-col.help-wide { float: none; width: 94%; }
+.help .help-item { margin-bottom: 20px; }
 .help .help-item:last-child { margin-bottom: 0; }
-
-
-a:focus, a:hover, a:active, .btn:focus, select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { outline: 0; }
-iframe { border: none; }
-a:focus { text-decoration: none; }
