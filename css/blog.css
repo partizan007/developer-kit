@@ -6,34 +6,28 @@
 
 
 /* Header */
-.blog .blog-header 			{ position: relative; padding: 0 100px 0 79px; margin-bottom: 20px; min-height: 64px; }
-.blog .blog-header h1 		{ margin-bottom: 5px; margin-top: 0; }
-.blog .blog-header h1 span 	{ cursor: help; font-size: 14px; vertical-align: text-top; color: #ddd; }
-.blog .blog-header .avatar 	{ position: absolute; top: 0; left: 0; }
+.blog .blog-header { position: relative; padding: 0 100px 0 79px; margin-bottom: 20px; min-height: 64px; }
+.blog .blog-header h1 { margin-bottom: 5px; margin-top: 0; }
+.blog .blog-header h1 span { cursor: help; vertical-align: text-top; }
+.blog .blog-header .avatar { position: absolute; top: 0; left: 0; }
 
-.blog .blog-header .vote 		{ position: absolute; top: 0; right: 0; }
-.blog .blog-header .vote-label 	{ text-align: center; }
+.blog .blog-header .vote { position: absolute; top: 0; right: 0; }
+.blog .blog-header .vote-label { text-align: center; }
 
 .blog .blog-header .actions li:first-child { padding-left: 0px; }
 
 
 /* Blog Mini */
-.blog-mini 							{ padding: 10px 20px; background-color: #f5f5f5; line-height: 26px; }
-.blog-mini .blog-mini-header 		{ text-align: right; }
-.blog-mini .blog-mini-header a 		{ margin-left: 10px; }
-.blog-mini .blog-mini-header .btn 	{ margin-left: 10px; }
-
-
-/* Content */
-.blog .blog-more-content 	{ padding: 20px; background-color: #f5f5f5; border-top: 1px solid #eee; }
-.blog .blog-content 		{ padding: 0 0 10px; border-bottom: 1px solid #eee; }
+.blog-mini .blog-mini-header { text-align: right; }
+.blog-mini .blog-mini-header a { margin-left: 10px; }
+.blog-mini .blog-mini-header .btn { margin-left: 10px; }
 
 
 /* Footer */
 .blog .blog-footer { padding-top: 20px; }
 
-.blog-info 		{ margin: 0; }
-.blog-info dt 	{ text-align: left; font-weight: normal; border-bottom: 1px solid #eee; }
-.blog-info dd 	{ margin-left: 160px; border-bottom: 1px solid transparent; }
+.blog-info { margin: 0; }
+.blog-info dt { text-align: left; font-weight: normal; }
+.blog-info dd { margin-left: 160px; border-bottom: 1px solid transparent; }
 
-.user-avatar img 	{ margin-right: 1px; width: 16px; height: 16px; vertical-align: text-top; }
+.user-avatar img { margin-right: 1px; width: 16px; height: 16px; vertical-align: text-top; }

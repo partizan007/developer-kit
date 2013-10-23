@@ -6,8 +6,8 @@ form .icon-question-sign { cursor: help; }
 
 .captcha-image { vertical-align: top; margin-left: 0; margin-right: 16px; }
 
-.form-profile 					{ position: relative; }
-.form-profile .form-actions 	{ margin-top: 0; margin-bottom: 0; }
+.form-profile { position: relative; }
+.form-profile .form-actions { margin-top: 0; margin-bottom: 0; }
 
 .mceEditor { display: block; margin-bottom: 20px; }
 
@@ -17,8 +17,8 @@ form .icon-question-sign { cursor: help; }
 
 select, input[type="file"] { height: auto; }
 
-/* Валидатор (регистрация)
----------------------------------------------------------------*/
+
+/* Валидатор (регистрация) */
 .validate-error-hide { display: none; }
 
 .captcha { display: block; }

@@ -2,19 +2,19 @@
 	СТРАНИЦА ПОЛЬЗОВАТЕЛЯ
 -------------------------------------------- */
 
-.profile 				{ min-height: 64px; margin-bottom: 20px; padding: 0 0 0 79px; position: relative; }
+.profile { min-height: 64px; margin-bottom: 20px; padding: 0 0 0 79px; position: relative; }
 
-.profile .avatar 		{ position: absolute; top: 0; left: 0; }
+.profile .avatar { position: absolute; top: 0; left: 0; }
 
 .profile .vote-label,
-.profile .count 		{ text-align: center; }
+.profile .count { text-align: center; }
 
-.profile .vote 			{ margin-left: 20px; }
+.profile .vote { margin-left: 20px; }
 
-.profile .user-login 				{ margin: 0 160px 0 0; }
-.profile .user-login.no-user-name 	{ position: relative; }
+.profile .user-login { margin: 0 160px 0 0; }
+.profile .user-login.no-user-name { position: relative; }
 
-.profile-info-about h3 	{ margin-top: 0; }
+.profile-info-about h3 { margin-top: 0; }
 
 
 /* Настройки */
