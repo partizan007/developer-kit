@@ -256,19 +256,7 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	// Раскрывающиеся блоки (поиск по блогам и людям)
-	$("#block-more").click(function () {
-		if ($('#block-more-content').is(':visible')) {
-			$('#block-more-content').hide();
-			$('#block-more').toggleClass('opened');
-		} else {
-			$('#block-more-content').show();
-			$('#block-more').toggleClass('opened');
-		}
-		
-		return false;
-	});
-	
+
 	// Хук конца инициализации javascript-составляющих шаблона
 	ls.hook.run('ls_template_init_end',[],window);
 });

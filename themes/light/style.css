@@ -91,7 +91,8 @@ body.light .site-info .site-description { font-size: 18px; }
 
 
 /* »«¡–¿ÕÕŒ≈ */
-.favourite { color: #818189; }
+.favourite, 
+.favourite:focus { color: #818189; }
 .favourite:hover, 
 .favourite.active { color: #ff7f00; }
 
