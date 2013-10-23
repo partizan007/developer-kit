@@ -3,7 +3,7 @@
 $config = array();
 
 /* Theme */
-$config['view']['theme'] = 'light';
+$config['view']['theme'] = 'warm';
 
 
 
