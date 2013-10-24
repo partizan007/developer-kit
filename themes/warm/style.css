@@ -12,12 +12,20 @@ a.actions-delete { color: #b94a48; }
 
 
 /* ÿ¿œ ¿ —¿…“¿ */
+#header .navbar-brand { font-size: 26px; }
+#header .navbar .nav > li > a { font-weight: bold; }
 #header .navbar .nav > li > a.new-messages { color: #b94a48; }
 #header .navbar .nav > li > a.new-messages:hover { color: #d75c57; }
 
 
 /* Õ¿¬»√¿÷»ﬂ */
-#nav { background-color: #f5f3ec; }
+#nav { background-color: #f6f3ef; }
+#wrapper .nav-filter-wrapper { margin-bottom: 30px; }
+.nav-pills > li > a { color: #454e5c; font-size: 12px; font-weight: bold; border: 1px solid transparent; color: #454e5c; }
+.nav-pills > li > a:hover { background-color: transparent; color: #59828e; }
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus { background-color: transparent; border-color: rgba(0, 0, 0, 0.1); color: #59828e; }
 
 
 /* ‘”“≈– */
@@ -144,8 +152,13 @@ a.blogs-search:hover, a.people-search:hover { text-decoration: none; }
 .topic { margin-bottom: 40px; }
 
 /* Header */
-.topic .topic-header .topic-title a { color: #333; }
+.topic .topic-header .topic-title { font-size: 36px; }
+.topic .topic-header .topic-title a { color: #42656f; text-decoration: underline; }
+.topic .topic-header .topic-title a:hover { text-decoration: none; }
 .topic .topic-header .topic-title span { font-size: 14px; color: #ddd; }
+
+/* Topic content */
+.topic .topic-content { font-size: 16px; }
 
 /* Topic Link */
 .topic .topic-url a { color: #468847; }
@@ -232,6 +245,9 @@ a.blogs-search:hover, a.people-search:hover { text-decoration: none; }
 
 
 /* ¡ÀŒ » */
+.block { border-width: 2px; padding: 2px; }
+.block .panel-body { border: 1px solid #e0d9d3; }
+
 .block .block-header h3 a { color: #333; }
 .block .block-header h3 a:hover { text-decoration: none; color: #555; }
 
@@ -242,6 +258,12 @@ a.blogs-search:hover, a.people-search:hover { text-decoration: none; }
 /* Block Type - Blog */
 .block.block-type-blog a.rss { color: #999; }
 .block.block-type-blog a.rss:hover { color: #777; }
+
+/* Block Type - Stream */
+.block.block-type-stream a.stream-topic { color: #5c8d9a; text-decoration: underline; }
+.block.block-type-stream a.stream-topic:hover { text-decoration: none; }
+
+.item-list li .author { color: #515e6c; font-size: 85%; font-weight: bold; }
 
 /* Block Type - Profile */
 .block.block-type-profile .upload-photo { background-color: #eee; }
