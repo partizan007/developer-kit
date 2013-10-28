@@ -19,7 +19,7 @@
 
 	{$aHtmlHeadFiles.css}
 	
-	{if {cfg name='view.theme'} == 'light' or {cfg name='view.theme'} == 'warm' }
+	{if {cfg name='view.theme'} == 'light'}
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	{/if}
 	
