@@ -20,7 +20,7 @@ $config['head']['default']['css'] = array(
 	"___path.static.skin___/themes/___view.theme___/bootstrap/css/bootstrap.min.css",
 
 	/* Structure */
-	"___path.static.skin___/css/style.css",
+	"___path.static.skin___/css/base.css",
 	"___path.root.engine_lib___/external/jquery/markitup/skins/synio/style.css",
 	"___path.root.engine_lib___/external/jquery/markitup/sets/synio/style.css",
 	"___path.root.engine_lib___/external/jquery/jcrop/jquery.Jcrop.css",
