@@ -8,7 +8,7 @@
 			</header>
 	
 			<div class="modal-body">
-				<ul class="nav nav-pills">
+				<ul class="nav nav-tabs">
 					<li class="active js-block-upload-img-item" data-type="pc"><a href="#">{$aLang.uploadimg_from_pc}</a></li>
 					<li class="js-block-upload-img-item" data-type="link"><a href="#">{$aLang.uploadimg_from_link}</a></li>
 				</ul>

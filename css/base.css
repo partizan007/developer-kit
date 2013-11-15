@@ -66,6 +66,8 @@ body.light .site-info { margin-bottom: 40px; }
 .help .help-item { margin-bottom: 20px; }
 .help .help-item:last-child { margin-bottom: 0; }
 
+.ui-menu { padding-left: 0; }
+
 
 
 /* --------------------------------------------
@@ -472,7 +474,7 @@ select, input[type="file"] { height: auto; }
 .user-list-mini li > input,
 .stream-settings-friends li > input { float: left; margin-right: 7px; }
 .user-list-mini li img,
-.stream-settings-friends li img { margin-right: 2px; position: relative; width: 16px; height: 16px; }
+.stream-settings-friends li img { margin-right: 2px; position: relative; width: 16px; height: 16px; vertical-align: text-top; }
 
 
 /* Block Type - Profile */
