@@ -120,7 +120,6 @@ body.light .site-info { margin-bottom: 40px; }
 
 
 /* Список пользователей */
-.user-list-avatar { margin: 0 -5px; }
 .user-list-avatar li { margin-bottom: 10px; }
 .user-list-avatar li img { display: block; }
 
