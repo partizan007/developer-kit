@@ -116,7 +116,7 @@
 					{include file='sidebar.tpl'}
 				{/if} 
 	
-				<div role="main" 
+				<div id="content" role="main" 
 					class="{if $noSidebar}col-md-12 col-lg-12{else}col-md-9 col-lg-9{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
 					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 			
