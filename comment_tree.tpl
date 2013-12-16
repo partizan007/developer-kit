@@ -12,7 +12,7 @@
 		<h3><span id="count-comments">{$iCountComment}</span> {$iCountComment|declension:$aLang.comment_declension:'russian'}</h3>
 		
 		{if $bAllowSubscribe and $oUserCurrent}
-			<div class="text-muted subscribe">
+			<div class="hidden-xs text-muted subscribe">
 				<div class="checkbox">
 					<label>
 						<input {if $oSubscribeComment and $oSubscribeComment->getStatus()}checked="checked"{/if} type="checkbox" id="comment_subscribe" class="input-checkbox" onchange="ls.subscribe.toggle('{$sTargetType}_new_comment','{$iTargetId}','',this.checked);">

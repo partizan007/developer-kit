@@ -256,6 +256,17 @@ jQuery(document).ready(function($){
 		}
 	});
 	
+	
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement("style")
+			msViewportStyle.appendChild(
+			document.createTextNode(
+				"@-ms-viewport{width:auto!important}"
+			)
+		)
+		document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+	}
+	
 
 	// Хук конца инициализации javascript-составляющих шаблона
 	ls.hook.run('ls_template_init_end',[],window);

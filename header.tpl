@@ -16,6 +16,18 @@
 	
 	<meta name="description" content="{$sHtmlDescription}">
 	<meta name="keywords" content="{$sHtmlKeywords}">
+	
+	{if $oTopic}
+		<meta property="og:title" content="{$oTopic->getTitle()|escape:'html'}"/>
+		<meta property="og:url" content="{$oTopic->getUrl()}"/>
+		{if $oTopic->getPreviewImageWebPath()}
+			<meta property="og:image" content="{$oTopic->getPreviewImageWebPath(300crop)}"/>
+		{/if}
+		<meta property="og:description" content="{$sHtmlDescription}"/>
+		<meta property="og:site_name" content="{cfg name='view.name'}"/>
+		<meta property="og:type" content="article"/>
+		<meta name="twitter:card" content="summary">
+	{/if}
 
 	{$aHtmlHeadFiles.css}
 	
@@ -72,6 +84,11 @@
 	
 	
 	{hook run='html_head_end'}
+	
+	<!--[if lt IE 9]>
+		<script src="{cfg name="path.static.skin"}/js/html5shiv.js"></script>
+		<script src="{cfg name="path.static.skin"}/js/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 
