@@ -27,7 +27,7 @@ a.link-dotted:hover { text-decoration: none; }
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
 #nav .btn-write { margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 
-#wrapper .nav-filter-wrapper { margin-bottom: 20px; }
+#wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
 
 /* Pagination */
@@ -339,12 +339,13 @@ select, input[type="file"] { height: auto; }
 
 .topic .topic-header .topic-info { margin-bottom: 15px; }
 .topic .topic-header .topic-info .topic-blog { margin-right: 10px; }
+.topic .topic-header .topic-info time { margin-right: 10px; }
+
 .topic .topic-header .topic-info .actions { display: inline; }
-.topic .topic-header .topic-info .actions li:first-child { padding-left: 0; }
 
 
 /* Content */
-.topic .topic-content { margin-bottom: 15px; }
+.topic .topic-content { margin-bottom: 20px; }
 
 
 /* Topic Link */
@@ -360,7 +361,6 @@ select, input[type="file"] { height: auto; }
 
 /* Info */
 .topic .topic-footer .topic-info { padding-top: 5px; }
-.topic .topic-footer .topic-info li:first-child { padding-left: 0; }
 .topic .topic-footer .topic-info li:last-child { padding-right: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a img { margin-right: 2px; width: 16px; height: 16px; vertical-align: top; }
 .topic .topic-footer .topic-info li.topic-info-share a:hover { text-decoration: none; }
@@ -444,7 +444,6 @@ select, input[type="file"] { height: auto; }
 /* Info Block */
 .comment .comment-info { position: relative; overflow: hidden; zoom: 1; }
 .comment .comment-info li { float: left; padding-left: 5px; padding-right: 5px; }
-.comment .comment-info li:first-child { padding-left: 0; }
 .comment .comment-info li:last-child { padding-right: 0; }
 .comment .comment-info li.goto-comment-child { display: none; }
 .comment .comment-info li.vote { position: absolute; top: 0; right: 0; }
@@ -452,7 +451,6 @@ select, input[type="file"] { height: auto; }
 
 /* Actions */
 .comment .comment-actions { margin: 10px 0 0; }
-.comment .comment-actions li:first-child { padding-left: 0; }
 
 
 /* Форма комментирования */
@@ -485,13 +483,12 @@ select, input[type="file"] { height: auto; }
 
 /* Block Type - Profile */
 .block.block-type-profile .panel-body { padding: 5px; }
-.block.block-type-profile .profile-photo-wrapper { position: relative; margin: 0 auto; min-height: 50px; }
+.block.block-type-profile .profile-photo-wrapper { position: relative; min-height: 50px; }
 .block.block-type-profile .profile-photo { max-width: 100%; vertical-align: top; }
 .block.block-type-profile .status { position: absolute; top: 5px; left: 5px; }
 .block.block-type-profile .upload-photo { padding: 7px 10px 10px; margin: 0 auto; }
 
 .block.block-type-profile-note .actions { margin-bottom: 0; }
-.block.block-type-profile-note .actions li:first-child { margin-bottom: 0; padding-left: 0; }
 
 .block.block-type-profile-actions ul { margin-bottom: 0; }
 .block.block-type-profile-actions ul li { margin-bottom: 5px; }
@@ -522,10 +519,9 @@ select, input[type="file"] { height: auto; }
 
 
 /* Добавление топика */
-.modal.modal-write .modal-dialog { width: 712px; }
+.modal.modal-write .modal-dialog { width: 692px; }
 
 .modal.modal-write .write-list li { text-align: center; }
-.modal.modal-write .write-list li:first-child { padding-left: 0; }
 .modal.modal-write .write-list li:last-child { padding-right: 0; }
 
 .modal.modal-write .write-list li .write-item-image { display: block; width: 100px; height: 100px; background: url(../images/write.png) no-repeat; margin-bottom: 10px; }
@@ -555,8 +551,6 @@ select, input[type="file"] { height: auto; }
 .blog .blog-header .vote { position: absolute; top: 0; right: 0; }
 .blog .blog-header .vote-label { text-align: center; }
 
-.blog .blog-header .actions li:first-child { padding-left: 0px; }
-
 
 /* Blog Mini */
 .blog-mini .blog-mini-header { text-align: right; }
@@ -579,7 +573,7 @@ select, input[type="file"] { height: auto; }
 	СТРАНИЦА ПОЛЬЗОВАТЕЛЯ
 -------------------------------------------- */
 
-.profile { min-height: 64px; margin-bottom: 20px; padding: 0 0 0 79px; position: relative; }
+.profile { min-height: 64px; margin-bottom: 40px; padding: 0 0 0 79px; position: relative; }
 
 .profile .avatar { position: absolute; top: 0; left: 0; }
 

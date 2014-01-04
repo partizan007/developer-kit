@@ -2,7 +2,7 @@ LiveStreet Template "Developer-Kit"
 
 Copyright © 2013 Kulesh Uladzimir
 
-Contact e-mail: vj-team@yandex.ru
+Contact e-mail: v.a.kulesh@yandex.ru
 
 Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0):
 http://creativecommons.org/licenses/by-sa/3.0/deed.en
@@ -24,6 +24,6 @@ http://creativecommons.org/licenses/by-sa/3.0/deed.en
 - Вы должны атрибутировать произведение (указывать автора и источник) в порядке, предусмотренном автором (активная ссылка на мой профиль, которая уже прописана в копирайтах).
 
 Снять мой копирайт можно за донейт от 10уе.
-E-mail для связи: vj-team@yandex.ru.
+E-mail для связи: v.a.kulesh@yandex.ru.
 
 ------------------------------------------------------

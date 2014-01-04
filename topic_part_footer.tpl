@@ -5,33 +5,35 @@
 
 
 	<footer class="topic-footer">
-		<small>
-			<ul class="text-muted list-unstyled list-inline topic-tags js-favourite-insert-after-form js-favourite-tags-topic-{$oTopic->getId()}">
-				<li><span class="glyphicon glyphicon-tags"></span></li>
-			
-				{strip}
-					{if $oTopic->getTagsArray()}
-						{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
-							<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
-						{/foreach}
-					{else}
-						<li>{$aLang.topic_tags_empty}</li>
-					{/if}
+		{if !$bTopicList}
+			<small>
+				<ul class="text-muted list-unstyled list-inline topic-tags js-favourite-insert-after-form js-favourite-tags-topic-{$oTopic->getId()}">
+					<li><span class="glyphicon glyphicon-tags"></span></li>
 				
-					{if $oUserCurrent}
-						{if $oFavourite}
-							{foreach from=$oFavourite->getTagsArray() item=sTag name=tags_list_user}
-								<li class="topic-tags-user js-favourite-tag-user">, <a rel="tag" href="{$oUserCurrent->getUserWebPath()}favourites/topics/tag/{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
+					{strip}
+						{if $oTopic->getTagsArray()}
+							{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
+								<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
 							{/foreach}
+						{else}
+							<li>{$aLang.topic_tags_empty}</li>
 						{/if}
 					
-						<li class="topic-tags-edit js-favourite-tag-edit" {if !$oFavourite}style="display:none;"{/if}>
-							<a href="#" onclick="return ls.favourite.showEditTags({$oTopic->getId()},'topic',this);" class="link-dotted">{$aLang.favourite_form_tags_button_show}</a>
-						</li>
-					{/if}
-				{/strip}
-			</ul>
-		</small>
+						{if $oUserCurrent}
+							{if $oFavourite}
+								{foreach from=$oFavourite->getTagsArray() item=sTag name=tags_list_user}
+									<li class="topic-tags-user js-favourite-tag-user">, <a rel="tag" href="{$oUserCurrent->getUserWebPath()}favourites/topics/tag/{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
+								{/foreach}
+							{/if}
+						
+							<li class="topic-tags-edit js-favourite-tag-edit" {if !$oFavourite}style="display:none;"{/if}>
+								<a href="#" onclick="return ls.favourite.showEditTags({$oTopic->getId()},'topic',this);" class="link-dotted">{$aLang.favourite_form_tags_button_show}</a>
+							</li>
+						{/if}
+					{/strip}
+				</ul>
+			</small>
+		{/if}
 		
 		
 		<div class="topic-share" id="topic_share_{$oTopic->getId()}">
@@ -46,11 +48,6 @@
 				<li class="topic-info-author">
 					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="{$oUser->getLogin()}" class="avatar" /></a>
 					<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
-				</li>
-				<li class="topic-info-date">
-					<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}" class="text-muted">
-						{date_format date=$oTopic->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
-					</time>
 				</li>
 				<li class="topic-info-favourite">
 					<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>

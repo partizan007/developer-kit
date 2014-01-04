@@ -80,7 +80,7 @@
 		});
 	</script>
 
-	<section class="panel panel-info block block-type-profile-actions">
+	<section class="panel panel-default block block-type-profile-actions">
 		<div class="panel-body">
 	
 			<div class="block-content">
@@ -101,7 +101,7 @@
 
 
 {if $oUserCurrent && $oUserCurrent->getId() != $oUserProfile->getId()}
-	<section class="panel panel-danger block block-type-profile-note">
+	<section class="panel panel-default block block-type-profile-note">
 		<div class="panel-body">
 		
 			{if $oUserNote}
