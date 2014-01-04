@@ -1,4 +1,4 @@
-<table class="table table-hover table-blogs">
+<table class="table table-blogs">
 	{if $bBlogsUseOrder}
 		<thead>
 			<tr>
