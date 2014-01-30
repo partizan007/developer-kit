@@ -197,7 +197,7 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .comment-preview { background-color: #f5f5f5; }
 
 /* Комментарий */
-.comment { padding: 25px 0 25px 58px; }
+.comment { padding: 25px 0 25px 63px; }
 .comment .comment-avatar { top: 25px; left: 0; height: 48px; width: 48px; }
 
 /* Типы комментариев
@@ -215,6 +215,7 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .ls-user-role-not-admin .comment.comment-deleted { padding: 10px 15px; background-color: #f5f5f5; border-top: none; }
 
 /* Info Block */
+.comment .comment-info li.comment-author a { font-weight: bold; }
 .comment .comment-info li.comment-author a.comment-topic-author { color: #468847; }
 .comment .comment-info li.comment-date a { color: #999; }
 .comment .comment-info li.goto-comment-parent,
