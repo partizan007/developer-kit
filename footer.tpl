@@ -63,7 +63,7 @@
 				<div class="col-sm-4 col-md-4 col-lg-2 col-lg-offset-2 copyright">
 					{hook run='copyright'}
 					<br />
-					Автор шаблона &mdash; <a href="http://pantheon.by/profile/vOFFka/">вOFFка</a>
+					Автор шаблона &mdash; <a href="http://voffka.the-hut.by/">вOFFка</a>
 				</div>
 				
 			</div>
