@@ -16,14 +16,20 @@ a.actions-delete { color: #b94a48; }
 #header .navbar .nav > li > a.new-messages:hover { color: #d75c57; }
 
 
+/*  ŒÕ“≈…Õ≈– */
+.container { padding-left: 30px; padding-right: 30px; }
+#wrapper.container { background-color: #fff; margin-bottom: 40px; margin-top: 40px; padding-top: 30px; padding-bottom: 30px; }
+
+
 /* Õ¿¬»√¿÷»ﬂ */
-#nav { background-color: #eee; }
+#nav { background-color: #fff; }
 
 
 /* ‘”“≈– */
-#footer { background-color: #eee; }
-#footer .footer-list-header { font-weight: bold; }
-#footer .footer-brand { display: block; margin-bottom: 20px; font-size: 24px; line-height: 1; }
+#footer { background-color: #222; color: #999; }
+#footer a { color: #999; font-size: 12px; }
+#footer .footer-list-header { font-weight: bold; color: #fff; }
+#footer .footer-brand { display: block; margin-bottom: 20px; font-size: 24px; line-height: 1; color: #fff; }
 #footer .copyright { font-size: 12px; }
 
 
