@@ -16,13 +16,35 @@ a.actions-delete { color: #b94a48; }
 #header .navbar .nav > li > a.new-messages:hover { color: #d75c57; }
 
 
-/*  ŒÕ“≈…Õ≈– */
-.container { padding-left: 30px; padding-right: 30px; }
-#wrapper.container { background-color: #fff; margin-bottom: 40px; margin-top: 40px; padding-top: 30px; padding-bottom: 30px; }
-
-
 /* Õ¿¬»√¿÷»ﬂ */
 #nav { background-color: #fff; }
+
+
+/*  ŒÕ“≈Õ“ */
+.content-inner.action-people,
+.content-inner.action-blogs,
+.content-inner.action-stream,
+.content-inner.action-profile,
+.content-inner.action-talk,
+.content-inner.action-settings,
+.content-inner.action-topic,
+.content-inner.action-question,
+.content-inner.action-link,
+.content-inner.action-photoset,
+.content-inner.action-comments,
+.content-inner.action-profile .comment-list,
+.profile-notes,
+.action-header,
+#comments.comments { background-color: #fff; padding: 25px; }
+
+.content-inner.action-profile.params-created,
+.content-inner.action-profile.params-favourites,
+.content-inner.action-talk.event-read,
+.content-inner.action-topic.event-saved { background-color: transparent; padding: 0; }
+
+.action-header { margin-bottom: 30px; }
+.action-header .nav-filter-wrapper { margin-bottom: 0 !important; }
+
 
 
 /* ‘”“≈– */
@@ -144,7 +166,8 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 
 /* “Œœ»  */
-.topic { margin-bottom: 40px; }
+.topic { background-color: #fff; margin-bottom: 30px; padding: 22px 25px 5px; }
+.topic-preview .topic { margin-bottom: 30px; padding: 0; }
 
 /* Header */
 .topic .topic-header .topic-title a { color: #333; }
@@ -200,6 +223,8 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 
 /*  ŒÃÃ≈Õ“¿–»» */
+.comments .comments-header h3 { margin-top: 0; }
+
 .comment-preview { background-color: #f5f5f5; }
 
 /*  ÓÏÏÂÌÚ‡ËÈ */
@@ -232,10 +257,12 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .comment .comment-actions li a.comment-repair { color: #468847; }
 
 /* ‘ÓÏ‡ ÍÓÏÏÂÌÚËÓ‚‡ÌËˇ */
-.reply { background-color: #f5f5f5; }
+.reply { background-color: #f5f5f5; margin-top: 20px;}
 
 
 /* ¡ÀŒ » */
+.block { box-shadow: none; margin-bottom: 30px; }
+
 .block .block-header h3 a { color: #333; }
 .block .block-header h3 a:hover { text-decoration: none; color: #555; }
 
@@ -308,3 +335,15 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 #notifier .n-box.n-notice { background: #063573; }
 #notifier .n-box.n-error { background: #850505; }
+
+
+/* œ¿√»Õ¿÷»ﬂ */
+.paging { background-color: #fff; padding: 0 25px; }
+.paging .pagination { margin-top: 15px; margin-bottom: 11px; }
+
+
+.content-inner.action-people .paging, 
+.content-inner.action-blogs .paging  { padding: 0; background-color: transparent; }
+
+.content-inner.action-people .paging .pagination, 
+.content-inner.action-blogs .paging .pagination  { margin-top: 20px; margin-bottom: 0; }

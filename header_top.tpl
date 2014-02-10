@@ -49,7 +49,9 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="{$oUserCurrent->getUserWebPath()}">{$aLang.user_menu_profile}</a></li>
-								<li><a href="{router page='talk'}" id="new_messages" title="{if $iUserCurrentCountTalkNew}{$aLang.user_privat_messages_new}{/if}">{$aLang.user_privat_messages}{if $iUserCurrentCountTalkNew} <span class="badge">{$iUserCurrentCountTalkNew}</span>{/if}</a></li>
+								<li><a href="{router page='talk'}" id="new_messages" title="{if $iUserCurrentCountTalkNew}{$aLang.user_privat_messages_new}{/if}">{$aLang.user_privat_messages}{if $iUserCurrentCountTalkNew} <span class="messages-count">+{$iUserCurrentCountTalkNew}</span>{/if}</a></li>
+								<li><a href="{$oUserCurrent->getUserWebPath()}wall/">{$aLang.user_menu_profile_wall}</a></li>
+								<li><a href="{$oUserCurrent->getUserWebPath()}created/topics/">{$aLang.user_menu_publication}</a></li>
 								<li><a href="{$oUserCurrent->getUserWebPath()}favourites/topics/">{$aLang.user_menu_profile_favourites}</a></li>
 								<li><a href="{router page='settings'}profile/">{$aLang.user_settings}</a></li>
 								{hook run='userbar_item'}

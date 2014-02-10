@@ -1,5 +1,8 @@
 {include file='header.tpl'}
-{include file='menu.talk.tpl'}
+
+<div class="action-header">
+	{include file='menu.talk.tpl'}
+</div>
 
 
 {assign var="oUser" value=$oTalk->getUser()}

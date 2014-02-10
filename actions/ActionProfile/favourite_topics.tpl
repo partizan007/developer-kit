@@ -1,8 +1,9 @@
 {include file='header.tpl' menu='people'}
 
-
-{include file='actions/ActionProfile/profile_top.tpl'}
-{include file='menu.profile_favourite.tpl'}
+<div class="action-header">
+	{include file='actions/ActionProfile/profile_top.tpl'}
+	{include file='menu.profile_favourite.tpl'}
+</div>
 
 {if $oUserCurrent and $oUserCurrent->getId()==$oUserProfile->getId()}
 	{$aBlockParams.user=$oUserProfile}

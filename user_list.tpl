@@ -42,8 +42,8 @@
 							{date_format date=$oSession->getDateLast() hours_back="12" minutes_back="60" now="60" day="day H:i" format="d.m.y, H:i"}
 						{/if}
 					</td>
-					<td class="text-info cell-skill"><small>{$oUserList->getSkill()}</small></td>
-					<td class="cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
+					<td class="small text-info cell-skill">{$oUserList->getSkill()}</td>
+					<td class="small cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}">{$oUserList->getRating()}</td>
 				</tr>
 			{/foreach}
 		{else}

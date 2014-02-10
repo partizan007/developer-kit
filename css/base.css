@@ -27,7 +27,7 @@ a.link-dotted:hover { text-decoration: none; }
 #nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
 #nav .btn-write { margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 
-#wrapper .nav-filter-wrapper { margin-bottom: 40px; }
+#wrapper .nav-filter-wrapper { margin-bottom: 30px; }
 
 
 /* Pagination */
@@ -85,8 +85,8 @@ body.light .site-info { margin-bottom: 40px; }
 
 #nav .container 				{ padding-top: 10px; padding-bottom: 10px; }
 #wrapper.container 				{ padding-top: 40px; padding-bottom: 40px; }
-#footer .container 				{ padding-top: 40px; padding-bottom: 40px; }
-#stat-performance .container 	{ padding-top: 40px; padding-bottom: 40px; }
+#footer .container 				{ padding-top: 60px; padding-bottom: 60px; }
+#stat-performance .container 	{ padding-top: 60px; padding-bottom: 60px; }
 
 
 
@@ -135,7 +135,9 @@ body.light .site-info { margin-bottom: 40px; }
 
 /* Поиск */
 .search-item { padding: 15px; margin-bottom: 20px; }
+#form-users-search.search-item .form-control { margin-bottom: 10px; }
 
+.search-abc { margin-bottom: 0; }
 .search-abc li { padding-left: 0 !important; }
 .search-abc li.active a { border: none; }
 
@@ -272,7 +274,6 @@ select, input[type="file"] { height: auto; }
 
 
 /* Table Blogs */
-.table.table-blogs { margin-bottom: 40px; }
 .table.table-blogs .cell-name .avatar { float: left; margin-right: 15px; }
 .table.table-blogs .cell-name p { overflow: hidden; margin-bottom: 5px; }
 .table.table-blogs .cell-name p .question-sign:hover { text-decoration: none; }
@@ -283,8 +284,6 @@ select, input[type="file"] { height: auto; }
 
 
 /* Table Users */
-.table.table-users { margin-bottom: 40px; }
-
 .table.table-users .cell-name .avatar { float: left; margin-right: 15px; }
 .table.table-users .cell-name .name { float: left; width: 120px; }
 
@@ -420,10 +419,8 @@ select, input[type="file"] { height: auto; }
 -------------------------------------------- */
 
 /* Блок с комментариями */
-.comments-header { margin-bottom: 20px; position: relative; }
+.comments-header { margin-bottom: 30px; position: relative; }
 .comments-header .subscribe { position: absolute; right: 0; top: -5px; }
-
-.comments { margin-bottom: 40px; }
 
 .comment-wrapper { position: relative; }
 .comment-wrapper .comment-wrapper { padding-left: 20px; }
@@ -456,11 +453,15 @@ select, input[type="file"] { height: auto; }
 
 
 /* Форма комментирования */
-.reply { margin-bottom: 20px; padding: 15px; }
+.reply { padding: 15px; }
 .reply textarea { height: 100px; }
 .reply textarea.loader { background: #f5f5f5 url(../images/loader.gif) no-repeat center; }
 
 .reply .mceEditor { display: block; margin-bottom: 10px; }
+
+
+/* Лента комментариев */
+.comment-path { margin-top: 20px; }
 
 
 
@@ -484,7 +485,6 @@ select, input[type="file"] { height: auto; }
 
 
 /* Block Type - Profile */
-.block.block-type-profile .panel-body { padding: 5px; }
 .block.block-type-profile .profile-photo-wrapper { position: relative; min-height: 50px; }
 .block.block-type-profile .profile-photo { max-width: 100%; vertical-align: top; }
 .block.block-type-profile .status { position: absolute; top: 5px; left: 5px; }

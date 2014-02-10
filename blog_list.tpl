@@ -72,8 +72,8 @@
 						</td>
 					{/if}
 
-					<td class="cell-readers" id="blog_user_count_{$oBlog->getId()}"><small>{$oBlog->getCountUser()}</small></td>
-					<td class="text-success cell-rating align-center"><small>{$oBlog->getRating()}</small></td>
+					<td class="small cell-readers" id="blog_user_count_{$oBlog->getId()}">{$oBlog->getCountUser()}</td>
+					<td class="small text-success cell-rating">{$oBlog->getRating()}</td>
 				</tr>
 			{/foreach}
 		{else}
