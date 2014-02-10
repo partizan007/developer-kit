@@ -541,7 +541,7 @@ select, input[type="file"] { height: auto; }
 	БЛОГ
 -------------------------------------------- */
 
-.blog { margin-bottom: 20px; overflow: hidden; }
+.blog { overflow: hidden; }
 
 
 /* Header */
