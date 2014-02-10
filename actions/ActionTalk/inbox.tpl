@@ -30,21 +30,19 @@
 					{assign var="oTalkUserAuthor" value=$oTalk->getTalkUser()}
 					<tr>
 						<td class="cell-checkbox"><input type="checkbox" name="talk_select[{$oTalk->getId()}]" class="form_talks_checkbox input-checkbox" /></td>
-						<td class="text-muted">
-							<small>
-								{strip}
-									{assign var="aTalkUserOther" value=[]}
-									{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
-										{if $oTalkUser->getUserId()!=$oUserCurrent->getId()}
-											{$aTalkUserOther[]=$oTalkUser}
-										{/if}
-									{/foreach}
-									{foreach from=$aTalkUserOther item=oTalkUser name=users}
-										{assign var="oUser" value=$oTalkUser->getUser()}
-										{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
-									{/foreach}
-								{/strip}
-							</small>
+						<td class="small text-muted">
+							{strip}
+								{assign var="aTalkUserOther" value=[]}
+								{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
+									{if $oTalkUser->getUserId()!=$oUserCurrent->getId()}
+										{$aTalkUserOther[]=$oTalkUser}
+									{/if}
+								{/foreach}
+								{foreach from=$aTalkUserOther item=oTalkUser name=users}
+									{assign var="oUser" value=$oTalkUser->getUser()}
+									{if !$smarty.foreach.users.first}, {/if}<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
+								{/foreach}
+							{/strip}
 						</td>
 						<td class="cell-favourite">
 							<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="muted favourite {if $oTalk->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>

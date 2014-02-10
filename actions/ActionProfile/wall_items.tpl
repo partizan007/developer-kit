@@ -6,26 +6,22 @@
 		<div class="comment">
 			<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(48)}" alt="{$oWallUser->getLogin()}" class="comment-avatar" /></a>
 			
-			<small>
-				<ul class="list-unstyled list-inline comment-info">
-					<li class="comment-author"><a href="{$oWallUser->getUserWebPath()}">{$oWallUser->getLogin()}</a></li>
-					<li class="text-muted comment-date"><time datetime="{date_format date=$oWall->getDateAdd() format='c'}">{date_format date=$oWall->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time></li>
-				</ul>
-			</small>
+			<ul class="list-unstyled list-inline small comment-info">
+				<li class="comment-author"><a href="{$oWallUser->getUserWebPath()}">{$oWallUser->getLogin()}</a></li>
+				<li class="text-muted comment-date"><time datetime="{date_format date=$oWall->getDateAdd() format='c'}">{date_format date=$oWall->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time></li>
+			</ul>
 
 			<div class="comment-content text">
 				{$oWall->getText()}
 			</div>
 			
 			{if $oUserCurrent and !$aReplyWall}
-				<small>
-					<ul class="list-unstyled list-inline comment-actions">
-						<li><a href="#" onclick="return ls.wall.toggleReply({$oWall->getId()});" class="link-dotted reply-link">{$aLang.wall_action_reply}</a></li>
-						{if $oWall->isAllowDelete()}
-							<li><a href="#" onclick="return ls.wall.remove({$oWall->getId()});" class="link-dotted comment-delete">{$aLang.wall_action_delete}</a></li>
-						{/if}
-					</ul>
-				</small>
+				<ul class="list-unstyled list-inline small comment-actions">
+					<li><a href="#" onclick="return ls.wall.toggleReply({$oWall->getId()});" class="link-dotted reply-link">{$aLang.wall_action_reply}</a></li>
+					{if $oWall->isAllowDelete()}
+						<li><a href="#" onclick="return ls.wall.remove({$oWall->getId()});" class="link-dotted comment-delete">{$aLang.wall_action_delete}</a></li>
+					{/if}
+				</ul>
 			{/if}
 		</div>
 		

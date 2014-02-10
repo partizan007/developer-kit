@@ -20,36 +20,32 @@
 	</div>
 
 	<footer class="topic-footer">
-		<small>
-			<ul class="text-muted list-unstyled list-inline topic-tags">
-				<li><span class="glyphicon glyphicon-tags"></span></li>
-				{strip}
-					{if $oTopic->getTagsArray()}
-						{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
-							<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
-						{/foreach}
-					{else}
-						<li>{$aLang.topic_tags_empty}</li>
-					{/if}
-				{/strip}
-			</ul>
-		</small>
+		<ul class="small text-muted list-unstyled list-inline topic-tags">
+			<li><span class="glyphicon glyphicon-tags"></span></li>
+			{strip}
+				{if $oTopic->getTagsArray()}
+					{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
+						<li>{if !$smarty.foreach.tags_list.first}, {/if}<a rel="tag" href="{router page='tag'}{$sTag|escape:'url'}/">{$sTag|escape:'html'}</a></li>
+					{/foreach}
+				{else}
+					<li>{$aLang.topic_tags_empty}</li>
+				{/if}
+			{/strip}
+		</ul>
 
-		<small>
-			<ul class="list-unstyled list-inline topic-info">
-				<li class="topic-info-author">
-					<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
-					<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
-				</li>
-				<li class="topic-info-date">
-					<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" pubdate title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}" class="text-muted">
-						{date_format date=$oTopic->getDateAdd() format="j F Y, H:i"}
-					</time>
-				</li>
-				
-				{hook run='topic_preview_show_info' topic=$oTopic}
-			</ul>
-		</small>
+		<ul class="list-unstyled list-inline small topic-info">
+			<li class="topic-info-author">
+				<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
+				<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+			</li>
+			<li class="topic-info-date">
+				<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" pubdate title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}" class="text-muted">
+					{date_format date=$oTopic->getDateAdd() format="j F Y, H:i"}
+				</time>
+			</li>
+			
+			{hook run='topic_preview_show_info' topic=$oTopic}
+		</ul>
 
 		{hook run='topic_preview_show_end' topic=$oTopic}
 	</footer>

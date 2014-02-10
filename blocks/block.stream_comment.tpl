@@ -7,11 +7,9 @@
 		<li class="js-title-comment" title="{$oComment->getText()|strip_tags|trim|truncate:100:'...'|escape:'html'}">
 			<p>
 				<a href="{$oUser->getUserWebPath()}" class="author">{$oUser->getLogin()}</a>
-				<small>
-					<time datetime="{date_format date=$oComment->getDate() format='c'}" class="text-muted">
-						 · {date_format date=$oComment->getDate() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
-					</time>
-				</small>
+				<time datetime="{date_format date=$oComment->getDate() format='c'}" class="small text-muted">
+					 · {date_format date=$oComment->getDate() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
+				</time>
 			</p>
 			<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}{$oTopic->getUrl()}#comment{/if}{$oComment->getId()}" class="stream-topic">{$oTopic->getTitle()|escape:'html'}</a>
 			<small class="text-danger">{$oTopic->getCountComment()}</small>
@@ -19,8 +17,6 @@
 	{/foreach}
 </ul>
 
-<footer>
-	<small class="text-muted">
-		<a href="{router page='comments'}">{$aLang.block_stream_comments_all}</a> · <a href="{router page='rss'}allcomments/">RSS</a>
-	</small>
+<footer class="small text-muted">
+	<a href="{router page='comments'}">{$aLang.block_stream_comments_all}</a> · <a href="{router page='rss'}allcomments/">RSS</a>
 </footer>
