@@ -14,12 +14,8 @@
 	<footer id="footer">
 		<div class="container">
 			<div class="row">
-			
-				<div class="col-sm-4 col-lg-2">
-					<a class="footer-brand" href="{cfg name='path.root.web'}">{cfg name='view.name'}</a>
-				</div>
-			
-				<div class="col-sm-4 col-md-4 col-lg-2">
+				
+				<div class="col-sm-4 col-md-4 col-lg-3">
 					{if $oUserCurrent}
 						<ul class="list-unstyled footer-list">
 							<li class="footer-list-header word-wrap">{$oUserCurrent->getLogin()}</li>
@@ -39,7 +35,7 @@
 					{/if}
 				</div>
 			
-				<div class="col-sm-4 col-md-4 col-lg-2">
+				<div class="col-sm-4 col-md-4 col-lg-3">
 					<ul class="list-unstyled footer-list">
 						<li class="footer-list-header">{$aLang.footer_menu_navigate_title}</li>
 						<li><a href="{cfg name='path.root.web'}">{$aLang.topic_title}</a></li>
@@ -50,7 +46,7 @@
 					</ul>
 				</div>
 			
-				<div class="col-sm-4 col-md-4 col-lg-2">
+				<div class="col-sm-4 col-md-4 col-lg-3">
 					<ul class="list-unstyled footer-list">
 						<li class="footer-list-header">{$aLang.footer_menu_navigate_info}</li>
 						<li><a href="#">{$aLang.footer_menu_project_about}</a></li>
@@ -61,14 +57,15 @@
 					</ul>
 				</div>
 				
-				<div class="col-sm-4 col-md-4 col-lg-2 col-lg-offset-2 copyright">
-					{hook run='copyright'}
-					<br />
-					Автор шаблона &mdash; <a href="http://voffka.the-hut.by/">вOFFка</a>
-				</div>
-				
 			</div>
 			{hook run='footer_end'}
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				{hook run='copyright'}, 
+				Автор шаблона &mdash; <a href="http://voffka.the-hut.by/">вOFFка</a>
+			</div>
 		</div>
 	</footer>
 

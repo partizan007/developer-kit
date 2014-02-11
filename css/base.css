@@ -30,10 +30,6 @@ a.link-dotted:hover { text-decoration: none; }
 #wrapper .nav-filter-wrapper { margin-bottom: 30px; }
 
 
-/* Pagination */
-.pagination.pages { margin-right: 40px; }
-
-
 /* Stat */
 #stat-performance table td { width: 200px; vertical-align: top; }
 
@@ -85,7 +81,7 @@ body.light .site-info { margin-bottom: 40px; }
 
 #nav .container 				{ padding-top: 10px; padding-bottom: 10px; }
 #wrapper.container 				{ padding-top: 40px; padding-bottom: 40px; }
-#footer .container 				{ padding-top: 60px; padding-bottom: 60px; }
+#footer .container 				{ padding-top: 40px; padding-bottom: 40px; }
 #stat-performance .container 	{ padding-top: 60px; padding-bottom: 60px; }
 
 
@@ -361,7 +357,7 @@ select, input[type="file"] { height: auto; }
 
 
 /* Info */
-.topic .topic-footer .topic-info { padding-top: 10px; }
+.topic .topic-footer .topic-info { padding-top: 15px; }
 .topic .topic-footer .topic-info li:last-child { padding-right: 0; }
 .topic .topic-footer .topic-info li.topic-info-author a img { margin-right: 2px; width: 16px; height: 16px; vertical-align: top; }
 .topic .topic-footer .topic-info li.topic-info-share a:hover { text-decoration: none; }

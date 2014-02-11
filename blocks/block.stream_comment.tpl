@@ -5,9 +5,9 @@
 		{assign var="oBlog" value=$oTopic->getBlog()}
 		
 		<li class="js-title-comment" title="{$oComment->getText()|strip_tags|trim|truncate:100:'...'|escape:'html'}">
-			<p>
+			<p class="small">
 				<a href="{$oUser->getUserWebPath()}" class="author">{$oUser->getLogin()}</a>
-				<time datetime="{date_format date=$oComment->getDate() format='c'}" class="small text-muted">
+				<time datetime="{date_format date=$oComment->getDate() format='c'}" class="text-muted">
 					 · {date_format date=$oComment->getDate() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
 				</time>
 			</p>

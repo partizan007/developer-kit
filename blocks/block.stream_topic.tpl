@@ -4,9 +4,9 @@
 		{assign var="oBlog" value=$oTopic->getBlog()}
 		
 		<li class="text-muted js-title-topic" title="{$oTopic->getText()|strip_tags|trim|truncate:150:'...'|escape:'html'}">
-			<p>
+			<p class="small">
 				<a href="{$oUser->getUserWebPath()}" class="author">{$oUser->getLogin()}</a>
-				<time datetime="{date_format date=$oTopic->getDate() format='c'}" class="small">
+				<time datetime="{date_format date=$oTopic->getDate() format='c'}">
 					 · {date_format date=$oTopic->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
 				</time>
 			</p>
