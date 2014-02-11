@@ -142,7 +142,7 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 
 /* ПОИСК */
-.search-item { background-color: #f5f5f5; }
+.search-item { background-color: #eee; }
 
 .search-abc li.active a { color: #333; border: none; }
 
@@ -253,8 +253,8 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .comment-preview { background-color: #f5f5f5; }
 
 /* Комментарий */
-.comment { padding: 25px 0 25px 63px; }
-.comment .comment-avatar { top: 25px; left: 0; height: 48px; width: 48px; }
+.comment { padding: 20px 20px 20px 60px; }
+.comment .comment-avatar { border: 5px solid #fff; height: 64px; left: -15px; top: 12px; width: 64px; }
 
 /* Типы комментариев
  * deleted 	- 	удаленный комментарий
@@ -262,7 +262,7 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
  * new 		- 	новый, непрочитанный комментарий
  * current 	- 	активный комментарий, который выделяется при исползование кнопки обновления в тулбаре
  */
-.comment { border-top: 1px solid #eeeeee; }
+.comment { background-color: #efefef; margin-bottom: 25px; margin-left: 10px; }
 .comment.comment-deleted .comment-content { background-color: #ffd3d3; padding: 10px; }
 .comment.comment-self .comment-content { background-color: #def2df; padding: 10px; }
 .comment.comment-new .comment-content { background-color: #d5e4f1; padding: 10px; }
@@ -271,8 +271,8 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .ls-user-role-not-admin .comment.comment-deleted { padding: 10px 15px; background-color: #f5f5f5; border-top: none; }
 
 /* Info Block */
-.comment .comment-info li.comment-author a { font-weight: bold; }
-.comment .comment-info li.comment-author a.comment-topic-author { color: #468847; }
+.comment .comment-info li.comment-author a { font-weight: bold; color: #252525; }
+.comment .comment-info li.comment-author a.comment-topic-author { color: #cb0009; }
 .comment .comment-info li.comment-date a { color: #adadad; }
 .comment .comment-info li.goto-comment-parent,
 .comment .comment-info li.goto-comment-child { font-size: 13px; line-height: 1.1; }
@@ -282,7 +282,12 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .comment .comment-actions li a.comment-repair { color: #468847; }
 
 /* Форма комментирования */
+.reply-header a { color: #cb0009; }
 .reply { background-color: #f5f5f5; margin-top: 20px;}
+
+/* Стена */
+#wall-container .comment-wrapper .comment-wrapper { padding-left: 30px; }
+#wall-container .comment-wrapper .comment-wrapper .btn-block { margin-bottom: 10px; }
 
 
 /* БЛОКИ */
@@ -332,10 +337,10 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 
 /* СТЕНА */
-.wall-submit { background-color: #f5f5f5; }
+.wall-submit { background-color: #eee; }
 .wall-submit .counter { color: #adadad; }
 
-.wall-submit.wall-submit-reply { background: #f5f5f5; }
+.wall-submit.wall-submit-reply { background: #eee; }
 
 
 /* ВСПЛЫВАЮЩИЕ ПОДСКАЗКИ */
