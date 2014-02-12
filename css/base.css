@@ -24,7 +24,7 @@ a.link-dotted:hover { text-decoration: none; }
 
 
 /* Навигация */
-#nav .navbar-search { margin-top: 2px; margin-bottom: 2px; }
+#nav .navbar-search { margin-top: 3px; margin-bottom: 3px; }
 #nav .btn-write { margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
 
 #wrapper .nav-filter-wrapper { margin-bottom: 30px; }
@@ -271,12 +271,10 @@ select, input[type="file"] { height: auto; }
 
 /* Table Blogs */
 .table.table-blogs .cell-name .avatar { float: left; margin-right: 15px; }
-.table.table-blogs .cell-name p { overflow: hidden; margin-bottom: 5px; }
-.table.table-blogs .cell-name p .question-sign:hover { text-decoration: none; }
 
 .table.table-blogs .cell-join { width: 130px; text-align: center; vertical-align: middle; }
-.table.table-blogs .cell-readers,
-.table.table-blogs .cell-rating { width: 72px; text-align: center; vertical-align: middle; }
+.table.table-blogs .cell-readers { width: 86px; text-align: center; vertical-align: middle; }
+.table.table-blogs .cell-rating { width: 71px; text-align: center; vertical-align: middle; }
 
 
 /* Table Users */
@@ -563,7 +561,7 @@ select, input[type="file"] { height: auto; }
 .blog-info dt { text-align: left; font-weight: normal; }
 .blog-info dd { margin-left: 160px; border-bottom: 1px solid transparent; }
 
-.user-avatar img { margin-right: 1px; width: 16px; height: 16px; vertical-align: text-top; }
+.user-avatar img { margin-right: 1px; width: 16px; height: 16px; vertical-align: text-bottom; }
 
 
 

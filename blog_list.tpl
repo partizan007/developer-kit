@@ -40,20 +40,15 @@
 							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" class="avatar visible-lg" />
 						</a>
 						
-						<p>
+						<h4>
 							<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a>
 
 							{if $oBlog->getType() == 'close'}
 								<span title="{$aLang.blog_closed}" class="glyphicon glyphicon-lock text-muted"></span>
 							{/if}
-
-							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="question-sign"><span class="glyphicon glyphicon-question-sign text-muted"></i></span></a>
-						</p>
+						</h4>
 						
-						<span class="user-avatar">
-							<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" /></a>
-							<a href="{$oUserOwner->getUserWebPath()}" class="small">{$oUserOwner->getLogin()}</a>
-						</span>
+						<p class="blog-description">{$oBlog->getDescription()|strip_tags|trim|truncate:150:'...'|escape:'html'}</p>
 					</td>
 
 					{if $oUserCurrent}
