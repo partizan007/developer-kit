@@ -32,7 +32,7 @@
 					</li>
 					<li class="write-item-type-draft">
 						<a href="{router page='topic'}saved/" class="write-item-image"></a>
-						<a href="{router page='topic'}saved/" class="write-item-link">{$aLang.topic_menu_saved} {if $iUserCurrentCountTopicDraft}({$iUserCurrentCountTopicDraft}){/if}</a>
+						<a href="{router page='topic'}saved/" class="write-item-link">{$aLang.topic_menu_saved}{if $iUserCurrentCountTopicDraft} ({$iUserCurrentCountTopicDraft}){/if}</a>
 					</li>
 					{hook run='write_item' isPopup=true}
 				</ul>

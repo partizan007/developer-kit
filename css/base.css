@@ -331,7 +331,7 @@ select, input[type="file"] { height: auto; }
 .topic .topic-header { margin-bottom: 20px; }
 .topic .topic-header .topic-title { margin-top: 0; }
 
-.topic .topic-header .topic-title span { cursor: help; vertical-align: text-top; }
+.topic .topic-header .topic-title span { cursor: help; vertical-align: top; }
 
 .topic .topic-header .topic-info .topic-blog { margin-right: 10px; }
 .topic .topic-header .topic-info time { margin-right: 10px; }
@@ -387,7 +387,7 @@ select, input[type="file"] { height: auto; }
 
 .topic-photo-upload { padding: 15px; margin-bottom: 20px; }
 .topic-photo-upload ul { overflow: hidden; zoom: 1; }
-.topic-photo-upload ul li { min-height: 100px; _height: 100px; margin-bottom: 10px; padding-left: 110px; position: relative; }
+.topic-photo-upload ul li { line-height: 1; margin-bottom: 20px; min-height: 100px; padding-left: 110px; position: relative; }
 .topic-photo-upload ul li img { position: absolute; top: 0; left: 0; }
 .topic-photo-upload ul li .image-delete { margin-right: 10px; }
 .topic-photo-upload ul li .mark-as-preview { display: none; }
@@ -395,6 +395,8 @@ select, input[type="file"] { height: auto; }
 .topic-photo-upload .topic-photo-upload-rules  { margin-bottom: 20px; }
 
 .topic-photo-upload ul li textarea { display: block; width: 100%; vertical-align: middle; }
+.topic-photo-upload ul li .image-delete { color: #ff4136; }
+.topic-photo-upload ul li .mark-as-preview { color: #16b76f; }
 
 
 /* Topic Talk */
