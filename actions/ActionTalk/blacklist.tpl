@@ -2,7 +2,7 @@
 {include file='menu.talk.tpl'}
 
 
-<section class="panel panel-default block">
+<section class="panel panel-default block block-type-blacklist">
 	<div class="panel-body">
 	
 		<header class="block-header">

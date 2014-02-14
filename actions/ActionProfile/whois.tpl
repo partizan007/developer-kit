@@ -206,7 +206,7 @@
 
 
 {if $aUsersFriend}
-	<h4><a href="{$oUserProfile->getUserWebPath()}friends/">{$aLang.profile_friends}</a> <span class="text-muted">({$iCountFriendsUser})<span></h4>
+	<h4><a href="{$oUserProfile->getUserWebPath()}friends/" class="user-friends">{$aLang.profile_friends}</a> <span class="text-muted">({$iCountFriendsUser})<span></h4>
 	
 	{include file='user_list_avatar.tpl' aUsersList=$aUsersFriend}
 {/if}

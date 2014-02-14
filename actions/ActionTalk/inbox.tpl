@@ -14,7 +14,7 @@
 		<button type="submit" onclick="if (confirm('{$aLang.talk_inbox_delete_confirm}')){ ls.talk.removeTalks() };" class="btn btn-default">{$aLang.talk_inbox_delete}</button>
 		<br /><br />
 		
-		<table class="table table-hover table-talk">
+		<table class="table table-talk">
 			<thead>
 				<tr>
 					<th class="cell-checkbox"><input type="checkbox" name="" class="input-checkbox" onclick="ls.tools.checkAll('form_talks_checkbox', this, true);"></th>
@@ -66,8 +66,9 @@
 							{else}
 								<span class="text-danger">&larr;</span>
 							{/if}
+							<p class="small text-muted">{$oTalk->getTextLast()|strip_tags|truncate:200:'...'|escape:'html'}</p>
 						</td>
-						<td class="text-muted cell-date ta-r"><small>{date_format date=$oTalk->getDate() format="j F Y, H:i"}</small></td>
+						<td class="small text-muted cell-date ta-r">{date_format date=$oTalk->getDate() format="j F Y, H:i"}</td>
 					</tr>
 				{/foreach}
 			</tbody>

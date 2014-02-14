@@ -13,7 +13,7 @@
 				<tr>
 					<td class="cell-username"><a href="{$oNote->getTargetUser()->getUserWebPath()}" class="user">{$oNote->getTargetUser()->getLogin()}</a></td>
 					<td class="cell-note">{$oNote->getText()}</td>
-					<td class="text-muted cell-date">{date_format date=$oNote->getDateAdd() format="j F Y"}</td>
+					<td class="small text-muted cell-date">{date_format date=$oNote->getDateAdd() format="j F Y"}</td>
 				</tr>
 			{/foreach}
 		</table>

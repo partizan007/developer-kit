@@ -3,7 +3,7 @@
 
 
 {if $aTalks}
-	<table class="table table-hover table-talk">
+	<table class="table table-talk">
 		<thead>
 			<tr>
 				<th class="cell-recipients"><small>{$aLang.talk_inbox_target}</small></th>
@@ -44,8 +44,9 @@
 					{if $oTalk->getCountComment()}
 						<span class="text-muted">({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()}<span class="text-info">+{$oTalkUserAuthor->getCommentCountNew()}</span>{/if})</span>
 					{/if}
+					<p class="small text-muted">{$oTalk->getTextLast()|strip_tags|truncate:200:'...'|escape:'html'}</p>
 				</td>
-				<td class="text-muted cell-date ta-r"><small>{date_format date=$oTalk->getDate()}</small></td>
+				<td class="small text-muted cell-date ta-r">{date_format date=$oTalk->getDate()}</td>
 			</tr>
 		{/foreach}
 		</tbody>

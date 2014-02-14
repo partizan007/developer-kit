@@ -457,7 +457,7 @@ select, input[type="file"] { height: auto; }
 
 
 /* Лента комментариев */
-.comment-path { margin-top: 20px; }
+.comment-path { margin-top: 20px; padding: 5px 0; }
 
 
 
@@ -481,10 +481,10 @@ select, input[type="file"] { height: auto; }
 
 
 /* Block Type - Profile */
-.block.block-type-profile .profile-photo-wrapper { position: relative; min-height: 50px; }
+.block.block-type-profile .profile-photo-wrapper { position: relative; min-height: 50px; margin: 0 auto; max-width: 250px; }
 .block.block-type-profile .profile-photo { max-width: 100%; vertical-align: top; }
 .block.block-type-profile .status { position: absolute; top: 5px; left: 5px; }
-.block.block-type-profile .upload-photo { padding: 7px 10px 10px; margin: 0 auto; }
+.block.block-type-profile .upload-photo { padding: 7px 10px 10px; margin: 0 auto; max-width: 250px; }
 
 .block.block-type-profile-note .actions { margin-bottom: 0; }
 
@@ -492,11 +492,11 @@ select, input[type="file"] { height: auto; }
 .block.block-type-profile-actions ul li { margin-bottom: 5px; }
 .block.block-type-profile-actions ul li:last-child { margin-bottom: 0; }
 
-.block.block-type-profile-nav { margin-bottom: 20px; }
-
 
 /* Block Type - Foldable */
 .block.block-type-foldable .block-content { display: none; margin-top: 10px; padding-top: 10px; }
+
+.block.block-type-blacklist ul { list-style: none outside none; padding-left: 0; }
 
 
 

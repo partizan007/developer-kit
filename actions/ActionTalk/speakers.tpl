@@ -1,5 +1,5 @@
 <div class="talk-search talk-recipients">
-	<header class="talk-recipients-header">
+	<header class="small talk-recipients-header">
 		{$aLang.talk_speaker_title}:
 		
 		{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}

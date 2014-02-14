@@ -26,12 +26,16 @@ a:focus { text-decoration: none; }
 a { transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
 
 a.actions-edit { color: #16b76f; }
-a.actions-delete { color: #ff4136; }
+a.actions-delete,
+a.delete { color: #ff4136; }
 
 a.stream-topic { color: #252525; }
 a.blog-top { color: #252525; font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: bold; }
 a.read-more { color: #868686 !important; font-size: 13px; text-decoration: none !important; }
 a.read-more:hover { color: #ff4136; }
+
+.table.table-talk a.user { color: #252525; font-weight: bold; }
+.table.table-talk a.user.inactive { color: #adadad; }
 
 
 /* ÿ¿œ ¿ —¿…“¿ */
@@ -63,7 +67,8 @@ a.read-more:hover { color: #ff4136; }
 .content-inner.action-blog.params-users,
 .profile-notes,
 .action-header,
-#comments.comments { background-color: #fff; padding: 25px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02); }
+#comments.comments,
+.content-inner.action-admin { background-color: #fff; padding: 25px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02); }
 
 .content-inner.action-profile.params-created,
 .content-inner.action-profile.params-favourites,
@@ -77,7 +82,7 @@ a.read-more:hover { color: #ff4136; }
 /* ‘”“≈– */
 #footer { background-color: #111; color: #919191; }
 #footer a { color: #919191; font-size: 12px; }
-#footer .footer-list-header { font-weight: bold; color: #fff; }
+#footer .footer-list-header { border-bottom: 1px dotted #252525; color: #fff; font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: bold; margin-bottom: 5px; padding-bottom: 3px; }
 
 #footer .footer-bottom { background-color: #080808; font-size: 12px; }
 #footer .footer-bottom .container { padding-bottom: 20px; padding-top: 20px; }
@@ -109,6 +114,9 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .text h4 { font-size: 24px; }
 .text h5 { font-size: 20px; }
 .text h6 { font-size: 16px; }
+
+a.user-friends { color: #252525; }
+a.user-friends:hover { color: #ff4136; text-decoration: none; }
 
 
 /* √ŒÀŒ—Œ¬¿Õ»≈ */
@@ -176,7 +184,8 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 /* –¿«ÕŒ≈ */
 .wrapper-content { background-color: #f4f3ec; }
-.wrapper-content.wrapper-content-dark { background-color: #f0f0f0; }
+.wrapper-content.wrapper-content-dark { background-color: rgba(0, 0, 0, 0.02); }
+.form-profile { background-color: #f4f3ec; }
 
 .page-header h1 { font-weight: 300; }
 
@@ -258,9 +267,11 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+#form-topic-add .checkbox { margin-bottom: 20px; }
+
 /* Topic Talk */
-.topic.topic-type-talk .talk-recipients { background-color: #f5f5f5; }
-.talk-search .talk-search-content { border-top: 1px solid #eee; }
+.topic.topic-type-talk .talk-recipients { background-color: #f4f3ec; }
+.talk-search .talk-search-content { border-top: 1px dotted #cdcdcd; }
 
 
 /*  ŒÃÃ≈Õ“¿–»» */
@@ -303,6 +314,14 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 .reply-header a { color: #ff4136; }
 .reply { background-color: #f4f3ec; margin-top: 25px; margin-bottom: 25px; }
 
+/* ÀÂÌÚ‡ ÍÓÏÏÂÌÚ‡ËÂ‚ */
+.comments.comment-list { margin-bottom: 30px; }
+.comment-path { margin-top: 20px; padding: 5px 0; }
+.comment-path .blog-name { color: #ff4136; }
+.comment-path .comment-path-topic { color: #252525; }
+.comment-path .comment-path-comments { color: #16b76f; }
+
+
 /* —ÚÂÌ‡ */
 #wall-container .comment-wrapper .comment-wrapper { padding-left: 30px; }
 #wall-container .comment-wrapper .comment-wrapper .btn-block { margin-bottom: 10px; }
@@ -324,9 +343,15 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 /* Block Type - Profile */
 .block.block-type-profile .upload-photo { background-color: #eee; }
+.block.block-type-profile-nav a { background-color: #f7f7f7; }
+.block.block-type-profile-note { background-color: #eaf5ff; border-color: #cbe6ff; }
 
 /* Block Type - Foldable */
-.block.block-type-foldable .block-content { border-top: 1px solid #eee; }
+.block.block-type-foldable { background-color: #f4f3ec; box-shadow: none; }
+.block.block-type-foldable .block-content { border-top: 1px dotted #cdcdcd; }
+.block.block-type-foldable .block-content .form-control[readonly] { cursor: text; }
+
+.block.block-type-blacklist { background-color: #f4f3ec; box-shadow: none; }
 
 
 /* ÃŒƒ¿À‹Õ€≈ Œ Õ¿ */
@@ -362,10 +387,10 @@ body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
 
 
 /* —“≈Õ¿ */
-.wall-submit { background-color: #eee; }
+.wall-submit { background-color: #f4f3ec; }
 .wall-submit .counter { color: #adadad; }
 
-.wall-submit.wall-submit-reply { background: #eee; }
+.wall-submit.wall-submit-reply { background: #f4f3ec; }
 
 
 /* ¬—œÀ€¬¿ﬁŸ»≈ œŒƒ— ¿« » */
