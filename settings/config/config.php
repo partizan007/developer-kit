@@ -30,6 +30,8 @@ $config['head']['default']['css'] = array(
 	
 	/* Theme */
 	"___path.static.skin___/themes/___view.theme___/style.css",
+	/* Themer Icons */
+	"___path.static.skin___/themes/___view.theme___/icons/css/fontello.css",
 );
 
 

@@ -87,6 +87,20 @@
 		<script src="{cfg name="path.static.skin"}/js/html5shiv.js"></script>
 		<script src="{cfg name="path.static.skin"}/js/respond.min.js"></script>
 	<![endif]-->
+	
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="{cfg name="path.static.skin"}/themes/default/icons/css/fontello-ie7.css">
+	<![endif]-->
+	<script>
+		function toggleCodes(on) {
+			var obj = document.getElementById('icons');
+			if (on) {
+				obj.className += ' codesOn';
+			} else {
+				obj.className = obj.className.replace(' codesOn', '');
+			}
+		}
+	</script>
 </head>
 
 

@@ -63,8 +63,22 @@
 		
 		<div class="footer-bottom">
 			<div class="container">
-				{hook run='copyright'}, 
-				Автор шаблона &mdash; <a href="http://voffka.the-hut.by/">вOFFка</a>
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						{hook run='copyright'}, 
+						Автор шаблона &mdash; <a href="http://voffka.the-hut.by/">вOFFка</a>
+					</div>
+					
+					<div class="col-sm-6 col-md-6 col-lg-6 text-right social-icons">
+						<a href="#"><span class="icon-facebook"></span></a>
+						<a href="#"><span class="icon-gplus"></span></a>
+						<a href="#"><span class="icon-twitter"></span></a>
+						<a href="#"><span class="icon-vkontakte"></span></a>
+						<a href="#"><span class="icon-youtube-play"></span></a>
+						<a href="#"><span class="icon-yandex"></span></a>
+						<a href="#"><span class="icon-odnoklassniki"></span></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</footer>

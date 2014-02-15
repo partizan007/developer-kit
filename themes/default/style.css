@@ -101,10 +101,9 @@ a.read-more:hover { color: #ff4136; }
 
 
 /* LIGHT PAGES */
-body.light { background-color: #eee; }
-body.light .site-info .site-name a { color: #333; }
-body.light .site-info .site-name a:hover { color: #777; text-decoration: none; }
-.light-form { background-color: #fff; border-radius: 5px; }
+body.light .site-info .site-name a { color: #252525; }
+body.light .site-info .site-name a:hover { color: #ff4136; text-decoration: none; }
+.light-form { background-color: #fff; }
 
 
 /* MISC */
