@@ -384,6 +384,7 @@ select, input[type="file"] { height: auto; }
 .topic.topic-type-photoset .topic-photo-preview .topic-photo-desc { display: none; width: 100%; padding: 7px 2%; position: absolute; bottom: 0; left: 0; line-height: 16px; }
 
 .topic.topic-type-photoset .topic-photo-images { padding-top: 10px; margin-bottom: 10px; }
+.topic.topic-type-photoset .topic-photo-images ul { margin-left: 0; }
 .topic.topic-type-photoset .topic-photo-images ul li { float: left; margin: 0 9px 9px 0; padding: 0; position: relative; }
 
 .topic-photo-upload { padding: 15px; margin-bottom: 20px; }
