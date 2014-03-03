@@ -310,6 +310,7 @@ a.user-friends:hover { color: #ff4136; text-decoration: none; }
 .comment .comment-actions li a.comment-repair { color: #16b76f; }
 
 /* Форма комментирования */
+.reply-header { margin-bottom: 25px; }
 .reply-header a { color: #ff4136; }
 .reply { background-color: #f4f3ec; margin-top: 25px; margin-bottom: 25px; }
 
@@ -347,6 +348,7 @@ a.user-friends:hover { color: #ff4136; text-decoration: none; }
 
 /* Block Type - Foldable */
 .block.block-type-foldable { background-color: #f4f3ec; box-shadow: none; }
+.block.block-type-foldable.block-type-favourite-topic { background-color: #fff; }
 .block.block-type-foldable .block-content { border-top: 1px dotted #cdcdcd; }
 .block.block-type-foldable .block-content .form-control[readonly] { cursor: text; }
 
