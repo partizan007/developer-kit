@@ -49,31 +49,31 @@ a.read-more:hover { color: #ff4136; }
 
 
 /* สฮอาลอา */
-.content-inner.action-people,
-.content-inner.action-blogs,
-.content-inner.action-stream,
-.content-inner.action-profile,
-.content-inner.action-talk,
-.content-inner.action-settings,
-.content-inner.action-topic,
-.content-inner.action-question,
-.content-inner.action-link,
-.content-inner.action-photoset,
-.content-inner.action-comments,
-.content-inner.action-profile .comment-list,
-.content-inner.action-blog.event-edit,
-.content-inner.action-blog.event-admin,
-.content-inner.action-blog.event-add,
-.content-inner.action-blog.params-users,
+.action-people .content-inner,
+.action-blogs .content-inner,
+.action-stream .content-inner,
+.action-profile .content-inner,
+.action-talk .content-inner,
+.action-settings .content-inner,
+.action-topic .content-inner,
+.action-question .content-inner,
+.action-link .content-inner,
+.action-photoset .content-inner,
+.action-comments .content-inner,
+.action-profile .content-inner .comment-list,
+.action-blog.event-edit .content-inner,
+.action-blog.event-admin .content-inner,
+.action-blog.event-add .content-inner,
+.action-blog.params-users .content-inner,
+.action-admin .content-inner,
 .profile-notes,
 .action-header,
-#comments.comments,
-.content-inner.action-admin { background-color: #fff; padding: 25px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02); }
+#comments.comments { background-color: #fff; padding: 25px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02); }
 
-.content-inner.action-profile.params-created,
-.content-inner.action-profile.params-favourites,
-.content-inner.action-talk.event-read,
-.content-inner.action-topic.event-saved { background-color: transparent; padding: 0; box-shadow: none; }
+.action-profile.params-created .content-inner,
+.action-profile.params-favourites .content-inner,
+.action-talk.event-read .content-inner,
+.action-topic.event-saved .content-inner { background-color: transparent; padding: 0; box-shadow: none; }
 
 .action-header { margin-bottom: 30px; }
 .action-header .nav-filter-wrapper { margin-bottom: 0 !important; }

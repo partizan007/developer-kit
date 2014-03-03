@@ -123,7 +123,7 @@
 {add_block group='toolbar' name='toolbar_scrollup.tpl' priority=-100}
 
 
-<body class="{$body_classes}">
+<body class="{$body_classes} action-{$sAction}{if $sEvent} event-{$sEvent}{/if}{if $aParams[0]} params-{$aParams[0]}{/if}">
 	{hook run='body_begin'}
 		
 	{if $oUserCurrent}
@@ -149,7 +149,7 @@
 					class="{if $noSidebar}col-md-12 col-lg-12{else}col-md-8 col-lg-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
 					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 					
-					<div class="content-inner action-{$sAction}{if $sEvent} event-{$sEvent}{/if}{if $aParams[0]} params-{$aParams[0]}{/if}">
+					<div class="content-inner">
 						{include file='nav_content.tpl'}
 						{include file='system_message.tpl'}
 						
