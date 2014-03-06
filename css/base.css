@@ -447,7 +447,7 @@ select, input[type="file"] { height: auto; }
 
 
 /* Actions */
-.comment .comment-actions { margin-top: 10px; }
+.comment .comment-actions { margin-top: 10px; margin-bottom: 0; }
 
 
 /* Форма комментирования */
