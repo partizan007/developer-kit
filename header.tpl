@@ -137,6 +137,8 @@
 	{include file='header_top.tpl'}
 	{include file='nav.tpl'}
 	
+	{hook run='content_top'}
+	
 	<section id="container" class="{hook run='container_class'}">
 		<div id="wrapper" class="container {hook run='wrapper_class'}">
 			<div class="row">

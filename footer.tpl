@@ -9,6 +9,9 @@
 			</div> <!-- /row -->
 		</div> <!-- /wrapper -->
 	</section> <!-- /container -->
+	
+	
+	{include file='blocks.tpl' group='content-bottom'}
 
 
 	<footer id="footer">
