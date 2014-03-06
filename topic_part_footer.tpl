@@ -56,7 +56,7 @@
 				<li class="topic-info-comments">
 					{if $oTopic->getCountCommentNew()}
 						<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}" class="new">
-							<span class="glyphicon glyphicon-comment icon-active"></span>
+							<span class="glyphicon glyphicon-comment"></span>
 							<span>{$oTopic->getCountComment()}</span>
 							<span class="count">+{$oTopic->getCountCommentNew()}</span>
 						</a>
