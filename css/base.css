@@ -133,7 +133,7 @@ body.light .site-info { margin-bottom: 40px; }
 .search-item { padding: 15px; margin-bottom: 20px; }
 #form-users-search.search-item .form-control { margin-bottom: 10px; }
 
-.search-abc { margin-bottom: 0; }
+.search-abc { margin-bottom: 0; margin-left: 0; }
 .search-abc li { padding-left: 0 !important; }
 .search-abc li.active a { border: none; }
 
@@ -447,7 +447,7 @@ select, input[type="file"] { height: auto; }
 .comment .comment-info li { float: left; padding-right: 10px; }
 .comment .comment-info li:last-child { padding-right: 0; }
 .comment .comment-info li.goto-comment-child { display: none; }
-.comment .comment-info li.vote { position: absolute; top: 0; right: 0; }
+.comment .comment-info li.vote { position: absolute; top: 0; right: 0; padding-right: 0; }
 
 
 /* Actions */
