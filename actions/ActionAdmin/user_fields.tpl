@@ -64,8 +64,8 @@
             / <span class="userfield_admin_pattern">{$oField->getPattern()|escape:"html"}</span>
 
 			<div class="pull-right userfield-actions">
-				<a href="javascript:ls.userfield.showEditForm({$oField->getId()})" title="{$aLang.user_field_update}" class="icon-edit"></a> 
-				<a href="javascript:ls.userfield.deleteUserfield({$oField->getId()})" title="{$aLang.user_field_delete}" class="icon-remove"></a>
+				<a href="javascript:ls.userfield.showEditForm({$oField->getId()})" title="{$aLang.user_field_update}" class="small glyphicon glyphicon-edit"></a> 
+				<a href="javascript:ls.userfield.deleteUserfield({$oField->getId()})" title="{$aLang.user_field_delete}" class="small glyphicon glyphicon-remove"></a>
 			</div>
 		</li>
 	{/foreach}

@@ -85,7 +85,7 @@
 							{/foreach}
 						</select>
 						<input type="text" name="profile_user_field_value[]" value="" class="form-control">
-						<a class="glyphicon glyphicon-trash icon-remove" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
+						<a class="glyphicon glyphicon-trash" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
 					</p>
 		
 					<div class="pull-right avatar-change">
@@ -187,7 +187,7 @@
 							{/foreach}
 						</select>
 						<input type="text" name="profile_user_field_value[]" value="{$oField->getValue()|escape:'html'}" class="form-control">
-						<a class="glyphicon glyphicon-trash icon-remove" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
+						<a class="glyphicon glyphicon-trash" title="{$aLang.user_field_delete}" href="#" onclick="return ls.userfield.removeFormField(this);"></a>
 					</p>
 				{/foreach}
 			</div>

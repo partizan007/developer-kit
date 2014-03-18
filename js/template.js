@@ -177,7 +177,7 @@ jQuery(document).ready(function($){
 	
 	// опрос
 	ls.hook.add('ls_pool_add_answer_after',function(removeAnchor){
-		var removeAnchor = $('<a href="#" class="glyphicon glyphicon-trash icon-remove" />').attr('title', ls.lang.get('delete')).click(function(e){
+		var removeAnchor = $('<a href="#" class="glyphicon glyphicon-trash" />').attr('title', ls.lang.get('delete')).click(function(e){
 			e.preventDefault();
 			return this.removeAnswer(e.target);
 		}.bind(ls.poll));

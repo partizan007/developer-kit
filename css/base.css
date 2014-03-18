@@ -251,10 +251,14 @@ select, input[type="file"] { height: auto; }
 .icon-contact-www { background-position: -200px 0; }
 
 
-.form-profile .icon-remove,
-.poll-create .icon-remove { margin-left: 3px; position: relative; }
-.form-profile .icon-remove:hover,
-.poll-create .icon-remove:hover { text-decoration: none; }
+.form-profile .glyphicon-trash,
+.poll-create .glyphicon-trash,
+.userfield-actions .glyphicon-edit,
+.userfield-actions .glyphicon-remove { margin-left: 3px; position: relative; }
+.form-profile .glyphicon-trash:hover,
+.poll-create .glyphicon-trash:hover,
+.userfield-actions .glyphicon-edit:hover,
+.userfield-actions .glyphicon-remove:hover { text-decoration: none; }
 
 
 
@@ -373,7 +377,7 @@ select, input[type="file"] { height: auto; }
 .poll-create { padding: 15px 20px; margin-bottom: 20px; }
 .poll-create .question-list li { position: relative; margin-bottom: 15px; }
 .poll-create .question-list .form-control { padding-right: 30px; }
-.poll-create .question-list .icon-remove { position: absolute; right: 10px; top: 9px; z-index: 10; }
+.poll-create .question-list .glyphicon-trash { position: absolute; right: 10px; top: 9px; z-index: 10; }
 
 
 /* Topic Photo */
@@ -590,7 +594,7 @@ select, input[type="file"] { height: auto; }
 
 /* Настройки */
 #user-field-contact-contener .form-control { display: inline; max-width: 200px; }
-#user-field-contact-contener .icon-remove { position: relative; top: -1px; vertical-align: middle; }
+#user-field-contact-contener .glyphicon-trash { position: relative; top: -1px; vertical-align: middle; }
 
 
 

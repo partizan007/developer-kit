@@ -196,10 +196,14 @@ a.user-friends:hover { color: #ff4136; text-decoration: none; }
 
 
 /* » ŒÕ » */
-.form-profile .icon-remove,
-.poll-create .icon-remove { color: #adadad; }
-.form-profile .icon-remove:hover,
-.poll-create .icon-remove:hover { color: #777; }
+.form-profile .glyphicon-trash,
+.poll-create .glyphicon-trash,
+.userfield-actions .glyphicon-edit,
+.userfield-actions .glyphicon-remove { color: #adadad; }
+.form-profile .glyphicon-trash:hover,
+.poll-create .glyphicon-trash:hover,
+.userfield-actions .glyphicon-edit:hover,
+.userfield-actions .glyphicon-remove:hover { color: #777; }
 
 
 /* TABLE BLOGS */
