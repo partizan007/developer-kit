@@ -509,8 +509,6 @@ select, input[type="file"] { height: auto; }
 /* --------------------------------------------
 	МОДАЛЬНЫЕ ОКНА
 -------------------------------------------- */
-.modal .modal-dialog { overflow: hidden; }
-
 .jqmOverlay { background-color: #000; }
 
 
