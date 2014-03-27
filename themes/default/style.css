@@ -395,7 +395,7 @@ a.user-friends:hover { color: #ff4136; text-decoration: none; }
 .wall-submit { background-color: #f4f3ec; }
 .wall-submit .counter { color: #adadad; }
 
-.wall-submit.wall-submit-reply { background: #f4f3ec; }
+.wall-submit.wall-submit-reply { background-color: #f4f3ec; }
 
 
 /* ÂÑÏËÛÂÀŞÙÈÅ ÏÎÄÑÊÀÇÊÈ */

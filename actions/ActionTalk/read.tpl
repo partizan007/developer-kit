@@ -12,7 +12,7 @@
 		<h1 class="topic-title">{$oTalk->getTitle()|escape:'html'}</h1>
 		
 		<div class="topic-info">
-			<ul class="list-unstyled list-inline actions">								   
+			<ul class="list-unstyled list-inline small actions">								   
 				<li class="delete"><a href="{router page='talk'}delete/{$oTalk->getId()}/?security_ls_key={$LIVESTREET_SECURITY_KEY}" onclick="return confirm('{$aLang.talk_inbox_delete_confirm}');" class="actions-delete">{$aLang.delete}</a></li>
 			</ul>
 		</div>
