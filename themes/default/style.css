@@ -68,7 +68,7 @@ a.read-more:hover { color: #ff4136; }
 .action-admin .content-inner,
 .profile-notes,
 .action-header,
-#comments.comments { background-color: #fff; padding: 25px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02); }
+.comments-tree { background-color: #fff; padding: 25px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02); }
 
 .action-profile.params-created .content-inner,
 .action-profile.params-favourites .content-inner,
