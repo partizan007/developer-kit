@@ -4,7 +4,7 @@
 	<h1>{$aLang.people}</h1>
 </div>
 
-<table class="table table-hover table-users">
+<table class="table table-users">
 	<thead>
 		<tr>
 			<th class="cell-name"><small>{$aLang.user}</small></th>
