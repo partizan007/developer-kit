@@ -100,17 +100,7 @@ jQuery(document).ready(function($){
 			showTimeout: 1000
 		});
 	}
-
-	$('.js-title-talk').poshytip({
-		className: 'infobox-yellow',
-		alignTo: 'target',
-		alignX: 'left',
-		alignY: 'center',
-		offsetX: 10,
-		liveEvents: true,
-		showTimeout: 500
-	});
-
+	
 	$('.js-infobox-vote-topic').poshytip({
 		content: function() {
 			var id = $(this).attr('id').replace('vote_total_topic_','vote-info-topic-');
@@ -134,7 +124,7 @@ jQuery(document).ready(function($){
 		liveEvents: true,
 		showTimeout: 500
 	});
-
+	
 	$('.js-infobox').poshytip({
 		className: 'infobox-standart',
 		liveEvents: true,
