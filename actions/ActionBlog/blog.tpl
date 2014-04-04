@@ -158,7 +158,7 @@
 <div class="row nav-filter-wrapper">
 	<div class="col-lg-12">
 		<div class="blog-nav">
-			<ul class="nav nav-pills pull-left">
+			<ul class="nav nav-pills">
 				<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
 				
 				<li {if $sMenuSubItemSelect=='new'}class="active"{/if}><a href="{$sMenuSubBlogUrl}newall/">{$aLang.blog_menu_collective_new}{if $iCountTopicsBlogNew>0} +{$iCountTopicsBlogNew}{/if}</a></li>

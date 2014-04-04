@@ -388,7 +388,7 @@ a.user-friends:hover { color: #ff4136; text-decoration: none; }
 
 
 /* Blog Nav */
-.blog-nav { display: inline-block; padding: 10px 25px; width: 100%; background-color: #fff; box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.02); }
+.blog-nav { padding: 10px 25px; background-color: #fff; box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.02); }
 
 
 /* —“≈Õ¿ */
