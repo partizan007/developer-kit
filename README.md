@@ -1,4 +1,4 @@
-LiveStreet Template "Developer-Kit"
+LiveStreet Template "Developer-Kit" - v.1.5.0
 
 Copyright © 2013 Kulesh Uladzimir
 
@@ -9,7 +9,6 @@ http://creativecommons.org/licenses/by-sa/3.0/deed.en
 
 ------------------------------------------------------
 
-"Developer-Kit" - v.1.5.0
 Шаблон для LiveStreet CMS базирующийся на Bootstrap.
 
 ------------------------------------------------------
