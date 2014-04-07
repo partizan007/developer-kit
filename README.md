@@ -9,6 +9,7 @@ http://creativecommons.org/licenses/by-sa/3.0/deed.en
 
 ------------------------------------------------------
 
+"Developer-Kit" - v.1.5.0
 Шаблон для LiveStreet CMS базирующийся на Bootstrap.
 
 ------------------------------------------------------
