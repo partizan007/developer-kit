@@ -34,11 +34,13 @@
 		{/if}
 		
 		
-		<div class="topic-share" id="topic_share_{$oTopic->getId()}">
-			{hookb run="topic_share" topic=$oTopic bTopicList=$bTopicList}
-				<div class="yashare-auto-init" data-yashareTitle="{$oTopic->getTitle()|escape:'html'}" data-yashareLink="{$oTopic->getUrl()}" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div>
-			{/hookb}
-		</div>
+		{if !$bTopicList}
+			<div class="topic-share" id="topic_share_{$oTopic->getId()}">
+				{hookb run="topic_share" topic=$oTopic bTopicList=$bTopicList}
+					<div class="yashare-auto-init" data-yashareTitle="{$oTopic->getTitle()|escape:'html'}" data-yashareLink="{$oTopic->getUrl()}" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div>
+				{/hookb}
+			</div>
+		{/if}
 
 		
 		<ul class="list-unstyled list-inline small topic-info">
@@ -50,7 +52,9 @@
 				<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
 				<span class="text-muted favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span>
 			</li>
-			<li class="topic-info-share"><a href="#" class="glyphicon glyphicon-share-alt" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>
+			{if !$bTopicList}
+				<li class="topic-info-share"><a href="#" class="glyphicon glyphicon-share-alt" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>
+			{/if}
 			
 			{if $bTopicList}
 				<li class="topic-info-comments">
