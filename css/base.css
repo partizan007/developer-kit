@@ -19,7 +19,7 @@ a.link-dotted:hover { text-decoration: none; }
 
 /* Шапка сайта */
 #header .navbar h1.site-name { margin: 0; }
-#header .navbar .nav > li > a img.avatar { width: 20px; height: 20px; vertical-align: top; }
+#header .navbar .nav > li > a img.avatar { width: 18px; height: 18px; vertical-align: top; }
 #header .navbar .nav > li > a.new-messages span { top: 2px; }
 
 
