@@ -4,7 +4,11 @@
 
 	<div id="wall-item-{$oWall->getId()}" class="js-wall-item comment-wrapper">
 		<div class="comment">
-			<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(64)}" alt="{$oWallUser->getLogin()}" class="comment-avatar" /></a>
+			{if {cfg name='view.theme'} == 'blue'}
+				<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(48)}" alt="{$oWallUser->getLogin()}" class="comment-avatar" /></a>
+			{else}
+				<a href="{$oWallUser->getUserWebPath()}"><img src="{$oWallUser->getProfileAvatarPath(64)}" alt="{$oWallUser->getLogin()}" class="comment-avatar" /></a>
+			{/if}
 			
 			<ul class="list-unstyled list-inline small comment-info">
 				<li class="comment-author"><a href="{$oWallUser->getUserWebPath()}">{$oWallUser->getLogin()}</a></li>
