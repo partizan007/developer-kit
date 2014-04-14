@@ -18,7 +18,11 @@
 		<a name="comment{$oComment->getId()}"></a>
 		
 		
-		<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(64)}" alt="{$oUser->getLogin()}" class="comment-avatar" /></a>
+		{if {cfg name='view.theme'} == 'blue'}
+			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="{$oUser->getLogin()}" class="comment-avatar" /></a>
+		{else}
+			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(64)}" alt="{$oUser->getLogin()}" class="comment-avatar" /></a>
+		{/if}
 		
 		<ul class="list-unstyled small comment-info">
 			<li class="comment-author">
