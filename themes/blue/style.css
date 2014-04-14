@@ -22,7 +22,7 @@ a:focus { text-decoration: none; }
 
 
 
-/* ÑÑÛËÊÈ */
+/* Ğ¡Ğ¡Ğ«Ğ›ĞšĞ˜ */
 a { transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
 
 a.actions-edit { color: #090; }
@@ -39,7 +39,7 @@ a.read-more:hover { color: #f00 !important; }
 .table.table-talk a.user.inactive { color: #adadad; }
 
 
-/* ØÀÏÊÀ ÑÀÉÒÀ */
+/* Ğ¨ĞĞŸĞšĞ Ğ¡ĞĞ™Ğ¢Ğ */
 #header .navbar .site-name { font-weight: 700; }
 #header .navbar .nav > li > a { padding-left: 15px; padding-right: 15px; }
 #header .navbar .nav > li > a.new-messages { color: #fff500; }
@@ -47,7 +47,7 @@ a.read-more:hover { color: #f00 !important; }
 #header .navbar .nav > li > a img.avatar { margin-right: 3px; }
 
 
-/* ÍÀÂÈÃÀÖÈß */
+/* ĞĞĞ’Ğ˜Ğ“ĞĞ¦Ğ˜Ğ¯ */
 #nav { background-color: #fff; border-bottom: 1px solid #efefef; box-shadow: 0 10px 10px #fafafa; }
 #nav .container { padding-bottom: 12px; padding-top: 12px; }
 #nav .navbar-search { margin-bottom: 0; margin-top: 0; }
@@ -69,8 +69,8 @@ a.read-more:hover { color: #f00 !important; }
 #wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
 
-/* ÔÓÒÅĞ */
-#footer { background-color: #f4f3ec; border-top: 2px solid #d7dbe4; color: #fff; }
+/* Ğ¤Ğ£Ğ¢Ğ•Ğ  */
+#footer { background-color: #e9eaed; border-top: 2px solid #d7dbe4; color: #fff; }
 #footer a { color: #111; font-size: 11px; }
 #footer .footer-list-header { border-bottom: 1px solid #d7dbe4; color: #111; font-weight: bold; margin-bottom: 5px; padding-bottom: 3px; }
 
@@ -110,7 +110,7 @@ a.user-friends { color: #111; }
 a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
-/* ÃÎËÎÑÎÂÀÍÈÅ */
+/* Ğ“ĞĞ›ĞĞ¡ĞĞ’ĞĞĞ˜Ğ• */
 .vote .vote-count { color: #adadad; }
 .vote .vote-count a { color: #adadad; }
 
@@ -130,7 +130,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .vote.voted.voted-down .vote-up:hover { color: #090; }
 
 
-/* ÈÇÁĞÀÍÍÎÅ */
+/* Ğ˜Ğ—Ğ‘Ğ ĞĞĞĞĞ• */
 .favourite, 
 .favourite:hover, 
 .favourite:focus { color: #adadad; }
@@ -152,14 +152,14 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .toolbar .toolbar-topic a.toolbar-topic-prev { border-bottom: 1px solid #efefef; }
 
 
-/* ÏÎÈÑÊ */
+/* ĞŸĞĞ˜Ğ¡Ğš */
 .search-item { background-color: #f2f2f2; border-radius: 3px; }
 .search-abc li.active a { color: #333; border: none; }
 .search-tags { margin-bottom: 40px; padding: 15px; background-color: #f2f2f2; border-radius: 3px; }
 .search-tags .form-group { margin-bottom: 0; }
 
 
-/* ÎÁËÀÊÎ ÒÅÃÎÂ */
+/* ĞĞ‘Ğ›ĞĞšĞ Ğ¢Ğ•Ğ“ĞĞ’ */
 .tag-cloud li a { color: #adadad; }
 .tag-cloud li a:hover { color: #f00; }
 
@@ -183,19 +183,19 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 #block_blogs .item-list li .avatar { height: 36px; width: 36px; }
 
 
-/* ĞÀÇÍÎÅ */
+/* Ğ ĞĞ—ĞĞĞ• */
 .wrapper-content { background-color: #f2f2f2; border-radius: 3px; }
 .wrapper-content.wrapper-content-dark { background-color: rgba(0, 0, 0, 0.02); }
 .form-profile { background-color: #f2f2f2; }
 
 
-/* ÔÎĞÌÀÒÈĞÎÂÀÍÍÛÉ ÒÅÊÑÒ */
+/* Ğ¤ĞĞ ĞœĞĞ¢Ğ˜Ğ ĞĞ’ĞĞĞĞ«Ğ™ Ğ¢Ğ•ĞšĞ¡Ğ¢ */
 .text a { text-decoration: underline; }
 .text a:hover { text-decoration: none; }
 .text a:visited { color: #6091bf; }
 
 
-/* ÈÊÎÍÊÈ */
+/* Ğ˜ĞšĞĞĞšĞ˜ */
 .form-profile .glyphicon-trash,
 .poll-create .glyphicon-trash,
 .userfield-actions .glyphicon-edit,
@@ -224,7 +224,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .table.table-users .cell-rating, .table.table-users .cell-skill { width: 75px; }
 
 
-/* ÒÎÏÈÊ */
+/* Ğ¢ĞĞŸĞ˜Ğš */
 .topic { margin-bottom: 40px; }
 .topic-preview .topic { margin-bottom: 30px; padding: 0; }
 
@@ -290,22 +290,22 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .talk-search .talk-search-content { border-top: 1px dotted #cdcdcd; }
 
 
-/* ÊÎÌÌÅÍÒÀĞÈÈ */
+/* ĞšĞĞœĞœĞ•ĞĞ¢ĞĞ Ğ˜Ğ˜ */
 .comments .comments-header h3 { margin-top: 0; }
 .comment blockquote { background-color: #fff; border-left: 4px solid #ddd; font-size: 13px; }
 .comment .text pre.prettyprint { background-color: #fff; }
 
 .comment-preview { margin-top: 25px; background-color: #e9eaed; }
 
-/* Êîììåíòàğèé */
+/* ĞšĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸Ğ¹ */
 .comment { padding: 20px 20px 20px 73px; border-top: 1px solid #efefef; margin-bottom: 25px; min-height: 88px; }
 .comment .comment-avatar { height: 48px; left: 10px; top: 20px; width: 48px; }
 
-/* Òèïû êîììåíòàğèåâ
- * deleted 	- 	óäàëåííûé êîììåíòàğèé
- * self 	- 	âàø êîììåíòàğèé
- * new 		- 	íîâûé, íåïğî÷èòàííûé êîììåíòàğèé
- * current 	- 	àêòèâíûé êîììåíòàğèé, êîòîğûé âûäåëÿåòñÿ ïğè èñïîëçîâàíèå êíîïêè îáíîâëåíèÿ â òóëáàğå
+/* Ğ¢Ğ¸Ğ¿Ñ‹ ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸ĞµĞ²
+ * deleted 	- 	ÑƒĞ´Ğ°Ğ»ĞµĞ½Ğ½Ñ‹Ğ¹ ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸Ğ¹
+ * self 	- 	Ğ²Ğ°Ñˆ ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸Ğ¹
+ * new 		- 	Ğ½Ğ¾Ğ²Ñ‹Ğ¹, Ğ½ĞµĞ¿Ñ€Ğ¾Ñ‡Ğ¸Ñ‚Ğ°Ğ½Ğ½Ñ‹Ğ¹ ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸Ğ¹
+ * current 	- 	Ğ°ĞºÑ‚Ğ¸Ğ²Ğ½Ñ‹Ğ¹ ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸Ğ¹, ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğ¹ Ğ²Ñ‹Ğ´ĞµĞ»ÑĞµÑ‚ÑÑ Ğ¿Ñ€Ğ¸ Ğ¸ÑĞ¿Ğ¾Ğ»Ğ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ ĞºĞ½Ğ¾Ğ¿ĞºĞ¸ Ğ¾Ğ±Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ¸Ñ Ğ² Ñ‚ÑƒĞ»Ğ±Ğ°Ñ€Ğµ
  */
 .comment.comment-deleted { background-color: #fff1f1; }
 .comment.comment-self { background-color: #fffbe8; }
@@ -325,11 +325,11 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .comment .comment-actions li a.comment-delete { color: #f00; }
 .comment .comment-actions li a.comment-repair { color: #090; }
 
-/* Ôîğìà êîììåíòèğîâàíèÿ */
+/* Ğ¤Ğ¾Ñ€Ğ¼Ğ° ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ */
 .reply-header { margin-bottom: 25px; }
 .reply { background-color: #f2f2f2; margin-top: 25px; margin-bottom: 25px; }
 
-/* Ëåíòà êîììåíòàğèåâ */
+/* Ğ›ĞµĞ½Ñ‚Ğ° ĞºĞ¾Ğ¼Ğ¼ĞµĞ½Ñ‚Ğ°Ñ€Ğ¸ĞµĞ² */
 .comments.comment-list { margin-bottom: 30px; }
 .comment-path { margin-top: 20px; padding: 5px 0; }
 .comment-path .blog-name { color: #f00; }
@@ -337,12 +337,12 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .comment-path .comment-path-comments { color: #090; }
 
 
-/* Ñòåíà */
+/* Ğ¡Ñ‚ĞµĞ½Ğ° */
 #wall-container .comment-wrapper .comment-wrapper { padding-left: 30px; }
 #wall-container .comment-wrapper .comment-wrapper .btn-block { margin-bottom: 10px; }
 
 
-/* ÁËÎÊÈ */
+/* Ğ‘Ğ›ĞĞšĞ˜ */
 .block { margin-bottom: 30px; box-shadow: none; }
 
 .block .block-header h3 { font-size: 19px; margin-bottom: 15px; margin-top: 0; }
@@ -374,18 +374,18 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .block.block-type-blacklist { background-color: #f2f2f2; box-shadow: none; }
 
 
-/* ÌÎÄÀËÜÍÛÅ ÎÊÍÀ */
+/* ĞœĞĞ”ĞĞ›Ğ¬ĞĞ«Ğ• ĞĞšĞĞ */
 .modal-header { padding: 15px 20px; background-color: #476698; border-radius: 4px 4px 0 0;}
 .modal-title { color: #fff; }
 .modal-content { border-radius: 8px 8px 4px 4px; }
 
-/* Äîáàâëåíèå òîïèêà */
+/* Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ğµ Ñ‚Ğ¾Ğ¿Ğ¸ĞºĞ° */
 .modal.modal-write .write-list li:hover a { color: #f00; }
 .modal.modal-write .write-list li .write-item-link { color: #111; font-size: 11px; font-weight: bold; text-transform: uppercase; }
 .modal.modal-write .write-list li .write-item-link:hover { color: #f00; text-decoration: none; }
 
 
-/* ÁËÎÃ */
+/* Ğ‘Ğ›ĞĞ“ */
 .blog { margin-bottom: 20px; }
 
 /* Header */
@@ -406,7 +406,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .blog .blog-footer .user-avatar { margin-right: 5px; }
 
 
-/* ÑÒÅÍÀ */
+/* Ğ¡Ğ¢Ğ•ĞĞ */
 .wall-submit { background-color: #f2f2f2; border-radius: 3px; }
 .wall-submit .counter { color: #adadad; }
 
@@ -423,7 +423,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 #wall-button-next { margin-top: 30px; }
 
 
-/* ÂÑÏËÛÂÀŞÙÈÅ ÏÎÄÑÊÀÇÊÈ */
+/* Ğ’Ğ¡ĞŸĞ›Ğ«Ğ’ĞĞ®Ğ©Ğ˜Ğ• ĞŸĞĞ”Ğ¡ĞšĞĞ—ĞšĞ˜ */
 .infobox { font-size: 12px; padding: 15px; color: #fff; background: rgba(0,0,0,.8); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 .infobox a { color: #b4b8ed; }
 .infobox a:hover { color: #999ddb; }
@@ -433,7 +433,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .infobox.infobox-standart .tip-arrow  { border-color: rgba(0,0,0,.8); }
 
 
-/* ÂÑÏËÛÂÀŞÙÈÅ ÓÂÅÄÎÌËÅÍÈß */
+/* Ğ’Ğ¡ĞŸĞ›Ğ«Ğ’ĞĞ®Ğ©Ğ˜Ğ• Ğ£Ğ’Ğ•Ğ”ĞĞœĞ›Ğ•ĞĞ˜Ğ¯ */
 #notifier { width: 250px; top: 10px; right: 10px; font-size: 12px; }
 
 #notifier .n-box { 
@@ -452,5 +452,5 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 #notifier .n-box.n-error { background: #850505; }
 
 
-/* ÏÀÃÈÍÀÖÈß */
+/* ĞŸĞĞ“Ğ˜ĞĞĞ¦Ğ˜Ğ¯ */
 .paging .pagination { margin-bottom: 0; }
