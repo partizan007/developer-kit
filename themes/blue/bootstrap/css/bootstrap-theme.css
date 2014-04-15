@@ -336,11 +336,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffebcccc', GradientType=0);
 }
 .well {
-  background-image: -webkit-linear-gradient(top, #fff7c9 0%, #fffbe3 100%);
-  background-image: linear-gradient(to bottom, #fff7c9 0%, #fffbe3 100%);
+  background-image: -webkit-linear-gradient(top, #e4e6ea 0%, #f2f3f5 100%);
+  background-image: linear-gradient(to bottom, #e4e6ea 0%, #f2f3f5 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffff7c9', endColorstr='#fffffbe3', GradientType=0);
-  border-color: #fff4b0;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe4e6ea', endColorstr='#fff2f3f5', GradientType=0);
+  border-color: #d5d8df;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
 }

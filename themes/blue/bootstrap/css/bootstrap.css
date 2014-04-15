@@ -4139,7 +4139,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 6px 10px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #a8a8a8;
+  color: #415d8b;
   background-color: #ffffff;
   border: 1px solid #ffffff;
   margin-left: -1px;
@@ -4159,9 +4159,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #a8a8a8;
-  background-color: #eeeeee;
-  border-color: #eeeeee;
+  color: #ff0000;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 .pagination > .active > a,
 .pagination > .active > span,
@@ -4170,9 +4170,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: #ffffff;
-  background-color: #cb0009;
-  border-color: #cb0009;
+  color: #415d8b;
+  background-color: #e9eaed;
+  border-color: #e9eaed;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -4236,7 +4236,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 .pager .next > a,
 .pager .next > span {
@@ -5034,8 +5034,8 @@ a.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #fffbe3;
-  border: 1px solid #fff6bf;
+  background-color: #f2f3f5;
+  border: 1px solid #dee0e5;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
