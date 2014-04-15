@@ -315,7 +315,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .comments-header .subscribe { font-size: 12px; }
 .subscribe .input-checkbox { margin-top: 2px; }
 .comment blockquote { background-color: #fff; border-left: 4px solid #ddd; font-size: 13px; }
-.comment .text pre.prettyprint { background-color: #fff; }
+.comment .text pre.prettyprint { background-color: #f5f5f5; }
 
 .comment-preview { margin-top: 25px; background-color: #f2f2f2; border-radius: 3px; }
 
