@@ -9,6 +9,13 @@ a:focus { text-decoration: none; }
 .text-info { color: #0074d9; }
 .text-danger { color: #f00; }
 
+.btn.btn-default { background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1)); }
+.btn.btn-primary, 
+.btn.btn-success, 
+.btn.btn-info, 
+.btn.btn-warning, 
+.btn.btn-danger { background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15)); }
+
 .dropdown-menu > li > a { padding: 5px 20px; font-size: 12px; }
 
 .pagination > .disabled > span,
@@ -306,6 +313,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 /* КОММЕНТАРИИ */
 .comments .comments-header h3 { margin-top: 0; }
 .comments-header .subscribe { font-size: 12px; }
+.subscribe .input-checkbox { margin-top: 2px; }
 .comment blockquote { background-color: #fff; border-left: 4px solid #ddd; font-size: 13px; }
 .comment .text pre.prettyprint { background-color: #fff; }
 
@@ -384,7 +392,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .block.block-type-profile-nav a { color: #415d8b; background-color: #f7f7f7; font-size: inherit; }
 .block.block-type-profile-nav .nav-pills > li.active > a, 
 .block.block-type-profile-nav .nav-pills > li.active > a:hover, 
-.block.block-type-profile-nav .nav-pills > li.active > a:focus { background: #476698; border-color: #476698 !important; color: #fff; }
+.block.block-type-profile-nav .nav-pills > li.active > a:focus { background: #5f88c9; border-color: #5f88c9 !important; color: #fff; }
 .block.block-type-profile-nav .nav-stacked > li + li { margin-top: 3px; }
 .block.block-type-profile-nav .badge { background-color: #bfc5d6; }
 
@@ -419,10 +427,10 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .blog .blog-header h1 span { font-size: 14px; color: #f00; }
 
 /* Blog Mini */
-.blog-mini { padding: 10px 20px; background-color: #e9eaed; line-height: 26px; }
+.blog-mini { padding: 10px 20px; background-color: #f2f3f5; line-height: 26px; }
 
 /* Content */
-.blog .blog-more-content { padding: 0 20px 20px; background-color: #e9eaed; }
+.blog .blog-more-content { padding: 0 20px 20px; background-color: #f2f3f5; }
 .blog .blog-content { background-color: #fff; padding: 15px 15px 5px; }
 
 /* Footer */
