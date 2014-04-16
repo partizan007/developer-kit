@@ -69,7 +69,7 @@
 				<div class="row">
 					<div class="col-sm-6 col-md-6 col-lg-6">
 						{hook run='copyright'}, 
-						Автор шаблона &mdash; <a href="http://voffka.the-hut.by/">вOFFка</a>
+						Автор шаблона &mdash; <a href="http://kulesh-vladimir.by/">вOFFка</a>
 					</div>
 					
 					<div class="col-sm-6 col-md-6 col-lg-6 text-right social-icons">
