@@ -249,6 +249,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .topic-preview .topic { margin-bottom: 30px; padding: 0; }
 
 /* Header */
+.topic .topic-header .topic-title { line-height: 1.25; }
 .topic .topic-header .topic-title a { text-decoration: underline; }
 .topic .topic-header .topic-title a:hover { color: #f00; }
 .topic .topic-header .topic-title span { font-size: 12px; color: #ccc; top: 4px; }
