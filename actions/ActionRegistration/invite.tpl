@@ -5,6 +5,8 @@
 	<h3>{$aLang.registration_invite}</h3>
 </div>
 
+{include file='system_message.tpl'}
+
 <form action="{router page='registration'}invite/" method="POST">
 	<div class="form-group">
 		<label>{$aLang.registration_invite_code}</label>
