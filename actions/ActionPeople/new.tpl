@@ -8,9 +8,9 @@
 	<thead>
 		<tr>
 			<th class="cell-name"><small>{$aLang.user}</small></th>
-			<th class="cell-date"><small>{$aLang.user_date_registration}</small></th>
-			<th class="cell-skill"><small>{$aLang.user_skill}</small></th>
-			<th class="cell-rating"><small>{$aLang.user_rating}</small></th>
+			<th class="hidden-xs cell-date"><small>{$aLang.user_date_registration}</small></th>
+			<th class="hidden-xs cell-skill"><small>{$aLang.user_skill}</small></th>
+			<th class="hidden-xs cell-rating"><small>{$aLang.user_rating}</small></th>
 		</tr>
 	</thead>
 
@@ -32,9 +32,9 @@
 							{if $oUserList->getProfileName()}<p class="text-muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
 						</div>
 					</td>
-					<td class="text-muted cell-date"><small>{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</small></td>
-					<td class="text-info cell-skill"><small>{$oUserList->getSkill()}</small></td>
-					<td class="cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
+					<td class="hidden-xs text-muted cell-date"><small>{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</small></td>
+					<td class="hidden-xs text-info cell-skill"><small>{$oUserList->getSkill()}</small></td>
+					<td class="hidden-xs cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}"><small>{$oUserList->getRating()}</small></td>
 				</tr>
 			{/foreach}
 		{else}
