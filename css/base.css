@@ -316,7 +316,7 @@ select, input[type="file"] { height: auto; }
 
 
 /* Table Profile Info */
-.table.table-profile-info .cell-label { width: 33%; }
+.table.table-profile-info .cell-label { width: 37%; }
 
 /* Table Plugins */
 .table.table-plugins h4 { margin-top: 0; }
