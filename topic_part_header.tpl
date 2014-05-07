@@ -14,10 +14,6 @@
 			{if $oTopic->getPublish() == 0}   
 				<span class="glyphicon glyphicon-file text-muted" title="{$aLang.topic_unpublish}"></span>
 			{/if}
-			
-			{if $oTopic->getType() == 'link'} 
-				<span class="glyphicon glyphicon-globe text-muted" title="{$aLang.topic_link}"></span>
-			{/if}
 		{if $bTopicList}</h2>{else}</h1>{/if}
 
 		<div class="topic-info">

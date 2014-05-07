@@ -8,6 +8,7 @@
 	{hook run='topic_content_end' topic=$oTopic bTopicList=$bTopicList}
 
 	<div class="topic-url">
+		<span class="glyphicon glyphicon-globe" title="{$aLang.topic_link}"></span>
 		<a href="{router page='link'}go/{$oTopic->getId()}/" title="{$aLang.topic_link_count_jump}: {$oTopic->getLinkCountJump()}">{$oTopic->getLinkUrl()}</a>
 	</div>
 </div>
