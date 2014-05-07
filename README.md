@@ -1,4 +1,4 @@
-LiveStreet Template "Developer-Kit" - v.1.5.0
+LiveStreet Template "Developer-Kit" - v.1.5.2
 
 Copyright © 2013 Kulesh Uladzimir
 
