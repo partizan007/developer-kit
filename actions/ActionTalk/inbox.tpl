@@ -17,11 +17,11 @@
 		<table class="table table-talk">
 			<thead>
 				<tr>
-					<th class="cell-checkbox"><input type="checkbox" name="" class="input-checkbox" onclick="ls.tools.checkAll('form_talks_checkbox', this, true);"></th>
+					<th class="hidden-xs cell-checkbox"><input type="checkbox" name="" class="input-checkbox" onclick="ls.tools.checkAll('form_talks_checkbox', this, true);"></th>
 					<th class="cell-recipients"><small>{$aLang.talk_inbox_target}</small></th>
-					<th class="cell-favourite"></th>
+					<th class="hidden-xs cell-favourite"></th>
 					<th class="cell-title"><small>{$aLang.talk_inbox_title}</small></th>
-					<th class="cell-date ta-r"><small>{$aLang.talk_inbox_date}</small></th>
+					<th class="hidden-xs cell-date"><small>{$aLang.talk_inbox_date}</small></th>
 				</tr>
 			</thead>
 
@@ -29,7 +29,7 @@
 				{foreach from=$aTalks item=oTalk}
 					{assign var="oTalkUserAuthor" value=$oTalk->getTalkUser()}
 					<tr>
-						<td class="cell-checkbox"><input type="checkbox" name="talk_select[{$oTalk->getId()}]" class="form_talks_checkbox input-checkbox" /></td>
+						<td class="hidden-xs cell-checkbox"><input type="checkbox" name="talk_select[{$oTalk->getId()}]" class="form_talks_checkbox input-checkbox" /></td>
 						<td class="small text-muted">
 							{strip}
 								{assign var="aTalkUserOther" value=[]}
@@ -44,7 +44,7 @@
 								{/foreach}
 							{/strip}
 						</td>
-						<td class="cell-favourite">
+						<td class="hidden-xs cell-favourite">
 							<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="muted favourite {if $oTalk->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
 						</td>
 						<td>
@@ -68,7 +68,7 @@
 							{/if}
 							<p class="small text-muted">{$oTalk->getTextLast()|strip_tags|truncate:200:'...'|escape:'html'}</p>
 						</td>
-						<td class="small text-muted cell-date ta-r">{date_format date=$oTalk->getDate() format="j F Y, H:i"}</td>
+						<td class="hidden-xs small text-muted cell-date">{date_format date=$oTalk->getDate() format="j F Y, H:i"}</td>
 					</tr>
 				{/foreach}
 			</tbody>

@@ -7,9 +7,9 @@
 		<thead>
 			<tr>
 				<th class="cell-recipients"><small>{$aLang.talk_inbox_target}</small></th>
-				<th class="cell-favourite"></th>
+				<th class="hidden-xs cell-favourite"></th>
 				<th class="cell-title"><small>{$aLang.talk_inbox_title}</small></th>
-				<th class="cell-date ta-r"><small>{$aLang.talk_inbox_date}</small></th>
+				<th class="hidden-xs cell-date"><small>{$aLang.talk_inbox_date}</small></th>
 			</tr>
 		</thead>
 
@@ -31,7 +31,7 @@
 						{/foreach}
 					{/strip}
 				</td>
-				<td class="cell-favourite">
+				<td class="hidden-xs cell-favourite">
 					<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
 				</td>
 				<td>
@@ -46,7 +46,7 @@
 					{/if}
 					<p class="small text-muted">{$oTalk->getTextLast()|strip_tags|truncate:200:'...'|escape:'html'}</p>
 				</td>
-				<td class="small text-muted cell-date ta-r">{date_format date=$oTalk->getDate()}</td>
+				<td class="hidden-xs small text-muted cell-date">{date_format date=$oTalk->getDate()}</td>
 			</tr>
 		{/foreach}
 		</tbody>

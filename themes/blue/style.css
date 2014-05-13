@@ -352,7 +352,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .comment .comment-actions li a.comment-repair { color: #090; }
 
 /* Форма комментирования */
-.reply-header { margin-bottom: 25px; }
+.reply-header { margin-bottom: 25px; line-height: inherit; }
 .reply { background-color: #f2f2f2; margin-top: 25px; margin-bottom: 25px; border-radius: 3px; }
 
 /* Лента комментариев */
