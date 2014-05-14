@@ -19,7 +19,7 @@
 
 <div class="row">
 
-	<div class="col-sm-6 col-md-6 col-lg-6">
+	<div class="col-sm-6">
 		{assign var="aUserFieldValues" value=$oUserProfile->getUserFieldValues(true,array(''))}
 		{if $oUserProfile->getProfileSex()!='other' || $oUserProfile->getProfileBirthday() || $oGeoTarget || $oUserProfile->getProfileAbout() || count($aUserFieldValues)}
 
@@ -81,7 +81,7 @@
 	</div>
 
 
-	<div class="col-sm-6 col-md-6 col-lg-6">
+	<div class="col-sm-6">
 		{assign var="aUserFieldContactValues" value=$oUserProfile->getUserFieldValues(true,array('contact'))}
 		{if $aUserFieldContactValues}
 			<h4>{$aLang.profile_contacts}</h4>

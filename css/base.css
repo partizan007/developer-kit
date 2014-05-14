@@ -57,9 +57,10 @@ a.link-dotted:hover { text-decoration: none; }
 
 /* Light Pages */
 body.light { padding-bottom: 40px; padding-top: 40px; }
-body.light .site-info { margin-bottom: 40px; }
-.light-form { margin: 0 auto; max-width: 400px; padding: 20px; }
-.light-form .page-header h2, .light-form .page-header h3 { margin-top: 0; }
+body.light .site-info { max-width: 400px; margin-bottom: 60px; }
+body.light .light-form { max-width: 400px; padding: 20px; }
+body.light .light-form .page-header h2, 
+body.light .light-form .page-header h3 { margin-top: 0; }
 
 
 /* Misc */

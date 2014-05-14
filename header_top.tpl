@@ -60,8 +60,8 @@
 						</li>
 					{else}
 						{hook run='userbar_item'}
-						<li><a href="{router page='login'}" class="js-login-form-show">{$aLang.user_login_submit}</a></li>
-						<li class="hidden-sm"><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}</a></li>
+						<li><a href="{router page='login'}" class="js-login-form-show" rel="nofollow">{$aLang.user_login_submit}</a></li>
+						<li class="hidden-sm"><a href="{router page='registration'}" class="js-registration-form-show" rel="nofollow">{$aLang.registration_submit}</a></li>
 					{/if}
 				</ul>
 			</div>

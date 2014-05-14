@@ -77,11 +77,11 @@
 	
 	<div class="blog-mini" id="blog-mini">
 		<div class="row">
-			<div class="col-sm-6 col-lg-6 small text-muted">
+			<div class="col-sm-6 small text-muted">
 				<span id="blog_user_count_{$oBlog->getId()}">{$iCountBlogUsers}</span> {$iCountBlogUsers|declension:$aLang.reader_declension:'russian'},
 				{$oBlog->getCountTopic()} {$oBlog->getCountTopic()|declension:$aLang.topic_declension:'russian'}
 			</div>
-			<div class="col-sm-6 col-lg-6 blog-mini-header">
+			<div class="col-sm-6 blog-mini-header">
 				<a href="#" class="small link-dotted" onclick="ls.blog.toggleInfo(); return false;">{$aLang.blog_expand_info}</a>
 				<a href="{router page='rss'}blog/{$oBlog->getUrl()}/" class="small">RSS</a>
 				{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId()}
@@ -101,7 +101,7 @@
 			{hook run='blog_info_begin' oBlog=$oBlog}
 		
 			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="col-sm-6">
 					<dl class="dl-horizontal blog-info">
 						<dt>{$aLang.infobox_blog_create}</dt>
 						<dd>{date_format date=$oBlog->getDateAdd() format="j F Y"}</dd>
@@ -117,7 +117,7 @@
 					</dl>
 				</div>
 		
-				<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="col-sm-6">
 					<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong><br />							
 					<span class="user-avatar">
 						<a href="{$oUserOwner->getUserWebPath()}"><img src="{$oUserOwner->getProfileAvatarPath(24)}" alt="avatar" /></a>		

@@ -21,7 +21,7 @@
 		<meta property="og:title" content="{$oTopic->getTitle()|escape:'html'}"/>
 		<meta property="og:url" content="{$oTopic->getUrl()}"/>
 		{if $oTopic->getPreviewImageWebPath()}
-			<meta property="og:image" content="{$oTopic->getPreviewImageWebPath(700crop)}"/>
+			<meta property="og:image" content="{$oTopic->getPreviewImageWebPath(750crop)}"/>
 		{/if}
 		<meta property="og:description" content="{$sHtmlDescription}"/>
 		<meta property="og:site_name" content="{cfg name='view.name'}"/>
@@ -148,7 +148,7 @@
 				{/if} 
 	
 				<div id="content" role="main" 
-					class="{if $noSidebar}col-md-12 col-lg-12{else}col-md-8 col-lg-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
+					class="{if $noSidebar}col-md-12{else}col-md-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
 					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 					
 					<div class="content-inner">

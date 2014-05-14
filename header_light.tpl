@@ -85,9 +85,9 @@
 	
 	<div class="container">
 	
-		<hgroup class="site-info">
+		<hgroup class="center-block site-info">
 			<h1 class="text-center site-name"><a href="{cfg name='path.root.web'}">{cfg name='view.name'}</a></h1>
-			<h5 class="text-center site-description">{cfg name='view.description'}</h5>
+			<p class="text-center lead site-description">{cfg name='view.description'}</p>
 		</hgroup>
 
-		<div class="light-form">
+		<div class="center-block light-form">

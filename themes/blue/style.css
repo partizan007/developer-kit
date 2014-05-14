@@ -110,9 +110,10 @@ a.read-more:hover { color: #f00 !important; }
 body.light { background-color: #e9eaed; }
 body.light .site-info .site-name a { color: #111; }
 body.light .site-info .site-name a:hover { color: #f00; text-decoration: none; }
-.light-form { background-color: #fff; border-radius: 4px; }
-.site-name { font-weight: 700; }
-.site-description { color: #868686; font-size: 15px; font-weight: 500; margin-top: 15px; }
+body.light .light-form { background-color: #fff; border-radius: 4px; }
+body.light .site-name { font-weight: 700; }
+body.light .site-description { color: #868686; font-size: 16px; margin-top: 15px; }
+
 
 /* MISC */
 .help { border: 1px solid #ddd; background-color: #fff; }

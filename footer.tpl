@@ -18,7 +18,7 @@
 		<div class="container">
 			<div class="row">
 				
-				<div class="col-sm-4 col-md-4 col-lg-3">
+				<div class="col-sm-3">
 					{if $oUserCurrent}
 						<ul class="list-unstyled footer-list">
 							<li class="footer-list-header word-wrap">{$oUserCurrent->getLogin()}</li>
@@ -38,7 +38,7 @@
 					{/if}
 				</div>
 			
-				<div class="col-sm-4 col-md-4 col-lg-3">
+				<div class="col-sm-3">
 					<ul class="list-unstyled footer-list">
 						<li class="footer-list-header">{$aLang.footer_menu_navigate_title}</li>
 						<li><a href="{cfg name='path.root.web'}">{$aLang.topic_title}</a></li>
@@ -49,7 +49,7 @@
 					</ul>
 				</div>
 			
-				<div class="col-sm-4 col-md-4 col-lg-3">
+				<div class="col-sm-3">
 					<ul class="list-unstyled footer-list">
 						<li class="footer-list-header">{$aLang.footer_menu_navigate_info}</li>
 						<li><a href="#">{$aLang.footer_menu_project_about}</a></li>
@@ -67,19 +67,19 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-6">
 						{hook run='copyright'}, 
 						Автор шаблона &mdash; <a href="http://kulesh-vladimir.by/">вOFFка</a>
 					</div>
 					
-					<div class="col-sm-6 col-md-6 col-lg-6 text-right social-icons">
-						<a href="#"><span class="icon-facebook"></span></a>
-						<a href="#"><span class="icon-gplus"></span></a>
-						<a href="#"><span class="icon-twitter"></span></a>
-						<a href="#"><span class="icon-vkontakte"></span></a>
-						<a href="#"><span class="icon-youtube-play"></span></a>
-						<a href="#"><span class="icon-yandex"></span></a>
-						<a href="#"><span class="icon-odnoklassniki"></span></a>
+					<div class="col-sm-6 text-right social-icons">
+						<a href="#" rel="nofollow"><span class="icon-facebook"></span></a>
+						<a href="#" rel="nofollow"><span class="icon-gplus"></span></a>
+						<a href="#" rel="nofollow"><span class="icon-twitter"></span></a>
+						<a href="#" rel="nofollow"><span class="icon-vkontakte"></span></a>
+						<a href="#" rel="nofollow"><span class="icon-youtube-play"></span></a>
+						<a href="#" rel="nofollow"><span class="icon-yandex"></span></a>
+						<a href="#" rel="nofollow"><span class="icon-odnoklassniki"></span></a>
 					</div>
 				</div>
 			</div>
