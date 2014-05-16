@@ -3,7 +3,7 @@
 $config = array();
 
 /* Theme */
-$config['view']['theme'] = 'blue';
+$config['view']['theme'] = 'default';
 
 
 
