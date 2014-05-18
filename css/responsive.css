@@ -8,12 +8,15 @@
 	.comment .comment-info li.comment-favourite, 
 	.comment .comment-info li.vote { display: none; }
 	
-	#wall-container .comment-wrapper .comment-wrapper { padding-left: 0 !important; }
+	.comment { margin-bottom: 15px !important; }
+	.comment-wrapper .comment-wrapper { padding-left: 0 !important; }
+	#wall-container .comment { margin-bottom: 0 !important; }
 	.wall-submit.wall-submit-reply { margin-left: 0 !important; }
 }
 
 @media (max-width: 479px) {
-	.comment { padding-left: 20px !important; }
+	.comment { padding-right: 10px !important; padding-left: 10px !important; min-height: 0 !important; }
+	.ls-user-role-not-admin .comment.comment-deleted { padding-left: 15px !important; margin-bottom: 25px !important; }
 	.comment .comment-avatar { display: none; }
 	
 	.profile { padding-left: 0; }
@@ -38,8 +41,8 @@
 	.blog-mini .blog-mini-header a { margin-left: 0; margin-right: 10px; }
 	.blog-mini .blog-mini-header .btn { margin-left: 0; }
 	.blog-info { margin-bottom: 20px; }
-	.blog-info dd { margin-left: 0; }
-	.blog-info dd { text-align: left !important; }
+	.blog-info dt { float: left; width: 50%; }
+	.blog-info dd { margin-left: 50%; }
 	
 	#footer .footer-list { margin-bottom: 20px; }
 	#footer .social-icons { text-align: left; margin-top: 20px; }
