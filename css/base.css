@@ -23,13 +23,6 @@ a.link-dotted:hover { text-decoration: none; }
 #header .navbar .nav > li > a.new-messages span { top: 2px; }
 
 
-/* Навигация */
-#nav .navbar-search { margin-top: 3px; margin-bottom: 3px; }
-#nav .btn-write { margin-top: 2px; margin-bottom: 2px; margin-left: 20px; }
-
-#wrapper .nav-filter-wrapper { margin-bottom: 30px; }
-
-
 /* Stat */
 #stat-performance table td { width: 200px; vertical-align: top; }
 
@@ -74,18 +67,6 @@ body.light .light-form .page-header h3 { margin-top: 0; }
 
 .text pre.prettyprint { background-color: #f7f7f7; border-color: #eaeaea; margin: 0; padding: 15px; }
 .text pre code { white-space: inherit; }
-
-
-
-/* --------------------------------------------
-	СЕТКА
--------------------------------------------- */
-
-#nav .container 				{ padding-top: 10px; padding-bottom: 10px; }
-#wrapper.container 				{ padding-top: 40px; padding-bottom: 40px; }
-#footer .container 				{ padding-top: 40px; padding-bottom: 40px; }
-#stat-performance .container 	{ padding-top: 60px; padding-bottom: 60px; }
-
 
 
 /* -------------------------------------------------------------------
@@ -329,7 +310,6 @@ select, input[type="file"] { height: auto; }
 /* --------------------------------------------
 	ТОПИК
 -------------------------------------------- */
-
 .topic { overflow: hidden; zoom: 1; }
 
 

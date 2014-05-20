@@ -123,7 +123,7 @@
 {add_block group='toolbar' name='toolbar_scrollup.tpl' priority=-100}
 
 
-<body class="{$body_classes} action-{$sAction}{if $sEvent} event-{$sEvent}{/if}{if $aParams[0]} params-{$aParams[0]}{/if}">
+<body class="{$body_classes}">
 	{hook run='body_begin'}
 		
 	{if $oUserCurrent}
@@ -139,21 +139,20 @@
 	
 	{hook run='content_top'}
 	
-	<section id="container" class="{hook run='container_class'}">
-		<div id="wrapper" class="container {hook run='wrapper_class'}">
+	<section id="wrapper" class="{hook run='wrapper_class'}">
+		<div id="container" class="container {hook run='container_class'}">
 			<div class="row">
 			
 				{if !$noSidebar && $sidebarPosition == 'left'}
 					{include file='sidebar.tpl'}
 				{/if} 
 	
-				<div id="content" role="main" 
+				<div id="content-wrapper" role="main" 
 					class="{if $noSidebar}col-md-12{else}col-md-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
 					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 					
-					<div class="content-inner">
-						{include file='nav_content.tpl'}
-						{include file='system_message.tpl'}
-						
-						{hook run='content_begin'}
-						
+					{include file='nav_content.tpl'}
+					{include file='system_message.tpl'}
+					
+					{hook run='content_begin'}
+					

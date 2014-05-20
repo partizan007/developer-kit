@@ -1,7 +1,6 @@
-<nav id="nav" class="clearfix">
+<nav id="nav">
 	<div class="container">
 		<div class="row">
-	
 			<div class="col-sm-8">
 				{if $menu}
 					{if in_array($menu,$aMenuContainers)}{$aMenuFetch.$menu}{else}{include file="menu.$menu.tpl"}{/if}
@@ -17,7 +16,6 @@
 					<input type="text" placeholder="{$aLang.search}" maxlength="255" name="q" class="form-control">
 				</form>
 			</div>
-	
 		</div>
 	</div>
 </nav>

@@ -3,8 +3,8 @@ a:focus, a:hover, a:active, .btn:focus, select:focus, input[type="file"]:focus, 
 iframe { border: none; }
 a:focus { text-decoration: none; }
 
-.text { line-height: 1.6; }
 
+/* ПЕРЕОПРЕДЕЛЯЕМ/ДОПИСЫВАЕМ BOOTSTRAP */
 .text-success { color: #090; }
 .text-info { color: #0074d9; }
 .text-danger { color: #f00; }
@@ -15,6 +15,17 @@ a:focus { text-decoration: none; }
 .btn.btn-info, 
 .btn.btn-warning, 
 .btn.btn-danger { background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15)); }
+
+.nav-pills > li > a { color: #868686; font-size: 12px; line-height: 1.5; border: 1px solid rgba(0, 0, 0, 0); }
+.nav-pills > li.active > a, 
+.nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a:focus { background: -moz-linear-gradient(center top , #fefefe 0%, #f4f4f4 100%); border-color: #e6e6e6 !important; color: #555; }
+
+.nav-pills > li > a:hover, 
+.nav-pills > li > a:focus, 
+.nav-pills .open > a, 
+.nav-pills .open > a:hover, 
+.nav-pills .open > a:focus { background-color: #f5f5f5; border-color: #f5f5f5 !important; }
 
 .dropdown-menu > li > a { padding: 5px 20px; font-size: 12px; }
 
@@ -36,6 +47,7 @@ a:focus { text-decoration: none; }
 
 
 
+
 /* ССЫЛКИ */
 a { transition: color 0.2s ease 0s; -webkit-transition: color 0.2s ease 0s; }
 
@@ -52,6 +64,9 @@ a.read-more:hover { color: #f00 !important; }
 .table.table-talk a.user { color: #111; font-weight: bold; }
 .table.table-talk a.user.inactive { color: #adadad; }
 
+a.user-friends { color: #111; }
+a.user-friends:hover { color: #f00; text-decoration: none; }
+
 
 /* ШАПКА САЙТА */
 #header .navbar .site-name { font-weight: 700; }
@@ -62,36 +77,38 @@ a.read-more:hover { color: #f00 !important; }
 
 
 /* НАВИГАЦИЯ */
-#nav { background-color: #fff; border-bottom: 1px solid #efefef; box-shadow: 0 10px 10px #fafafa; }
-#nav .container { padding-bottom: 12px; padding-top: 12px; }
-#nav .navbar-search { margin-bottom: 0; margin-top: 0; }
+#nav { padding-top: 12px; padding-bottom: 12px; background-color: #fff; border-bottom: 1px solid #efefef; box-shadow: 0 10px 10px #fafafa; }
 #nav .navbar-search .form-control { border-color: #e6e6e6; }
 #nav .navbar-search .form-control::-moz-placeholder { color: #aaa; }
-#nav .btn-write { margin-bottom: 0; margin-top: 0; }
+#nav .btn-write { margin-left: 30px; }
 
-.nav-pills > li > a { color: #868686; font-size: 12px; line-height: 1.5; border: 1px solid rgba(0, 0, 0, 0); }
-.nav-pills > li.active > a, 
-.nav-pills > li.active > a:hover, 
-.nav-pills > li.active > a:focus { background: -moz-linear-gradient(center top , #fefefe 0%, #f4f4f4 100%); border-color: #e6e6e6 !important; color: #555; }
 
-.nav-pills > li > a:hover, 
-.nav-pills > li > a:focus, 
-.nav-pills .open > a, 
-.nav-pills .open > a:hover, 
-.nav-pills .open > a:focus { background-color: #f5f5f5; border-color: #f5f5f5 !important; }
-
+/* КОНТЕНТ */
+#wrapper { padding-top: 40px; padding-bottom: 40px; }
 #wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
 
 /* ФУТЕР */
-#footer { background-color: #e9eaed; border-top: 2px solid #d7dbe4; color: #fff; }
-#footer a { color: #111; font-size: 11px; }
-#footer .footer-list-header { border-bottom: 1px solid #d7dbe4; color: #111; font-weight: bold; margin-bottom: 5px; padding-bottom: 3px; }
+#footer .footer-center { padding-top: 40px; padding-bottom: 40px; color: #fff; background-color: #e9eaed; border-top: 2px solid #d7dbe4; }
+#footer .footer-center a { color: #111; font-size: 11px; }
+#footer .footer-center .footer-list-header { border-bottom: 1px solid #d7dbe4; color: #111; font-weight: bold; margin-bottom: 5px; padding-bottom: 3px; }
 
-#footer .footer-bottom { background-color: #476698; font-size: 11px; }
-#footer .footer-bottom .container { padding-bottom: 15px; padding-top: 15px; }
+#footer .footer-bottom { padding-bottom: 15px; padding-top: 15px; font-size: 11px; color: #fff; background-color: #476698; }
 #footer .footer-bottom a { color: #fff; }
 #footer .footer-bottom .social-icons a:hover { text-decoration: none; }
+
+
+/* СТАТИСТИКА */
+#stat-performance { padding-top: 60px; padding-bottom: 60px; }
+
+
+/* LIGHT PAGES */
+body.light { background-color: #e9eaed; }
+body.light .site-info .site-name a { color: #111; }
+body.light .site-info .site-name a:hover { color: #f00; text-decoration: none; }
+body.light .light-form { background-color: #fff; border-radius: 4px; }
+body.light .site-name { font-weight: 700; }
+body.light .site-description { color: #868686; font-size: 16px; margin-top: 15px; }
 
 
 /* STREAM */
@@ -104,27 +121,6 @@ a.read-more:hover { color: #f00 !important; }
 /* USERFIELDS */
 .userfield-list li { background-color: #f2f2f2; }
 .userfield-list li .userfield_admin_name { font-weight: bold; color: #333; }
-
-
-/* LIGHT PAGES */
-body.light { background-color: #e9eaed; }
-body.light .site-info .site-name a { color: #111; }
-body.light .site-info .site-name a:hover { color: #f00; text-decoration: none; }
-body.light .light-form { background-color: #fff; border-radius: 4px; }
-body.light .site-name { font-weight: 700; }
-body.light .site-description { color: #868686; font-size: 16px; margin-top: 15px; }
-
-
-/* MISC */
-.help { border: 1px solid #ddd; background-color: #fff; }
-.help:before { display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #fff transparent; border-style: solid; }
-
-.text h4, 
-.text h5, 
-.text h6 { font-weight: 700; }
-
-a.user-friends { color: #111; }
-a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* ГОЛОСОВАНИЕ */
@@ -211,10 +207,19 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .stream-settings-friends .checkbox a:hover { color: #f00; }
 .user-list-mini li img, .stream-settings-friends li img { vertical-align: middle; }
 
+.help { border: 1px solid #ddd; background-color: #fff; }
+.help:before { display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent #fff transparent; border-style: solid; }
+
+
 /* ФОРМАТИРОВАННЫЙ ТЕКСТ */
 .text a { text-decoration: underline; }
 .text a:hover { text-decoration: none; }
 .text a:visited { color: #6091bf; }
+
+.text { line-height: 1.6; }
+.text h4, 
+.text h5, 
+.text h6 { font-weight: 700; }
 
 
 /* ИКОНКИ */
