@@ -339,11 +339,6 @@ select, input[type="file"] { height: auto; }
 
 .topic .topic-header .topic-title span { cursor: help; vertical-align: top; }
 
-.topic .topic-header .topic-info .topic-blog { margin-right: 10px; }
-.topic .topic-header .topic-info time { margin-right: 10px; }
-
-.topic .topic-header .topic-info .actions { display: inline; }
-
 
 /* Content */
 .topic .topic-content { margin-bottom: 20px; }
