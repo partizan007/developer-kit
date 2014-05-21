@@ -6,7 +6,7 @@
 		<div class="container">
 				
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-navbar-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -20,7 +20,7 @@
 			
 			{hook run='userbar_nav'}
 			
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="collapse navbar-collapse header-navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li {if $sMenuHeadItemSelect=='blog'}class="active"{/if}><a href="{cfg name='path.root.web'}">{$aLang.topic_title}</a></li>
 					<li {if $sMenuHeadItemSelect=='blogs'}class="active"{/if}><a href="{router page='blogs'}">{$aLang.blogs}</a></li>
