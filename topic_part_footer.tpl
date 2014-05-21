@@ -129,5 +129,3 @@
 		{/if}
 	</footer>
 </article> <!-- /.topic -->
-
-{include file='blocks.tpl' group='topic-bottom'}
