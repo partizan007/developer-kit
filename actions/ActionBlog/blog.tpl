@@ -62,10 +62,10 @@
 		
 		{if $oUserCurrent and ($oUserCurrent->getId()==$oBlog->getOwnerId() or $oUserCurrent->isAdministrator() or $oBlog->getUserIsAdministrator() )}
 			<ul class="small list-unstyled list-inline actions">
+				<li><a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="actions-edit">{$aLang.blog_edit}</a></li>
 				<li>
-					<a href="{router page='blog'}edit/{$oBlog->getId()}/" title="{$aLang.blog_edit}" class="actions-edit">{$aLang.blog_edit}</a></li>
 					{if $oUserCurrent->isAdministrator()}
-						<li><a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="actions-delete">{$aLang.blog_delete}</a>
+						<a href="#" title="{$aLang.blog_delete}" id="blog_delete_show" class="actions-delete">{$aLang.blog_delete}</a>
 					{else}
 						<a href="{router page='blog'}delete/{$oBlog->getId()}/?security_ls_key={$LIVESTREET_SECURITY_KEY}" title="{$aLang.blog_delete}" onclick="return confirm('{$aLang.blog_admin_delete_confirm}');" class="actions-delete">{$aLang.blog_delete}</a>
 					{/if}
@@ -155,47 +155,49 @@
 
 {hook run='blog_info' oBlog=$oBlog}
 
-<div class="row nav-filter-wrapper">
-	<div class="col-lg-12">
-		<div class="blog-nav">
-			<ul class="nav nav-pills">
-				<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
-				
-				<li {if $sMenuSubItemSelect=='new'}class="active"{/if}><a href="{$sMenuSubBlogUrl}newall/">{$aLang.blog_menu_collective_new}{if $iCountTopicsBlogNew>0} +{$iCountTopicsBlogNew}{/if}</a></li>
-				
-				<li class="dropdown{if $sMenuSubItemSelect=='discussed'} active{/if}">
-					<a href="{$sMenuSubBlogUrl}discussed/" class="dropdown-toggle" data-toggle="dropdown">
-						{$aLang.blog_menu_collective_discussed}
-						<b class="caret"></b>
-					</a>
-					
-					<ul class="dropdown-menu">				
-						<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
-						<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
-						<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
-						<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=all">{$aLang.blog_menu_top_period_all}</a></li>
-					</ul>
-				</li>
-				
-				<li class="dropdown{if $sMenuSubItemSelect=='top'} active{/if}">
-					<a href="{$sMenuSubBlogUrl}top/" class="dropdown-toggle" data-toggle="dropdown">
-						{$aLang.blog_menu_collective_top}
-						<b class="caret"></b>
-					</a>
-					
-					<ul class="dropdown-menu">				
-						<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
-						<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
-						<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
-						<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=all">{$aLang.blog_menu_top_period_all}</a></li>
-					</ul>
-				</li>
-				
-				{hook run='menu_blog_blog_item'}
-			</ul>
-		</div>
-	</div>
-</div>
+
+<ul class="nav nav-pills nav-filter-wrapper">
+	<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
+	
+	<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
+		{if $iCountTopicsBlogNew>0}
+			<a href="{$sMenuSubBlogUrl}new/">{$aLang.blog_menu_collective_new} +{$iCountTopicsBlogNew}</a>
+		{else}
+			<a href="{$sMenuSubBlogUrl}newall/">{$aLang.blog_menu_collective_new}</a>
+		{/if}
+	</li>
+	
+	<li class="dropdown{if $sMenuSubItemSelect=='discussed'} active{/if}">
+		<a href="{$sMenuSubBlogUrl}discussed/" class="dropdown-toggle" data-toggle="dropdown">
+			{$aLang.blog_menu_collective_discussed}
+			<b class="caret"></b>
+		</a>
+		
+		<ul class="dropdown-menu">				
+			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
+			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
+			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
+			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=all">{$aLang.blog_menu_top_period_all}</a></li>
+		</ul>
+	</li>
+	
+	<li class="dropdown{if $sMenuSubItemSelect=='top'} active{/if}">
+		<a href="{$sMenuSubBlogUrl}top/" class="dropdown-toggle" data-toggle="dropdown">
+			{$aLang.blog_menu_collective_top}
+			<b class="caret"></b>
+		</a>
+		
+		<ul class="dropdown-menu">				
+			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
+			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
+			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
+			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=all">{$aLang.blog_menu_top_period_all}</a></li>
+		</ul>
+	</li>
+	
+	{hook run='menu_blog_blog_item'}
+</ul>
+
 
 {if $bCloseBlog}
 	<div class="alert alert-danger">

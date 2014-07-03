@@ -33,7 +33,7 @@
 				<a href="{$oTarget->getTarget()->getUrl()}#comment{$oTarget->getId()}">{$oTarget->getTarget()->getTitle()|escape:'html'}</a>
 				{assign var=sTextEvent value=$oTarget->getText()|strip_tags|truncate:200}
 				{if trim($sTextEvent)}
-					<div class="stream-comment-preview"><small>{$sTextEvent}</small></div>
+					<div class="small stream-comment-preview">{$sTextEvent}</div>
 				{/if}
 			{elseif $oStreamEvent->getEventType() == 'add_blog'}
 				{if $oUser->getProfileSex() != 'woman'} {$aLang.stream_list_event_add_blog} {else} {$aLang.stream_list_event_add_blog_female} {/if} 
@@ -61,7 +61,7 @@
 				<a href="{$oTarget->getUrlWall()}">{$oTarget->getWallUser()->getLogin()}</a>
 				{assign var=sTextEvent value=$oTarget->getText()|strip_tags|truncate:200}
 				{if trim($sTextEvent)}
-					<div class="stream-comment-preview"><small>{$sTextEvent}</small></div>
+					<div class="small stream-comment-preview">{$sTextEvent}</div>
 				{/if}
 			{else}
 				{hook run="stream_list_event_`$oStreamEvent->getEventType()`" oStreamEvent=$oStreamEvent}
