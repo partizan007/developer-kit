@@ -68,6 +68,8 @@ body.light .light-form .page-header h3 { margin-top: 0; }
 .text pre.prettyprint { background-color: #f7f7f7; border-color: #eaeaea; margin: 0; padding: 15px; }
 .text pre code { white-space: inherit; }
 
+blockquote { margin: 0; }
+
 
 /* -------------------------------------------------------------------
 	ОБЩИЕ СТИЛИ
