@@ -21,5 +21,7 @@ return array(
 
 	'blogs_name_search' => 'Поиск по названию',
 	'people_name_search' => 'Поиск по логину',
+	
+	'footer_menu_project_info' => '<b>Место для описания Вашего сайта. Изменить текст можно в файле russian.php шаблона.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae fermentum velit. Suspendisse porta faucibus tincidunt. Vivamus lacus magna, aliquam at tempor tempor, dignissim tincidunt turpis. Nam scelerisque sollicitudin metus ac interdum.',
 );
 ?>

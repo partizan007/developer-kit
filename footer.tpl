@@ -16,7 +16,12 @@
 		<div class="footer-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-3">
+					<div class="col-md-12 col-lg-6 project-info">
+						<h5>{cfg name='view.name'}</h5>
+						{$aLang.footer_menu_project_info}
+					</div>
+					
+					<div class="col-sm-4 col-lg-2">
 						{if $oUserCurrent}
 							<ul class="list-unstyled footer-list">
 								<li class="footer-list-header word-wrap">{$oUserCurrent->getLogin()}</li>
@@ -36,7 +41,7 @@
 						{/if}
 					</div>
 					
-					<div class="col-sm-3">
+					<div class="col-sm-4 col-lg-2">
 						<ul class="list-unstyled footer-list">
 							<li class="footer-list-header">{$aLang.footer_menu_navigate_title}</li>
 							<li><a href="{cfg name='path.root.web'}">{$aLang.topic_title}</a></li>
@@ -47,7 +52,7 @@
 						</ul>
 					</div>
 					
-					<div class="col-sm-3">
+					<div class="col-sm-4 col-lg-2">
 						<ul class="list-unstyled footer-list">
 							<li class="footer-list-header">{$aLang.footer_menu_navigate_info}</li>
 							<li><a href="#">{$aLang.footer_menu_project_about}</a></li>
@@ -67,8 +72,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
-						{hook run='copyright'}, 
-						Автор шаблона &mdash; <a href="http://kulesh-vladimir.by/">вOFFка</a>
+						{hook run='copyright'}. 
+						Template based on "Developer-Kit" by <a href="http://kulesh-vladimir.by/">вOFFка</a>
 					</div>
 					
 					<div class="col-sm-6 text-right social-icons">

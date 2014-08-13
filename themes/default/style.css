@@ -89,8 +89,10 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* ФУТЕР */
-#footer .footer-center { padding-top: 40px; padding-bottom: 40px; color: #fff; background-color: #e9eaed; border-top: 2px solid #d7dbe4; }
+#footer .footer-center { padding-top: 40px; padding-bottom: 40px; background-color: #e9eaed; border-top: 2px solid #d7dbe4; }
 #footer .footer-center a { color: #111; font-size: 11px; }
+#footer .footer-center .project-info { font-size: 12px; }
+#footer .footer-center .project-info h5 { border-bottom: 1px solid #d7dbe4; font-size: 13px; font-weight: bold; line-height: 1.42857; margin-bottom: 5px; margin-top: 0; padding-bottom: 3px; }
 #footer .footer-center .footer-list-header { border-bottom: 1px solid #d7dbe4; color: #111; font-weight: bold; margin-bottom: 5px; padding-bottom: 3px; }
 
 #footer .footer-bottom { padding-bottom: 15px; padding-top: 15px; font-size: 11px; color: #fff; background-color: #476698; }
@@ -499,3 +501,26 @@ body.light .site-description { color: #868686; font-size: 16px; margin-top: 15px
 
 /* ПАГИНАЦИЯ */
 .paging .pagination { margin-bottom: 0; }
+
+
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 319px) {
+	
+}
+
+@media (max-width: 479px) {
+	
+}
+
+@media (max-width: 767px) {
+	#footer .footer-list { margin-bottom: 40px; }
+}
+
+@media (max-width: 991px) {
+	
+}
+
+@media (max-width: 1199px) {
+	#footer .footer-center .project-info { margin-bottom: 40px; }
+}

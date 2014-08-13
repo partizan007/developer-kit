@@ -87,7 +87,7 @@
 				</form>
 			</div>
 		{else}
-			{$aLang.comment_unregistered}
+			<div class="alert alert-info" role="alert">{$aLang.comment_unregistered}</div>
 		{/if}
 	{/if}
 </div>
