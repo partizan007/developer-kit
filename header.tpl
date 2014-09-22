@@ -28,15 +28,20 @@
 		<meta property="og:type" content="article"/>
 		<meta name="twitter:card" content="summary">
 	{/if}
-
+	
 	{$aHtmlHeadFiles.css}
 	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-
+	{if {cfg name='view.theme'} == 'new'}
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	{else}
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	{/if}
+	
+	
 	<link href="{cfg name='path.static.skin'}/images/favicon.ico?v1" rel="shortcut icon" />
 	<link rel="search" type="application/opensearchdescription+xml" href="{router page='search'}opensearch/" title="{cfg name='view.name'}" />
-
-
+	
+	
 	{if $aHtmlRssAlternate}
 		<link rel="alternate" type="application/rss+xml" href="{$aHtmlRssAlternate.url}" title="{$aHtmlRssAlternate.title}">
 	{/if}
@@ -71,7 +76,7 @@
 	
 	
 	{$aHtmlHeadFiles.js}
-
+	
 	
 	<script type="text/javascript">
 		var tinyMCE = false;
