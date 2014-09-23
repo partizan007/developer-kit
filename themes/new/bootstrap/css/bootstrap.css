@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=f9e702e274f171821c11)
- * Config saved to config.json and https://gist.github.com/f9e702e274f171821c11
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=34fc83fe881d23e98747)
+ * Config saved to config.json and https://gist.github.com/34fc83fe881d23e98747
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -993,7 +993,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
   color: inherit;
 }
@@ -1280,7 +1280,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #dae2e6;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1304,7 +1304,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #dae2e6;
   border-left: 0;
   text-align: right;
 }
@@ -5172,22 +5172,22 @@ a.list-group-item-danger.active:focus {
   border-bottom: 1px solid #dddddd;
 }
 .panel-default {
-  border-color: #eeeeee;
+  border-color: #e7ebed;
 }
 .panel-default > .panel-heading {
   color: #000000;
   background-color: #f5f5f5;
-  border-color: #eeeeee;
+  border-color: #e7ebed;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #eeeeee;
+  border-top-color: #e7ebed;
 }
 .panel-default > .panel-heading .badge {
   color: #f5f5f5;
   background-color: #000000;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #eeeeee;
+  border-bottom-color: #e7ebed;
 }
 .panel-primary {
   border-color: #275ec2;
