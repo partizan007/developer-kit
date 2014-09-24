@@ -165,9 +165,7 @@
 								<p class="help-block"><small class="text-danger validate-error-hide validate-error-reminder"></small></p>
 							</div>
 					
-							<div class="form-group">
-								<button type="submit" name="submit_reminder" class="btn btn-success" id="popup-reminder-form-submit" disabled="disabled">{$aLang.password_reminder_submit}</button>
-							</div>
+							<button type="submit" name="submit_reminder" class="btn btn-success" id="popup-reminder-form-submit" disabled="disabled">{$aLang.password_reminder_submit}</button>
 							
 						</form>
 					</div>
