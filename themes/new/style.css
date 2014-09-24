@@ -369,7 +369,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .comment { padding-left: 63px; margin-bottom: 35px; min-height: 88px; }
 .comment .comment-avatar { height: 48px; left: 0; top: 0; width: 48px; border-radius: 24px; }
 
-.comment .comment-content { border: 1px solid #e7ebed; border-radius: 4px; margin-bottom: 10px; overflow: inherit; padding: 15px; position: relative; overflow: hidden; }
+.comment .comment-content { border: 1px solid #e7ebed; border-radius: 4px; margin-bottom: 10px; padding: 15px; position: relative; }
 .comment-content:before {
   border-color: transparent transparent #fff;
   border-style: solid;
