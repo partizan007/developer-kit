@@ -83,7 +83,7 @@
     "@input-bg": "#fff",
     "@input-bg-disabled": "@gray-lighter",
     "@input-color": "@gray",
-    "@input-border": "#ccc",
+    "@input-border": "#dfe3e8",
     "@input-border-radius": "@border-radius-base",
     "@input-border-focus": "#66afe9",
     "@input-color-placeholder": "@gray-light",
@@ -182,7 +182,7 @@
     "@nav-tabs-justified-link-border-color": "#ddd",
     "@nav-tabs-justified-active-link-border-color": "@body-bg",
     "@nav-pills-border-radius": "@border-radius-base",
-    "@nav-pills-active-link-hover-bg": "@component-active-bg",
+    "@nav-pills-active-link-hover-bg": "#ecedee",
     "@nav-pills-active-link-hover-color": "@component-active-color",
     "@pagination-color": "@link-color",
     "@pagination-bg": "#fff",
@@ -419,5 +419,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=26d320660b4de14b2fe8"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=814cbafc1859e25e6bef"
 }

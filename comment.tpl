@@ -73,26 +73,25 @@
 			<div class="text">
 				{$oComment->getText()}
 			</div>
+		
+			{if $oUserCurrent}
+				<ul class="list-unstyled list-inline small comment-actions">
+					{if !$oComment->getDelete() and !$bAllowNewComment}
+						<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
+					{/if}
+					
+					{if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
+						<li><a href="#" class="comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
+					{/if}
+					
+					{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}   										
+						<li><a href="#" class="comment-repair link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
+					{/if}
+					
+					{hook run='comment_action' comment=$oComment}
+				</ul>
+			{/if}
 		</div>
-			
-			
-		{if $oUserCurrent}
-			<ul class="list-unstyled list-inline small comment-actions">
-				{if !$oComment->getDelete() and !$bAllowNewComment}
-					<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
-				{/if}
-				
-				{if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
-					<li><a href="#" class="comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
-				{/if}
-			
-				{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}   										
-					<li><a href="#" class="comment-repair link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
-				{/if}
-			
-				{hook run='comment_action' comment=$oComment}
-			</ul>
-		{/if}
 	{else}				
 		<span class="text-muted">{$aLang.comment_was_delete}</span>
 	{/if}	

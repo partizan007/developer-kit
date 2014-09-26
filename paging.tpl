@@ -2,9 +2,9 @@
 	<div class="paging">
 		<ul class="pagination">
 			{if $aPaging.iPrevPage}
-				<li class="prev"><a href="{$aPaging.sBaseUrl}/page{$aPaging.iPrevPage}/{$aPaging.sGetParams}" class="js-paging-prev-page" title="{$aLang.paging_previos}">&laquo;</a></li>
+				<li class="prev"><a href="{$aPaging.sBaseUrl}/page{$aPaging.iPrevPage}/{$aPaging.sGetParams}" class="js-paging-prev-page" title="{$aLang.paging_previos}">&larr; {$aLang.paging_previos}</a></li>
 			{else}
-				<li class="disabled prev"><span>&laquo;</span></li>
+				<li class="disabled prev"><span>&larr; {$aLang.paging_previos}</span></li>
 			{/if}
 			
 			
@@ -24,9 +24,9 @@
 			
 			
 			{if $aPaging.iNextPage}
-				<li class="pull-right next"><a href="{$aPaging.sBaseUrl}/page{$aPaging.iNextPage}/{$aPaging.sGetParams}" class="js-paging-next-page" title="{$aLang.paging_next}">&raquo;</a></li>
+				<li class="next"><a href="{$aPaging.sBaseUrl}/page{$aPaging.iNextPage}/{$aPaging.sGetParams}" class="js-paging-next-page" title="{$aLang.paging_next}">{$aLang.paging_next} &rarr;</a></li>
 			{else}
-				<li class="pull-right disabled next"><span>&raquo;</span></li>
+				<li class="disabled next"><span>{$aLang.paging_next} &rarr;</span></li>
 			{/if}
 		</ul>
 	</div>

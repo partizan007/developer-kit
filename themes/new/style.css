@@ -11,17 +11,42 @@ a:focus { text-decoration: none; }
 
 blockquote { background-color: #f4f5f5; color: #727a90; }
 
-.btn.btn-default { background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1)); }
+.btn.btn-default {
+	background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
+	background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	background-image: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+	background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+}
+
 .btn.btn-primary, 
 .btn.btn-success, 
 .btn.btn-info, 
 .btn.btn-warning, 
-.btn.btn-danger { background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15)); }
+.btn.btn-danger {
+	background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15)));
+	background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+	background-image: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+	background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+	background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%);
+}
 
 .nav-pills > li > a { padding: 6px 12px; color: #727a90; font-size: 13px; border: 1px solid rgba(0, 0, 0, 0); }
 .nav-pills > li.active > a, 
 .nav-pills > li.active > a:hover, 
-.nav-pills > li.active > a:focus { background: -moz-linear-gradient(center top , #fefefe 0%, #f4f4f4 100%); border-color: #e2e7ea !important; color: #333; }
+.nav-pills > li.active > a:focus {
+	color: #333;
+	border-color: #e2e7ea !important;
+	
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.03) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.03)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.03) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.03) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.03) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.03) 100%);
+}
 
 .nav-pills > li > a:hover, 
 .nav-pills > li > a:focus, 
@@ -79,11 +104,18 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 /* НАВИГАЦИЯ */
 #nav {
-  background: -moz-linear-gradient(center top , #fdfdfd 0%, #f6f8f9 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border-bottom: 1px solid #e7ebed;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  padding-bottom: 10px;
-  padding-top: 10px;
+	border-bottom: 1px solid #e7ebed;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); box-shadow: 0 0 10px rgba(0,0,0,.15);
+	
+	background: #fdfdfd;
+	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f6f8f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f6f8f9));
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 }
 #nav .btn-write { margin-left: 30px; font-size: 13px; }
 
@@ -124,16 +156,16 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 .stream-comment-preview { background-color: #f2f3f5; border-radius: 4px; padding: 8px 12px; position: relative; box-shadow: 0 2px 4px #e3e5e8 inset; }
 .stream-comment-preview:after {
-  border-color: transparent transparent #e7e9ed;
-  border-style: solid;
-  border-width: 6px;
-  content: "";
-  display: block;
-  height: 0;
-  left: 15px;
-  position: absolute;
-  top: -12px;
-  width: 0;
+	border-color: transparent transparent #e7e9ed;
+	border-style: solid;
+	border-width: 6px;
+	content: "";
+	display: block;
+	height: 0;
+	left: 15px;
+	position: absolute;
+	top: -12px;
+	width: 0;
 }
 
 
@@ -171,11 +203,20 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 /* TOOLBAR */
 .toolbar { top: 156px; }
+
 .toolbar section {
-  background: -moz-linear-gradient(center top , #fdfdfd 0%, #f6f8f9 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border: 1px solid #e9edef;
-  border-radius: 4px;
+	border: 1px solid #e9edef;
+	border-radius: 4px;
+	
+	background: #fdfdfd;
+	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f6f8f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f6f8f9));
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 }
+
 .toolbar section a { color: #a8aec1; }
 .toolbar section a:hover { color: #828a9f; }
 
@@ -325,24 +366,24 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .poll-create { background-color: rgba(0, 0, 0, 0.02); }
 
 /* Topic Photo */
-.topic.topic-type-photoset .topic-photo-preview .topic-photo-count { color: #3fb618; background: rgba(0,0,0,.6); }
-.topic.topic-type-photoset .topic-photo-preview .topic-photo-desc { color: #fff; background: rgba(0,0,0,.7); }
+.topic.topic-type-photoset .topic-photo-preview .topic-photo-count { color: #3fb618; background-color: rgba(0,0,0,.6); }
+.topic.topic-type-photoset .topic-photo-preview .topic-photo-desc { color: #fff; background-color: rgba(0,0,0,.7); }
 .topic.topic-type-photoset .topic-photo-images { margin-bottom: 15px; }
 .topic.topic-type-photoset .topic-photo-images h2 { border-bottom: 1px solid #eee; font-size: 22px; margin-bottom: 15px; margin-top: 0; padding-bottom: 5px; }
 .topic.topic-type-photoset .topic-photo-images ul { background-color: #f2f3f5; margin-bottom: 15px; margin-right: -9px; padding: 20px 20px 11px; }
 
 .topic-photo-upload { background-color: rgba(0, 0, 0, 0.02); }
 .topic-photo-upload ul li textarea {
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	padding: 6px 12px;
+	font-size: 13px;
+	line-height: 1.428571429;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .topic-photo-upload ul li .image-delete { color: #f00; }
@@ -369,31 +410,31 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .comment { padding-left: 63px; margin-bottom: 35px; min-height: 88px; }
 .comment .comment-avatar { height: 48px; left: 0; top: 0; width: 48px; border-radius: 24px; }
 
-.comment .comment-content { border: 1px solid #e7ebed; border-radius: 4px; margin-bottom: 10px; padding: 15px; position: relative; }
+.comment .comment-content { border: 1px solid #e7ebed; border-radius: 4px; padding: 15px; position: relative; }
 .comment-content:before {
-  border-color: transparent transparent #fff;
-  border-style: solid;
-  border-width: 7px;
-  content: "";
-  display: block;
-  height: 0;
-  left: 10px;
-  position: absolute;
-  top: -13px;
-  width: 0;
-  z-index: 10;
+	border-color: transparent transparent #fff;
+	border-style: solid;
+	border-width: 7px;
+	content: "";
+	display: block;
+	height: 0;
+	left: 10px;
+	position: absolute;
+	top: -13px;
+	width: 0;
+	z-index: 10;
 }
 .comment-content:after {
-  border-color: transparent transparent #d6dce0;
-  border-style: solid;
-  border-width: 7px;
-  content: "";
-  display: block;
-  height: 0;
-  left: 10px;
-  position: absolute;
-  top: -14px;
-  width: 0;
+	border-color: transparent transparent #d6dce0;
+	border-style: solid;
+	border-width: 7px;
+	content: "";
+	display: block;
+	height: 0;
+	left: 10px;
+	position: absolute;
+	top: -14px;
+	width: 0;
 }
 
 /* Типы комментариев
@@ -402,19 +443,19 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
  * new 		- 	новый, непрочитанный комментарий
  * current 	- 	активный комментарий, который выделяется при исползование кнопки обновления в тулбаре
  */
-.comment.comment-deleted .comment-content { background: #fbeeee; border-color: #c8a8a8; }
+.comment.comment-deleted .comment-content { background-color: #fbeeee; border-color: #c8a8a8; }
 .comment.comment-deleted .comment-content:after { border-color: transparent transparent #c8a8a8; }
 .comment.comment-deleted .comment-content:before { border-color: transparent transparent #fbeeee; }
 
-.comment.comment-self .comment-content { background: #fefef1; border-color: #e6e6bd; }
+.comment.comment-self .comment-content { background-color: #fefef1; border-color: #e6e6bd; }
 .comment.comment-self .comment-content:after { border-color: transparent transparent #e6e6bd; }
 .comment.comment-self .comment-content:before { border-color: transparent transparent #fefef1; }
 
-.comment.comment-new .comment-content { background: #fff; border-color: #dddb5c; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
+.comment.comment-new .comment-content { background-color: #fff; border-color: #dddb5c; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
 .comment.comment-new .comment-content:after { border-color: transparent transparent #dddb5c; }
 .comment.comment-new .comment-content:before { border-color: transparent transparent #fff; }
 
-.comment.comment-current .comment-content { background: #cdf5a6; border-color: #bae48e; }
+.comment.comment-current .comment-content { background-color: #cdf5a6; border-color: #bae48e; }
 .comment.comment-current .comment-content:after { border-color: transparent transparent #bae48e; }
 .comment.comment-current .comment-content:before { border-color: transparent transparent #cdf5a6; }
 
@@ -497,7 +538,19 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 
 /* МОДАЛЬНЫЕ ОКНА */
-.modal-header { background: -moz-linear-gradient(center top , #fdfdfd 0%, #eaeeef 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); border-radius: 8px 8px 0 0; padding: 15px 20px; }
+.modal-header {
+	padding: 15px 20px;
+	border-radius: 8px 8px 0 0;
+	
+	background: #fdfdfd;
+	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f6f8f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f6f8f9));
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+}
+
 .modal-content { border-radius: 8px 8px 8px 8px; }
 .modal-header .close { margin-top: 2px; }
 
@@ -559,7 +612,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .infobox a:hover { color: #999ddb; }
 
 /* Default Tip */
-.infobox.infobox-standart { background: rgba(0,0,0,.8); }
+.infobox.infobox-standart { background-color: rgba(0,0,0,.8); }
 .infobox.infobox-standart .tip-arrow  { border-color: rgba(0,0,0,.8); }
 
 
@@ -578,8 +631,8 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 #notifier .n-box h3 { color: #fff; }
 #notifier .n-box p { font-size: 12px; }
 
-#notifier .n-box.n-notice { background: #063573; }
-#notifier .n-box.n-error { background: #850505; }
+#notifier .n-box.n-notice { background-color: #063573; }
+#notifier .n-box.n-error { background-color: #850505; }
 
 
 /* ПАГИНАЦИЯ */
