@@ -4,6 +4,6 @@ Contact e-mail: v.a.kulesh@yandex.ru
 ------------------------------------------------------
 
 Ссылка на кастомизированную страницу Бутстрапа:
-http://getbootstrap.com/customize/?id=814cbafc1859e25e6bef
+http://getbootstrap.com/customize/?id=7c68a103188143a9b107
 
 ------------------------------------------------------

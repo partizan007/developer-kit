@@ -100,8 +100,6 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* ШАПКА САЙТА */
-#header .navbar .site-name { font-weight: bold; text-transform: uppercase; }
-#header .navbar .nav > li > a { font-size: 12px; font-weight: bold; text-transform: uppercase; }
 #header .navbar .nav > li > a img.avatar {
 	vertical-align: text-bottom;
 

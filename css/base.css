@@ -20,8 +20,7 @@ a.link-dotted:hover { text-decoration: none; }
 /* Шапка сайта */
 #header .navbar h1.site-name { margin: 0; }
 #header .navbar .nav > li > a img.avatar { width: 18px; height: 18px; vertical-align: top; }
-#header .navbar .nav > li > a.new-messages span { top: 2px; }
-
+#header .navbar .nav > li > a.new-messages span { font-size: 12px; top: 1px; }
 
 /* Stat */
 #stat-performance table td { width: 200px; vertical-align: top; }
@@ -148,7 +147,7 @@ blockquote { margin: 0; }
 
 .alert ul { margin-bottom: 0; }
 
-.ls-user:before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icon-user.png) 0 0 no-repeat; vertical-align: text-top; }
+.ls-user:before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icon-user.png) 0 0 no-repeat; vertical-align: baseline; }
 
 .wrapper-content { padding: 20px; }
 

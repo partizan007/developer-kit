@@ -156,11 +156,11 @@
     "@navbar-inverse-color": "@gray-light",
     "@navbar-inverse-bg": "#000",
     "@navbar-inverse-border": "darken(@navbar-inverse-bg, 10%)",
-    "@navbar-inverse-link-color": "@gray-light",
+    "@navbar-inverse-link-color": "#ddd",
     "@navbar-inverse-link-hover-color": "#fff",
     "@navbar-inverse-link-hover-bg": "transparent",
-    "@navbar-inverse-link-active-color": "@navbar-inverse-link-hover-color",
-    "@navbar-inverse-link-active-bg": "darken(@navbar-inverse-bg, 10%)",
+    "@navbar-inverse-link-active-color": "#bad2ff",
+    "@navbar-inverse-link-active-bg": "transparent",
     "@navbar-inverse-link-disabled-color": "#444",
     "@navbar-inverse-link-disabled-bg": "transparent",
     "@navbar-inverse-brand-color": "@navbar-inverse-link-hover-color",
@@ -187,12 +187,12 @@
     "@pagination-color": "@link-color",
     "@pagination-bg": "#fff",
     "@pagination-border": "#fff",
-    "@pagination-hover-color": "@link-hover-color",
+    "@pagination-hover-color": "#f00",
     "@pagination-hover-bg": "#fff",
     "@pagination-hover-border": "#fff",
     "@pagination-active-color": "#000",
-    "@pagination-active-bg": "#ffea8a",
-    "@pagination-active-border": "#ffea8a",
+    "@pagination-active-bg": "#f2f3f5",
+    "@pagination-active-border": "#e7ebed",
     "@pagination-disabled-color": "@gray-light",
     "@pagination-disabled-bg": "#fff",
     "@pagination-disabled-border": "#fff",
@@ -419,5 +419,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=814cbafc1859e25e6bef"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=7c68a103188143a9b107"
 }
