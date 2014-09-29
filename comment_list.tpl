@@ -40,12 +40,14 @@
 			</ul>
 			
 			
-			<div class="comment-content text">						
-				{if $oComment->isBad()}
-					{$oComment->getText()}						
-				{else}
-					{$oComment->getText()}
-				{/if}		
+			<div class="comment-content">
+				<div class="text">
+					{if $oComment->isBad()}
+						{$oComment->getText()}						
+					{else}
+						{$oComment->getText()}
+					{/if}
+				</div>
 			</div>
 		</section>
 	{/foreach}	
