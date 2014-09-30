@@ -135,7 +135,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 /* КОНТЕНТ */
 #wrapper { padding-top: 50px; padding-bottom: 50px; }
-#wrapper .nav-filter-wrapper { margin-bottom: 50px; }
+#wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
 
 /* ФУТЕР */

@@ -158,7 +158,6 @@
 
 <ul class="nav nav-pills nav-filter-wrapper">
 	<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
-	
 	<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 		{if $iCountTopicsBlogNew>0}
 			<a href="{$sMenuSubBlogUrl}new/">{$aLang.blog_menu_collective_new} +{$iCountTopicsBlogNew}</a>
@@ -166,36 +165,33 @@
 			<a href="{$sMenuSubBlogUrl}newall/">{$aLang.blog_menu_collective_new}</a>
 		{/if}
 	</li>
-	
-	<li class="dropdown{if $sMenuSubItemSelect=='discussed'} active{/if}">
-		<a href="{$sMenuSubBlogUrl}discussed/" class="dropdown-toggle" data-toggle="dropdown">
-			{$aLang.blog_menu_collective_discussed}
-			<b class="caret"></b>
-		</a>
-		
-		<ul class="dropdown-menu">				
-			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
-			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
-			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
-			<li {if $sMenuSubItemSelect=='discussed' & $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/?period=all">{$aLang.blog_menu_top_period_all}</a></li>
-		</ul>
-	</li>
-	
-	<li class="dropdown{if $sMenuSubItemSelect=='top'} active{/if}">
-		<a href="{$sMenuSubBlogUrl}top/" class="dropdown-toggle" data-toggle="dropdown">
-			{$aLang.blog_menu_collective_top}
-			<b class="caret"></b>
-		</a>
-		
-		<ul class="dropdown-menu">				
-			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
-			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
-			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
-			<li {if $sMenuSubItemSelect=='top' & $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/?period=all">{$aLang.blog_menu_top_period_all}</a></li>
-		</ul>
-	</li>
-	
+	<li {if $sMenuSubItemSelect=='discussed'}class="active"{/if}><a href="{$sMenuSubBlogUrl}discussed/">{$aLang.blog_menu_collective_discussed}</a></li>
+	<li {if $sMenuSubItemSelect=='top'}class="active"{/if}><a href="{$sMenuSubBlogUrl}top/">{$aLang.blog_menu_collective_top}</a></li>
 	{hook run='menu_blog_blog_item'}
+	
+	{if $sPeriodSelectCurrent}
+		<li class="pull-right active dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				{if $sPeriodSelectCurrent=='1'}
+					{$aLang.blog_menu_top_period_24h}
+				{elseif $sPeriodSelectCurrent=='7'}
+					{$aLang.blog_menu_top_period_7d}
+				{elseif $sPeriodSelectCurrent=='30'}
+					{$aLang.blog_menu_top_period_30d}
+				{elseif $sPeriodSelectCurrent=='all'}
+					{$aLang.blog_menu_top_period_all}
+				{/if}
+				
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				<li {if $sPeriodSelectCurrent=='1'}class="active"{/if}><a href="{$sPeriodSelectRoot}?period=1">{$aLang.blog_menu_top_period_24h}</a></li>
+				<li {if $sPeriodSelectCurrent=='7'}class="active"{/if}><a href="{$sPeriodSelectRoot}?period=7">{$aLang.blog_menu_top_period_7d}</a></li>
+				<li {if $sPeriodSelectCurrent=='30'}class="active"{/if}><a href="{$sPeriodSelectRoot}?period=30">{$aLang.blog_menu_top_period_30d}</a></li>
+				<li {if $sPeriodSelectCurrent=='all'}class="active"{/if}><a href="{$sPeriodSelectRoot}?period=all">{$aLang.blog_menu_top_period_all}</a></li>
+			</ul>
+		</li>
+	{/if}
 </ul>
 
 
