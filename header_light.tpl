@@ -86,7 +86,16 @@
 	<div class="container">
 	
 		<hgroup class="center-block site-info">
-			<h1 class="text-center site-name"><a href="{cfg name='path.root.web'}">{cfg name='view.name'}</a></h1>
+			<h1 class="text-center site-name">
+				<a href="{cfg name='path.root.web'}">
+					{if {cfg name='view.config_sitename'} == 'true'}
+						{cfg name='view.name'}
+					{else}
+						{cfg name='view.own_sitename'}
+					{/if}
+				</a>
+			</h1>
+			
 			<p class="text-center lead site-description">{cfg name='view.description'}</p>
 		</hgroup>
 

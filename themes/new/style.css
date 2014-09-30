@@ -139,15 +139,35 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* ФУТЕР */
-#footer .footer-center { padding-top: 50px; padding-bottom: 50px; background-color: #000; }
-#footer .footer-center a { color: #adadad; font-size: 13px; }
-#footer .footer-center .project-info { color: #adadad; font-size: 13px; }
-#footer .footer-center .project-info h5 { border-bottom: 1px dotted #222; color: #fff; font-size: 14px; font-weight: bold; line-height: 1.42857; margin-bottom: 7px; margin-top: 0; padding-bottom: 5px; }
-#footer .footer-center .footer-list-header { border-bottom: 1px dotted #222; color: #fff; font-weight: bold; margin-bottom: 5px; padding-bottom: 5px; }
+#footer .footer-center { padding-top: 50px; padding-bottom: 50px; }
+#footer .footer-center a { font-size: 13px; }
+#footer .footer-center .project-info { font-size: 13px; }
+#footer .footer-center .project-info h5 { font-size: 14px; font-weight: bold; line-height: 1.42857; margin-bottom: 7px; margin-top: 0; padding-bottom: 5px; }
+#footer .footer-center .footer-list-header { font-weight: bold; margin-bottom: 5px; padding-bottom: 5px; }
 
-#footer .footer-bottom { padding-bottom: 15px; padding-top: 15px; border-top: 1px dotted #111; font-size: 12px; color: #adadad; background-color: #000; }
-#footer .footer-bottom a { color: #adadad; }
-#footer .footer-bottom .social-icons a:hover { color: #fff; text-decoration: none; }
+#footer .footer-bottom { padding-bottom: 15px; padding-top: 15px; font-size: 12px; }
+
+/* Светлый футер*/
+#footer.footer-light .footer-center { background-color: #4064a6; }
+#footer.footer-light .footer-center a { color: #ddd; }
+#footer.footer-light .footer-center .project-info { color: #ddd; }
+#footer.footer-light .footer-center .project-info h5 { border-bottom: 1px dotted #4a71b7; color: #fff; }
+#footer.footer-light .footer-center .footer-list-header { border-bottom: 1px dotted #4a71b7; color: #fff; }
+
+#footer.footer-light .footer-bottom { border-top: 1px dotted #4a71b7; color: #ddd; background-color: #4064a6; }
+#footer.footer-light .footer-bottom a { color: #ddd; }
+#footer.footer-light .footer-bottom .social-icons a:hover { color: #fff; text-decoration: none; }
+
+/* Темный футер*/
+#footer.footer-dark .footer-center { background-color: #000; }
+#footer.footer-dark .footer-center a { color: #adadad; }
+#footer.footer-dark .footer-center .project-info { color: #adadad; }
+#footer.footer-dark .footer-center .project-info h5 { border-bottom: 1px dotted #222; color: #fff; }
+#footer.footer-dark .footer-center .footer-list-header { border-bottom: 1px dotted #222; color: #fff; }
+
+#footer.footer-dark .footer-bottom { border-top: 1px dotted #111; color: #adadad; background-color: #000; }
+#footer.footer-dark .footer-bottom a { color: #adadad; }
+#footer.footer-dark .footer-bottom .social-icons a:hover { color: #fff; text-decoration: none; }
 
 
 /* СТАТИСТИКА */

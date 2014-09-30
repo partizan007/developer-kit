@@ -3,11 +3,25 @@
 $config = array();
 
 /* Theme */
-$config['view']['theme'] = 'new';
+$config['view']['theme'] = 'new'; // Выбор темы оформления.
+
+/* Theme Color */
+$config['view']['theme_color'] = 'dark'; // Использовать светлый или темный вариант темы?
+/* Возможные значения: dark, light.
+ * При переключении между вариантами меняются цвета шапки и подвала.
+ */
+
+
+/* Site Name */
+$config['view']['config_sitename'] = 'true'; // Использовать имя сайта прописанное в конфиге сайта?
+/* Если выставлено "false", ниже можно задать свое имя. */
+$config['view']['own_sitename'] = 'Site Name'; // Свое имя сайта (удобно при необходимости вывода краткого имени).
 
 
 
 
+
+/*-------------------------------------------------------------------------------------------------------------------*/
 $config['head']['default']['js'] = Config::Get('head.default.js');
 $config['head']['default']['js'][] = '___path.static.skin___/js/template.js';
 

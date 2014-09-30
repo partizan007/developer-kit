@@ -2,7 +2,7 @@
 	
 	{hook run='header_banner_begin'}
 	
-	<nav class="navbar navbar-inverse navbar-static-top">
+	<nav class="navbar {if {cfg name='view.theme_color'} == 'light'}navbar-default{else}navbar-inverse{/if} navbar-static-top">
 		<div class="container">
 				
 			<div class="navbar-header">
@@ -14,7 +14,15 @@
 				</button>
 			
 				<hgroup class="site-info">
-					<h1 class="site-name"><a class="navbar-brand" href="{cfg name='path.root.web'}">{cfg name='view.name'}</a></h1>
+					<h1 class="site-name">
+						<a class="navbar-brand" href="{cfg name='path.root.web'}">
+							{if {cfg name='view.config_sitename'} == 'true'}
+								{cfg name='view.name'}
+							{else}
+								{cfg name='view.own_sitename'}
+							{/if}
+						</a>
+					</h1>
 				</hgroup>
 			</div>
 			

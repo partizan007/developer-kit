@@ -10,14 +10,20 @@
 	</section> <!-- /wrapper -->
 	
 	
-	<footer id="footer">
+	<footer id="footer" class="{if {cfg name='view.theme_color'} == 'light'}footer-light{else}footer-dark{/if}">
 		{include file='blocks.tpl' group='footer-top'}
 		
 		<div class="footer-center">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-lg-6 project-info">
-						<h5>{cfg name='view.name'}</h5>
+						<h5>
+							{if {cfg name='view.config_sitename'} == 'true'}
+								{cfg name='view.name'}
+							{else}
+								{cfg name='view.own_sitename'}
+							{/if}
+						</h5>
 						{$aLang.footer_menu_project_info}
 					</div>
 					
