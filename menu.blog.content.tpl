@@ -3,7 +3,7 @@
 		<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{cfg name='path.root.web'}/">{$aLang.blog_menu_all_good}</a></li>
 		<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 			{if $iCountTopicsNew>0}
-				<a href="{router page='index'}new/" class="new" title="{$aLang.blog_menu_top_period_24h}">+{$iCountTopicsNew}</a>
+				<a href="{router page='index'}new/" class="new" title="{$aLang.blog_menu_top_period_24h}">{$aLang.blog_menu_all_new} +{$iCountTopicsNew}</a>
 			{else}
 				<a href="{router page='index'}newall/" title="{$aLang.blog_menu_top_period_all}">{$aLang.blog_menu_all_new}</a>
 			{/if}
@@ -45,7 +45,7 @@
 		<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{$sMenuSubBlogUrl}">{$aLang.blog_menu_collective_good}</a></li>
 		<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 			{if $iCountTopicsBlogNew>0}
-				<a href="{$sMenuSubBlogUrl}new/" class="new" title="{$aLang.blog_menu_top_period_24h}">+{$iCountTopicsBlogNew}</a>
+				<a href="{$sMenuSubBlogUrl}new/" class="new" title="{$aLang.blog_menu_top_period_24h}">{$aLang.blog_menu_collective_new} +{$iCountTopicsBlogNew}</a>
 			{else}
 				<a href="{$sMenuSubBlogUrl}newall/" title="{$aLang.blog_menu_top_period_all}">{$aLang.blog_menu_collective_new}</a>
 			{/if}
@@ -87,7 +87,7 @@
 		<li {if $sMenuSubItemSelect=='good'}class="active"{/if}><a href="{router page='personal_blog'}">{$aLang.blog_menu_personal_good}</a></li>
 		<li {if $sMenuSubItemSelect=='new'}class="active"{/if}>
 			{if $iCountTopicsPersonalNew>0}
-				<a href="{router page='personal_blog'}new/" class="new" title="{$aLang.blog_menu_top_period_24h}">+{$iCountTopicsPersonalNew}</a>
+				<a href="{router page='personal_blog'}new/" class="new" title="{$aLang.blog_menu_top_period_24h}">{$aLang.blog_menu_personal_new} +{$iCountTopicsPersonalNew}</a>
 			{else}
 				<a href="{router page='personal_blog'}newall/" title="{$aLang.blog_menu_top_period_all}">{$aLang.blog_menu_personal_new}</a>
 			{/if}
