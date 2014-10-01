@@ -1,5 +1,5 @@
-<nav id="nav">
-	<div class="container">
+<nav id="nav" {if {cfg name='view.theme_bg'} !== 'true'}class="theme-bg-no"{/if}>
+	<div class="container {if {cfg name='view.theme_bg'} == 'true'}theme-bg{/if}">
 		<div class="row">
 			<div class="col-sm-8">
 				{if $menu}

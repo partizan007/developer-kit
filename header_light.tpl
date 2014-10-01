@@ -80,7 +80,7 @@
 {/if}
 
 
-<body class="{$body_classes} light">
+<body class="{$body_classes} light {if {cfg name='view.theme_bg'} == 'true'}theme-bg{/if}">
 	{hook run='body_begin'}
 	
 	<div class="container">

@@ -31,12 +31,7 @@
 	
 	{$aHtmlHeadFiles.css}
 	
-	{if {cfg name='view.theme'} == 'new'}
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	{else}
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	{/if}
-	
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	
 	<link href="{cfg name='path.static.skin'}/images/favicon.ico?v1" rel="shortcut icon" />
 	<link rel="search" type="application/opensearchdescription+xml" href="{router page='search'}opensearch/" title="{cfg name='view.name'}" />
@@ -128,7 +123,7 @@
 {add_block group='toolbar' name='toolbar_scrollup.tpl' priority=-100}
 
 
-<body class="{$body_classes}">
+<body class="{$body_classes} {if {cfg name='view.theme_bg'} == 'true'}theme-bg{/if}">
 	{hook run='body_begin'}
 		
 	{if $oUserCurrent}
