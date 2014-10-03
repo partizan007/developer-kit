@@ -390,7 +390,7 @@ select, input[type="file"] { height: auto; }
 /* Topic Talk */
 .topic.topic-type-talk .talk-recipients { padding: 10px 15px; margin-bottom: 20px; }
 
-.talk-search .talk-search-content { display: none; padding-top: 10px; margin-top: 10px; }
+.talk-search .talk-search-content { display: none; padding-top: 20px; margin-top: 10px; }
 
 
 /* Topic Preview */

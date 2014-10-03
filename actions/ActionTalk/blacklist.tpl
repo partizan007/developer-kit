@@ -5,14 +5,10 @@
 <section class="panel panel-default block block-type-blacklist">
 	<div class="panel-body">
 	
-		<header class="block-header">
-			<h3>{$aLang.talk_blacklist_title}</h3>
-		</header>
-
 		<div class="block-content">
 			<form onsubmit="return ls.talk.addToBlackList();">
 				<div class="form-group">
-					<label for="talk_blacklist_add">{$aLang.talk_balcklist_add_label}</label>
+					<label for="talk_blacklist_add">{$aLang.talk_blacklist_title}</label>
 					<input type="text" id="talk_blacklist_add" name="add" class="form-control autocomplete-users-sep" />
 				</div>
 			</form>

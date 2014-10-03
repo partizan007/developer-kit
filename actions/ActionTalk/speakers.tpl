@@ -4,9 +4,7 @@
 		
 		{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
 			{assign var="oUserRecipient" value=$oTalkUser->getUser()}
-			{if $oUser->getId() != $oUserRecipient->getId()}
-				<a class="{if $oTalkUser->getUserActive() != $TALK_USER_ACTIVE}inactive{/if}" href="{$oUserRecipient->getUserWebPath()}">{$oUserRecipient->getLogin()}</a>{if !$smarty.foreach.users.last}, {/if}
-			{/if}
+			<a class="username {if $oTalkUser->getUserActive() != $TALK_USER_ACTIVE}inactive{/if}" href="{$oUserRecipient->getUserWebPath()}">{$oUserRecipient->getLogin()}</a>{if !$smarty.foreach.users.last}, {/if}
 		{/foreach}
 		
 		{if $oTalk->getUserId()==$oUserCurrent->getId() or $oUserCurrent->isAdministrator()}
@@ -17,8 +15,7 @@
 	
 	{if $oTalk->getUserId()==$oUserCurrent->getId() or $oUserCurrent->isAdministrator()}
 		<div class="talk-search-content talk-recipients-content" id="talk_recipients">
-			<h3>{$aLang.talk_speaker_title}</h3>
-
+			
 			<form onsubmit="return ls.talk.addToTalk({$oTalk->getId()});">
 				<div class="form-group">
 					<label for="talk_speaker_add">{$aLang.talk_speaker_add_label}</label>
