@@ -2,8 +2,8 @@
 	
 	{hook run='header_banner_begin'}
 	
-	<nav class="navbar {if {cfg name='view.theme_color'} == 'light'}navbar-default{else}navbar-inverse{/if} navbar-static-top">
-		<div class="container">
+	<nav class="navbar navbar-{cfg name='navbar.view'} navbar-{cfg name='navbar.position'}">
+		<div class="container{if {cfg name='navbar.container.fluid'} == 'true'}-fluid{/if}">
 				
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-navbar-collapse">
@@ -13,17 +13,15 @@
 					<span class="icon-bar"></span>
 				</button>
 			
-				<hgroup class="site-info">
-					<h1 class="site-name">
-						<a class="navbar-brand" href="{cfg name='path.root.web'}">
-							{if {cfg name='view.config_sitename'} == 'true'}
-								{cfg name='view.name'}
-							{else}
-								{cfg name='view.own_sitename'}
-							{/if}
-						</a>
-					</h1>
-				</hgroup>
+				<h1 class="site-name">
+					<a class="navbar-brand" href="{cfg name='path.root.web'}">
+						{if {cfg name='view.config_sitename'} == 'true'}
+							{cfg name='view.name'}
+						{else}
+							{cfg name='view.own_sitename'}
+						{/if}
+					</a>
+				</h1>
 			</div>
 			
 			{hook run='userbar_nav'}

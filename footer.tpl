@@ -10,7 +10,7 @@
 	</section> <!-- /wrapper -->
 	
 	
-	<footer id="footer" class="{if {cfg name='view.theme_color'} == 'light'}footer-light{else}footer-dark{/if}">
+	<footer id="footer" class="{if {cfg name='navbar.view'} == 'default'}footer-light{else}footer-dark{/if}">
 		{include file='blocks.tpl' group='footer-top'}
 		
 		<div class="footer-center">
