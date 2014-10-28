@@ -594,11 +594,17 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 #form-topic-add .checkbox { margin-bottom: 20px; }
 
 
-/* ТОПИК (миниатюра)*/
+/* СПИСКИ ТОПИКОВ */
+/* Миниатюра */
 .topic.topic-thumbnail { margin-bottom: 10px; }
-.topic.topic-thumbnail .topic_preview { margin-bottom: 20px; }
+.topic.topic-thumbnail .topic_preview { margin-bottom: 20px; max-width: 100%; }
+.topic.topic-thumbnail .topic-header { margin-bottom: 15px; }
 .topic.topic-thumbnail .topic-header .topic-title { font-size: 21px; }
 .topic.topic-thumbnail .topic-header .topic-title a { font-size: 21px; }
+.topic.topic-thumbnail .topic-content { margin-bottom: 15px; }
+
+/* Топик с большим изображением */
+.topic.topic-big-preview .topic_preview { margin-bottom: 20px; max-width: 100%; }
 
 
 /* Topic Talk */

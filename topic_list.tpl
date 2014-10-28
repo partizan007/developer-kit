@@ -1,5 +1,5 @@
 {if count($aTopics)>0}
-	{assign var="sTopicListTemplateName" value="topiclists/{cfg name='topic_list.view'}.tpl"}
+	{assign var="sTopicListTemplateName" value="topic_lists/{cfg name='topic_list.view'}.tpl"}
 	{include file=$sTopicListTemplateName}
 	
 	{include file='paging.tpl' aPaging=$aPaging}
