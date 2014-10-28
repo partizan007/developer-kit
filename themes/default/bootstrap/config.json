@@ -318,12 +318,12 @@
     "@panel-danger-text": "@state-danger-text",
     "@panel-danger-border": "@state-danger-border",
     "@panel-danger-heading-bg": "@state-danger-bg",
-    "@thumbnail-padding": "4px",
+    "@thumbnail-padding": "0",
     "@thumbnail-bg": "@body-bg",
-    "@thumbnail-border": "#ddd",
-    "@thumbnail-border-radius": "@border-radius-base",
+    "@thumbnail-border": "transparent",
+    "@thumbnail-border-radius": "0",
     "@thumbnail-caption-color": "@text-color",
-    "@thumbnail-caption-padding": "9px",
+    "@thumbnail-caption-padding": "0",
     "@well-bg": "#fcfce9",
     "@well-border": "darken(@well-bg, 20%)",
     "@badge-color": "#fff",
@@ -419,5 +419,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=685e5e7eeea391140501"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=120bf4a4ed055c076023"
 }

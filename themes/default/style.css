@@ -536,6 +536,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .topic .topic-footer .topic-info li.topic-info-author a { color: #727a90; text-decoration: underline; }
 .topic .topic-footer .topic-info li.topic-info-author a:hover { color: #f00; }
 .topic .topic-footer .topic-info li.topic-info-author a .avatar {
+	display: inline;
 	vertical-align: text-bottom;
 	
 	-webkit-border-radius: 8px;
@@ -591,6 +592,14 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .topic-photo-upload ul li .mark-as-preview { color: #090; }
 
 #form-topic-add .checkbox { margin-bottom: 20px; }
+
+
+/* ТОПИК (миниатюра)*/
+.topic.topic-thumbnail { margin-bottom: 10px; }
+.topic.topic-thumbnail .topic_preview { margin-bottom: 20px; }
+.topic.topic-thumbnail .topic-header .topic-title { font-size: 21px; }
+.topic.topic-thumbnail .topic-header .topic-title a { font-size: 21px; }
+
 
 /* Topic Talk */
 .topic.topic-type-talk .talk-recipients { background-color: #f2f3f5; }
