@@ -995,3 +995,13 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 @media (max-width: 1199px) {
 	#footer .footer-center .project-info { margin-bottom: 40px; }
 }
+
+@media (min-width: 480px) {
+	.topic.topic-thumbnail-lg .thumbnail { position: relative; }
+	.topic.topic-thumbnail-lg .caption { position: absolute; bottom: 45px; margin: 0 50px; text-align: center; border: 15px solid rgba(0, 0, 0, 0.3); }
+	.topic.topic-thumbnail-lg .topic-header { background-color: #fff; margin-bottom: 0; padding: 15px 25px 10px; }
+	.topic.topic-thumbnail-lg .topic-header .topic-title { font-size: 25px; }
+	.topic.topic-thumbnail-lg .topic-header .topic-title a { font-size: 25px; }
+	.topic.topic-thumbnail-lg .topic-footer { background-color: #fff; padding: 0 25px 10px; }
+	.topic.topic-thumbnail-lg .topic-footer .topic-info { border-top: none; }
+}
