@@ -603,6 +603,9 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .topic.topic-thumbnail .topic-header .topic-title a { font-size: 21px; }
 .topic.topic-thumbnail .topic-content { margin-bottom: 15px; }
 
+.topic.topic-thumbnail-sm .topic-header .topic-title { font-size: 18px; }
+.topic.topic-thumbnail-sm .topic-header .topic-title a { font-size: 18px; }
+
 /* Топик с большим изображением */
 .topic.topic-big-preview .topic_preview { margin-bottom: 20px; max-width: 100%; }
 
