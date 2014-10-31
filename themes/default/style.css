@@ -596,6 +596,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 /* СПИСКИ ТОПИКОВ */
 /* Миниатюра */
+.topic .thumbnail { overflow: hidden; }
 .topic.topic-thumbnail { margin-bottom: 10px; }
 .topic.topic-thumbnail .topic_preview { margin-bottom: 20px; max-width: 100%; }
 .topic.topic-thumbnail .topic-header { margin-bottom: 15px; }
@@ -998,10 +999,12 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 @media (min-width: 480px) {
 	.topic.topic-thumbnail-lg .thumbnail { position: relative; }
-	.topic.topic-thumbnail-lg .caption { position: absolute; bottom: 45px; margin: 0 50px; text-align: center; border: 15px solid rgba(0, 0, 0, 0.3); }
+	.topic.topic-thumbnail-lg .caption { position: absolute; bottom: 45px; margin: 0 50px; text-align: center; border: 15px solid rgba(0, 0, 0, 0.3); width: calc(100% - 100px); }
+	.topic.topic-thumbnail-lg .caption.topic_preview_no { position: relative; bottom: 0; margin: 0; width: 100%; }
 	.topic.topic-thumbnail-lg .topic-header { background-color: #fff; margin-bottom: 0; padding: 15px 25px 10px; }
 	.topic.topic-thumbnail-lg .topic-header .topic-title { font-size: 25px; }
 	.topic.topic-thumbnail-lg .topic-header .topic-title a { font-size: 25px; }
+	.topic.topic-thumbnail-lg .topic-content { padding: 0 25px; }
 	.topic.topic-thumbnail-lg .topic-footer { background-color: #fff; padding: 0 25px 10px; }
 	.topic.topic-thumbnail-lg .topic-footer .topic-info { border-top: none; }
 }

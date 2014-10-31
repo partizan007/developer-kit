@@ -9,7 +9,7 @@
 	{/if}
 	
 	
-	<div class="caption">
+	<div class="caption {if !$oTopic->getPreviewImageWebPath()}topic_preview_no{/if}">
 		<header class="topic-header">
 			<h2 class="topic-title"><a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a></h2>
 			
@@ -17,6 +17,12 @@
 				<a href="{$oBlog->getUrlFull()}" class="topic-blog">{$oBlog->getTitle()|escape:'html'}</a>
 			</div>
 		</header>
+		
+		{if !$oTopic->getPreviewImageWebPath()}
+			<div class="topic-content text">
+				{$oTopic->getText()|strip_tags|truncate:{cfg name='topic.thumbnail_lg.text_length'}:"..."}
+			</div>
+		{/if}
 		
 		<footer class="topic-footer">
 			<ul class="list-unstyled list-inline small topic-info">
