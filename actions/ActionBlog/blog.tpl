@@ -1,3 +1,8 @@
+{if {cfg name='sidebar.blog_pages'} !== 'true'}
+	{assign var="noSidebar" value=true}
+{/if}
+{assign var="bBlogsTopicList" value=true}
+
 {include file='header.tpl'}
 {assign var="oUserOwner" value=$oBlog->getOwner()}
 {assign var="oVote" value=$oBlog->getVote()}
