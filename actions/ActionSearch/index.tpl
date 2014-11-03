@@ -1,3 +1,6 @@
+{assign var="bTopicListPage" value=true}
+
+
 {include file='header.tpl'}
 
 <div class="page-header">

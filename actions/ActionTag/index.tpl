@@ -1,5 +1,7 @@
-{include file='header.tpl'}
+{assign var="bTopicListPage" value=true}
 
+
+{include file='header.tpl'}
 
 <form action="" method="GET" class="js-tag-search-form search-tags">
 	<div class="form-group">
@@ -8,6 +10,5 @@
 </form>
 
 {include file='topic_list.tpl'}
-
 
 {include file='footer.tpl'}
