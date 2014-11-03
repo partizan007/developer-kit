@@ -512,8 +512,8 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .topic-preview .topic { margin-bottom: 50px; padding: 0; }
 
 /* Header */
-.topic .topic-header .topic-title { font-size: 29px; }
-.topic .topic-header .topic-title a { font-size: 27px; text-decoration: underline; }
+.topic .topic-header h2.topic-title { font-size: 27px; }
+.topic .topic-header .topic-title a { text-decoration: underline; }
 .topic .topic-header .topic-title a:hover { color: #f00; }
 .topic .topic-header .topic-title span { font-size: 12px; color: #ccc; top: 7px; }
 .topic .topic-header .topic-info .topic-blog { color: #727a90; text-decoration: underline; }
@@ -595,20 +595,24 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 
 /* СПИСКИ ТОПИКОВ */
+/* Топик с большим изображением */
+.topic.topic-lg-preview .topic_preview { margin-bottom: 20px; max-width: 100%; }
+
+/* Топик с небольшим изображением слева */
+.topic.topic-sm-preview .topic_preview { max-width: 100%; }
+.topic.topic-sm-preview .topic-header .topic-title { font-size: 25px; }
+
+.topic.topic-sm-preview-inner .topic_preview { max-width: 100%; margin-bottom: 20px; }
+
 /* Миниатюра */
 .topic .thumbnail { overflow: hidden; }
 .topic.topic-thumbnail { margin-bottom: 10px; }
 .topic.topic-thumbnail .topic_preview { margin-bottom: 20px; max-width: 100%; }
 .topic.topic-thumbnail .topic-header { margin-bottom: 15px; }
 .topic.topic-thumbnail .topic-header .topic-title { font-size: 21px; }
-.topic.topic-thumbnail .topic-header .topic-title a { font-size: 21px; }
 .topic.topic-thumbnail .topic-content { margin-bottom: 15px; }
 
 .topic.topic-thumbnail-sm .topic-header .topic-title { font-size: 18px; }
-.topic.topic-thumbnail-sm .topic-header .topic-title a { font-size: 18px; }
-
-/* Топик с большим изображением */
-.topic.topic-big-preview .topic_preview { margin-bottom: 20px; max-width: 100%; }
 
 
 /* Topic Talk */
@@ -1003,7 +1007,6 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 	.topic.topic-thumbnail-lg .caption.topic_preview_no { position: relative; bottom: 0; margin: 0; width: 100%; }
 	.topic.topic-thumbnail-lg .topic-header { background-color: #fff; margin-bottom: 0; padding: 15px 25px 10px; }
 	.topic.topic-thumbnail-lg .topic-header .topic-title { font-size: 25px; }
-	.topic.topic-thumbnail-lg .topic-header .topic-title a { font-size: 25px; }
 	.topic.topic-thumbnail-lg .topic-content { padding: 0 25px; }
 	.topic.topic-thumbnail-lg .topic-footer { background-color: #fff; padding: 0 25px 10px; }
 	.topic.topic-thumbnail-lg .topic-footer .topic-info { border-top: none; }

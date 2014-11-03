@@ -5,10 +5,6 @@
 
 
 <header class="topic-header">
-	{if $oTopic->getPreviewImageWebPath()}
-		<a href="{$oTopic->getUrl()}"><img class="topic_preview" src="{$oTopic->getPreviewImageWebPath({cfg name='topic.big_preview.img_size'})}"></a>
-	{/if}
-	
 	<h2 class="topic-title">
 		<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
 		
@@ -35,9 +31,19 @@
 		{/if}
 	</ul>
 </header>
-
-<div class="topic-content text">
-	{$oTopic->getText()|strip_tags|truncate:{cfg name='topic.big_preview.text_length'}:"..."}
+	
+<div class="row topic-main-content">
+	<div class="col-md-4">
+		{if $oTopic->getPreviewImageWebPath()}
+			<a href="{$oTopic->getUrl()}"><img class="topic_preview" src="{$oTopic->getPreviewImageWebPath({cfg name='topic.sm_preview_2.img_size'})}"></a>
+		{/if}
+	</div>
+	
+	<div class="col-md-8">
+		<div class="topic-content text">
+			{$oTopic->getText()|strip_tags|truncate:{cfg name='topic.sm_preview_2.text_length'}:"..."}
+		</div>
+	</div>
 </div>
 
 <footer class="topic-footer">
@@ -77,10 +83,10 @@
 																	vote-count-negative
 																{/if}
 															{/if}
-														
+															
 															{if $oVote} 
 																voted
-															
+																
 																{if $oVote->getDirection() > 0}
 																	voted-up
 																{elseif $oVote->getDirection() < 0}
@@ -110,7 +116,7 @@
 				</div>
 			{/if}
 		</li>
-	
+		
 		{hook run='topic_show_info' topic=$oTopic}
 	</ul>
 </footer>
