@@ -101,6 +101,13 @@
 			}
 		}
 	</script>
+	
+	
+	{if {cfg name='masonry.add'} == 'true' and $bTopicListPage}
+		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/imagesloaded.pkgd.js"></script>
+		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/masonry-default.js"></script>
+	{/if}
 </head>
 
 

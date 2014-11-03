@@ -2,6 +2,8 @@
 	{assign var="noSidebar" value=true}
 {/if}
 {assign var="bBlogsTopicList" value=true}
+{assign var="bTopicListPage" value=true}
+
 
 {include file='header.tpl'}
 {assign var="oUserOwner" value=$oBlog->getOwner()}

@@ -605,14 +605,19 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 .topic.topic-sm-preview-inner .topic_preview { max-width: 100%; margin-bottom: 20px; }
 
 /* Миниатюра */
-.topic .thumbnail { overflow: hidden; }
-.topic.topic-thumbnail { margin-bottom: 10px; }
-.topic.topic-thumbnail .topic_preview { margin-bottom: 20px; max-width: 100%; }
+.topic .thumbnail { overflow: hidden; max-width: 100%; }
+.topic.topic-thumbnail { margin-bottom: 10px; max-width: 100%; }
+.topic.topic-thumbnail .topic_preview { margin-bottom: 20px; }
 .topic.topic-thumbnail .topic-header { margin-bottom: 15px; }
 .topic.topic-thumbnail .topic-header .topic-title { font-size: 21px; }
 .topic.topic-thumbnail .topic-content { margin-bottom: 15px; }
 
 .topic.topic-thumbnail-sm .topic-header .topic-title { font-size: 18px; }
+
+/* Loading Indicator */
+#topic-thumbs { min-height: 199px; /* Высота индикатора загрузки + верхний и нижний отступ от него*/}
+#loading-indicator { display: none; margin-top: 60px; margin-bottom: 60px; }
+#loading-indicator img { display: block; width: 79px; height: 79px; margin: 0 auto; }
 
 
 /* Topic Talk */

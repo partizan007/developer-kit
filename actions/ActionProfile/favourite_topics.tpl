@@ -1,3 +1,6 @@
+{assign var="bTopicListPage" value=true}
+
+
 {include file='header.tpl' menu='people'}
 
 <div class="action-header">
