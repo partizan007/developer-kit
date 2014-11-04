@@ -18,7 +18,7 @@
 			</div>
 		</header>
 		
-		{if !$oTopic->getPreviewImageWebPath()}
+		{if !$oTopic->getPreviewImageWebPath() and {cfg name='topic.thumbnail_lg.text_length'} > 0}
 			<div class="topic-content text">
 				{$oTopic->getText()|strip_tags|truncate:{cfg name='topic.thumbnail_lg.text_length'}:"..."}
 			</div>

@@ -1,7 +1,6 @@
 {if {cfg name='sidebar.blog_pages'} !== 'true'}
 	{assign var="noSidebar" value=true}
 {/if}
-{assign var="bBlogsTopicList" value=true}
 {assign var="bTopicListPage" value=true}
 
 

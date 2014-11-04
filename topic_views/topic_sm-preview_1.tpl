@@ -39,9 +39,11 @@
 		</ul>
 	</header>
 	
-	<div class="topic-content text">
-		{$oTopic->getText()|strip_tags|truncate:{cfg name='topic.sm_preview_1.text_length'}:"..."}
-	</div>
+	{if {cfg name='topic.sm_preview_1.text_length'} > 0}
+		<div class="topic-content text">
+			{$oTopic->getText()|strip_tags|truncate:{cfg name='topic.sm_preview_1.text_length'}:"..."}
+		</div>
+	{/if}
 	
 	<footer class="topic-footer">
 		<ul class="list-unstyled list-inline small topic-info">

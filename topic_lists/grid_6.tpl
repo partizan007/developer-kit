@@ -1,4 +1,4 @@
-{if $bBlogsTopicList or $sAction=='profile' or $sAction=='tag' or $sAction=='search' or Router::GetAction() == 'feed'}
+{if !$noSidebar}
 	<div id="topic-thumbs" class="row">
 		{foreach from=$aTopics item=oTopic name=foo}
 			<article class="col-sm-6 topic topic-thumbnail topic-type-{$oTopic->getType()}">
