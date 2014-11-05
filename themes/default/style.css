@@ -158,6 +158,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* КОНТЕНТ */
+.index-container-lg .container { max-width: 1280px; width: 100%; }
 #wrapper { padding-top: 50px; padding-bottom: 50px; }
 #wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
