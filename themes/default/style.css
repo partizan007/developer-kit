@@ -4,6 +4,7 @@ iframe { border: none; }
 a:focus { text-decoration: none; }
 
 
+
 /* ПЕРЕОПРЕДЕЛЯЕМ/ДОПИСЫВАЕМ BOOTSTRAP */
 .text-success { color: #090; }
 .text-info { color: #0074d9; }
@@ -158,7 +159,6 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* КОНТЕНТ */
-.index-container-lg .container { max-width: 1280px; width: 100%; }
 #wrapper { padding-top: 50px; padding-bottom: 50px; }
 #wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
@@ -615,6 +615,9 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 .topic.topic-thumbnail-sm .topic-header .topic-title { font-size: 18px; }
 
+/* Stamp */
+.stamp { position: absolute; right: 0; top: 0; }
+
 /* Loading Indicator */
 #topic-thumbs { min-height: 199px; /* Высота индикатора загрузки + верхний и нижний отступ от него*/}
 #loading-indicator { display: none; margin-top: 60px; margin-bottom: 60px; }
@@ -1016,4 +1019,13 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 	.topic.topic-thumbnail-lg .topic-content { padding: 0 25px; }
 	.topic.topic-thumbnail-lg .topic-footer { background-color: #fff; padding: 0 25px 10px; }
 	.topic.topic-thumbnail-lg .topic-footer .topic-info { border-top: none; }
+}
+
+@media (min-width: 1199px) {
+	.index-container-lg .container { max-width: 1370px; width: 100%; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.col-md-8 { width: 66.466666666666666%; }
+	.col-md-4 { width: 33.33323333%; }
 }

@@ -9,7 +9,8 @@ jQuery(document).ready(function($){
 		
 		var $container = $container.masonry({
 			itemSelector: 'no-item',
-			columnWidth: '.grid-sizer'
+			columnWidth: '.grid-sizer',
+			stamp: '.stamp'
 		})
 		// set proper itemSelector
 		.masonry( 'option', { itemSelector: '.masonry-item' })

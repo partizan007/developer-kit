@@ -135,12 +135,13 @@
 {/if}
 
 
+
 {add_block group='toolbar' name='toolbar_admin.tpl' priority=100}
 {add_block group='toolbar' name='toolbar_scrollup.tpl' priority=-100}
 
 
 
-<body class="{$body_classes} body-padding-{cfg name='navbar.position'}">
+<body class="{$body_classes} body-padding-{cfg name='navbar.position'} {cfg name='topic_list.view'}">
 	{hook run='body_begin'}
 		
 	{if $oUserCurrent}
