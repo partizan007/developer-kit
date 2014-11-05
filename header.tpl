@@ -130,8 +130,8 @@
 	{assign var=body_classes value=$body_classes|cat:' theme-bg'}
 {/if}
 
-{if {cfg name='index.container_lg'} == 'true' and $noSidebar}
-	{assign var=body_classes value=$body_classes|cat:' index-container-lg'}
+{if {cfg name='container.lg'} == 'true' and $noSidebar}
+	{assign var=body_classes value=$body_classes|cat:' container-lg'}
 {/if}
 
 
