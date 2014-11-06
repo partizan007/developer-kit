@@ -41,9 +41,13 @@
 				<article class="col-sm-12 col-md-8 col-lg-6 topic topic-thumbnail topic-thumbnail-lg masonry-item topic-type-{$oTopic->getType()}">
 					{include file='topic_views/topic_thumbnail_lg.tpl'}
 				</article>
-			{else}
+			{elseif $smarty.foreach.foo.iteration % 3 == 0}
 				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-sm masonry-item topic-type-{$oTopic->getType()}">
 					{include file='topic_views/topic_thumbnail_sm.tpl'}
+				</article>
+			{else}
+				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-xs masonry-item topic-type-{$oTopic->getType()}">
+					{include file='topic_views/topic_thumbnail_xs.tpl'}
 				</article>
 			{/if}
 		{/foreach}

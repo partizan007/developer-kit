@@ -8,7 +8,6 @@
 		<a href="{$oTopic->getUrl()}"><img class="topic_preview" src="{$oTopic->getPreviewImageWebPath({cfg name='topic.thumbnail_sm.img_size'})}"></a>
 	{/if}
 	
-	
 	<div class="caption">
 		<header class="topic-header">
 			<h3 class="topic-title"><a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a></h3>

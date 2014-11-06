@@ -608,12 +608,32 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 /* Миниатюра */
 .topic .thumbnail { overflow: hidden; max-width: 100%; }
 .topic.topic-thumbnail { margin-bottom: 10px; max-width: 100%; }
-.topic.topic-thumbnail .topic_preview { margin-bottom: 20px; }
+.topic.topic-thumbnail .topic_preview {
+	margin-bottom: 20px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
 .topic.topic-thumbnail .topic-header { margin-bottom: 15px; }
 .topic.topic-thumbnail .topic-header .topic-title { font-size: 21px; }
 .topic.topic-thumbnail .topic-content { margin-bottom: 15px; }
 
-.topic.topic-thumbnail-sm .topic-header .topic-title { font-size: 18px; }
+.topic.topic-thumbnail-sm .topic-header .topic-title { font-size: 19px; }
+
+.topic.topic-thumbnail-xs .media { margin-bottom: 5px; padding-bottom: 15px; border-bottom: 1px solid #e7ebed; }
+.topic.topic-thumbnail-xs .media > .pull-left { margin-right: 15px; }
+.topic.topic-thumbnail-xs .topic_preview {
+	height: 64px;
+	width: 64px;
+	margin-bottom: 0;
+  
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;
+}
+.topic.topic-thumbnail-xs .topic-header { margin-bottom: 0; }
+.topic.topic-thumbnail-xs .topic-header .topic-title { font-size: 17px; }
 
 /* Stamp */
 .stamp { position: absolute; right: 0; top: 0; }
@@ -999,6 +1019,8 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 }
 
 @media (max-width: 767px) {
+	.topic.topic-thumbnail { width: 100%; }
+	
 	#footer .footer-list { margin-bottom: 40px; }
 }
 
@@ -1012,7 +1034,8 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 @media (min-width: 480px) {
 	.topic.topic-thumbnail-lg .thumbnail { position: relative; }
-	.topic.topic-thumbnail-lg .caption { position: absolute; bottom: 45px; margin: 0 50px; text-align: center; border: 15px solid rgba(0, 0, 0, 0.3); width: calc(100% - 100px); }
+	.topic.topic-thumbnail-lg .topic_preview { margin-bottom: 0; }
+	.topic.topic-thumbnail-lg .caption { position: absolute; bottom: 35px; margin: 0 50px; text-align: center; border: 15px solid rgba(0, 0, 0, 0.3); width: calc(100% - 100px); }
 	.topic.topic-thumbnail-lg .caption.topic_preview_no { position: relative; bottom: 0; margin: 0; width: 100%; }
 	.topic.topic-thumbnail-lg .topic-header { background-color: #fff; margin-bottom: 0; padding: 15px 25px 10px; }
 	.topic.topic-thumbnail-lg .topic-header .topic-title { font-size: 25px; }
