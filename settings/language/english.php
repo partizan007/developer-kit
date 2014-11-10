@@ -23,5 +23,7 @@ return array(
 	'people_name_search' => 'People search',
 	
 	'footer_menu_project_info' => '<b>Your site description. Edit in file english.php of template.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae fermentum velit. Suspendisse porta faucibus tincidunt. Vivamus lacus magna, aliquam at tempor tempor, dignissim tincidunt turpis. Nam scelerisque sollicitudin metus ac interdum.',
+	
+	'block_ad' => 'Advertisement',
 );
 ?>
