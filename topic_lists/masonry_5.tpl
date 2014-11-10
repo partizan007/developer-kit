@@ -32,10 +32,6 @@
 		
 		<div class="grid-sizer col-sm-6 col-md-4 col-lg-3"></div>
 		
-		<div class="hidden-xs hidden-sm col-md-4 col-lg-3 stamp">
-			{include file='blocks.tpl' group='stamp'}
-		</div>
-		
 		{foreach from=$aTopics item=oTopic name=foo}
 			{if $smarty.foreach.foo.first}
 				<article class="col-sm-12 col-md-8 col-lg-6 topic topic-thumbnail topic-thumbnail-lg masonry-item topic-type-{$oTopic->getType()}">
@@ -47,5 +43,9 @@
 				</article>
 			{/if}
 		{/foreach}
+		
+		<div class="hidden-xs hidden-sm col-md-4 col-lg-3 stamp">
+			{include file='blocks.tpl' group='stamp'}
+		</div>
 	</div>
 {/if}

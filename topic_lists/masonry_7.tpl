@@ -32,18 +32,14 @@
 		
 		<div class="grid-sizer col-sm-6 col-md-4 col-lg-3"></div>
 		
-		<div class="hidden-xs hidden-sm col-md-4 col-lg-3 stamp">
-			{include file='blocks.tpl' group='stamp'}
-		</div>
-		
 		{foreach from=$aTopics item=oTopic name=foo}
-			{if $smarty.foreach.foo.first}
-				<article class="col-sm-12 col-md-8 col-lg-6 topic topic-thumbnail topic-thumbnail-lg masonry-item topic-type-{$oTopic->getType()}">
-					{include file='topic_views/topic_thumbnail_lg.tpl'}
+			{if $smarty.foreach.foo.iteration == 1}
+				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-sq masonry-item topic-type-{$oTopic->getType()}">
+					{include file='topic_views/topic_thumbnail_sq.tpl'}
 				</article>
 			{elseif $smarty.foreach.foo.iteration == 2}
-				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-sm masonry-item topic-type-{$oTopic->getType()}">
-					{include file='topic_views/topic_thumbnail_sm.tpl'}
+				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail masonry-item topic-type-{$oTopic->getType()}">
+					{include file='topic_views/topic_thumbnail.tpl'}
 				</article>
 				
 			{elseif $smarty.foreach.foo.iteration == 3}
@@ -86,22 +82,14 @@
 				</article>
 				
 			{elseif $smarty.foreach.foo.iteration == 12}
-				<div class="col-xs-12 masonry-item centerbar">
+				<div class="hidden-xs hidden-sm col-md-12 masonry-item centerbar">
 					<div class="row">
-						<div class="col-sm-6 col-md-4 col-lg-3">
+						<div class="col-md-6">
 							{include file='blocks.tpl' group='centerbar-first'}
 						</div>
 						
-						<div class="col-sm-6 col-md-4 col-lg-3">
+						<div class="col-md-6">
 							{include file='blocks.tpl' group='centerbar-second'}
-						</div>
-						
-						<div class="col-sm-6 col-md-4 col-lg-3">
-							{include file='blocks.tpl' group='centerbar-third'}
-						</div>
-						
-						<div class="col-sm-6 col-md-4 col-lg-3">
-							{include file='blocks.tpl' group='centerbar-fourth'}
 						</div>
 					</div>
 				</div>
@@ -111,8 +99,8 @@
 				</article>
 				
 			{elseif $smarty.foreach.foo.iteration == 13}
-				<article class="col-sm-12 col-md-8 col-lg-6 topic topic-thumbnail topic-thumbnail-lg masonry-item topic-type-{$oTopic->getType()}">
-					{include file='topic_views/topic_thumbnail_lg.tpl'}
+				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-sq masonry-item topic-type-{$oTopic->getType()}">
+					{include file='topic_views/topic_thumbnail_sq.tpl'}
 				</article>
 			{elseif $smarty.foreach.foo.iteration == 14}
 				<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-sm masonry-item topic-type-{$oTopic->getType()}">
@@ -129,5 +117,9 @@
 				</article>
 			{/if}
 		{/foreach}
+		
+		<div class="hidden-xs hidden-sm col-md-4 col-lg-3 stamp">
+			{include file='blocks.tpl' group='stamp'}
+		</div>
 	</div>
 {/if}
