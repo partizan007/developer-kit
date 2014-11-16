@@ -78,6 +78,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 /* НАВИГАЦИЯ */
 #nav { padding-top: 12px; padding-bottom: 12px; background-color: #fff; border-bottom: 1px solid #efefef; box-shadow: 0 10px 10px #fafafa; }
+#nav .navbar-search { max-width: 190px; }
 #nav .navbar-search .form-control { border-color: #e6e6e6; }
 #nav .navbar-search .form-control::-moz-placeholder { color: #aaa; }
 #nav .btn-write { margin-left: 30px; }
