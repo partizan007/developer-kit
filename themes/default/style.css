@@ -413,15 +413,8 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 /* ITEM LIST */
 .item-list { border-top: 1px solid #efefef; }
-.item-list li { border-bottom: 1px solid #efefef; padding: 10px 0; }
-.item-list li .author { color: #727a90; text-decoration: underline; }
-.item-list li .blog-name { color: #727a90; text-decoration: underline; }
-.item-list li .blog-name:hover { color: #f00; }
-
-.block.block-type-stream .item-list li p { margin-bottom: 5px; }
-
-#block_blogs .item-list li { padding: 10px 0; margin: 0; }
-#block_blogs .item-list li .avatar {
+.item-list li { border-bottom: 1px solid #efefef; padding: 12px 0; margin: 0; }
+.item-list li .avatar {
 	height: 36px;
 	width: 36px;
 	
@@ -429,6 +422,11 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 	-moz-border-radius: 18px;
 	border-radius: 18px;
 }
+.item-list li .author { color: #727a90; text-decoration: underline; }
+.item-list li .blog-name { color: #727a90; text-decoration: underline; }
+.item-list li .blog-name:hover { color: #f00; }
+
+.block.block-type-stream .item-list li p { margin-bottom: 5px; }
 
 
 /* РАЗНОЕ */
