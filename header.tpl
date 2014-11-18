@@ -126,8 +126,12 @@
 	{assign var=body_classes value=$body_classes|cat:' ls-user-role-not-admin'}
 {/if}
 
-{if {cfg name='view.theme_bg'} == 'true'}
-	{assign var=body_classes value=$body_classes|cat:' theme-bg'}
+{if {cfg name='view.layout'} == 'full-width'}
+	{assign var=body_classes value=$body_classes|cat:' full-width'}
+{elseif {cfg name='view.layout'} == 'boxed'}
+	{assign var=body_classes value=$body_classes|cat:' boxed'}
+{elseif {cfg name='view.layout'} == 'boxed-center'}
+	{assign var=body_classes value=$body_classes|cat:' boxed-center'}
 {/if}
 
 {if {cfg name='container.lg'} == 'true' and $noSidebar}
@@ -151,26 +155,26 @@
 		{include file='window_login.tpl'}
 	{/if}
 	
-	
-	{include file='header_top.tpl'}
-	{include file='nav.tpl'}
-	
-	{hook run='content_top'}
-	
-	<section id="wrapper" class="{hook run='wrapper_class'}">
-		<div id="container" class="container {hook run='container_class'}">
-			<div class="row">
-			
-				{if !$noSidebar && $sidebarPosition == 'left'}
-					{include file='sidebar.tpl'}
-				{/if} 
-	
-				<div id="content-wrapper" role="main" 
-					class="{if $noSidebar}col-md-12{else}col-md-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
-					{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
+	<div id="page-wrapper">
+		{include file='header_top.tpl'}
+		{include file='nav.tpl'}
+		
+		{hook run='content_top'}
+		
+		<section id="wrapper" class="{hook run='wrapper_class'}">
+			<div id="container" class="container {hook run='container_class'}">
+				<div class="row">
 					
-					{include file='nav_content.tpl'}
-					{include file='system_message.tpl'}
+					{if !$noSidebar && $sidebarPosition == 'left'}
+						{include file='sidebar.tpl'}
+					{/if} 
 					
-					{hook run='content_begin'}
-					
+					<div id="content-wrapper" role="main" 
+						class="{if $noSidebar}col-md-12{else}col-md-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
+						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
+						
+						{include file='nav_content.tpl'}
+						{include file='system_message.tpl'}
+						
+						{hook run='content_begin'}
+						

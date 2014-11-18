@@ -117,7 +117,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 
 
 /* НАВИГАЦИЯ */
-#nav.theme-bg-no {
+#nav {
 	border-bottom: 1px solid #e7ebed;
 	padding-bottom: 10px;
 	padding-top: 10px;
@@ -134,7 +134,20 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 	background: linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 }
-#nav .container.theme-bg {
+
+body.boxed-center #nav {
+	border-bottom: none;
+	padding-bottom: 0;
+	padding-top: 0;
+	
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	
+	background: transparent;
+}
+
+body.boxed-center #nav .container {
 	border-bottom: 1px solid #e7ebed;
 	padding-bottom: 10px;
 	padding-top: 10px;
@@ -155,6 +168,7 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 	background: linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 }
+
 #nav .btn-write { margin-left: 30px; font-size: 13px; }
 
 
@@ -163,9 +177,9 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 #wrapper .nav-filter-wrapper { margin-bottom: 40px; }
 
 /* ------------------------------ */
-/* Стили для фонового изображения */
+/* Стили для Boxed Layout */
 /* ------------------------------ */
-body.theme-bg {
+body.boxed {
   background: #f7f9f9 url("./images/bg.jpg") no-repeat fixed center center;
   
   -webkit-background-size: cover;
@@ -174,10 +188,25 @@ body.theme-bg {
   background-size: cover;
 }
 
-body.theme-bg .container { padding-left: 25px; padding-right: 25px; }
-body.theme-bg #wrapper { padding-top: 100px; padding-bottom: 100px; }
+body.boxed #page-wrapper { margin: 0 auto; max-width: 1200px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+/* ------------------------------ */
 
-body.theme-bg #wrapper .container {
+/* ------------------------------ */
+/* Стили для Boxed Center Layout */
+/* ------------------------------ */
+body.boxed-center {
+  background: #f7f9f9 url("./images/bg.jpg") no-repeat fixed center center;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body.boxed-center .container { padding-left: 25px; padding-right: 25px; }
+body.boxed-center #wrapper { padding-top: 100px; padding-bottom: 100px; }
+
+body.boxed-center #wrapper .container {
 	background-color: #fff;
 	padding-bottom: 25px;
 	padding-top: 25px;
@@ -191,8 +220,9 @@ body.theme-bg #wrapper .container {
 	box-shadow: 0 0 5px rgba(0,0,0,.05);
 }
 
-body.theme-bg .toolbar { top: 206px; }
+body.boxed-center .toolbar { top: 206px; }
 /* ------------------------------ */
+
 
 
 /* ФУТЕР */
@@ -1049,6 +1079,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 }
 
 @media (min-width: 1199px) {
+	.boxed.container-lg #page-wrapper { max-width: 1400px; }
 	.container-lg .container { max-width: 1370px; width: 100%; }
 }
 
