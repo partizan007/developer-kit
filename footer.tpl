@@ -95,11 +95,12 @@
 				</div>
 			</div>
 		</footer>
+		
+		
+		{include file='toolbar.tpl'}
+		
+		{hook run='body_end'}
 	</div> <!-- /page-wrapper -->
-	
 
-	{include file='toolbar.tpl'}
-
-	{hook run='body_end'}
 </body>
 </html>
