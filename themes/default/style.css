@@ -115,6 +115,16 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 #header .navbar .nav .messages-count { color: #f00; margin-left: 3px; }
 #header .navbar .nav > li > a img.avatar { margin-right: 3px; }
 
+#header .jumbotron {
+	margin-bottom: 0; 
+	background: #f7f9f9 url("./images/jum-bg.jpg") no-repeat center center;
+  
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 
 /* НАВИГАЦИЯ */
 #nav {
@@ -180,12 +190,12 @@ body.boxed-center #nav .container {
 /* Стили для Boxed Layout */
 /* ------------------------------ */
 body.boxed {
-  background: #f7f9f9 url("./images/bg.jpg") no-repeat fixed center center;
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: #f7f9f9 url("./images/bg.jpg") no-repeat fixed center center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 body.boxed #page-wrapper { margin: 0 auto; max-width: 1200px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
@@ -195,12 +205,12 @@ body.boxed #page-wrapper { margin: 0 auto; max-width: 1200px; background-color: 
 /* Стили для Boxed Center Layout */
 /* ------------------------------ */
 body.boxed-center {
-  background: #f7f9f9 url("./images/bg.jpg") no-repeat fixed center center;
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: #f7f9f9 url("./images/bg.jpg") no-repeat fixed center center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 body.boxed-center .container { padding-left: 25px; padding-right: 25px; }
@@ -346,6 +356,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 /* TOOLBAR */
 .toolbar { top: 156px; }
+body.jumbotron-in .toolbar { top: 457px; }
 
 .toolbar section {
 	border: 1px solid #e9edef;

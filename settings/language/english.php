@@ -25,5 +25,8 @@ return array(
 	'footer_menu_project_info' => '<b>Your site description. Edit in file english.php of template.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae fermentum velit. Suspendisse porta faucibus tincidunt. Vivamus lacus magna, aliquam at tempor tempor, dignissim tincidunt turpis. Nam scelerisque sollicitudin metus ac interdum.',
 	
 	'block_ad' => 'Advertisement',
+	
+	'jumbotron_heading' => 'Hello, world!',
+	'jumbotron_text' => 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.',
 );
 ?>

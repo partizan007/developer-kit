@@ -75,6 +75,12 @@
 		</div>
 	</nav>
 	
+	
+	{if {cfg name='view.jumbotron'} == 'true'}
+		{include file='jumbotron.tpl'}
+	{/if}
+	
+	
 	{hook run='header_banner_end'}
 	
 </header>

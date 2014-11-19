@@ -25,5 +25,8 @@ return array(
 	'footer_menu_project_info' => '<b>Место для описания Вашего сайта. Изменить текст можно в файле russian.php шаблона.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae fermentum velit. Suspendisse porta faucibus tincidunt. Vivamus lacus magna, aliquam at tempor tempor, dignissim tincidunt turpis. Nam scelerisque sollicitudin metus ac interdum.',
 	
 	'block_ad' => 'Реклама на сайте',
+	
+	'jumbotron_heading' => 'Hello, world!',
+	'jumbotron_text' => 'Изменить расположение элементов данной области можно в файле <b>jumbotron.tpl</b>, изменить текст - в <b>russian.php</b>.',
 );
 ?>

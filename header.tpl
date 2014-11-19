@@ -138,6 +138,10 @@
 	{assign var=body_classes value=$body_classes|cat:' container-lg'}
 {/if}
 
+{if {cfg name='view.jumbotron'} == 'true'}
+	{assign var=body_classes value=$body_classes|cat:' jumbotron-in'}
+{/if}
+
 
 
 {add_block group='toolbar' name='toolbar_admin.tpl' priority=100}
