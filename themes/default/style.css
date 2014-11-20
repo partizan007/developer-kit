@@ -639,10 +639,10 @@ body.jumbotron-in .toolbar { top: 457px; }
 .topic.topic-lg-preview .topic_preview { margin-bottom: 20px; max-width: 100%; }
 
 /* Топик с небольшим изображением слева */
-.topic.topic-sm-preview .topic_preview { max-width: 100%; }
+.topic.topic-sm-preview .topic_preview { margin-bottom: 20px; max-width: 100%; }
 .topic.topic-sm-preview .topic-header .topic-title { font-size: 25px; }
 
-.topic.topic-sm-preview-inner .topic_preview { max-width: 100%; margin-bottom: 20px; }
+.topic.topic-sm-preview-inner .topic_preview { margin-bottom: 20px; max-width: 100%; }
 
 /* Миниатюра */
 .topic .thumbnail { overflow: hidden; max-width: 100%; }
