@@ -29,7 +29,7 @@
 		<div class="grid-sizer col-sm-6 col-md-4 col-lg-3"></div>
 		
 		{foreach from=$aTopics item=oTopic name=foo}
-			<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail masonry-item topic-type-{$oTopic->getType()}">
+			<article class="col-sm-6 col-md-4 col-lg-3 topic topic-thumbnail topic-thumbnail-sm masonry-item topic-type-{$oTopic->getType()}">
 				{include file='topic_views/topic_thumbnail_sm.tpl'}
 			</article>
 		{/foreach}
