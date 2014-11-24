@@ -3,7 +3,7 @@
 	{hook run='header_banner_begin'}
 	
 	<nav class="navbar navbar-{cfg name='navbar.view'} navbar-{cfg name='navbar.position'}">
-		<div class="container{if {cfg name='navbar.container.fluid'} == 'true'}-fluid{/if}">
+		<div class="container{if {cfg name='navbar.container.fluid'} == true}-fluid{/if}">
 				
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-navbar-collapse">
@@ -15,7 +15,7 @@
 			
 				<h1 class="site-name">
 					<a class="navbar-brand" href="{cfg name='path.root.web'}">
-						{if {cfg name='view.config_sitename'} == 'true'}
+						{if {cfg name='view.config_sitename'} == true}
 							{cfg name='view.name'}
 						{else}
 							{cfg name='view.own_sitename'}
@@ -76,7 +76,7 @@
 	</nav>
 	
 	
-	{if {cfg name='view.jumbotron'} == 'true'}
+	{if {cfg name='view.jumbotron'} == true}
 		{include file='jumbotron.tpl'}
 	{/if}
 	

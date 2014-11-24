@@ -1,4 +1,4 @@
-{if {cfg name='sidebar.blog_pages'} !== 'true'}
+{if {cfg name='sidebar.blog_pages'} == true}
 	{assign var="noSidebar" value=true}
 {/if}
 {assign var="bTopicListPage" value=true}

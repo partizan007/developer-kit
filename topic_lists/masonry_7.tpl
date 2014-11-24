@@ -102,7 +102,7 @@
 				</article>
 				
 			{elseif $smarty.foreach.foo.iteration == 17}
-				{if {cfg name='masonry_7.centerbar'} == 'true' and $sAction=='index'}
+				{if {cfg name='masonry_7.centerbar'} == true and $sAction=='index'}
 					<div class="hidden-xs hidden-sm col-md-12 masonry-item centerbar">
 						<div class="row">
 							<div class="col-md-6">

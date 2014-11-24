@@ -103,7 +103,7 @@
 	</script>
 	
 	
-	{if {cfg name='masonry.add'} == 'true' and $bTopicListPage}
+	{if {cfg name='masonry.add'} == true and $bTopicListPage}
 		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/imagesloaded.pkgd.js"></script>
 		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/masonry-default.js"></script>
@@ -134,11 +134,11 @@
 	{assign var=body_classes value=$body_classes|cat:' boxed-center'}
 {/if}
 
-{if {cfg name='container.lg'} == 'true' and $noSidebar}
+{if {cfg name='container.lg'} == true and $noSidebar}
 	{assign var=body_classes value=$body_classes|cat:' container-lg'}
 {/if}
 
-{if {cfg name='view.jumbotron'} == 'true'}
+{if {cfg name='view.jumbotron'} == true}
 	{assign var=body_classes value=$body_classes|cat:' jumbotron-in'}
 {/if}
 
