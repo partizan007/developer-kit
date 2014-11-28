@@ -49,8 +49,8 @@
 				<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
 			</li>
 			<li class="topic-info-favourite">
-				<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
-				<span class="text-muted favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span>
+				<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}" title="{$aLang.topic_add_favourite}"><span class="glyphicon glyphicon-star-empty"></span></a>
+				<span class="text-muted favourite-count" id="fav_count_topic_{$oTopic->getId()}">{if $oTopic->getCountFavourite()>0}{$oTopic->getCountFavourite()}{/if}</span>
 			</li>
 			{if !$bTopicList}
 				<li class="topic-info-share"><a href="#" class="glyphicon glyphicon-share-alt" title="{$aLang.topic_share}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></a></li>

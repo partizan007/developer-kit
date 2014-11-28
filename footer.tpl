@@ -18,7 +18,7 @@
 					<div class="row">
 						<div class="col-md-12 col-lg-6 project-info">
 							<h5>
-								{if {cfg name='view.config_sitename'} == 'true'}
+								{if {cfg name='view.config_sitename'} == true}
 									{cfg name='view.name'}
 								{else}
 									{cfg name='view.own_sitename'}

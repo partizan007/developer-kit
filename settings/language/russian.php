@@ -18,7 +18,9 @@ return array(
 	'blog_expand_info' => 'О блоге',
 	
 	'topic_create_submit_preview_close' => 'Свернуть',
-
+	
+	'topic_add_favourite' => 'Добавить в избранное',
+	
 	'blogs_name_search' => 'Поиск по названию',
 	'people_name_search' => 'Поиск по логину',
 	

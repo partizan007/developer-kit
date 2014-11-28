@@ -2,7 +2,7 @@
 	
 	{hook run='header_banner_begin'}
 	
-	<nav class="navbar navbar-{cfg name='navbar.view'} navbar-{cfg name='navbar.position'}">
+	<nav class="navbar navbar-{cfg name='navbar.view'} navbar-{cfg name='navbar.position'}" role="navigation">
 		<div class="container{if {cfg name='navbar.container.fluid'} == true}-fluid{/if}">
 				
 			<div class="navbar-header">
@@ -76,7 +76,7 @@
 	</nav>
 	
 	
-	{if {cfg name='view.jumbotron'} == true}
+	{if {cfg name='view.jumbotron'} == true and {cfg name='view.layout'} !== 'boxed-center'}
 		{include file='jumbotron.tpl'}
 	{/if}
 	

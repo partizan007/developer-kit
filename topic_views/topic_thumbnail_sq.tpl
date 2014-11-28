@@ -36,7 +36,7 @@
 				</li>
 				<li class="hidden-xs topic-info-favourite">
 					<a href="#" onclick="return ls.favourite.toggle({$oTopic->getId()},this,'topic');" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
-					<span class="text-muted favourite-count" id="fav_count_topic_{$oTopic->getId()}">{$oTopic->getCountFavourite()}</span>
+					<span class="text-muted favourite-count" id="fav_count_topic_{$oTopic->getId()}">{if $oTopic->getCountFavourite()>0}{$oTopic->getCountFavourite()}{/if}</span>
 				</li>
 				<li class="pull-right topic-info-comments">
 					{if $oTopic->getCountCommentNew()}

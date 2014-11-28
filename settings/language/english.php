@@ -19,6 +19,8 @@ return array(
 	
 	'topic_create_submit_preview_close' => 'Close',
 	
+	'topic_add_favourite' => 'Add to favourite',
+	
 	'blogs_name_search' => 'Blogs search',
 	'people_name_search' => 'People search',
 	

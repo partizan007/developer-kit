@@ -5,7 +5,7 @@
 		{assign var="oBlog" value=$oTopic->getBlog()}
 		
 		<li class="media js-title-comment" title="{$oComment->getText()|strip_tags|trim|truncate:100:'...'|escape:'html'}">
-			<a href="{$oUser->getUserWebPath()}" class="pull-left"><img src="{$oUser->getProfileAvatarPath(48)}" width="48" height="48" class="media-object avatar" /></a>
+			<a href="{$oUser->getUserWebPath()}" class="hidden-xs pull-left"><img src="{$oUser->getProfileAvatarPath(48)}" width="48" height="48" class="media-object avatar" /></a>
 			
 			<div class="media-body">
 				<p class="small">

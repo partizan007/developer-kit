@@ -328,7 +328,7 @@ body.light .site-description { color: #727a90; font-size: 15px; margin-top: 15px
 
 
 /* ГОЛОСОВАНИЕ */
-.vote .vote-count { color: #adadad; }
+.vote .vote-count { color: #adadad; padding: 0 1px; }
 .vote .vote-count a { color: #adadad; }
 
 .vote.vote-count-positive .vote-count { color: #090; }
@@ -552,7 +552,6 @@ body.jumbotron-in .toolbar { top: 457px; }
 .topic-preview .topic { margin-bottom: 50px; padding: 0; }
 
 /* Header */
-.topic .topic-header h2.topic-title { font-size: 27px; }
 .topic .topic-header .topic-title a { text-decoration: underline; }
 .topic .topic-header .topic-title a:hover { color: #f00; }
 .topic .topic-header .topic-title span { font-size: 12px; color: #ccc; top: 7px; }
@@ -804,8 +803,8 @@ body.jumbotron-in .toolbar { top: 457px; }
 .comment .comment-info li.comment-author a { font-weight: bold; color: #000; }
 .comment .comment-info li.comment-author a.comment-topic-author { color: #090; }
 .comment .comment-info li.comment-date a { color: #adadad; }
-.comment .comment-info li.goto-comment-parent,
-.comment .comment-info li.goto-comment-child { font-size: 13px; line-height: 1.1; }
+.comment .comment-info li.goto-comment-parent a,
+.comment .comment-info li.goto-comment-child a { font-size: 13px; line-height: 1.1; }
 
 /* Actions */
 .comment .comment-actions li a.comment-delete { color: #f00; }
@@ -853,13 +852,7 @@ body.jumbotron-in .toolbar { top: 457px; }
 
 
 /* БЛОКИ */
-.block {
-	margin-bottom: 30px;
-
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
+.block { margin-bottom: 30px; }
 
 .block .block-header h3 { font-size: 20px; margin-bottom: 15px; margin-top: 0; }
 .block .block-header h3 a { color: #000; }
@@ -1058,7 +1051,11 @@ body.jumbotron-in .toolbar { top: 457px; }
 }
 
 @media (max-width: 479px) {
+	#nav .nav-pills > li { float: none; }
+	#nav .nav-pills > li + li { margin-left: 0; margin-top: 2px; }
 	
+	#wrapper .nav-filter-wrapper > li { float: none; }
+	#wrapper .nav-filter-wrapper > li + li { margin-left: 0; margin-top: 2px; }
 }
 
 @media (max-width: 767px) {

@@ -426,7 +426,7 @@ select, input[type="file"] { height: auto; }
 
 /* Info Block */
 .comment .comment-info { position: relative; overflow: hidden; zoom: 1; }
-.comment .comment-info li { float: left; padding-right: 10px; }
+.comment .comment-info li { float: left; padding-right: 10px; line-height: 1.6; }
 .comment .comment-info li:last-child { padding-right: 0; }
 .comment .comment-info li.goto-comment-child { display: none; }
 .comment .comment-info li.vote { position: absolute; top: 0; right: 0; padding-right: 0; }
