@@ -1,7 +1,7 @@
-{if {cfg name='sidebar.main_pages'} == true}
+{assign var="bTopicListPage" value=true}
+{if !{cfg name='sidebar.main_pages'}}
 	{assign var="noSidebar" value=true}
 {/if}
-{assign var="bTopicListPage" value=true}
 
 
 {include file='header.tpl' menu='blog' menu_content='blog'}

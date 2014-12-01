@@ -12,6 +12,10 @@
 	</div>
 {elseif !$noSidebar}
 	<div id="topic-thumbs" class="row">
+		<div id="loading-indicator" class="col-xs-12">
+			<img src="{cfg name="path.static.skin"}/images/loader-circle.gif" />
+		</div>
+		
 		<div class="grid-sizer col-sm-6"></div>
 		
 		{foreach from=$aTopics item=oTopic name=foo}
@@ -19,10 +23,6 @@
 				{include file='topic_views/topic_thumbnail.tpl'}
 			</article>
 		{/foreach}
-		
-		<div id="loading-indicator" class="col-xs-12">
-			<img src="{cfg name="path.static.skin"}/images/loader-circle.gif" />
-		</div>
 	</div>
 {else}
 	<div id="topic-thumbs" class="row">
