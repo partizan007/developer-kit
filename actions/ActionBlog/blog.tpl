@@ -62,7 +62,7 @@
 			<a href="#" class="vote-up" onclick="return ls.vote.vote({$oBlog->getId()},this,1,'blog');"><span class="glyphicon glyphicon-thumbs-up"></span></a>
 		</div>
 		
-		<img src="{$oBlog->getAvatarPath(64)}" class="avatar" />
+		<img src="{$oBlog->getAvatarPath(48)}" class="avatar" />
 		
 		<h1>{$oBlog->getTitle()|escape:'html'}{if $oBlog->getType()=='close'} <span title="{$aLang.blog_closed}" class="glyphicon glyphicon-lock"></span>{/if}</h1>
 		

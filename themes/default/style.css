@@ -104,6 +104,8 @@ a.user-friends:hover { color: #f00; text-decoration: none; }
 .body-padding-fixed-top { padding-top: 50px; }
 .body-padding-fixed-bottom { padding-bottom: 50px; }
 
+#header .navbar h1.site-name { font-weight: bold; }
+
 #header .navbar .nav > li > a img.avatar {
 	vertical-align: text-bottom;
 
@@ -273,6 +275,7 @@ body.boxed-center .toolbar { top: 206px; }
 
 /* LIGHT PAGES */
 body.light { background-color: #f2f3f5; }
+body.light .site-info .site-name { font-weight: bold; }
 body.light .site-info .site-name a { color: #000; }
 body.light .site-info .site-name a:hover { color: #f00; text-decoration: none; }
 body.light .light-form {
@@ -502,9 +505,9 @@ body.jumbotron-in .toolbar { top: 457px; }
 .text a:visited { color: #b10dc9; }
 
 .text { font-size: 15px; }
-.text h4 { font-size: 21px; }
-.text h5 { font-size: 19px; }
-.text h6 { font-size: 17px; }
+.text h4 { font-size: 21px; font-weight: bold; }
+.text h5 { font-size: 19px; font-weight: bold; }
+.text h6 { font-size: 17px; font-weight: bold; }
 
 
 /* ИКОНКИ */
@@ -539,7 +542,7 @@ body.jumbotron-in .toolbar { top: 457px; }
 	-moz-border-radius: 24px;
 	border-radius: 24px;
 }
-.table.table-users .cell-name .username a { font-size: 15px; font-weight: 600; text-decoration: underline; }
+.table.table-users .cell-name .username a { font-size: 15px; text-decoration: underline; }
 .table.table-users .cell-name .username a:hover { color: #f00; }
 .table.table-users .cell-name p .glyphicon { color: #ccc; cursor: help; font-size: 11px; vertical-align: top; }
 .table.table-users .cell-rating, .table.table-users .cell-skill { width: 75px; }
@@ -704,7 +707,7 @@ body.jumbotron-in .toolbar { top: 457px; }
 	border-radius: 3px;
 }
 
-.comment-preview blockquote { background-color: #fff; border-left: 4px solid #ddd; font-size: 13px; }
+.comment-preview blockquote { background-color: #fff; font-size: 15px; margin-bottom: 20px; }
 
 /* Комментарий */
 .comment { padding-left: 63px; margin-bottom: 35px; min-height: 88px; }
@@ -854,7 +857,7 @@ body.jumbotron-in .toolbar { top: 457px; }
 /* БЛОКИ */
 .block { margin-bottom: 30px; }
 
-.block .block-header h3 { font-size: 20px; margin-bottom: 15px; margin-top: 0; }
+.block .block-header h3 { font-size: 21px; margin-bottom: 15px; margin-top: 0; }
 .block .block-header h3 a { color: #000; }
 .block .block-header h3 a:hover { text-decoration: none; color: #f00; }
 
@@ -952,9 +955,9 @@ body.jumbotron-in .toolbar { top: 457px; }
 }
 
 /* Footer */
-.blog-info dt, .blog-info dd { line-height: 2; }
+.blog-info dt, .blog-info dd { float: left; line-height: 2; width: 50%; }
 .blog-info dt { border-bottom: 1px dotted #cdcdcd; }
-.blog-info dd { border-bottom: 1px dotted #cdcdcd; text-align: right; }
+.blog-info dd { border-bottom: 1px dotted #cdcdcd; margin-left: 0; text-align: right; }
 .blog .blog-footer { line-height: 1.7; }
 .blog .blog-footer .user-avatar { margin-right: 5px; }
 
