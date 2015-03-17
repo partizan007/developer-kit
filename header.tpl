@@ -21,12 +21,13 @@
 		<meta property="og:title" content="{$oTopic->getTitle()|escape:'html'}"/>
 		<meta property="og:url" content="{$oTopic->getUrl()}"/>
 		{if $oTopic->getPreviewImageWebPath()}
-			<meta property="og:image" content="{$oTopic->getPreviewImageWebPath(750crop)}"/>
+			<meta property="og:image" content="{$oTopic->getPreviewImageWebPath({cfg name='meta.thumbnail.img_size'})}"/>
 		{/if}
 		<meta property="og:description" content="{$sHtmlDescription}"/>
 		<meta property="og:site_name" content="{cfg name='view.name'}"/>
 		<meta property="og:type" content="article"/>
-		<meta name="twitter:card" content="summary">
+		<meta name="twitter:card" content="{cfg name='meta.twitter.card_type'}">
+		<meta name="twitter:domain" content="{cfg name="path.root.web"}">
 	{/if}
 	
 	{$aHtmlHeadFiles.css}
