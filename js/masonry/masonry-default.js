@@ -54,4 +54,8 @@ jQuery(document).ready(function($){
 		
 		return this;
 	};
+	
+	ls.hook.add('ls_block_onload_html_after',function(){
+		$('#topic-thumbs').masonry( 'reloadItems' ).masonry();
+	});
 });

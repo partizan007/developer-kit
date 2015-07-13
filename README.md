@@ -1,7 +1,7 @@
 ------------------------------------------------------
 
 LIVESTREET TEMPLATE "DEVELOPER-KIT"
-version 1.6.4
+version 1.6.5
 
 Copyright © 2013 Kulesh Uladzimir
 
