@@ -1,11 +1,10 @@
-{assign var="noSidebar" value=true}
-{include file='header_light.tpl'}
+{include file='header.tpl'}
 
-<div class="text-center page-header">
-	<h3>{$aLang.registration_confirm_header}</h3>
-	{$aLang.registration_confirm_text}<br /><br />
 
-	<a href="{cfg name='path.root.web'}">{$aLang.site_go_main}</a>
-</div>
+<h2>{$aLang.registration_confirm_header}</h2>
+{$aLang.registration_confirm_text}<br /><br />
 
-{include file='footer_light.tpl'}
+<a href="{cfg name='path.root.web'}">{$aLang.site_go_main}</a>
+
+
+{include file='footer.tpl'}

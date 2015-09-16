@@ -1,3 +1,3 @@
-<aside class="toolbar hidden-xs">
+<aside class="toolbar">
 	{include file='blocks.tpl' group='toolbar'}
 </aside>

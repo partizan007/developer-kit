@@ -1,0 +1,30 @@
+/* --------------------------------------------
+	БЛОГ
+-------------------------------------------- */
+
+.blog { margin-bottom: 20px; overflow: hidden; }
+
+
+/* Header */
+.blog .blog-header 			{ position: relative; padding: 0 100px 0 68px; margin-bottom: 20px; min-height: 48px; }
+.blog .blog-header h2 		{ margin: 0; }
+.blog .blog-header .avatar 	{ position: absolute; top: 0; left: 0; }
+
+.blog .blog-header .vote 		{ position: absolute; top: 0; right: 0; }
+.blog .blog-header .vote-label	{ text-align: center; font-size: 12px; color: #aaaaaa; }
+
+.blog .blog-header .actions 	{ font-size: 12px; }
+
+
+/* Content */
+.blog .blog-more-content 	{ margin-bottom: 20px; }
+.blog .blog-content 		{ padding: 20px 0 10px; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee; }
+
+
+/* Footer */
+.blog .blog-footer 	{ padding: 20px 0; border-bottom: 1px solid #eeeeee; }
+
+
+/* More Button */
+.blog-more 			{ display: block; padding: 12px 0; text-align: center; text-decoration: none; color: #999999; background: #eeeeee; }
+.blog-more:hover 	{ background: #e6e6e6; }

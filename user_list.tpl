@@ -1,20 +1,22 @@
-<table class="table table-users">
+<table class="table table-hover table-users">
 	{if $bUsersUseOrder}
 		<thead>
 			<tr>
-				<th class="cell-name"><small><a href="{$sUsersRootPage}?order=user_login&order_way={if $sUsersOrder=='user_login'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_login'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user}</span></a></small></th>
-				<th class="hidden-xs cell-date"><small>{$aLang.user_date_last}</small></th>
-				<th class="hidden-xs cell-skill"><small><a href="{$sUsersRootPage}?order=user_skill&order_way={if $sUsersOrder=='user_skill'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_skill'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_skill}</span></a></small></th>
-				<th class="hidden-xs cell-rating"><small><a href="{$sUsersRootPage}?order=user_rating&order_way={if $sUsersOrder=='user_rating'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_rating'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_rating}</span></a></small></th>
+				<th class="cell-name"><a href="{$sUsersRootPage}?order=user_login&order_way={if $sUsersOrder=='user_login'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_login'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user}</span></a></th>
+				<th>{$aLang.user_date_last}</th>
+				<th><a href="{$sUsersRootPage}?order=user_date_register&order_way={if $sUsersOrder=='user_date_register'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_date_register'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_date_registration}</span></a></th>
+				<th class="cell-skill"><a href="{$sUsersRootPage}?order=user_skill&order_way={if $sUsersOrder=='user_skill'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_skill'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_skill}</span></a></th>
+				<th class="cell-rating"><a href="{$sUsersRootPage}?order=user_rating&order_way={if $sUsersOrder=='user_rating'}{$sUsersOrderWayNext}{else}{$sUsersOrderWay}{/if}" {if $sUsersOrder=='user_rating'}class="{$sUsersOrderWay}"{/if}><span>{$aLang.user_rating}</span></a></th>
 			</tr>
 		</thead>
 	{else}
 		<thead>
 			<tr>
-				<th class="cell-name"><small>{$aLang.user}</small></th>
-				<th class="hidden-xs cell-date"><small>{$aLang.user_date_last}</small></th>
-				<th class="hidden-xs cell-skill"><small>{$aLang.user_skill}</small></th>
-				<th class="hidden-xs cell-rating"><small>{$aLang.user_rating}</small></th>
+				<th class="cell-name">{$aLang.user}</th>
+				<th class="cell-date">{$aLang.user_date_last}</th>
+				<th class="cell-date">{$aLang.user_date_registration}</th>
+				<th class="cell-skill">{$aLang.user_skill}</th>
+				<th class="cell-rating">{$aLang.user_rating}</th>
 			</tr>
 		</thead>
 	{/if}
@@ -26,24 +28,17 @@
 				{assign var="oUserNote" value=$oUserList->getUserNote()}
 				<tr>
 					<td class="cell-name">
-						<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(48)}" alt="{$oUserList->getLogin()}" class="avatar visible-lg" /></a>
-						<div class="name {if !$oUserList->getProfileName()}no-realname{/if}">
-							<p class="username">
-								<a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
-								{if $oUserNote}
-									<span class="glyphicon glyphicon-comment text-muted js-infobox" title="{$oUserNote->getText()|escape:'html'}"></span>
-								{/if}
-							</p>
-							{if $oUserList->getProfileName()}<p class="text-muted realname"><small>{$oUserList->getProfileName()}</small></p>{/if}
-						</div>
+						<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
+						<p class="username word-wrap"><a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
+							{if $oUserNote}
+								<i class="icon-comment js-infobox" title="{$oUserNote->getText()|escape:'html'}"></i>
+							{/if}
+						</p>
 					</td>
-					<td class="hidden-xs small text-muted cell-date">
-						{if $oSession}
-							{date_format date=$oSession->getDateLast() hours_back="12" minutes_back="60" now="60" day="day H:i" format="d.m.y, H:i"}
-						{/if}
-					</td>
-					<td class="hidden-xs small text-info cell-skill">{$oUserList->getSkill()}</td>
-					<td class="hidden-xs small cell-rating{if $oUserList->getRating() < 0} text-danger negative{else} text-success{/if}">{$oUserList->getRating()}</td>
+					<td class="cell-date">{if $oSession}{date_format date=$oSession->getDateLast() format="d.m.y, H:i"}{/if}</td>
+					<td class="cell-date">{date_format date=$oUserList->getDateRegister() format="d.m.y, H:i"}</td>
+					<td class="cell-skill">{$oUserList->getSkill()}</td>
+					<td class="cell-rating{if $oUserList->getRating() < 0} negative{/if}"><strong>{$oUserList->getRating()}</strong></td>
 				</tr>
 			{/foreach}
 		{else}

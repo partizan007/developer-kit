@@ -100,7 +100,17 @@ jQuery(document).ready(function($){
 			showTimeout: 1000
 		});
 	}
-	
+
+	$('.js-title-talk').poshytip({
+		className: 'infobox-yellow',
+		alignTo: 'target',
+		alignX: 'left',
+		alignY: 'center',
+		offsetX: 10,
+		liveEvents: true,
+		showTimeout: 500
+	});
+
 	$('.js-infobox-vote-topic').poshytip({
 		content: function() {
 			var id = $(this).attr('id').replace('vote_total_topic_','vote-info-topic-');
@@ -124,7 +134,7 @@ jQuery(document).ready(function($){
 		liveEvents: true,
 		showTimeout: 500
 	});
-	
+
 	$('.js-infobox').poshytip({
 		className: 'infobox-standart',
 		liveEvents: true,
@@ -156,23 +166,6 @@ jQuery(document).ready(function($){
 	// избранное
 	ls.hook.add('ls_favourite_toggle_after',function(idTarget,objFavourite,type,params,result){
 		$('#fav_count_'+type+'_'+idTarget).text((result.iCount>0) ? result.iCount : '');
-	});
-	
-	// лента активности
-	ls.hook.add('ls_stream_append_user_after',function(length,data){
-		if (length==0) {
-			$('#strm_u_'+data.uid).parent().find('a').before('<a href="'+data.user_web_path+'"><img src="'+data.user_avatar_48+'" alt="avatar" class="avatar" /></a> ');
-		}
-	});
-	
-	// опрос
-	ls.hook.add('ls_pool_add_answer_after',function(removeAnchor){
-		var removeAnchor = $('<a href="#" class="glyphicon glyphicon-trash" />').attr('title', ls.lang.get('delete')).click(function(e){
-			e.preventDefault();
-			return this.removeAnswer(e.target);
-		}.bind(ls.poll));
-		$(this).find('a').remove();
-		$(this).append(removeAnchor);
 	});
 
 	/****************
@@ -246,18 +239,18 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	
-	// Bootstrap
-	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-		var msViewportStyle = document.createElement("style")
-			msViewportStyle.appendChild(
-			document.createTextNode(
-				"@-ms-viewport{width:auto!important}"
-			)
-		)
-		document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
-	}
-	
+	// Раскрывающиеся блоки (поиск по блогам, людям, тегам)
+	$("#block-more").click(function () {
+		if ($('#block-more-content').is(':visible')) {
+			$('#block-more-content').hide();
+			$('#block-more').toggleClass('opened');
+		} else {
+			$('#block-more-content').show();
+			$('#block-more').toggleClass('opened');
+		}
+		
+		return false;
+	});
 	
 	// Хук конца инициализации javascript-составляющих шаблона
 	ls.hook.run('ls_template_init_end',[],window);

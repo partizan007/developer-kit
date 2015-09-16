@@ -1,10 +1,7 @@
 {include file='header.tpl'}
 
 
-<div class="page-header">
-	<h1>{$aLang.comments_all}</h1>
-</div>
-
+<h2 class="page-header">{$aLang.comments_all}</h2>
 
 {include file='comment_list.tpl'}
 

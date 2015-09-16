@@ -17,25 +17,19 @@
 	
 	<input type="hidden" name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}" />
 
-	<div class="form-group">
-		<label for="talk_users">{$aLang.talk_create_users}</label>
-		<input type="text" class="form-control autocomplete-users-sep" id="talk_users" name="talk_users" value="{$_aRequest.talk_users}" />
-	</div>
+	<p><label for="talk_users">{$aLang.talk_create_users}:</label>
+	<input type="text" class="input-block-level autocomplete-users-sep" id="talk_users" name="talk_users" value="{$_aRequest.talk_users}" /></p>
 
-	<div class="form-group">
-		<label for="talk_title">{$aLang.talk_create_title}</label>
-		<input type="text" class="form-control" id="talk_title" name="talk_title" value="{$_aRequest.talk_title}" />
-	</div>
+	<p><label for="talk_title">{$aLang.talk_create_title}:</label>
+	<input type="text" class="input-block-level" id="talk_title" name="talk_title" value="{$_aRequest.talk_title}" /></p>
 
-	<div class="form-group">
-		<label for="talk_text">{$aLang.talk_create_text}</label>
-		<textarea name="talk_text" id="talk_text" rows="12" class="form-control mce-editor markitup-editor">{$_aRequest.talk_text}</textarea>
-	</div>
+	<p><label for="talk_text">{$aLang.talk_create_text}:</label>
+	<textarea name="talk_text" id="talk_text" rows="12" class="input-block-level mce-editor markitup-editor">{$_aRequest.talk_text}</textarea></p>
 	
 	{hook run='form_add_talk_end'}
 	
-	<button type="submit" class="btn btn-success" name="submit_talk_add">{$aLang.talk_create_submit}</button>
-	<button type="submit" class="btn btn-default" name="submit_preview" onclick="jQuery('#text_preview').parent().show(); ls.tools.textPreview('talk_text',false); return false;">{$aLang.topic_create_submit_preview}</button>		
+	<button type="submit" class="btn btn-primary" name="submit_talk_add">{$aLang.talk_create_submit}</button>
+	<button type="submit" class="btn" name="submit_preview" onclick="jQuery('#text_preview').parent().show(); ls.tools.textPreview('talk_text',false); return false;">{$aLang.topic_create_submit_preview}</button>		
 </form>
 
 {hook run='talk_add_end'}

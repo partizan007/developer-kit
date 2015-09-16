@@ -1,17 +1,16 @@
 {include file='header.tpl'}
 
-<div class="page-header">
-	<h1>{$aLang.search_results}</h1>
-</div>
+
+<h2 class="page-header">{$aLang.search_results}</h2>
 
 <form action="{router page='search'}topics/" class="search">
 	{hook run='search_form_begin'}
-	<input type="text" value="{$aReq.q|escape:'html'}" placeholder="{$aLang.search}" maxlength="255" name="q" class="form-control">
+	<input type="text" value="{$aReq.q|escape:'html'}" placeholder="{$aLang.search}" maxlength="255" name="q" class="input-block-level">
 	{hook run='search_form_end'}
 </form>
 
 {if $bIsResults}
-	<ul class="nav nav-pills nav-filter-wrapper">
+	<ul class="nav nav-pills">
 		{foreach from=$aRes.aCounts item=iCount key=sType name="sTypes"}
 			<li {if $aReq.sType == $sType}class="active"{/if}>					
 				<a href="{router page='search'}{$sType}/?q={$aReq.q|escape:'html'}">
@@ -38,5 +37,6 @@
 {else}
 	{$aLang.search_results_empty}
 {/if}
+
 
 {include file='footer.tpl'}

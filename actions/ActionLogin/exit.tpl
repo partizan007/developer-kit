@@ -1,8 +1,6 @@
 {assign var="noSidebar" value=true}
-{include file='header_light.tpl'}
+{include file='header.tpl'}
 
-<div class="text-center page-header">
-	<h3>{$aLang.user_exit_notice}</h3>
-</div>
+<h2 class="page-header">{$aLang.user_exit_notice}</h2>
 
-{include file='footer_light.tpl'}
+{include file='footer.tpl'}
