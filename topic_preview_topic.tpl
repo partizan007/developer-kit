@@ -1,18 +1,14 @@
 {assign var="oUser" value=$oTopic->getUser()}
 
-<h3 class="page-header">{$aLang.topic_preview}</h3>
+<div class="page-header">
+	<h2>{$aLang.topic_preview}</h2>
+</div>
 
 <article class="topic topic-type-{$oTopic->getType()}">
 	<header class="topic-header">
 		<h1 class="topic-title">
 			{$oTopic->getTitle()|escape:'html'}
 		</h1>
-
-		<div class="topic-info">
-			<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" pubdate title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}">
-				{date_format date=$oTopic->getDateAdd() format="j F Y, H:i"}
-			</time>
-		</div>
 	</header>
 
 	<div class="topic-content text">
@@ -24,8 +20,8 @@
 	</div>
 
 	<footer class="topic-footer">
-		<ul class="unstyled inline topic-tags">
-			<li><i class="icon-tags"></i></li>
+		<ul class="small text-muted list-unstyled list-inline topic-tags">
+			<li><span class="glyphicon glyphicon-tags"></span></li>
 			{strip}
 				{if $oTopic->getTagsArray()}
 					{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
@@ -37,8 +33,17 @@
 			{/strip}
 		</ul>
 
-		<ul class="unstyled inline topic-info">
-			<li class="topic-info-author"><a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></li>
+		<ul class="list-unstyled list-inline small topic-info">
+			<li class="topic-info-author">
+				<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
+				<a rel="author" href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a>
+			</li>
+			<li class="topic-info-date">
+				<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" pubdate title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}" class="text-muted">
+					{date_format date=$oTopic->getDateAdd() format="j F Y, H:i"}
+				</time>
+			</li>
+			
 			{hook run='topic_preview_show_info' topic=$oTopic}
 		</ul>
 
@@ -47,6 +52,6 @@
 </article>
 
 
-<button type="submit" name="submit_topic_publish" class="btn btn-primary fl-r" onclick="jQuery('#submit_topic_publish').trigger('click');">{$aLang.topic_create_submit_publish}</button>
-<button type="submit" name="submit_preview" onclick="jQuery('#text_preview').html('').hide(); return false;" class="btn">{$aLang.topic_create_submit_preview_close}</button>
-<button type="submit" name="submit_topic_save" class="btn" onclick="jQuery('#submit_topic_save').trigger('click');">{$aLang.topic_create_submit_save}</button>
+<button type="submit" name="submit_topic_publish" class="btn btn-success pull-right" onclick="jQuery('#submit_topic_publish').trigger('click');">{$aLang.topic_create_submit_publish}</button>
+<button type="submit" name="submit_preview" onclick="jQuery('#text_preview').html('').hide(); return false;" class="btn btn-default">{$aLang.topic_create_submit_preview_close}</button>
+<button type="submit" name="submit_topic_save" class="btn btn-default" onclick="jQuery('#submit_topic_save').trigger('click');">{$aLang.topic_create_submit_save}</button>

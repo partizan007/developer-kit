@@ -1,7 +1,7 @@
 {if $oUserCurrent and $oUserCurrent->isAdministrator()}
 	<section class="toolbar-admin">
 		<a href="{router page='admin'}" title="{$aLang.admin_title}">
-			<i class="icon-cog"></i>
+			<span class="glyphicon glyphicon-cog"></span>
 		</a>
 	</section>
 {/if}

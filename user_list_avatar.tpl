@@ -1,10 +1,10 @@
 {if $aUsersList}
-	<ul class="unstyled inline user-list-avatar">
+	<ul class="list-unstyled list-inline user-list-avatar">
 		{foreach from=$aUsersList item=oUserList}
 			{assign var="oSession" value=$oUserList->getSession()}
 			
 			<li>
-				<a href="{$oUserList->getUserWebPath()}" title="{$oUserList->getLogin()}"><img src="{$oUserList->getProfileAvatarPath(48)}" alt="avatar" class="avatar" /></a>
+				<a href="{$oUserList->getUserWebPath()}" title="{$oUserList->getLogin()}"><img src="{$oUserList->getProfileAvatarPath(48)}" alt="{$oUserList->getLogin()}" class="avatar" /></a>
 			</li>
 		{/foreach}
 	</ul>

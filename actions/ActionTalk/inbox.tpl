@@ -10,18 +10,18 @@
 		<input type="hidden" name="submit_talk_read" id="form_talks_list_submit_read" value="" />
 		<input type="hidden" name="submit_talk_del" id="form_talks_list_submit_del" value="" />
 
-		<button type="submit" onclick="ls.talk.makeReadTalks()" class="btn">{$aLang.talk_inbox_make_read}</button>
-		<button type="submit" onclick="if (confirm('{$aLang.talk_inbox_delete_confirm}')){ ls.talk.removeTalks() };" class="btn">{$aLang.talk_inbox_delete}</button>
+		<button type="submit" onclick="ls.talk.makeReadTalks()" class="btn btn-default">{$aLang.talk_inbox_make_read}</button>
+		<button type="submit" onclick="if (confirm('{$aLang.talk_inbox_delete_confirm}')){ ls.talk.removeTalks() };" class="btn btn-default">{$aLang.talk_inbox_delete}</button>
 		<br /><br />
 		
-		<table class="table table-hover table-talk">
+		<table class="table table-talk">
 			<thead>
 				<tr>
-					<th class="cell-checkbox"><input type="checkbox" name="" class="input-checkbox" onclick="ls.tools.checkAll('form_talks_checkbox', this, true);"></th>
-					<th class="cell-recipients">{$aLang.talk_inbox_target}</th>
-					<th class="cell-favourite"></th>
-					<th class="cell-title">{$aLang.talk_inbox_title}</th>
-					<th class="cell-date ta-r">{$aLang.talk_inbox_date}</th>
+					<th class="hidden-xs cell-checkbox"><input type="checkbox" name="" class="input-checkbox" onclick="ls.tools.checkAll('form_talks_checkbox', this, true);"></th>
+					<th class="cell-recipients"><small>{$aLang.talk_inbox_target}</small></th>
+					<th class="hidden-xs cell-favourite"></th>
+					<th class="cell-title"><small>{$aLang.talk_inbox_title}</small></th>
+					<th class="hidden-xs cell-date"><small>{$aLang.talk_inbox_date}</small></th>
 				</tr>
 			</thead>
 
@@ -29,8 +29,8 @@
 				{foreach from=$aTalks item=oTalk}
 					{assign var="oTalkUserAuthor" value=$oTalk->getTalkUser()}
 					<tr>
-						<td class="cell-checkbox"><input type="checkbox" name="talk_select[{$oTalk->getId()}]" class="form_talks_checkbox input-checkbox" /></td>
-						<td>
+						<td class="hidden-xs cell-checkbox"><input type="checkbox" name="talk_select[{$oTalk->getId()}]" class="form_talks_checkbox input-checkbox" /></td>
+						<td class="small text-muted">
 							{strip}
 								{assign var="aTalkUserOther" value=[]}
 								{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
@@ -44,12 +44,12 @@
 								{/foreach}
 							{/strip}
 						</td>
-						<td class="cell-favourite">
-							<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a>
+						<td class="hidden-xs cell-favourite">
+							<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="muted favourite {if $oTalk->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></a>
 						</td>
 						<td>
 							{strip}
-								<a href="{router page='talk'}read/{$oTalk->getId()}/" class="js-title-talk" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
+								<a href="{router page='talk'}read/{$oTalk->getId()}/" title="{$oTalk->getTextLast()|strip_tags|truncate:100:'...'|escape:'html'}">
 									{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
 										<strong>{$oTalk->getTitle()|escape:'html'}</strong>
 									{else}
@@ -57,24 +57,25 @@
 									{/if}
 								</a>
 							{/strip}
-							
+							&nbsp;
 							{if $oTalk->getCountComment()}
-								({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()} +{$oTalkUserAuthor->getCommentCountNew()}{/if})
+								<span class="text-muted">({$oTalk->getCountComment()}{if $oTalkUserAuthor->getCommentCountNew()}<span class="text-info">+{$oTalkUserAuthor->getCommentCountNew()}</span>{/if})</span>
 							{/if}
 							{if $oUserCurrent->getId()==$oTalk->getUserIdLast()}
-								&rarr;
+								<span class="text-success">&rarr;</span>
 							{else}
-								&larr;
+								<span class="text-danger">&larr;</span>
 							{/if}
+							<p class="small text-muted">{$oTalk->getTextLast()|strip_tags|truncate:200:'...'|escape:'html'}</p>
 						</td>
-						<td class="cell-date ta-r">{date_format date=$oTalk->getDate() format="j F Y, H:i"}</td>
+						<td class="hidden-xs small text-muted cell-date">{date_format date=$oTalk->getDate() format="j F Y, H:i"}</td>
 					</tr>
 				{/foreach}
 			</tbody>
 		</table>
 	</form>
 {else}
-	<div class="notice-empty">{$aLang.talk_inbox_empty}</div>
+	<div class="alert alert-info notice-empty">{$aLang.talk_inbox_empty}</div>
 {/if}
 
 

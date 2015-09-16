@@ -1,4 +1,4 @@
-<ul class="nav nav-pills">
+<ul class="nav nav-pills nav-filter-wrapper">
 	<li {if $sMenuSubItemSelect=='topics'}class="active"{/if}>
 		<a href="{$oUserProfile->getUserWebPath()}created/topics/">{$aLang.topic_title}  {if $iCountTopicUser} ({$iCountTopicUser}) {/if}</a>
 	</li>
