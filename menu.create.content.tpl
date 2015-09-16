@@ -28,17 +28,15 @@
 
 <div class="dropdown-create">
 	{strip}
-		<div class="page-header">
-			<h1>{$aLang.block_create} <a href="#" class="dropdown-create-trigger link-dashed" id="dropdown-create-trigger">
-				{if $sMenuItemSelect=='topic'}
-					{$aLang.topic_menu_add}
-				{elseif $sMenuItemSelect=='blog'}
-					{$aLang.blog_menu_create}
-				{else}
-					{hook run='menu_create_item_select' sMenuItemSelect=$sMenuItemSelect}
-				{/if}
-			</a></h1>
-		</div>
+		<h2 class="page-header">{$aLang.block_create} <a href="#" class="dropdown-create-trigger link-dashed" id="dropdown-create-trigger">
+			{if $sMenuItemSelect=='topic'}
+				{$aLang.topic_menu_add}
+			{elseif $sMenuItemSelect=='blog'}
+				{$aLang.blog_menu_create}
+			{else}
+				{hook run='menu_create_item_select' sMenuItemSelect=$sMenuItemSelect}
+			{/if}
+		</a></h2>
 	{/strip}
 	
 	<ul class="dropdown-menu" id="dropdown-create-menu" style="display: none">
@@ -50,7 +48,7 @@
 
 
 {if $sMenuItemSelect=='topic'}
-	<ul class="nav nav-pills nav-filter-wrapper">
+	<ul class="nav nav-pills">
 		<li {if $sMenuSubItemSelect=='topic'}class="active"{/if}><a href="{router page='topic'}add/">{$aLang.topic_menu_add_topic}</a></li>
 		<li {if $sMenuSubItemSelect=='question'}class="active"{/if}><a href="{router page='question'}add/">{$aLang.topic_menu_add_question}</a></li>
 		<li {if $sMenuSubItemSelect=='link'}class="active"{/if}><a href="{router page='link'}add/">{$aLang.topic_menu_add_link}</a></li>

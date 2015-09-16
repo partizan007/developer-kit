@@ -1,8 +1,7 @@
 {include file='header.tpl'}
 
-<div class="page-header">
-	<h1>{$aLang.blog_user_readers_all} ({$iCountBlogUsers}): <a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a></h1>
-</div>
+
+<h2 class="page-header">{$aLang.blog_user_readers_all} ({$iCountBlogUsers}): <a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a></h2>
 	
 {if $aBlogUsers}
 	{assign var="aUsersList" value=[]}

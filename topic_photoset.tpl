@@ -9,10 +9,10 @@
 {assign var=oMainPhoto value=$oTopic->getPhotosetMainPhoto()}
 {if $oMainPhoto}
 	<div class="topic-photo-preview" id="photoset-main-preview-{$oTopic->getId()}" onclick="window.location='{$oTopic->getUrl()}#photoset'">
-		<div class="topic-photo-count" id="photoset-photo-count-{$oTopic->getId()}"><small>{$oTopic->getPhotosetCount()} {$aLang.topic_photoset_photos}</small></div>
+		<div class="topic-photo-count" id="photoset-photo-count-{$oTopic->getId()}">{$oTopic->getPhotosetCount()} {$aLang.topic_photoset_photos}</div>
 	
 		{if $oMainPhoto->getDescription()}
-			<div class="topic-photo-desc" id="photoset-photo-desc-{$oTopic->getId()}"><small>{$oMainPhoto->getDescription()}</small></div>
+			<div class="topic-photo-desc" id="photoset-photo-desc-{$oTopic->getId()}">{$oMainPhoto->getDescription()}</div>
 		{/if}
 	
 		<img src="{$oMainPhoto->getWebPath(500)}" alt="image" id="photoset-main-image-{$oTopic->getId()}" />
@@ -27,7 +27,7 @@
 		{$oTopic->getTextShort()}
 		{if $oTopic->getTextShort()!=$oTopic->getText()}
 			<br />
-			<a href="{$oTopic->getUrl()}#cut" title="{$aLang.topic_read_more}" class="read-more">
+			<a href="{$oTopic->getUrl()}#cut" title="{$aLang.topic_read_more}">
 				{if $oTopic->getCutText()}
 					{$oTopic->getCutText()} &rarr;
 				{else}
@@ -60,7 +60,7 @@
 		<h2>{$oTopic->getPhotosetCount()} {$oTopic->getPhotosetCount()|declension:$aLang.topic_photoset_count_images}</h2>
 		<a name="photoset"></a>
 		
-		<ul id="topic-photo-images" class="list-unstyled list-inline clearfix">
+		<ul id="topic-photo-images" class="unstyled inline">
 			{assign var=aPhotos value=$oTopic->getPhotosetPhotos(0, $oConfig->get('module.topic.photoset.per_page'))}
 			{if count($aPhotos)}                                
 				{foreach from=$aPhotos item=oPhoto}
@@ -74,7 +74,7 @@
 		</ul>
 		
 		{if count($aPhotos)<$oTopic->getPhotosetCount()}
-			<a href="javascript:ls.photoset.getMore({$oTopic->getId()})" id="topic-photo-more" class="btn btn-info btn-large btn-block topic-photo-more">{$aLang.topic_photoset_show_more} &darr;</a>
+			<a href="javascript:ls.photoset.getMore({$oTopic->getId()})" id="topic-photo-more" class="topic-photo-more">{$aLang.topic_photoset_show_more} &darr;</a>
 		{/if}
 	</div>
 {/if}

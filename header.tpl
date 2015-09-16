@@ -16,28 +16,12 @@
 	
 	<meta name="description" content="{$sHtmlDescription}">
 	<meta name="keywords" content="{$sHtmlKeywords}">
-	
-	{if $oTopic}
-		<meta property="og:title" content="{$oTopic->getTitle()|escape:'html'}"/>
-		<meta property="og:url" content="{$oTopic->getUrl()}"/>
-		{if $oTopic->getPreviewImageWebPath()}
-			<meta property="og:image" content="{$oTopic->getPreviewImageWebPath({cfg name='meta.thumbnail.img_size'})}"/>
-		{/if}
-		<meta property="og:description" content="{$sHtmlDescription}"/>
-		<meta property="og:site_name" content="{cfg name='view.name'}"/>
-		<meta property="og:type" content="article"/>
-		<meta name="twitter:card" content="{cfg name='meta.twitter.card_type'}">
-		<meta name="twitter:domain" content="{cfg name="path.root.web"}">
-	{/if}
-	
+
 	{$aHtmlHeadFiles.css}
-	
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	
+
 	<link href="{cfg name='path.static.skin'}/images/favicon.ico?v1" rel="shortcut icon" />
 	<link rel="search" type="application/opensearchdescription+xml" href="{router page='search'}opensearch/" title="{cfg name='view.name'}" />
-	
-	
+
 	{if $aHtmlRssAlternate}
 		<link rel="alternate" type="application/rss+xml" href="{$aHtmlRssAlternate.url}" title="{$aHtmlRssAlternate.title}">
 	{/if}
@@ -72,7 +56,7 @@
 	
 	
 	{$aHtmlHeadFiles.js}
-	
+
 	
 	<script type="text/javascript">
 		var tinyMCE = false;
@@ -83,32 +67,6 @@
 	
 	
 	{hook run='html_head_end'}
-	
-	<!--[if lt IE 9]>
-		<script src="{cfg name="path.static.skin"}/js/html5shiv.js"></script>
-		<script src="{cfg name="path.static.skin"}/js/respond.min.js"></script>
-	<![endif]-->
-	
-	<!--[if IE 7]>
-		<link rel="stylesheet" href="{cfg name="path.static.skin"}/themes/default/icons/css/fontello-ie7.css">
-	<![endif]-->
-	<script>
-		function toggleCodes(on) {
-			var obj = document.getElementById('icons');
-			if (on) {
-				obj.className += ' codesOn';
-			} else {
-				obj.className = obj.className.replace(' codesOn', '');
-			}
-		}
-	</script>
-	
-	
-	{if {cfg name='masonry.add'} == true and $bTopicListPage}
-		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/masonry.pkgd.min.js"></script>
-		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/imagesloaded.pkgd.js"></script>
-		<script type="text/javascript" src="{cfg name="path.static.skin"}/js/masonry/masonry-default.js"></script>
-	{/if}
 </head>
 
 
@@ -127,30 +85,11 @@
 	{assign var=body_classes value=$body_classes|cat:' ls-user-role-not-admin'}
 {/if}
 
-{if {cfg name='view.layout'} == 'full-width'}
-	{assign var=body_classes value=$body_classes|cat:' full-width'}
-{elseif {cfg name='view.layout'} == 'boxed'}
-	{assign var=body_classes value=$body_classes|cat:' boxed'}
-{elseif {cfg name='view.layout'} == 'boxed-center'}
-	{assign var=body_classes value=$body_classes|cat:' boxed-center'}
-{/if}
-
-{if {cfg name='container.lg'} == true and $noSidebar}
-	{assign var=body_classes value=$body_classes|cat:' container-lg'}
-{/if}
-
-{if {cfg name='view.jumbotron'} == true}
-	{assign var=body_classes value=$body_classes|cat:' jumbotron-in'}
-{/if}
-
-
-
 {add_block group='toolbar' name='toolbar_admin.tpl' priority=100}
 {add_block group='toolbar' name='toolbar_scrollup.tpl' priority=-100}
 
 
-
-<body class="{$body_classes} body-padding-{cfg name='navbar.position'} {cfg name='topic_list.view'}">
+<body class="{$body_classes}">
 	{hook run='body_begin'}
 		
 	{if $oUserCurrent}
@@ -160,26 +99,24 @@
 		{include file='window_login.tpl'}
 	{/if}
 	
-	<div id="page-wrapper">
-		{include file='header_top.tpl'}
-		{include file='nav.tpl'}
+	{include file='navbar.tpl'}
+	{include file='header_top.tpl'}
+	{include file='nav.tpl'}
+	
+	<div class="container {hook run='container_class'}">
+
+		<div class="row wrapper {hook run='wrapper_class'}">
+			{if !$noSidebar && $sidebarPosition == 'left'}
+				{include file='sidebar.tpl'}
+			{/if}
 		
-		{hook run='content_top'}
-		
-		<section id="wrapper" class="{hook run='wrapper_class'}">
-			<div id="container" class="container {hook run='container_class'}">
-				<div class="row">
-					
-					{if !$noSidebar && $sidebarPosition == 'left'}
-						{include file='sidebar.tpl'}
-					{/if} 
-					
-					<div id="content-wrapper" role="main" 
-						class="{if $noSidebar}col-md-12{else}col-md-8{/if} content{if $sidebarPosition == 'left'} content-right{/if}"
-						{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
-						
-						{include file='nav_content.tpl'}
-						{include file='system_message.tpl'}
-						
-						{hook run='content_begin'}
-						
+			<div role="main" 
+				class="span8 content 
+					   {if $noSidebar}content-full-width{/if} 
+					   {if $sidebarPosition == 'left'}content-right{/if}"
+				{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
+				
+				{include file='nav_content.tpl'}
+				{include file='system_message.tpl'}
+				
+				{hook run='content_begin'}

@@ -2,14 +2,14 @@
 
 <div id="topic_question_area_{$oTopic->getId()}" class="poll">
 	{if !$oTopic->getUserQuestionIsVote()}
-		<ul class="list-unstyled poll-vote">
+		<ul class="unstyled poll-vote">
 			{foreach from=$oTopic->getQuestionAnswers() key=key item=aAnswer}
-				<li class="radio"><label><input type="radio" id="topic_answer_{$oTopic->getId()}_{$key}" name="topic_answer_{$oTopic->getId()}" value="{$key}" onchange="jQuery('#topic_answer_{$oTopic->getId()}_value').val(jQuery(this).val());" />{$aAnswer.text|escape:'html'}</label></li>
+				<li><label class="radio"><input type="radio" id="topic_answer_{$oTopic->getId()}_{$key}" name="topic_answer_{$oTopic->getId()}" value="{$key}" onchange="jQuery('#topic_answer_{$oTopic->getId()}_value').val(jQuery(this).val());" />{$aAnswer.text|escape:'html'}</label></li>
 			{/foreach}
 		</ul>
 
-		<button type="submit" onclick="ls.poll.vote({$oTopic->getId()},jQuery('#topic_answer_{$oTopic->getId()}_value').val());" class="btn btn-success">{$aLang.topic_question_vote}</button>
-		<button type="submit" onclick="ls.poll.vote({$oTopic->getId()},-1)" class="btn btn-default">{$aLang.topic_question_abstain}</button>
+		<button type="submit" onclick="ls.poll.vote({$oTopic->getId()},jQuery('#topic_answer_{$oTopic->getId()}_value').val());" class="btn btn-primary">{$aLang.topic_question_vote}</button>
+		<button type="submit" onclick="ls.poll.vote({$oTopic->getId()},-1)" class="btn">{$aLang.topic_question_abstain}</button>
 		
 		<input type="hidden" id="topic_answer_{$oTopic->getId()}_value" value="-1" />
 	{else}

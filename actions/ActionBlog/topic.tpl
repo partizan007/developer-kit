@@ -3,8 +3,6 @@
 
 {include file='topic.tpl'}
 
-{include file='blocks.tpl' group='topic-bottom'}
-
 {include 
 	file='comment_tree.tpl' 	
 	iTargetId=$oTopic->getId()
