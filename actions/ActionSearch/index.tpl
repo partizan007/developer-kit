@@ -1,17 +1,22 @@
+{assign var="bTopicListPage" value=true}
+
+
 {include file='header.tpl'}
 
-
-<h2 class="page-header">{$aLang.search}</h2>
+<div class="page-header">
+	<h1>{$aLang.search}</h1>
+</div>
 
 {hook run='search_begin'}
 
 <form action="{router page='search'}topics/" class="search">
 	{hook run='search_form_begin'}
-	<input type="text" placeholder="{$aLang.search}" maxlength="255" name="q" class="input-block-level">
+	<div class="form-group">
+		<input type="text" placeholder="{$aLang.search}" maxlength="255" name="q" class="form-control">
+	</div>
 	{hook run='search_form_end'}
 </form>
 
 {hook run='search_end'}
-
 
 {include file='footer.tpl'}

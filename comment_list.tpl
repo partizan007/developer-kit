@@ -6,18 +6,17 @@
 		
 		
 		
-		<div class="comment-path">
+		<div class="small text-muted comment-path">
 			<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
-			<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
-			<a href="{$oTopic->getUrl()}#comments">({$oTopic->getCountComment()})</a>
+			<a href="{$oTopic->getUrl()}" class="comment-path-topic">{$oTopic->getTitle()|escape:'html'}</a>
+			<a href="{$oTopic->getUrl()}#comments" class="comment-path-comments">({$oTopic->getCountComment()})</a>
 		</div>
 		
 		
 		<section class="comment">
 			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="avatar" class="comment-avatar" /></a>
 		
-		
-			<ul class="unstyled inline comment-info">
+			<ul class="list-unstyled list-inline small comment-info">
 				<li class="comment-author"><a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></li>
 				<li class="comment-date">
 					<a href="{if $oConfig->GetValue('module.comment.nested_per_page')}{router page='comments'}{else}{$oTopic->getUrl()}#comment{/if}{$oComment->getId()}" class="link-dotted" title="{$aLang.comment_url_notice}">
@@ -26,8 +25,8 @@
 				</li>
 				{if $oUserCurrent and !$bNoCommentFavourites}
 					<li class="comment-favourite">
-						<div onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="favourite {if $oComment->getIsFavourite()}active{/if}"></div>
-						<span class="favourite-count" id="fav_count_comment_{$oComment->getId()}">{if $oComment->getCountFavourite() > 0}{$oComment->getCountFavourite()}{/if}</span>
+						<div onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="favourite {if $oComment->getIsFavourite()}active{/if}"><span class="glyphicon glyphicon-star-empty"></span></div>
+						<span class="text-muted favourite-count" id="fav_count_comment_{$oComment->getId()}">{if $oComment->getCountFavourite() > 0}{$oComment->getCountFavourite()}{/if}</span>
 					</li>
 				{/if}
 				<li id="vote_area_comment_{$oComment->getId()}" class="pull-right vote 
@@ -39,14 +38,16 @@
 					<span class="vote-count" id="vote_total_comment_{$oComment->getId()}">{$oComment->getRating()}</span>
 				</li>
 			</ul>
-					
-					
-			<div class="comment-content text">						
-				{if $oComment->isBad()}
-					{$oComment->getText()}						
-				{else}
-					{$oComment->getText()}
-				{/if}		
+			
+			
+			<div class="comment-content">
+				<div class="text">
+					{if $oComment->isBad()}
+						{$oComment->getText()}						
+					{else}
+						{$oComment->getText()}
+					{/if}
+				</div>
 			</div>
 		</section>
 	{/foreach}	

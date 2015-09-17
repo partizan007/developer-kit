@@ -2,72 +2,50 @@
 	АДАПТИВНОСТЬ
 -------------------------------------------- */
 
-.navbar .btn-navbar .icon-bar { opacity: 1; }
-
-/* Desktop large
-------------------------- */
-@media (min-width: 1200px) {
-
+@media (max-width: 319px) {
+	.comment .comment-info li.goto-comment-parent, 
+	.comment .comment-info li.goto-comment-child, 
+	.comment .comment-info li.comment-favourite, 
+	.comment .comment-info li.vote { display: none; }
+	
+	.comment { margin-bottom: 15px !important; }
+	.comment-wrapper .comment-wrapper { padding-left: 0 !important; }
+	#wall-container .comment { margin-bottom: 0 !important; }
+	.wall-submit.wall-submit-reply { margin-left: 0 !important; }
 }
 
-
-
-/* Desktop
-------------------------- */
-@media (max-width: 980px) {
-  /* Unfloat brand */
-  body > .navbar-fixed-top .brand { float: left; margin-left: 0; padding-left: 10px; padding-right: 10px; }
-
-  /* Inline-block quick links for more spacing */
-  .quick-links li { display: inline-block; margin: 5px; }
-  
-  .navbar-search { float: left; }
-  .subnav-collapse.in.collapse { padding-top: 10px; }
+@media (max-width: 479px) {
+	.comment { padding-right: 10px !important; padding-left: 10px !important; min-height: 0 !important; }
+	.ls-user-role-not-admin .comment.comment-deleted { padding-left: 15px !important; margin-bottom: 25px !important; }
+	.comment .comment-avatar { display: none; }
+	
+	.profile { padding-left: 0; }
+	.profile .avatar { display: none; }
+	.profile .strength { display: none; }
+	
+	#form_talks_list .btn { margin-bottom: 10px; }
+	.table.table-talk .cell-recipients { width: 80px; }
+	
+	.blog .blog-header { padding-left: 0; padding-right: 0; min-height: 0; }
+	.blog .blog-header .avatar { display: none; }
+	.blog .blog-header .vote { display: none; }
 }
 
-
-
-/* Tablet to desktop
-------------------------- */
-@media (min-width: 768px) and (max-width: 980px) {
-  /* Remove any padding from the body */
-  body { padding-top: 0; }
-  /* Widen masthead and social buttons to fill body padding */
-  .header { margin-top: -20px; } /* Offset bottom margin on .navbar */
-}
-
-
-
-/* Tablet
-------------------------- */
 @media (max-width: 767px) {
-  /* Remove any padding from the body */
-  body { padding-top: 0; }
-
-  .header { padding: 40px 20px; margin-top: -20px; margin-right: -20px; margin-left:  -20px; }
-  
-  .toolbar { display: none; }
-
-  /* Unfloat the back to top link in footer */
-  .footer { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+	/* Модальные окна */
+	.modal.modal-write .modal-dialog,
+	.modal.modal-upload-photo .modal-dialog,
+	.modal.modal-upload-avatar .modal-dialog { width: auto; }
+	
+	.blog-mini .blog-mini-header { text-align: left !important; margin-top: 10px; }
+	.blog-mini .blog-mini-header a { margin-left: 0; margin-right: 10px; }
+	.blog-mini .blog-mini-header .btn { margin-left: 0; }
+	.blog-info { display: inline-block; margin-bottom: 20px; width: 100%; }
+	
+	#footer .footer-list { margin-bottom: 20px; }
+	#footer .social-icons { text-align: left; margin-top: 20px; }
 }
 
-
-
-/* Landscape phones
-------------------------- */
-@media (max-width: 480px) {
-  /* Remove padding above jumbotron */
-  body { padding-top: 0; }
-
-  /* center align subhead text like the masthead */
-  .header h1, .header p { text-align: center; }
-
-  /* Do our best to make tables work in narrow viewports */
-  table code { white-space: normal; word-wrap: break-word; word-break: break-all; }
-
-  /* Tighten up footer */
-  .footer { padding-top: 20px; padding-bottom: 20px; }
-  /* Unfloat the back to top in footer to prevent odd text wrapping */
-  .footer .pull-right { float: none; }
+@media (max-width: 991px) {
+	.sidebar { margin-top: 40px; }
 }
