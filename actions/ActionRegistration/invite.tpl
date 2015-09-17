@@ -1,15 +1,19 @@
 {assign var="noSidebar" value=true}
-{include file='header.tpl'}
+{include file='header_light.tpl'}
 
+<div class="text-center page-header">
+	<h3>{$aLang.registration_invite}</h3>
+</div>
 
-<h2 class="page-header">{$aLang.registration_invite}</h2>
+{include file='system_message.tpl'}
 
 <form action="{router page='registration'}invite/" method="POST">
-	<p><label>{$aLang.registration_invite_code}:</label>
-	<input type="text" name="invite_code" class="span4" /></p>
-
-	<input type="submit" name="submit_invite" value="{$aLang.registration_invite_check}" class="btn" />
+	<div class="form-group">
+		<label>{$aLang.registration_invite_code}</label>
+		<input type="text" name="invite_code" class="form-control" />
+	</div>
+	
+	<input type="submit" name="submit_invite" value="{$aLang.registration_invite_check}" class="btn btn-success" />
 </form>
 
-
-{include file='footer.tpl'}
+{include file='footer_light.tpl'}

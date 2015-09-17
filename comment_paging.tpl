@@ -5,8 +5,8 @@
 		{assign var="sGetSep" value='?'}
 	{/if}
 	
-	<div class="pagination pagination-comments">				
-		<ul>
+	<div class="paging pagination-comments">				
+		<ul class="pagination">
 			<li>{$aLang.paging}:</li>				
 				
 			{if $oConfig->GetValue('module.comment.nested_page_reverse')}
