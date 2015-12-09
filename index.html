@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Developer-kit by vakulesh</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Developer-kit</h1>
+        <h2>LiveStreet CMS Template</h2>
+        <a href="https://github.com/vakulesh/developer-kit" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <hr>
+
+<p>LIVESTREET TEMPLATE "DEVELOPER-KIT"
+version 1.6.5</p>
+
+<p>Copyright © 2013 Kulesh Uladzimir</p>
+
+<p>Contact e-mail: <a href="mailto:v.a.kulesh@yandex.ru">v.a.kulesh@yandex.ru</a></p>
+
+<p>Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0): <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">http://creativecommons.org/licenses/by-sa/3.0/deed.en</a></p>
+
+<hr>
+
+<p>ШАБЛОН ДЛЯ LIVESTREET CMS БАЗИРУЮЩИЙСЯ НА BOOTSTRAP.</p>
+
+<p>Шаблон предназначен для разработки на нем своих шаблонов,
+но, при желании, может быть использован и как самостоятельный.</p>
+
+<hr>
+
+<p>ОСНОВНЫЕ ПОЛОЖЕНИЯ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ:</p>
+
+<p>Шаблон распространяется по лицензии Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) по которой вы можете свободно:</p>
+
+<ul>
+<li>делиться — копировать, распространять и передавать другим лицам данное произведение;</li>
+<li>изменять (создавать производные произведения) — чтобы приспособить это произведение к своим задачам;</li>
+<li>использовать произведение в коммерческих целях.</li>
+</ul>
+
+<p>При обязательном соблюдении следующих условий:</p>
+
+<ul>
+<li>Вы должны атрибутировать произведение (указывать автора и источник) в порядке, предусмотренном автором
+(прямая текстовая гиперссылка на мой блог, которая уже прописана в шаблоне).</li>
+</ul>
+
+<hr>
+
+<p>НАСТРОЙКА ШАБЛОНА:</p>
+
+<p>В шаблоне присутствует 17 предустановленных вариантов отображения лент топиков. Для корректного отображения
+всех их (кроме стандартного списка топиков) рекомендуется установить и настроить плагин «Main Preview» (<a href="https://catalog.livestreetcms.com/addon/view/226">https://catalog.livestreetcms.com/addon/view/226</a>).</p>
+
+<p>Для плагина «Main Preview» в большинстве случаев рекомендую использовать размеры изображений 750х500 пикселей. В таком
+случае, на всех дисплеях превью будут отображаться корректно (в мобильных устройствах занимать всю ширину дисплея).
+Отдельные моменты описаны в конфиге шаблона в пояснении к той или иной настройке.</p>
+
+<p>Кроме того, можно использовать любые свои размеры для настройки превью топиков. Так, для экономии трафика можно
+уменьшать размеры превью. В таком случае, необходимо подставить Ваши размеры в конфиг шаблона для соответсвующих миниатюр.</p>
+
+<p>Пример настройки плагина «Main Preview» для большинства лент:</p>
+
+<p>$config['preview_minimal_size_width']   = 750;  // Минимальная ширина превью, если изображение меньше, то на его основе превью создаваться не будет. Актуально только для автоматических превью
+$config['preview_minimal_size_height']  = 500;  // Минимальная высота превью, если изображение меньше, то на его основе превью создаваться не будет. Актуально только для автоматических превью</p>
+
+<p>/**</p>
+
+<ul>
+<li>Список размеров превью топика</li>
+<li>
+<p>Обычно задается другим плагином или шаблоном
+*/
+$config['size_images_preview']=array(</p>
+
+<p>array(
+    'w' =&gt; 750,
+    'h' =&gt; 500,
+    'crop' =&gt; true,
+)</p>
+</li>
+</ul>
+
+<p>);</p>
+
+<p>Пример настройки плагина для ленты masonry_7:</p>
+
+<p>$config['preview_minimal_size_width']   = 750;  // Минимальная ширина превью, если изображение меньше, то на его основе превью создаваться не будет. Актуально только для автоматических превью
+$config['preview_minimal_size_height']  = 500;  // Минимальная высота превью, если изображение меньше, то на его основе превью создаваться не будет. Актуально только для автоматических превью</p>
+
+<p>/**</p>
+
+<ul>
+<li>Список размеров превью топика</li>
+<li>
+<p>Обычно задается другим плагином или шаблоном
+*/
+$config['size_images_preview']=array(</p>
+
+<p>array(
+    'w' =&gt; 750,
+    'h' =&gt; 500,
+    'crop' =&gt; true,
+),</p>
+
+<p>array(
+    'w' =&gt; 751,
+    'h' =&gt; 751,
+    'crop' =&gt; true,
+),</p>
+
+<p>array(
+    'w' =&gt; 64,
+    'h' =&gt; 64,
+    'crop' =&gt; true,
+)</p>
+</li>
+</ul>
+
+<p>);</p>
+
+<p>Для лент топиков masonry_5, masonry_6 и masonry_7 помимо настройки плагина «Main Preview» необходимо перенастроить вывод блоков.</p>
+
+<p>Для лент masonry_5 и masonry_6 в файл config.local.php необходимо добавить следующее:</p>
+
+<p>/**</p>
+
+<ul>
+<li>Настройки вывода блоков
+*/
+$config['block']['rule_index'] = array(
+'action'  =&gt; array(
+        'index', 'blog' =&gt; array('{topics}','{blog}')
+    ),
+'blocks'  =&gt; array(
+        'stamp' =&gt; array('stream'=&gt;array('priority'=&gt;100),'tags'=&gt;array('priority'=&gt;50),'blogs'=&gt;array('params'=&gt;array(),'priority'=&gt;1))
+    ),
+'clear' =&gt; false,
+);</li>
+</ul>
+
+<p>$config['block']['rule_personal_blog'] = array(
+    'action'  =&gt; array( 'personal_blog' ),
+    'blocks'  =&gt; array( 'stamp' =&gt; array('stream','tags') ),
+);</p>
+
+<p>Для ленты masonry_7 в файл config.local.php рекомендуется индивидуальная блоков для каждого проекта.
+Ниже приведу лишь пример вывода рекламного блока в правом верхнем углу и блоков прямого эфира и топа блогов
+в центральной области:</p>
+
+<p>/**</p>
+
+<ul>
+<li>Настройки вывода блоков
+*/
+$config['block']['rule_index'] = array(
+'action'  =&gt; array(
+        'index'
+    ),
+'blocks'  =&gt; array(
+        'centerbar-first' =&gt; array('stream'=&gt;array('priority'=&gt;100)),
+        'centerbar-second' =&gt; array('blogs'=&gt;array('params'=&gt;array(),'priority'=&gt;1))
+    ),
+'clear' =&gt; false,
+);</li>
+</ul>
+
+<p>$config['block']['rule_ad'] = array(
+    'action'  =&gt; array(
+            'index', 'personal_blog', 'blog' =&gt; array('{topics}','{blog}')
+        ),
+    'blocks'  =&gt; array( 'stamp' =&gt; array('blocks/block.ad.tpl') ),
+);</p>
+
+<p>В данном случае рекомендую видоизменить блоки прямого эфира и топа блогов, либо вывести в этой области какие-то другие свои блоки.
+Отредактировать рекламный блок по своему усмотрению можно в файле blocks/block.ad.tpl шаблона.</p>
+
+<p>Кроме того, для ленты masonry_7 в конфиге сайта рекомендую изменить количество выводимых на странице топиоков на 32 или более.</p>
+
+<p>Остальные моменты настройки шаблоны описаны в конфиге шаблона в пояснениях к тому или иному пункту конфига.</p>
+
+<p>Следить за обновлениями шаблона, задавать вопросы по использованию и настройке шаблона и вносить свои предложения можно
+в моем блоге на странице шаблона: <a href="http://kulesh-vladimir.by/blog/developer-kit">http://kulesh-vladimir.by/blog/developer-kit</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/vakulesh/developer-kit/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/vakulesh/developer-kit/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/vakulesh/developer-kit"></a> is maintained by <a href="https://github.com/vakulesh">vakulesh</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
